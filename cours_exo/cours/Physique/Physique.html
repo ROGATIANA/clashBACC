@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leçons / Cours – MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <!-- ════ SIDEBAR ════ -->
+  <aside class="sidebar" id="sidebar">
+<div class="logo-wrap" id="logoWrap">
+  <div class="logo-ring"></div>
+  <img src="../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+</div>
+<div class="sidebar-title">PRÉPA<span>BACC</span></div>
+<div class="sidebar-sub">MMFNRR · 2026</div>
+
+<nav class="sidebar-nav">
+  <a href="../../../index.html" class="nav-item">
+<div class="nav-icon">🏠</div>
+<div class="nav-body">
+  <div class="nav-label">Accueil</div>
+  <div class="nav-desc">Page principale</div>
+</div>
+  </a>
+  <a href="../../../cours_exo/Cours.html" class="nav-item active">
+<div class="nav-icon">📖</div>
+<div class="nav-body">
+  <div class="nav-label">Leçons / Cours</div>
+  <div class="nav-desc">Fiches de révision</div>
+</div>
+  </a>
+  <a href="../../Exercice.html" class="nav-item">
+<div class="nav-icon">✏️</div>
+<div class="nav-body">
+  <div class="nav-label">Sujets Bacc</div>
+  <div class="nav-desc">Annales officielles</div>
+</div>
+  </a>
+  <a href="../../../Info/Info.html" class="nav-item">
+<div class="nav-icon">📝</div>
+<div class="nav-body">
+  <div class="nav-label">A propos</div>
+  <div class="nav-desc">Informations sur le site</div>
+</div>
+  </a>
+</nav>
+
+<div class="sidebar-footer">
+  <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+  <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2026 · 🇲🇬</div>
+</div>
+  </aside>
+
+  <!-- ════ MAIN ════ -->
+  <main class="main">
+
+<div class="topbar">
+  <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+  <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+<span></span><span></span><span></span>
+  </button>
+</div>
+
+    <!-- page header -->
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../index.html">Accueil</a> › 
+        <a href="../../../cours_exo/Cours.html">Leçons</a> › 
+          Physique
+      </div>
+      <div class="page-title">PHYSIQUE <span>GÉNÉRALE</span></div>
+      <div class="page-subtitle">Mécanique · Électromagnétisme · Physique nucléaire</div>
+    </div>
+
+    <!-- banner matière -->
+    <div class="subject-banner">
+      <div class="subject-icon-large">⚡</div>
+      <div class="subject-info">
+        <h3>Physique</h3>
+        <p>Mécanique, Électromagnétisme, Physique nucléaire – Cours complets pour le Bac</p>
+      </div>
+      <div class="chapter-count">16 chapitres + résumé</div>
+    </div>
+
+    <!-- section Résumé (mise en avant) -->
+    <div class="recall-section">
+      <div class="chapter-card recall-card">
+        <a href="chap/resume.html" class="chapter-link">
+          <div class="chapter-number">📘 RÉSUMÉ</div>
+          <div class="chapter-info">
+            <div class="chapter-title">Formulaire & notions clés</div>
+            <div class="chapter-desc">Rappels des formules essentielles et définitions fondamentales</div>
+          </div>
+          <div class="chapter-arrow">→</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- ════ PARTIE 1 : MÉCANIQUE ════ -->
+    <div class="section">
+      <div class="part-section">
+        <div class="part-title">PARTIE 1 : MÉCANIQUE</div>
+        <div class="chapters-grid">
+          
+          <div class="chapter-card">
+            <a href="Chap/part1/chap1.html" class="chapter-link">
+              <div class="chapter-number">CHAPITRE 1</div>
+              <div class="chapter-info">
+                <div class="chapter-title">Cinématique Du Point</div>
+                <div class="chapter-desc">Mouvement, vitesse, accélération, trajectoires</div>
+              </div>
+              <div class="chapter-arrow">→</div>
+            </a>
+          </div>
+
+          <div class="chapter-card">
+            <a href="Chap/part1/chap2.html" class="chapter-link">
+              <div class="chapter-number">CHAPITRE 2</div>
+              <div class="chapter-info">
+                <div class="chapter-title">Bases De La Dynamique</div>
+                <div class="chapter-desc">Lois de Newton, forces, référentiels</div>
+              </div>
+              <div class="chapter-arrow">→</div>
+            </a>
+          </div>
+
+          <div class="chapter-card">
+            <a href="Chap/part1/chap3.html" class="chapter-link">
+              <div class="chapter-number">CHAPITRE 3</div>
+              <div class="chapter-info">
+                <div class="chapter-title">Applications Des Bases De La Dynamique</div>
+                <div class="chapter-desc">Mouvements sur plan incliné, frottements, pendules</div>
+              </div>
+              <div class="chapter-arrow">→</div>
+            </a>
+          </div>
+
+          <div class="chapter-card">
+            <a href="Chap/part1/chap4.html" class="chapter-link">
+              <div class="chapter-number">CHAPITRE 4</div>
+              <div class="chapter-info">
+                <div class="chapter-title">Gravitation Universelle</div>
+                <div class="chapter-desc">Loi de gravitation, mouvement des planètes, satellites</div>
+              </div>
+              <div class="chapter-arrow">→</div>
+            </a>
+          </div>
+
+          <div class="chapter-card">
+            <a href="Chap/part1/chap5.html" class="chapter-link">
+              <div class="chapter-number">CHAPITRE 5</div>
+              <div class="chapter-info">
+                <div class="chapter-title">Oscillations Mécaniques Libres</div>
+                <div class="chapter-desc">Ressort, pendule élastique, équation différentielle</div>
+              </div>
+              <div class="chapter-arrow">→</div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ════ PARTIE 2 : ÉLECTROMAGNÉTIQUE ════ -->
+    <div class="section">
+      <div class="part-section">
+        <div class="part-title">PARTIE 2 : ÉLECTROMAGNÉTIQUE</div>
+        <div class="chapters-grid">
+
+          <div class="chapter-card">
+            <a href="Chap/part2/chap1.html" class="chapter-link">
+              <div class="chapter-number">CHAPITRE 1</div>
+              <div class="chapter-info">
+                <div class="chapter-title">Généralités Sur Les Champs Magnétiques</div>
+                <div class="chapter-desc">Champ magnétique, lignes de champ, aimants</div>
+              </div>
+              <div class="chapter-arrow">→</div>
+            </a>
+          </div>
+
+          <div class="chapter-card">
+            <a href="Chap/part2/chap2.html" class="chapter-link">
+              <div class="chapter-number">CHAPITRE 2</div>
+              <div class="chapter-info">
+                <div class="chapter-title">Mouvement D'Une Particule Chargée Dans Un Champ Magnétique Uniforme</div>
+                <div class="chapter-desc">Force de Lorentz, cyclotron, spectromètre de masse</div>
+              </div>
+              <div class="chapter-arrow">→</div>
+            </a>
+          </div>
+
+          <div class="chapter-card">
+            <a href="Chap/part2/chap3.html" class="chapter-link">
+              <div class="chapter-number">CHAPITRE 3</div>
+              <div class="chapter-info">
+                <div class="chapter-title">Loi De Laplace</div>
+                <div class="chapter-desc">Force sur un conducteur parcouru par un courant</div>
+              </div>
+              <div class="chapter-arrow">→</div>
+            </a>
+          </div>
+
+          <div class="chapter-card">
+            <a href="Chap/part2/chap4.html" class="chapter-link">
+              <div class="chapter-number">CHAPITRE 4</div>
+              <div class="chapter-info">
+                <div class="chapter-title">Induction Électromagnétique</div>
+                <div class="chapter-desc">Loi de Faraday, flux magnétique, forces électromotrices</div>
+              </div>
+              <div class="chapter-arrow">→</div>
+            </a>
+          </div>
+
+          <div class="chapter-card">
+            <a href="Chap/part2/chap5.html" class="chapter-link">
+              <div class="chapter-number">CHAPITRE 5</div>
+              <div class="chapter-info">
+                <div class="chapter-title">Auto-Induction Électromagnétique</div>
+                <div class="chapter-desc">Bobines, inductance, circuit RL</div>
+              </div>
+              <div class="chapter-arrow">→</div>
+            </a>
+          </div>
+
+          <div class="chapter-card">
+            <a href="Chap/part2/chap6.html" class="chapter-link">
+              <div class="chapter-number">CHAPITRE 6</div>
+              <div class="chapter-info">
+                <div class="chapter-title">Condensateurs : Dipôle RC</div>
+                <div class="chapter-desc">Charge et décharge, constante de temps</div>
+              </div>
+              <div class="chapter-arrow">→</div>
+            </a>
+          </div>
+
+          <div class="chapter-card">
+            <a href="Chap/part2/chap7.html" class="chapter-link">
+              <div class="chapter-number">CHAPITRE 7</div>
+              <div class="chapter-info">
+                <div class="chapter-title">Oscillations Électriques Libres : Circuit LC</div>
+                <div class="chapter-desc">Énergie, périodes, équations différentielles</div>
+              </div>
+              <div class="chapter-arrow">→</div>
+            </a>
+          </div>
+
+          <div class="chapter-card">
+            <a href="Chap/part2/chap8.html" class="chapter-link">
+              <div class="chapter-number">CHAPITRE 8</div>
+              <div class="chapter-info">
+                <div class="chapter-title">Oscillations Électriques Forcées : Circuit RLC Série</div>
+                <div class="chapter-desc">Résonance, impédance, facteur de qualité</div>
+              </div>
+              <div class="chapter-arrow">→</div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ════ PARTIE 3 : PHYSIQUE NUCLÉAIRE ════ -->
+    <div class="section">
+      <div class="part-section">
+        <div class="part-title">PARTIE 3 : PHYSIQUE NUCLÉAIRE</div>
+        <div class="chapters-grid">
+
+          <div class="chapter-card">
+            <a href="Chap/part3/chap1.html" class="chapter-link">
+              <div class="chapter-number">CHAPITRE 1</div>
+              <div class="chapter-info">
+                <div class="chapter-title">Masse Et Énergie : Réactions Nucléaires</div>
+                <div class="chapter-desc">E=mc², fission, fusion, défaut de masse</div>
+              </div>
+              <div class="chapter-arrow">→</div>
+            </a>
+          </div>
+
+          <div class="chapter-card">
+            <a href="Chap/part3/chap2.html" class="chapter-link">
+              <div class="chapter-number">CHAPITRE 2</div>
+              <div class="chapter-info">
+                <div class="chapter-title">Radioactivité : Réactions Nucléaires</div>
+                <div class="chapter-desc">Désintégrations α, β, γ, loi de décroissance, demi-vie</div>
+              </div>
+              <div class="chapter-arrow">→</div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    /* logo spin */
+    const logoImg  = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    /* sidebar mobile */
+    const sidebar   = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay   = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

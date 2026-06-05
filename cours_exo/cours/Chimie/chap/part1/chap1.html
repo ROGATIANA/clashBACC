@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chimie · Les Alcools | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre .highlight-red {
+      color: #e74c3c;
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem;
+    }
+    
+    .img-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    
+    .image-grid-chap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+    
+    .image-grid-chap .img-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.5rem;
+      text-align: center;
+      flex: 1;
+      min-width: 250px;
+    }
+    
+    .image-grid-chap .img-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(155, 89, 182, 0.1);
+      border-left: 3px solid #9b59b6;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .formula {
+      font-family: monospace;
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .formula-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.8rem;
+      text-align: center;
+    }
+    
+    .formula-card .formula-name {
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2024</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../../index.html">Accueil</a> ›
+        <a href="../../../../Cours.html">Leçons</a> ›
+        <a href="../../Chimie.html">Chimie</a> › Chimie Organique</a> › Chapitre 1
+      </div>
+      <div class="page-title">LES ALCOOLS <span>🍷 CHAPITRE 1</span></div>
+      <div class="page-subtitle">Classification, propriétés, réactions des alcools — Chimie Organique · Baccalauréat</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">🍷</div>
+      <div class="subject-info">
+        <h3>Les Alcools</h3>
+        <p>Structure · Nomenclature · Propriétés physico-chimiques · Oxydation · Estérification</p>
+      </div>
+      <div class="chapter-count">Cours complet</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>🍷 INTRODUCTION</h3>
+        <p>Les <span class="highlight">alcools</span> sont des composés organiques caractérisés par la présence d'un groupe hydroxyle <span class="formula">-OH</span> lié à un atome de carbone tétraédrique (carbone hybridé sp³). Ils constituent l'une des classes de composés les plus importantes en chimie organique, tant par leurs applications industrielles que par leur présence dans la nature (éthanol dans les boissons alcoolisées, glycérol dans les lipides).</p>
+        
+        <div class="note-box">
+          <strong>📌 Formule générale :</strong> <span class="formula">R-OH</span> (R = groupe alkyle)<br>
+          Exemples : Méthanol <span class="formula">CH₃-OH</span>, Éthanol <span class="formula">CH₃-CH₂-OH</span>
+        </div>
+      </div>
+
+      <!-- I – CLASSIFICATION -->
+      <div class="section-chapitre">
+        <h3>📚 I – CLASSIFICATION DES ALCOOLS</h3>
+        
+        <div class="law-box">
+          <h4>1. Selon le nombre de groupes -OH</h4>
+          <ul>
+            <li><span class="highlight">Alcool primaire (1°)</span> : le carbone portant le -OH est lié à 1 atome de carbone et 2 atomes d'hydrogène</li>
+            <li><span class="highlight">Alcool secondaire (2°)</span> : le carbone portant le -OH est lié à 2 atomes de carbone et 1 atome d'hydrogène</li>
+            <li><span class="highlight">Alcool tertiaire (3°)</span> : le carbone portant le -OH est lié à 3 atomes de carbone</li>
+          </ul>
+        </div>
+        
+        <div class="law-box">
+          <h4>2. Selon la chaîne carbonée</h4>
+          <ul>
+            <li><span class="highlight">Alcool saturé</span> : tous les carbones sont liés par des liaisons simples</li>
+            <li><span class="highlight">Alcool insaturé</span> : présence d'une ou plusieurs doubles liaisons C=C</li>
+            <li><span class="highlight">Alcool cyclique</span> : le groupe -OH est lié à un cycle (ex : cyclohexanol)</li>
+          </ul>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Nomenclature (IUPAC) :</strong><br>
+          - Identifier la chaîne carbonée la plus longue contenant le groupe -OH<br>
+          - Changer la terminaison -e de l'alcane en <span class="highlight">-ol</span><br>
+          - Numéroter la chaîne pour donner l'indice le plus bas au carbone portant le -OH<br>
+          - Exemple : <span class="formula">CH₃-CH₂-CH₂-OH</span> → <span class="highlight">propan-1-ol</span>
+        </div>
+      </div>
+
+      <!-- II – PROPRIÉTÉS PHYSIQUES -->
+      <div class="section-chapitre">
+        <h3>🔬 II – PROPRIÉTÉS PHYSIQUES</h3>
+        
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Point d'ébullition</p>
+            <p>Élevé par rapport aux alcanes<br>en raison des liaisons hydrogène</p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Solubilité dans l'eau</p>
+            <p>Les petits alcools (C1-C4) sont<br>miscibles à l'eau</p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Liaison hydrogène</p>
+            <p>Le groupe -OH forme des<br>liaisons hydrogène intermoléculaires</p>
+          </div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Évolution des propriétés :</strong><br>
+          - Le point d'ébullition augmente avec la longueur de la chaîne carbonée<br>
+          - Les alcools primaires ont un point d'ébullition plus élevé que les secondaires, eux-mêmes plus élevés que les tertiaires (même formule brute)<br>
+          - La solubilité dans l'eau diminue quand la chaîne carbonée s'allonge
+        </div>
+      </div>
+
+      <!-- III – RÉACTIONS DES ALCOOLS -->
+      <div class="section-chapitre">
+        <h3>⚗️ III – RÉACTIONS DES ALCOOLS</h3>
+        
+        <div class="law-box">
+          <h4>1. Déshydratation</h4>
+          <p>Les alcools subissent une déshydratation en milieu acide concentré (H₂SO₄) pour former des alcènes.</p>
+          <p><span class="formula">CH₃-CH₂-OH → CH₂=CH₂ + H₂O</span></p>
+          <p>Règle de Zaïtsev : l'alcène le plus substitué est majoritaire.</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>2. Oxydation des alcools</h4>
+          <ul>
+            <li><span class="highlight">Alcool primaire</span> → <span class="highlight">aldéhyde</span> → <span class="highlight">acide carboxylique</span></li>
+            <li><span class="highlight">Alcool secondaire</span> → <span class="highlight">cétone</span></li>
+            <li><span class="highlight">Alcool tertiaire</span> → <span class="highlight">pas d'oxydation</span> (pas d'hydrogène sur le carbone portant le -OH)</li>
+          </ul>
+          <p>Oxydants usuels : KMnO₄ (permanganate de potassium), K₂Cr₂O₇ (dichromate de potassium) en milieu acide.</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>3. Estérification</h4>
+          <p>Réaction entre un alcool et un acide carboxylique pour former un ester et de l'eau.</p>
+          <p><span class="formula">R-OH + R'-COOH ⇌ R-COO-R' + H₂O</span></p>
+          <p>Réaction <span class="highlight">lente</span>, <span class="highlight">limitée</span> et <span class="highlight">équilibrée</span> (catalyse par H⁺).</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>4. Hydrolyse des esters</h4>
+          <p>Réaction inverse de l'estérification : un ester réagit avec l'eau pour redonner l'alcool et l'acide carboxylique.</p>
+          <p><span class="formula">R-COO-R' + H₂O ⇌ R-OH + R'-COOH</span></p>
+        </div>
+      </div>
+
+      <!-- IV – FORMULAIRE -->
+      <div class="section-chapitre">
+        <h3>📝 IV – RÉCAPITULATIF</h3>
+        
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Formule générale</p>
+            <p><span class="formula">C<sub>n</sub>H<sub>2n+1</sub>-OH</span><br>(alcool saturé monohydrique)</p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Oxydation primaire</p>
+            <p><span class="formula">R-CH₂OH → R-CHO → R-COOH</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Oxydation secondaire</p>
+            <p><span class="formula">R-CHOH-R' → R-CO-R'</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Estérification</p>
+            <p><span class="formula">R-OH + R'-COOH ⇌ R-COO-R' + H₂O</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Images du cours -->
+      <div class="section-chapitre">
+        <h3>📚 COURS COMPLET</h3>
+        
+        <div class="img-container">
+          <img src="img/c01.jpg" alt="Cours alcools 1">
+          <div class="img-caption">Fig. 1 – Introduction et structure des alcools</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c02.jpg" alt="Cours alcools 2">
+          <div class="img-caption">Fig. 2 – Classification des alcools (primaire, secondaire, tertiaire)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c03.jpg" alt="Cours alcools 3">
+          <div class="img-caption">Fig. 3 – Nomenclature des alcools (IUPAC)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c04.jpg" alt="Cours alcools 4">
+          <div class="img-caption">Fig. 4 – Propriétés physiques et liaisons hydrogène</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c05.jpg" alt="Cours alcools 5">
+          <div class="img-caption">Fig. 5 – Déshydratation des alcools</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c06.jpg" alt="Cours alcools 6">
+          <div class="img-caption">Fig. 6 – Oxydation des alcools (primaires, secondaires, tertiaires)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c07.jpg" alt="Cours alcools 7">
+          <div class="img-caption">Fig. 7 – Estérification et hydrolyse</div>
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>💡 RÉCAPITULATIF ET CONSEILS</h3>
+        
+        <div class="note-box">
+          <strong>📌 Points clés à retenir :</strong><br>
+          - La <span class="highlight">déshydratation</span> des alcools donne des alcènes (milieu acide, chaleur)<br>
+          - L'<span class="highlight">oxydation</span> dépend du degré de l'alcool :<br>
+          &nbsp;&nbsp;&nbsp;• Primaire → aldéhyde → acide carboxylique<br>
+          &nbsp;&nbsp;&nbsp;• Secondaire → cétone<br>
+          &nbsp;&nbsp;&nbsp;• Tertiaire → pas d'oxydation<br>
+          - L'<span class="highlight">estérification</span> est une réaction équilibrée (catalyse acide)<br>
+          - Le groupe <span class="highlight">-OH</span> est polaire et permet la formation de liaisons hydrogène
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions Chimie | Chapitre 1 : Les Alcools — Conforme au programme 2024
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

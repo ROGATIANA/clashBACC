@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mathématiques · Calcul Intégral | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem;
+    }
+    
+    .img-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(241, 196, 15, 0.1);
+      border-left: 3px solid #f1c40f;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .formula {
+      font-family: monospace;
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .formula-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.8rem;
+      text-align: center;
+    }
+    
+    .formula-card .formula-name {
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2024</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../../index.html">Accueil</a> ›
+        <a href="../../../../Cours.html">Leçons</a> ›
+        <a href="../../MTH.html">Mathématiques</a> › Algèbre & Analyse</a> › Chapitre 3
+      </div>
+      <div class="page-title">CALCUL INTÉGRAL <span>∫ CHAPITRE 3</span></div>
+      <div class="page-subtitle">Notion d'intégrale, primitives, aires, volumes, propriétés — Mathématiques · Baccalauréat</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">∫</div>
+      <div class="subject-info">
+        <h3>Calcul intégral</h3>
+        <p>Primitives · Intégrales · Aires et volumes · Méthode des rectangles · Propriétés</p>
+      </div>
+      <div class="chapter-count">Cours complet</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>∫ INTRODUCTION</h3>
+        <p>Le <span class="highlight">calcul intégral</span> est l'opération inverse de la dérivation. L'intégrale d'une fonction sur un intervalle représente l'<span class="highlight">aire sous la courbe</span> de cette fonction. Il est utilisé dans de nombreux domaines : calcul d'aires, de volumes, en physique (travail, énergie), en probabilités, etc.</p>
+        
+        <div class="note-box">
+          <strong>📌 Notation :</strong><br>
+          <span class="formula">∫_a^b f(x) dx</span> se lit "intégrale de a à b de f(x) dx"<br>
+          a : borne inférieure, b : borne supérieure, f : intégrande
+        </div>
+      </div>
+
+      <!-- I – NOTION D'INTÉGRALE -->
+      <div class="section-chapitre">
+        <h3>📚 I – NOTION D'INTÉGRALE</h3>
+        
+        <div class="img-container">
+          <img src="img/i1.png" alt="Notion d'intégrale">
+          <div class="img-caption">Fig. 1 – Définition géométrique de l'intégrale (aire sous la courbe)</div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Interprétation géométrique :</strong><br>
+          L'intégrale <span class="formula">∫_a^b f(x) dx</span> représente l'aire (algébrique) comprise entre la courbe de f, l'axe des abscisses et les droites x = a et x = b.
+        </div>
+      </div>
+
+      <!-- II – INTÉGRALE ET PRIMITIVE -->
+      <div class="section-chapitre">
+        <h3>📊 II – INTÉGRALE ET PRIMITIVE</h3>
+        
+        <div class="img-container">
+          <img src="img/i2.png" alt="Intégrale et primitive">
+          <div class="img-caption">Fig. 2 – Théorème fondamental de l'analyse</div>
+        </div>
+        
+        <div class="law-box">
+          <strong>📌 Théorème fondamental de l'analyse :</strong><br>
+          Si F est une primitive de f sur [a,b] (c'est-à-dire F'(x) = f(x)), alors :<br>
+          <span class="formula">∫_a^b f(x) dx = F(b) - F(a)</span>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Primitives usuelles :</strong><br>
+          - <span class="formula">∫ x^n dx = x^{n+1}/(n+1) + C</span> (n ≠ -1)<br>
+          - <span class="formula">∫ 1/x dx = ln|x| + C</span><br>
+          - <span class="formula">∫ e^x dx = e^x + C</span><br>
+          - <span class="formula">∫ sin x dx = -cos x + C</span><br>
+          - <span class="formula">∫ cos x dx = sin x + C</span>
+        </div>
+      </div>
+
+      <!-- III – AIRES ET INTÉGRALES -->
+      <div class="section-chapitre">
+        <h3>📐 III – AIRES ET INTÉGRALES</h3>
+        
+        <div class="img-container">
+          <img src="img/i3.png" alt="Aires et intégrales">
+          <div class="img-caption">Fig. 3 – Calcul d'aires par intégration</div>
+        </div>
+        
+        <div class="law-box">
+          <strong>📌 Aire entre deux courbes :</strong><br>
+          L'aire de la région comprise entre les courbes de f et g sur [a,b] (avec f ≥ g) est :<br>
+          <span class="formula">A = ∫_a^b (f(x) - g(x)) dx</span>
+        </div>
+      </div>
+
+      <!-- IV – PROPRIÉTÉS DE L'INTÉGRALE -->
+      <div class="section-chapitre">
+        <h3>📏 IV – PROPRIÉTÉS DE L'INTÉGRALE</h3>
+        
+        <div class="img-container">
+          <img src="img/i4.png" alt="Propriétés de l'intégrale">
+          <div class="img-caption">Fig. 4 – Propriétés fondamentales (linéarité, relation de Chasles, etc.)</div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Propriétés essentielles :</strong><br>
+          - <span class="highlight">Linéarité</span> : <span class="formula">∫ (f + g) = ∫ f + ∫ g</span> et <span class="formula">∫ λf = λ∫ f</span><br>
+          - <span class="highlight">Relation de Chasles</span> : <span class="formula">∫_a^b f = ∫_a^c f + ∫_c^b f</span><br>
+          - <span class="highlight">Positivité</span> : Si f ≥ 0, alors <span class="formula">∫_a^b f ≥ 0</span><br>
+          - <span class="highlight">Inégalité de la moyenne</span> : <span class="formula">|∫_a^b f| ≤ ∫_a^b |f|</span><br>
+          - <span class="highlight">Valeur moyenne</span> : <span class="formula">μ = 1/(b-a) ∫_a^b f(x) dx</span>
+        </div>
+      </div>
+
+      <!-- V – PROPRIÉTÉS DES INTÉGRALES DE FONCTIONS PAIRES, IMPAIRES, PÉRIODIQUES -->
+      <div class="section-chapitre">
+        <h3>📈 V – INTÉGRALES DE FONCTIONS PAIRES, IMPAIRES, PÉRIODIQUES</h3>
+        
+        <div class="img-container">
+          <img src="img/i5.png" alt="Fonctions paires, impaires, périodiques">
+          <div class="img-caption">Fig. 5 – Propriétés des intégrales selon la parité et la périodicité</div>
+        </div>
+        
+        <div class="law-box">
+          <strong>📌 Fonctions paires :</strong><br>
+          <span class="formula">∫_{-a}^a f(x) dx = 2∫_0^a f(x) dx</span> (si f est paire)
+        </div>
+        
+        <div class="law-box">
+          <strong>📌 Fonctions impaires :</strong><br>
+          <span class="formula">∫_{-a}^a f(x) dx = 0</span> (si f est impaire)
+        </div>
+        
+        <div class="law-box">
+          <strong>📌 Fonctions périodiques de période T :</strong><br>
+          <span class="formula">∫_a^{a+T} f(x) dx = ∫_0^T f(x) dx</span> (indépendant de a)
+        </div>
+      </div>
+
+      <!-- VI – CALCULS D'INTÉGRALES -->
+      <div class="section-chapitre">
+        <h3>🧮 VI – CALCULS D'INTÉGRALES</h3>
+        
+        <div class="img-container">
+          <img src="img/i6.png" alt="Calculs d'intégrales">
+          <div class="img-caption">Fig. 6 – Techniques de calcul (intégration par parties, changement de variable)</div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Intégration par parties :</strong><br>
+          <span class="formula">∫_a^b u'(x)v(x) dx = [u(x)v(x)]_a^b - ∫_a^b u(x)v'(x) dx</span>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Changement de variable :</strong><br>
+          Soit x = φ(t) une bijection dérivable, alors :<br>
+          <span class="formula">∫_{x=a}^{x=b} f(x) dx = ∫_{t=φ^{-1}(a)}^{t=φ^{-1}(b)} f(φ(t)) φ'(t) dt</span>
+        </div>
+      </div>
+
+      <!-- VII – APPROXIMATION D'UNE INTÉGRALE : MÉTHODE DES RECTANGLES -->
+      <div class="section-chapitre">
+        <h3>📊 VII – APPROXIMATION D'UNE INTÉGRALE : MÉTHODE DES RECTANGLES</h3>
+        
+        <div class="img-container">
+          <img src="img/i7.png" alt="Méthode des rectangles">
+          <div class="img-caption">Fig. 7 – Approximation d'une intégrale par la méthode des rectangles</div>
+        </div>
+        
+        <div class="law-box">
+          <strong>📌 Méthode des rectangles (à gauche) :</strong><br>
+          <span class="formula">∫_a^b f(x) dx ≈ h · (f(x_0) + f(x_1) + ... + f(x_{n-1}))</span><br>
+          avec <span class="formula">h = (b-a)/n</span> et <span class="formula">x_k = a + k·h</span>
+        </div>
+        
+        <div class="law-box">
+          <strong>📌 Méthode des rectangles (à droite) :</strong><br>
+          <span class="formula">∫_a^b f(x) dx ≈ h · (f(x_1) + f(x_2) + ... + f(x_n))</span>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Méthode des trapèzes (plus précise) :</strong><br>
+          <span class="formula">∫_a^b f(x) dx ≈ h·[f(x_0)/2 + f(x_1) + ... + f(x_{n-1}) + f(x_n)/2]</span>
+        </div>
+      </div>
+
+      <!-- VIII – CALCUL D'AIRES ET DE VOLUMES -->
+      <div class="section-chapitre">
+        <h3>📦 VIII – CALCUL D'AIRES ET DE VOLUMES</h3>
+        
+        <div class="img-container">
+          <img src="img/i8.png" alt="Aires et volumes">
+          <div class="img-caption">Fig. 8 – Calcul de volumes par intégration (méthode des disques)</div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Volume de révolution (autour de l'axe des abscisses) :</strong><br>
+          <span class="formula">V = π ∫_a^b [f(x)]² dx</span>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Volume de révolution (autour de l'axe des ordonnées) :</strong><br>
+          <span class="formula">V = π ∫_c^d [g(y)]² dy</span> (avec x = g(y))
+        </div>
+      </div>
+
+      <!-- FORMULAIRE RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>📝 FORMULAIRE RÉCAPITULATIF</h3>
+        
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Théorème fondamental</p>
+            <p><span class="formula">∫_a^b f = F(b) - F(a)</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Linéarité</p>
+            <p><span class="formula">∫ (f+g) = ∫ f + ∫ g</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Relation de Chasles</p>
+            <p><span class="formula">∫_a^b = ∫_a^c + ∫_c^b</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Intégration par parties</p>
+            <p><span class="formula">∫ u'v = uv - ∫ uv'</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Valeur moyenne</p>
+            <p><span class="formula">μ = 1/(b-a) ∫_a^b f</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Volume de révolution</p>
+            <p><span class="formula">V = π ∫ [f(x)]² dx</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>💡 RÉCAPITULATIF ET CONSEILS</h3>
+        
+        <div class="note-box">
+          <strong>📌 Points clés à retenir :</strong><br>
+          - L'intégrale est l'<span class="highlight">opération inverse de la dérivation</span><br>
+          - <span class="highlight">Théorème fondamental</span> : <span class="formula">∫_a^b f = F(b) - F(a)</span><br>
+          - <span class="highlight">Aire</span> = valeur absolue de l'intégrale lorsque f ≥ 0<br>
+          - <span class="highlight">Propriétés essentielles</span> : linéarité, Chasles, positivité<br>
+          - <span class="highlight">Fonctions paires</span> : intégrale double sur [0,a]<br>
+          - <span class="highlight">Fonctions impaires</span> : intégrale nulle sur [-a,a]<br>
+          - <span class="highlight">Méthodes d'approximation</span> : rectangles, trapèzes<br>
+          - <span class="highlight">Volume de révolution</span> : <span class="formula">V = π ∫ [f(x)]² dx</span>
+        </div>
+        
+        <div class="law-box">
+          <strong>🎯 Méthode pour calculer une intégrale :</strong><br>
+          1. Vérifier que la fonction est continue sur l'intervalle<br>
+          2. Déterminer une primitive F de f<br>
+          3. Appliquer le théorème fondamental : <span class="formula">∫_a^b f = F(b) - F(a)</span><br>
+          4. Pour les intégrales complexes : utiliser l'intégration par parties ou le changement de variable
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions Mathématiques | Chapitre 4 : Calcul intégral — Conforme au programme 2024
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chimie · Acide Faible - Base Faible | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem;
+    }
+    
+    .img-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(155, 89, 182, 0.1);
+      border-left: 3px solid #9b59b6;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .formula {
+      font-family: monospace;
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .formula-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.8rem;
+      text-align: center;
+    }
+    
+    .formula-card .formula-name {
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2024</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../../index.html">Accueil</a> ›
+        <a href="../../../../Cours.html">Leçons</a> ›
+        <a href="../../Chimie.html">Chimie</a> › Chimie Minérale</a> › Chapitre 3
+      </div>
+      <div class="page-title">ACIDE FAIBLE - BASE FAIBLE <span>⚖️ CHAPITRE 3</span></div>
+      <div class="page-subtitle">Couple acide/base, notion d'équilibre, constante d'acidité Kₐ, pKₐ — Chimie Minérale · Baccalauréat</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">⚖️</div>
+      <div class="subject-info">
+        <h3>Acide faible - Base faible</h3>
+        <p>Couple acide/base · Constante d'acidité Kₐ · Équilibre chimique · Calcul du pH</p>
+      </div>
+      <div class="chapter-count">Cours complet</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>⚖️ INTRODUCTION</h3>
+        <p>Un <span class="highlight">acide faible</span> est un acide qui ne se dissocie que <span class="highlight">partiellement</span> dans l'eau. Une <span class="highlight">base faible</span> est une base qui ne se dissocie que partiellement dans l'eau. Contrairement aux acides/bases forts, la réaction de dissociation est un <span class="highlight">équilibre chimique</span> caractérisé par une constante d'équilibre K (Kₐ pour les acides, K_b pour les bases).</p>
+        
+        <div class="note-box">
+          <strong>📌 Exemples :</strong><br>
+          - <span class="highlight">Acides faibles</span> : CH₃COOH (acide éthanoïque), H₂CO₃, H₃PO₄, HF<br>
+          - <span class="highlight">Bases faibles</span> : NH₃ (ammoniac), CH₃NH₂ (méthylamine), C₅H₅N (pyridine)
+        </div>
+      </div>
+
+      <!-- I – DÉFINITIONS -->
+      <div class="section-chapitre">
+        <h3>📚 I – DÉFINITIONS</h3>
+        
+        <div class="law-box">
+          <h4>Acide faible</h4>
+          <p><span class="formula">AH + H₂O ⇌ A⁻ + H₃O⁺</span></p>
+          <p>La réaction est <span class="highlight">limitée</span> : la majorité des molécules AH reste sous forme non dissociée.</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Base faible</h4>
+          <p><span class="formula">B + H₂O ⇌ BH⁺ + OH⁻</span></p>
+          <p>La réaction est limitée : la majorité des molécules B reste sous forme non protonée.</p>
+        </div>
+      </div>
+
+      <!-- II – CONSTANTE D'ACIDITÉ Kₐ ET pKₐ -->
+      <div class="section-chapitre">
+        <h3>📊 II – CONSTANTE D'ACIDITÉ Kₐ ET pKₐ</h3>
+        
+        <div class="law-box">
+          <h4>Constante d'acidité</h4>
+          <p><span class="formula">K_a = [A⁻][H₃O⁺] / [AH]</span></p>
+          <p>Kₐ est une constante qui ne dépend que de la température. Plus Kₐ est grand, plus l'acide est fort.</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>pKₐ</h4>
+          <p><span class="formula">pK_a = -log K_a</span></p>
+          <p>Plus pKₐ est <span class="highlight">petit</span>, plus l'acide est <span class="highlight">fort</span>.<br>
+          Plus pKₐ est <span class="highlight">grand</span>, plus l'acide est <span class="highlight">faible</span>.</p>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Exemples de pKₐ :</strong><br>
+          - Acide chlorhydrique (fort) : pKₐ < 0<br>
+          - Acide éthanoïque : pKₐ = 4,76<br>
+          - Acide carbonique : pKₐ₁ = 6,35 ; pKₐ₂ = 10,33<br>
+          - Ammonium NH₄⁺ : pKₐ = 9,25
+        </div>
+      </div>
+
+      <!-- III – CALCUL DU pH -->
+      <div class="section-chapitre">
+        <h3>📐 III – CALCUL DU pH</h3>
+        
+        <div class="law-box">
+          <h4>Acide faible de concentration C</h4>
+          <p>Formule approchée (si C ≫ [H₃O⁺] ≫ 10⁻⁷) :</p>
+          <p><span class="formula">[H₃O⁺] = √(K_a·C)</span></p>
+          <p><span class="formula">pH = ½(pK_a - log C)</span></p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Base faible de concentration C</h4>
+          <p>On utilise la constante de basicité K_b = [BH⁺][OH⁻]/[B]</p>
+          <p>Avec K_b = K_e / K_a et pK_b = -log K_b</p>
+          <p><span class="formula">[OH⁻] = √(K_b·C)</span></p>
+          <p><span class="formula">pH = 7 + ½(pK_a + log C)</span></p>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Conditions de validité :</strong><br>
+          - C ≫ [H₃O⁺] pour un acide faible (taux de dissociation faible)<br>
+          - [H₃O⁺] ≫ 10⁻⁷ mol/L (pas trop dilué)<br>
+          - Pour les solutions très diluées, tenir compte de l'autoprotolyse de l'eau
+        </div>
+      </div>
+
+      <!-- IV – RELATION ENTRE Kₐ ET K_b -->
+      <div class="section-chapitre">
+        <h3>🔗 IV – RELATION ENTRE Kₐ ET K_b</h3>
+        
+        <div class="law-box">
+          <h4>Pour un couple acide/base conjugués</h4>
+          <p><span class="formula">K_a × K_b = K_e = 10^{-14} (à 25°C)</span></p>
+          <p><span class="formula">pK_a + pK_b = 14</span></p>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Conséquences :</strong><br>
+          - Plus l'acide est fort (pKₐ faible), plus sa base conjuguée est faible (pK_b grand)<br>
+          - Plus l'acide est faible (pKₐ grand), plus sa base conjuguée est forte (pK_b faible)<br>
+          - Relation fondamentale pour les calculs sur les bases faibles
+        </div>
+      </div>
+
+      <!-- V – FORMULAIRE -->
+      <div class="section-chapitre">
+        <h3>📝 V – FORMULAIRE RÉCAPITULATIF</h3>
+        
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Constante d'acidité Kₐ</p>
+            <p><span class="formula">K_a = [A⁻][H₃O⁺]/[AH]</span><br>
+            <span class="formula">pK_a = -log K_a</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Acide faible (C)</p>
+            <p><span class="formula">pH = ½(pK_a - log C)</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Base faible (C)</p>
+            <p><span class="formula">pH = 7 + ½(pK_a + log C)</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Relation Kₐ·K_b</p>
+            <p><span class="formula">K_a·K_b = K_e = 10⁻¹⁴</span><br>
+            <span class="formula">pK_a + pK_b = 14</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Images du cours -->
+      <div class="section-chapitre">
+        <h3>📚 COURS COMPLET</h3>
+        
+        <div class="img-container">
+          <img src="img/c43.jpg" alt="Cours acide faible base faible 1">
+          <div class="img-caption">Fig. 1 – Équilibre d'un acide faible dans l'eau</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c44.jpg" alt="Cours acide faible base faible 2">
+          <div class="img-caption">Fig. 2 – Constante d'acidité Kₐ et pKₐ</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c45.jpg" alt="Cours acide faible base faible 3">
+          <div class="img-caption">Fig. 3 – Calcul du pH d'un acide faible</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c46.jpg" alt="Cours acide faible base faible 4">
+          <div class="img-caption">Fig. 4 – Équilibre d'une base faible dans l'eau</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c47.jpg" alt="Cours acide faible base faible 5">
+          <div class="img-caption">Fig. 5 – Relation entre Kₐ et K_b d'un couple</div>
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>💡 RÉCAPITULATIF ET CONSEILS</h3>
+        
+        <div class="note-box">
+          <strong>📌 Points clés à retenir :</strong><br>
+          - Un <span class="highlight">acide faible</span> est partiellement dissocié (équilibre)<br>
+          - Kₐ mesure la force d'un acide : plus Kₐ est grand, plus l'acide est fort<br>
+          - pKₐ = -log Kₐ : plus pKₐ est petit, plus l'acide est fort<br>
+          - Pour un acide faible de concentration C : <span class="formula">pH = ½(pK_a - log C)</span><br>
+          - Pour une base faible : <span class="formula">pH = 7 + ½(pK_a + log C)</span><br>
+          - <span class="formula">K_a·K_b = K_e = 10^{-14}</span> et <span class="formula">pK_a + pK_b = 14</span>
+        </div>
+        
+        <div class="law-box">
+          <strong>🎯 Méthode pour calculer le pH d'un acide faible :</strong><br>
+          1. Vérifier que C ≫ 10⁻⁷ mol/L<br>
+          2. Appliquer la formule approchée <span class="formula">pH = ½(pK_a - log C)</span><br>
+          3. Vérifier que [H₃O⁺] = 10^{-pH} ≪ C (taux de dissociation < 5%)<br>
+          4. Si la condition n'est pas vérifiée, résoudre l'équation du second degré<br>
+          <span class="formula">[H₃O⁺]² + K_a[H₃O⁺] - K_a·C = 0</span>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions Chimie | Chapitre 3 : Acide faible - Base faible — Conforme au programme 2024
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

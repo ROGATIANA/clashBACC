@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malagasy · Ohabolana sy Oham-pitenenana | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre .highlight-red {
+      color: #e74c3c;
+      font-weight: 500;
+    }
+    
+    .ohabolana-container {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .ohabolana-item {
+      padding: 0.5rem;
+      border-bottom: 0.5px solid rgba(255,255,255,0.1);
+      font-style: italic;
+      color: var(--gold);
+    }
+    
+    .ohabolana-item:last-child {
+      border-bottom: none;
+    }
+    
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      color: var(--gold);
+      margin: 1rem 0 0.5rem;
+      padding-left: 0.5rem;
+      border-left: 3px solid var(--gold);
+    }
+    
+    .subtitle {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      color: #1abc9c;
+      margin: 0.8rem 0 0.3rem;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .grid-proverbs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+      .grid-proverbs {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2024</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../index.html">Accueil</a> ›
+        <a href="../../../Cours.html">Leçons</a> ›
+        <a href="../MLG.html">Malagasy</a> › Ohabolana
+      </div>
+      <div class="page-title">OHABOLANA SY OHAM-PITENENANA <span>📖 BY MMFNRR</span></div>
+      <div class="page-subtitle">Fiangonan-teny, ohabolana malagasy ho an'ny Baccalauréat</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">📖</div>
+      <div class="subject-info">
+        <h3>Ohabolana sy Oham-pitenenana</h3>
+        <p>Fiangonan-teny, ohabolana malagasy, kabarim-bazaha</p>
+      </div>
+      <div class="chapter-count">Fiangonan-teny</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>📖 FAMPIDIRANA</h3>
+        <p>Ny <span class="highlight">ohabolana</span> sy ny <span class="highlight">oham-pitenenana</span> dia tenim-paritra nentin-drazana izay misy lesona sy torohevitra azo raisina ho amin'ny fiainana. Zava-dehibe ny fahalalana azy ireo ho an'ny mpianatra satria matetika no misy ao amin'ny fanadinana Baccalauréat.</p>
+        
+        <div class="note-box">
+          <strong>📌 Zava-dehibe :</strong><br>
+          - Ny ohabolana dia <span class="highlight">fehezanteny fohy misy hevi-baventy</span><br>
+          - Matetika izy ireo no <span class="highlight">mampiseho ny kolontsaina malagasy</span><br>
+          - Ampiasaina amin'ny <span class="highlight">kabary sy lahateny</span> ny ohabolana<br>
+          - Zava-dehibe ny <span class="highlight">mahafantatra ny hevitry ny ohabolana</span>
+        </div>
+      </div>
+
+      <!-- 1. Ny Olombelona -->
+      <div class="section-chapitre">
+        <h3>👤 1. NY OLOMBELONA</h3>
+        
+        <div class="grid-proverbs">
+          <div class="ohabolana-container">
+            <div class="ohabolana-item">"Ny olombelona amalona an-drano ka be siasia"</div>
+            <div class="ohabolana-item">"Ny olombelona toy ny zozoro am-parihy ka mifanolana ihany"</div>
+            <div class="ohabolana-item">"Ny olombelona toy ny landim-boatavo ka rahafotorana iray ihany"</div>
+            <div class="ohabolana-item">"Aza manao rano dikain'ny zinga"</div>
+            <div class="ohabolana-item">"Ny Olombelona toy ny fandrin-drano ka tsy misy avo sy iva"</div>
+            <div class="ohabolana-item">"Ny Olombelona toy ny omby: ny indray mandry tsy indray mifoha"</div>
+            <div class="ohabolana-item">"Ny lehibe no manaiky ny henatra; ny kely no manaiky ny tahotra"</div>
+            <div class="ohabolana-item">"Ny hevitra tsy azo tsy amin'olombelona"</div>
+            <div class="ohabolana-item">"Raha monina anosy lavitra olon-kiresahana"</div>
+            <div class="ohabolana-item">"Ny hevitry ny maro mahataka-davitra"</div>
+            <div class="ohabolana-item">"Toko vato: tapaka. Toko hazo: lo. Fa ny tokon'olombelona tsy mba mety tapaka sy lo"</div>
+            <div class="ohabolana-item">"Ny Olombelona tsy ary mitovy fa vorom-bazaha misasa ka samy manao izay saim-patany"</div>
+            <div class="ohabolana-item">"Aza tsy tia olona fa ny olona no harena"</div>
+            <div class="ohabolana-item">"Roa lahy mianala: izaho tokiny, izy tokiko"</div>
+            <div class="ohabolana-item">"Ny olon-drery tsy mba vahoaka"</div>
+            <div class="ohabolana-item">"Zanahary tsy omen-tsiny, Andriamanitra tsy omem-pondro; fa ny Olombelona no be siasia"</div>
+            <div class="ohabolana-item">"Ny olona no miady ka ny marina no aholaka"</div>
+            <div class="ohabolana-item">"Ny olo-marina toy ny ombalahy am-pandrojinana: tsy folaka anio, tsy maty mandrakizay"</div>
+            <div class="ohabolana-item">"Aza manao toy ny tandindona; manaraka ihany fa tsy azo ho namana"</div>
+            <div class="ohabolana-item">"Ny tsihy no fola-mandefitra fa ny Olombelona tsy mba fola-mandefitra"</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Ny fitsimbinana ny aina -->
+      <div class="section-chapitre">
+        <h3>💚 2. NY FITSIMBINANA NY AINA</h3>
+        
+        <div class="grid-proverbs">
+          <div class="ohabolana-container">
+            <div class="ohabolana-item">"Lahy tokana ny aina"</div>
+            <div class="ohabolana-item">"Ny aina tsy hananam-piry"</div>
+            <div class="ohabolana-item">"Voalavo mifanena an-ketona ka samy miaro ny ainy ihany"</div>
+            <div class="ohabolana-item">"Izay manoro lala-mahitsy: mamindra aina"</div>
+            <div class="ohabolana-item">"Tehin-kibo am-piakarana: tsy haingo fa tohana aina"</div>
+            <div class="ohabolana-item">"Kibobolahy voafandrika ka ny mandrimandry no ahazoana aina"</div>
+            <div class="ohabolana-item">"Voalavo sasatra ny miaina ka ny saka matory no alaim-bolom-bava"</div>
+            <div class="ohabolana-item">"Voalavo sasatra ny miaina ka mandalo eo ambany saokan'ny saka"</div>
+            <div class="ohabolana-item">"Ny aina Ramangatahiana, ny vola Ramangakatsahina"</div>
+            <div class="ohabolana-item">"Bevohoka mifampitolona ka manafohy ny andro hiainany"</div>
+            <div class="ohabolana-item">"Volon-katsaka misedra tadio ka mifanohitra ny tsy eran'ny aina"</div>
+            <div class="ohabolana-item">"Voalavo latsaka anaty vilany jobo: ny herim-po betsaka fa ny hozam-body no tsy maharaka"</div>
+            <div class="ohabolana-item">"Ranomaso tsy mahatana aina"</div>
+            <div class="ohabolana-item">"Mpifankatia tsy miresaka very ny androtokom-pihavanana; mpitari-bato tsy mihoraka very ny androtokon'aina"</div>
+            <div class="ohabolana-item">"Ny aina tsy afaky ny tompony"</div>
+            <div class="ohabolana-item">"Ny aina aloka aman-javona: mihelina dia lasa"</div>
+            <div class="ohabolana-item">"Izay iray vatsy, iray aina"</div>
+            <div class="ohabolana-item">"Ramalina aza mifehy hazo tokana"</div>
+            <div class="ohabolana-item">"Ny mahery tsy miady tsy ela velona"</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Ny Zanaka -->
+      <div class="section-chapitre">
+        <h3>👶 3. NY ZANAKA</h3>
+        
+        <div class="grid-proverbs">
+          <div class="ohabolana-container">
+            <div class="ohabolana-item">"Ny zanaka no harena"</div>
+            <div class="ohabolana-item">"Ny hanambadian-kiterahana, ary ny hiterahana ho dimby"</div>
+            <div class="ohabolana-item">"Raha zanaka tsy tia Ray aman-dReny, miteraha mba hahita"</div>
+            <div class="ohabolana-item">"Ny Ray aman-dReny tsy mahafoy zanaka, fa ny zanaka ny mahafoy Ray aman-dReny"</div>
+            <div class="ohabolana-item">"Ny zaza fito tsy mahafehy trano, fa ny fanahy fito mahafehy trano"</div>
+            <div class="ohabolana-item">"Ny zaza tiana tsy hitsitsiana rotsan-kazo"</div>
+            <div class="ohabolana-item">"Iri-maha ory toy ny zanaka"</div>
+            <div class="ohabolana-item">"Tarana-boanjo, foto-boanemba"</div>
+            <div class="ohabolana-item">"Naniry zaza ka tera-dahy, nitady toko ka sendra vato, nikororoaka vary ka sendra rivotra"</div>
+            <div class="ohabolana-item">"Izay adala toa an-dRainy"</div>
+            <div class="ohabolana-item">"Fandrotrarana an-tanàna haolo ka mandimby Ray tsy satry"</div>
+            <div class="ohabolana-item">"Tsy misy mamy toy ny zanaka, fa raha manaiki-nono ahifika ihany"</div>
+            <div class="ohabolana-item">"Ny zanakao no adala ka ny an'ny hafa no omena tsiny"</div>
+            <div class="ohabolana-item">"Ny zanakao no soa tia ratsy, ka ny zanak'olona no tendren-kanana ody"</div>
+            <div class="ohabolana-item">"Ny mitera-dahy misy mpilanja, ny mitera-bavy misy mpitomany"</div>
+            <div class="ohabolana-item">"Maromaroa ny hateraka fa tsy hisy hilaozan'izay tsy ho tsara"</div>
+            <div class="ohabolana-item">"Tera-dahy ka hilevina andringiringim-bato; tera-bavy ka hilevina antsola-bato"</div>
+            <div class="ohabolana-item">"Tiako ny zanako ka omeko KOBA AINA 😅😂"</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Ny vintana, anjara, lahatra, tendry -->
+      <div class="section-chapitre">
+        <h3>✨ 4. NY VINTANA, ANJARA, LAHATRA, TENDRY</h3>
+        
+        <div class="subtitle">🌟 NY VINTANA :</div>
+        <div class="grid-proverbs">
+          <div class="ohabolana-container">
+            <div class="ohabolana-item">"Ratsy tarehy manam-bintana ka ny soa no manantona ho vady"</div>
+            <div class="ohabolana-item">"Raha vintana ny ho faty, tsy azo tazomina ny aina; fa raha vitan-ko velona, tsy azo vonoina ny aina"</div>
+            <div class="ohabolana-item">"Tolo-kena maty jiro ka vintana no andrasana"</div>
+            <div class="ohabolana-item">"Ratsy vintana toy ny saka; bevohoka vao atao hoe mamosavy"</div>
+            <div class="ohabolana-item">"Ratsy vintana toy ny akoho kely lasan'ny papango; tafiakatra ambony vao tra-pahoriana"</div>
+            <div class="ohabolana-item">"Aza miady vintana amin'ny akoho; fa na ho eny an-tsena aza izy lolohavina"</div>
+            <div class="ohabolana-item">"Faniriana ny hitaingin-tsoavaly; fa ny vintana mpiandry kisoa"</div>
+            <div class="ohabolana-item">"Ny faniriana tsy takatry ny vintana"</div>
+            <div class="ohabolana-item">"Ny te-hanana tsy mahaleo ny ambinina"</div>
+            <div class="ohabolana-item">"Avoavoin'ny vavany fa salakai'ny vintany"</div>
+            <div class="ohabolana-item">"Andriamanitra ny nanome fa i Balita no tsy nambinina"</div>
+            <div class="ohabolana-item">"Iraitampoha samihafa, samy manana ny vintany"</div>
+            <div class="ohabolana-item">"Ny vintana toy ny tanalaha ambony hazo, ka miova loko isaky ny zaza misioka"</div>
+          </div>
+        </div>
+        
+        <div class="subtitle">🎲 NY ANJARA :</div>
+        <div class="grid-proverbs">
+          <div class="ohabolana-container">
+            <div class="ohabolana-item">"Ny fitia toy ny zezika ka manan-jara izay izezehana"</div>
+            <div class="ohabolana-item">"Rafotsibe nahandro hoza-kena ka ny fofony ihany no anjarany"</div>
+            <div class="ohabolana-item">"Bingo manao matso ka misalovana ny anjara ho an'ny sasany"</div>
+            <div class="ohabolana-item">"Tovolahy manambady antitra: tolomina toa Renibe, avela amin'izao anjaran'ny tena"</div>
+            <div class="ohabolana-item">"Misao-bady tanora ka manome zara ho an'ny hafa"</div>
+          </div>
+        </div>
+        
+        <div class="subtitle">📜 NY LAHATRA :</div>
+        <div class="grid-proverbs">
+          <div class="ohabolana-container">
+            <div class="ohabolana-item">"Tsy misy biby te ho kary; fa mahery ny laha-Janahary"</div>
+            <div class="ohabolana-item">"Aza latsaina ny momba, fa tsy ny olombelona no Tompo mpandahatra"</div>
+            <div class="ohabolana-item">"Aza mimenomenona amin'ny anjara; fa tsy fantatra ny lahatry ny avo"</div>
+            <div class="ohabolana-item">"Hany hery dia ekeo ny lahatra; fa hadalana ny maika hananana"</div>
+            <div class="ohabolana-item">"Aza manantena hery; fa ny lahatra tsy azo rombahina"</div>
+            <div class="ohabolana-item">"Fikasana ny an'olombelona; fa ny lahatra an-Janahary"</div>
+          </div>
+        </div>
+        
+        <div class="subtitle">🎯 NY TENDRY :</div>
+        <div class="grid-proverbs">
+          <div class="ohabolana-container">
+            <div class="ohabolana-item">"I Bango aza adala ka izay manendry azy no tendriny"</div>
+            <div class="ohabolana-item">"Ady voatavo no nifanaovana; ka tendry mosavy no hita"</div>
+            <div class="ohabolana-item">"Ny zanakao no soa tia ratsy; ka ny zanak'olona no tendren-kanana ody"</div>
+            <div class="ohabolana-item">"Tsy mety raha manendry tena toy ny amboa ho an-tsena; na mandeha tsy vohizina toa lakan-jejo"</div>
+            <div class="ohabolana-item">"Boka mitendry valiha; tsy sitra-po fa tendry"</div>
+            <div class="ohabolana-item">"Vodisobika aza manan-tandrify"</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Ny fanahy -->
+      <div class="section-chapitre">
+        <h3>💫 5. NY FANAHY</h3>
+        
+        <div class="grid-proverbs">
+          <div class="ohabolana-container">
+            <div class="ohabolana-item">"Mitoto vary andro diavolana ka maka Fanahy ny akoho"</div>
+            <div class="ohabolana-item">"Ny hery tsy mahaleo ny Fanahy"</div>
+            <div class="ohabolana-item">"Aleo ratsy tarehy fa tsara Fanahy; toy izay ratsy Fanahy fa tsara tarehy"</div>
+            <div class="ohabolana-item">"Zaza fito tsy mahafehy trano fa ny Fanahy fito mahafehy trano"</div>
+            <div class="ohabolana-item">"Ny Fanahy no olona: ny Fanahy no maha olona"</div>
+            <div class="ohabolana-item">"Boka mandray tanana, ny Fanahy misy fa ny tanan-kandray no tsy misy"</div>
+            <div class="ohabolana-item">"Ny mpanjaka lozabe mahatahotra; ny malemy Fanahy mahamenatra"</div>
+            <div class="ohabolana-item">"Ady amin'adala ka ny manam-panahy no mandefitra"</div>
+            <div class="ohabolana-item">"Very Fanahy mbola velona tahaka ny valala voatango"</div>
+            <div class="ohabolana-item">"Fotsifotsy Fanahy toa takotra ka ny tain-kary avy no atao trano"</div>
+            <div class="ohabolana-item">"Aleo kely Fanahy sitrak'olona; toy izay be Fanahy maty foana"</div>
+            <div class="ohabolana-item">"Ny morodorodo fanaon'ny matanjaka; ny milantolanto famindra fanaon'ny manam-panahy"</div>
+            <div class="ohabolana-item">"Raha mitsapa rano: hazo lava raisina. Fa raha mitady fahendrena dia Fanahy ny jerena"</div>
+            <div class="ohabolana-item">"Ny firaka no tsy mba vola dia ny lemilemim-panahiny"</div>
+            <div class="ohabolana-item">"Atsipy ny tady eny an-tandroky ny omby. Atsipy ny teny ao am-pon'ny mahalala"</div>
+            <div class="ohabolana-item">"Aza mikoban-drano marivo fa mahavery Fanahy ny tsikovoka"</div>
+            <div class="ohabolana-item">"Fanahin-kisoa: tsy manan-tompo ka be tondro molotra"</div>
+            <div class="ohabolana-item">"Fanahin-dalitra ka ny malotoloto no mahafinaritra azy"</div>
+            <div class="ohabolana-item">"Mangahazo mangidy malemy ka hohanina amin'ny halemem-panahiny"</div>
+            <div class="ohabolana-item">"Teny atsipin'ny manam-panahy ka raisin'ny mahalala"</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Torohevitra -->
+      <div class="section-chapitre">
+        <h3>💡 TOROHEVITRA HO AN'NY FANADINANA</h3>
+        
+        <div class="note-box">
+          <strong>📌 Torohevitra :</strong><br>
+          - <span class="highlight">Vakio tsara</span> ny ohabolana sy ny heviny<br>
+          - <span class="highlight">Fantaro ny sokajy</span> misy ny ohabolana (olombelona, aina, zanaka, sns.)<br>
+          - <span class="highlight">Azonao tsianjery</span> ny ohabolana maro mba hampiasaina amin'ny kabary na fanadinana<br>
+          - <span class="highlight">Mahay manoratra ny hevitry ny ohabolana</span> amin'ny teny tsotra<br>
+          - <span class="highlight">Amplazao amin'ny toe-javatra iainan'ny olona</span> ny ohabolana mba hanehoana fa azonao tsara ny heviny
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Malagasy | Ohabolana sy Oham-pitenenana — Mifanaraka amin'ny programa 2024
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

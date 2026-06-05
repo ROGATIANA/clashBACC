@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVT · La Génétique Mendelienne | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2026</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2026 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- en-tête -->
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../index.html">Accueil</a> ›
+        <a href="../../../Cours.html">Leçons</a> ›
+        <a href="../SVT.html">SVT</a> › Chapitre 3
+      </div>
+      <div class="page-title">LA GÉNÉTIQUE MENDELIENNE <span>🧬 CHAPITRE 3</span></div>
+      <div class="page-subtitle">Transmission des caractères héréditaires, lois de Mendel, monohybridisme et dihybridisme — Baccalauréat</div>
+    </div>
+
+    <!-- bannière matière -->
+    <div class="subject-banner">
+      <div class="subject-icon-large">🧬</div>
+      <div class="subject-info">
+        <h3>Génétique mendelienne</h3>
+        <p>Notions fondamentales · Lois de Mendel · Croisements · Cas particuliers</p>
+      </div>
+      <div class="chapter-count">Fiche complète</div>
+    </div>
+
+    <!-- CONTENU PRINCIPAL DU CHAPITRE -->
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>🧬 INTRODUCTION</h3>
+        <p>Le but de ce chapitre est d'étudier les différents types de génétique qui existent. Pour traiter un exercice de génétique mendélienne, il faut suivre les professeurs mais aussi ne pas trop réfléchir pour éviter certains pièges.</p>
+        <p>À chaque moment, si on commence à étudier ou traiter un exercice, la plupart du temps la première question sert toujours à analyser. L'analyse est facile, mais ce qui complique tout, ce sont les types de croisement. Vous aurez ici tous les types possibles.</p>
+      </div>
+
+      <!-- I – NOTIONS FONDAMENTALES -->
+      <div class="section-chapitre">
+        <h3>📚 I – NOTIONS FONDAMENTALES</h3>
+        
+        <ul>
+          <li><span class="highlight">La génétique</span> : science qui étudie la transmission des caractères héréditaires d'une génération à l'autre.</li>
+          <li><span class="highlight">Le caractère</span> : variable qualitative (couleur, taille, forme, aspect...). Dans le cas germinal, chaque caractère est contrôlé par un seul gène.</li>
+          <li><span class="highlight">Le gène</span> : portion d'ADN située à un emplacement précis sur le chromosome (<span class="highlight">locus</span>), contrôle la synthèse d'une protéine.
+            <ul>
+              <li>Si le gène est porté par un <span class="highlight">autosome</span> → transmission autosomique (peut être influencée par le sexe).</li>
+              <li>Si le gène est porté par un <span class="highlight">gonosome (X ou Y)</span> → transmission gonosomique (<span class="highlight">liée au sexe</span>).</li>
+            </ul>
+          </li>
+          <li><span class="highlight">Le caractère DOMINANT</span> : caractère parental qui apparaît en 1ʳᵉ génération <span class="highlight">F₁</span>. On le note par une <span class="highlight">grande lettre</span>.</li>
+          <li><span class="highlight">Le caractère RÉCESSIF</span> : caractère parental qui disparaît en F₁ et réapparaît en F₂. On le note par une <span class="highlight">petite lettre</span>.</li>
+          <li><span class="highlight">Le caractère CODOMINANT</span> : deux caractères qui donnent en F₁ un aspect non parental. On les note par des <span class="highlight">grandes lettres</span>.</li>
+          <li><span class="highlight">Monohybridisme</span> : étude d'un seul caractère.</li>
+          <li><span class="highlight">Dihybridisme</span> : étude de deux caractères.</li>
+          <li><span class="highlight">Polyhybridisme</span> : étude de plusieurs caractères.</li>
+          <li><span class="highlight">Le génotype</span> : composition allélique de l'individu (structure invisible). Chaque caractère est contrôlé par un gène représenté par deux allèles (identiques ou différents).</li>
+        </ul>
+        
+        <div class="center-text note-box">
+          <strong>Un caractère = Un gène = Deux allèles</strong>
+        </div>
+        
+        <ul>
+          <li><span class="highlight">Le phénotype</span> : apparence de l'individu (structure visible). Chaque caractère est représenté par un seul allèle (sauf codominance où phénotype = génotype).</li>
+          <li><span class="highlight">Lignée pure (race pure / homozygote)</span> : lignée qui n'accepte pas l'apparition d'un nouveau caractère si elle est autofécondée. Les allèles sont identiques, produit un seul type de gamète (<span class="highlight">homogamétique</span>).</li>
+          <li><span class="highlight">Lignée hybride (hétérozygote)</span> : accepte l'apparition d'un nouvel individu à l'autofécondation. Plusieurs allèles différents, produit plusieurs types de gamètes.</li>
+          <li><span class="highlight">Test-cross (croisement test)</span> : croisement d'un individu à caractère dominant avec un individu récessif pour déterminer le génotype du dominant.
+            <ul>
+              <li>Descendance phénotype unique → individu testé <span class="highlight">homozygote</span></li>
+              <li>Descendance ½ - ½ → individu testé <span class="highlight">hétérozygote</span></li>
+            </ul>
+          </li>
+          <li><span class="highlight">Back-cross (croisement retour)</span> : croisement d'un individu F₁ avec l'un de ses parents.
+            <ul>
+              <li>Descendance phénotype unique → parent croisé avec F₁ est <span class="highlight">dominant</span></li>
+              <li>Descendance ½ - ½ → parent est <span class="highlight">récessif</span></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- II – LES LOIS DE MENDEL -->
+      <div class="section-chapitre">
+        <h3>📜 II – LES LOIS DE MENDEL</h3>
+        
+        <div class="law-box">
+          <h4>1ʳᵉ Loi de Mendel : Uniformité de l'hybride de F₁</h4>
+          <p>Si la descendance est <span class="highlight">homogène</span> → les individus croisés sont des <span class="highlight">races pures</span>.<br>
+          Si la descendance est <span class="highlight">hétérogène</span> → les individus croisés sont des hybrides (l'un des deux).</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>2ᵉ Loi de Mendel : Disjonction des allèles</h4>
+          <p>Le gamète porte <span class="highlight">un seul allèle de chaque gène</span>.</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>3ᵉ Loi de Mendel : Ségrégation indépendante des gènes</h4>
+          <p>Les gènes (caractères) se transmettent indépendamment les uns des autres.</p>
+        </div>
+      </div>
+
+      <!-- III – ÉTUDE DE TOUS LES CAS POSSIBLES -->
+      <div class="section-chapitre">
+        <h3>🔬 III – ÉTUDE DE TOUS LES CAS POSSIBLES</h3>
+        
+        <div class="img-container">
+          <img src="img/e1.png" alt="Tableau récapitulatif">
+          <div class="img-caption">Fig. 1 – Récapitulatif des types génétiques</div>
+        </div>
+        
+        <h4>Cas 1 : Gène autosome</h4>
+        <div class="img-container">
+          <img src="img/e2.png" alt="Exemple génotype autosome">
+          <div class="img-caption">Fig. 2 – Exemple de génotype</div>
+        </div>
+        
+        <h4>Types de gamètes</h4>
+        <div class="img-container">
+          <img src="img/e3.png" alt="Types de gamètes">
+          <div class="img-caption">Fig. 3 – Formation des gamètes</div>
+        </div>
+        
+        <h4>Cas de Test-cross</h4>
+        <div class="img-container">
+          <img src="img/e4.png" alt="Test-cross">
+          <div class="img-caption">Fig. 4 – Schéma du Test-cross</div>
+        </div>
+        
+        <h4>Cas de Back-cross</h4>
+        <div class="img-container">
+          <img src="img/e5.png" alt="Back-cross">
+          <div class="img-caption">Fig. 5 – Schéma du Back-cross</div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Remarque :</strong> En dihybridisme, on utilise le Test-cross ou le Back-cross pour déterminer le nombre de gamètes formés par l'individu hybride et leurs proportions.
+        </div>
+      </div>
+
+      <!-- IV – CAS DE MONOHYBRIDISME -->
+      <div class="section-chapitre">
+        <h3>🧫 IV – CAS DE MONOHYBRIDISME (Gène autosome dominant)</h3>
+        
+        <div class="note-box">
+          <strong>🔬 Expérience :</strong> On croise deux drosophiles : l'une à corps gris, l'autre à corps noir. En F₁, toutes les drosophiles ont le corps gris.
+        </div>
+        
+        <h4>Question 1 : Analyser ce résultat</h4>
+        <p><span class="highlight">Solution :</span></p>
+        <ul>
+          <li>Un seul caractère étudié (la couleur) → <span class="highlight">Monohybridisme</span></li>
+          <li>F₁ est <span class="highlight">homogène</span> (corps gris)</li>
+          <li>Les parents sont des <span class="highlight">races pures</span></li>
+          <li>Le gris domine le noir : <span class="formula">G &gt; g</span></li>
+          <li>Le croisement vérifie la <span class="highlight">1ʳᵉ loi de Mendel</span></li>
+        </ul>
+        
+        <div class="img-container">
+          <img src="img/e6.png" alt="Croisement monohybridisme">
+          <div class="img-caption">Fig. 6 – Croisement des races pures</div>
+        </div>
+        
+        <h4>Question 2 : Croisement des individus F₁</h4>
+        <p>On obtient en F₂ : 210 drosophiles à corps gris et 70 à corps noir.</p>
+        
+        <div class="img-container">
+          <img src="img/e8.png" alt="Échiquier de croisement F1 x F1">
+          <div class="img-caption">Fig. 7 – Échiquier de croisement F₁ × F₁</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/e10.png" alt="Rapport phénotypique">
+          <div class="img-caption">Fig. 8 – Rapport phénotypique 3:1</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/e13.png" alt="Résumé monohybridisme">
+          <div class="img-caption">Fig. 9 – Récapitulatif du monohybridisme</div>
+        </div>
+      </div>
+
+      <!-- V – GÈNE INFLUENCÉ PAR LE SEXE -->
+      <div class="section-chapitre">
+        <h3>⚥ V – CAS DU GÈNE INFLUENCÉ PAR LE SEXE</h3>
+        
+        <p>C'est un gène dont l'un des allèles est dominant chez le mâle et récessif chez la femelle. Noté <span class="formula">G₁ → A et B</span> tel que <span class="formula">A</span> est dominant chez le mâle et récessif chez la femelle.</p>
+        
+        <div class="img-container">
+          <img src="img/e14.png" alt="Gène influencé par le sexe">
+          <div class="img-caption">Fig. 10 – Caractéristiques du gène influencé par le sexe</div>
+        </div>
+        
+        <h4>Exemple chez les bovins</h4>
+        <p>Allèle responsable des cornes <span class="formula">D</span> domine chez le mâle.</p>
+        <ul>
+          <li><span class="formula">D</span> : cornes</li>
+          <li><span class="formula">S</span> : absence de cornes</li>
+        </ul>
+        
+        <div class="img-container">
+          <img src="img/e15.png" alt="Bovins gène influencé">
+          <div class="img-caption">Fig. 11 – Transmission chez les bovins</div>
+        </div>
+      </div>
+
+      <!-- VI – CAS DES ABEILLES -->
+      <div class="section-chapitre">
+        <h3>🐝 VI – CAS DES ABEILLES (Haplodiploïdie)</h3>
+        
+        <div class="img-container">
+          <img src="img/e16.png" alt="Système haplodiploïde">
+          <div class="img-caption">Fig. 12 – Système de détermination du sexe chez les abeilles</div>
+        </div>
+        
+        <p>Dans une cellule haploïde (mâle d'abeille), le gène est représenté par un seul allèle.</p>
+        
+        <div class="note-box">
+          <strong>🔬 Expérience :</strong> On croise deux races pures d'abeilles :<br>
+          Mâle de couleur argent × Femelle de couleur noire<br>
+          On obtient en F₁ : mâles de couleur noire et femelles de couleur intermédiaire.
+        </div>
+        
+        <div class="img-container">
+          <img src="img/e17.png" alt="Expérience abeilles">
+          <div class="img-caption">Fig. 13 – Résultats expérimentaux</div>
+        </div>
+        
+        <h4>Solution</h4>
+        <ul>
+          <li>Un seul caractère étudié → <span class="highlight">Monohybridisme</span></li>
+          <li>Les femelles F₁ sont hybrides, couleur intermédiaire → <span class="highlight">Codominance (dominance intermédiaire)</span></li>
+          <li>Noir : <span class="formula">N</span> ; Argent : <span class="formula">A</span></li>
+          <li>Le croisement confirme la 1ʳᵉ loi de Mendel</li>
+        </ul>
+        
+        <div class="img-container">
+          <img src="img/e18.png" alt="Croisement abeilles">
+          <div class="img-caption">Fig. 14 – Échiquier de croisement chez les abeilles</div>
+        </div>
+      </div>
+
+      <!-- VII – GÈNE GONOSOME -->
+      <div class="section-chapitre">
+        <h3>🟡 VII – CAS DU GÈNE GONOSOME (LIÉ AU SEXE)</h3>
+        
+        <div class="img-container">
+          <img src="img/e21.png" alt="Gène gonosome">
+          <div class="img-caption">Fig. 15 – Gène porté par le chromosome X</div>
+        </div>
+        
+        <p>Le gène est porté par le chromosome X. Critères de reconnaissance :</p>
+        <ul>
+          <li><span class="highlight">1ʳᵉ critère</span> : Le croisement est un croisement inverse, ou l'une des F₁ est différente.</li>
+          <li><span class="highlight">2ᵉ critère</span> : Les mâles de F₁ diffèrent des femelles, ou les mâles sont identiques à leur mère. On détermine la dominance à partir du phénotype des femelles F₁.</li>
+          <li><span class="highlight">3ᵉ critère</span> : La diversité des mâles de F₁ permet de déterminer la dominance à partir du phénotype de la mère.</li>
+        </ul>
+        
+        <div class="note-box">
+          <strong>📌 Remarque :</strong> On peut déterminer le sexe de l'individu à partir de son phénotype s'il ne porte pas le phénotype dominant.
+        </div>
+      </div>
+
+      <!-- VIII – CAS DE DIHYBRIDISME -->
+      <div class="section-chapitre">
+        <h3>🧬 VIII – CAS DE DIHYBRIDISME</h3>
+        
+        <div class="img-container">
+          <img src="img/e22.png" alt="Dihybridisme">
+          <div class="img-caption">Fig. 16 – Deux gènes : A/a et B/b</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/e23.png" alt="Types gamètes dihybridisme">
+          <div class="img-caption">Fig. 17 – Types de gamètes possibles</div>
+        </div>
+        
+        <h4>Cas de deux gènes autosomes</h4>
+        <div class="img-container">
+          <img src="img/e24.png" alt="Deux gènes autosomes">
+          <div class="img-caption">Fig. 18 – Croisement dihybridisme</div>
+        </div>
+      </div>
+
+      <!-- IX – CARTE FACTORIELLE -->
+      <div class="section-chapitre">
+        <h3>🗺️ IX – CARTE FACTORIELLE (Gènes liés)</h3>
+        
+        <p>Pour déterminer la carte factorielle d'un gène par rapport à d'autres gènes, il faut calculer le pourcentage de recombinés, qui correspond à la distance entre les gènes.</p>
+        
+        <div class="note-box">
+          <strong>📌 Règle :</strong> <span class="formula">1% = 1 cM (centi-Morgan)</span>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/e25.png" alt="Calcul pourcentage recombinés">
+          <div class="img-caption">Fig. 19 – Calcul du pourcentage de recombinés</div>
+        </div>
+        
+        <h4>Emplacement des gènes</h4>
+        <div class="img-container">
+          <img src="img/e26.png" alt="Carte factorielle">
+          <div class="img-caption">Fig. 20 – Détermination de la carte factorielle</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/e27.png" alt="Exemple carte factorielle">
+          <div class="img-caption">Fig. 21 – Exemple de carte factorielle</div>
+        </div>
+      </div>
+
+      <!-- Récapitulatif -->
+      <div class="section-chapitre">
+        <h3>📝 RÉCAPITULATIF</h3>
+        <div class="note-box">
+          <strong>💡 À retenir :</strong><br>
+          - <span class="highlight">Test-cross</span> : croisement avec un individu récessif pour déterminer le génotype d'un dominant.<br>
+          - <span class="highlight">Back-cross</span> : croisement d'un individu F₁ avec l'un de ses parents.<br>
+          - <span class="highlight">Monohybridisme</span> : étude d'un seul caractère → rapport 3:1 en F₂.<br>
+          - <span class="highlight">Dihybridisme</span> : étude de deux caractères → rapport 9:3:3:1 si gènes indépendants.<br>
+          - <span class="highlight">Gène lié au sexe</span> : porté par les chromosomes sexuels X ou Y.<br>
+          - <span class="highlight">Codominance</span> : deux allèles s'expriment ensemble → phénotype intermédiaire.
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions SVT | Chapitre 3 : La Génétique Mendelienne — Conforme au programme 2026
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // logo spin
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    // sidebar mobile toggle
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

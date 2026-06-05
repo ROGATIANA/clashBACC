@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Français · Grammaire | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre .highlight-red {
+      color: #e74c3c;
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(231, 76, 60, 0.1);
+      border-left: 3px solid #e74c3c;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .formula {
+      font-family: monospace;
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .fr-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.8rem;
+      text-align: center;
+    }
+    
+    .fr-card .fr-name {
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    .example {
+      font-style: italic;
+      color: var(--gold);
+    }
+    
+    .button-area {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .btn-chapitre {
+      display: inline-block;
+      background: rgba(231, 76, 60, 0.15);
+      border: 1px solid rgba(231, 76, 60, 0.3);
+      border-radius: 10px;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      color: var(--text-on-dark);
+      transition: all 0.3s ease;
+      text-align: center;
+      flex: 1;
+      min-width: 180px;
+    }
+    
+    .btn-chapitre:hover {
+      background: rgba(231, 76, 60, 0.3);
+      transform: translateY(-2px);
+    }
+    
+    .btn-chapitre strong {
+      color: var(--gold);
+      display: block;
+      font-size: 1rem;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+      .btn-chapitre {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+        min-width: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2024</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../index.html">Accueil</a> ›
+        <a href="../../../Cours.html">Leçons</a> ›
+        <a href="../FRS.html">Français</a> › Chapitre 2
+      </div>
+      <div class="page-title">GRAMMAIRE <span>✍️ CHAPITRE 2</span></div>
+      <div class="page-subtitle">Conjugaison, syntaxe, orthographe, analyse grammaticale</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">✍️</div>
+      <div class="subject-info">
+        <h3>Grammaire</h3>
+        <p>Mots · Pronoms · Voix active/passive · Discours direct/indirect · Pronoms relatifs · Négation · Nominalisation</p>
+      </div>
+      <div class="chapter-count">Cours complet</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Navigation vers les sous-chapitres -->
+      <div class="section-chapitre">
+        <h3>📖 SOUS-CHAPITRES</h3>
+        
+        <div class="button-area">
+          <a href="#" class="btn-chapitre">
+            <strong>Chapitre 1</strong>
+            Les mots
+          </a>
+          <a href="#" class="btn-chapitre">
+            <strong>Chapitre 2</strong>
+            Les pronoms personnels
+          </a>
+          <a href="#" class="btn-chapitre">
+            <strong>Chapitre 3</strong>
+            La forme passive et active
+          </a>
+          <a href="#" class="btn-chapitre">
+            <strong>Chapitre 4</strong>
+            Le discours direct et indirect
+          </a>
+          <a href="#" class="btn-chapitre">
+            <strong>Chapitre 5</strong>
+            Les pronoms relatifs
+          </a>
+          <a href="#" class="btn-chapitre">
+            <strong>Chapitre 6</strong>
+            La forme négative
+          </a>
+          <a href="#" class="btn-chapitre">
+            <strong>Chapitre 7</strong>
+            La nominalisation
+          </a>
+        </div>
+      </div>
+
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>📚 INTRODUCTION</h3>
+        <p>La <span class="highlight">grammaire</span> est l'ensemble des règles qui organisent une langue. Maîtriser la grammaire française est essentiel pour l'expression écrite et orale, ainsi que pour la réussite des épreuves du Baccalauréat (commentaire, dissertation, dictée).</p>
+        
+        <div class="note-box">
+          <strong>📌 Objectifs :</strong><br>
+          - Connaître les classes grammaticales (natures des mots)<br>
+          - Maîtriser l'accord des pronoms et des verbes<br>
+          - Savoir transformer une phrase (voix active/passive, discours direct/indirect)<br>
+          - Utiliser correctement la négation et la nominalisation
+        </div>
+      </div>
+
+      <!-- Aperçu des chapitres -->
+      <div class="section-chapitre">
+        <h3>📝 APERÇU DES NOTIONS</h3>
+        
+        <div class="grid-formulas">
+          <div class="fr-card">
+            <p class="fr-name">📖 Les mots</p>
+            <p>Noms, verbes, adjectifs, adverbes, prépositions, conjonctions, interjections.</p>
+          </div>
+          <div class="fr-card">
+            <p class="fr-name">👤 Les pronoms personnels</p>
+            <p>Je, tu, il, elle, nous, vous, ils, elles (sujet) ; me, te, le, la, nous, vous, les (complément).</p>
+          </div>
+          <div class="fr-card">
+            <p class="fr-name">🔄 La forme passive et active</p>
+            <p>Voix active : le sujet fait l'action.<br>Voix passive : le sujet subit l'action.</p>
+          </div>
+          <div class="fr-card">
+            <p class="fr-name">💬 Le discours direct et indirect</p>
+            <p>Discours direct : citation exacte avec guillemets.<br>Discours indirect : rapport des paroles sans guillemets.</p>
+          </div>
+          <div class="fr-card">
+            <p class="fr-name">🔗 Les pronoms relatifs</p>
+            <p>Qui, que, quoi, dont, où, lequel, auquel, duquel.</p>
+          </div>
+          <div class="fr-card">
+            <p class="fr-name">🚫 La forme négative</p>
+            <p>Ne... pas, ne... plus, ne... jamais, ne... rien, ne... personne, etc.</p>
+          </div>
+          <div class="fr-card">
+            <p class="fr-name">📌 La nominalisation</p>
+            <p>Transformation d'un verbe ou d'un adjectif en nom (ex: changer → changement, beau → beauté).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Règles essentielles -->
+      <div class="section-chapitre">
+        <h3>⚡ RÈGLES ESSENTIELLES</h3>
+        
+        <div class="law-box">
+          <strong>📌 1. L'accord du participe passé :</strong><br>
+          - Avec l'auxiliaire "être" : le participe passé s'accorde en genre et en nombre avec le sujet.<br>
+          <span class="example">Elle est <strong>venue</strong>. Ils sont <strong>partis</strong>.</span><br>
+          - Avec l'auxiliaire "avoir" : le participe passé s'accorde avec le COD si celui-ci est placé avant.<br>
+          <span class="example">La lettre que j'ai <strong>écrite</strong>.</span>
+        </div>
+        
+        <div class="law-box">
+          <strong>📌 2. Les homophones grammaticalux :</strong><br>
+          - <span class="example">a/à</span> : a = verbe avoir / à = préposition<br>
+          - <span class="example">et/est</span> : et = conjonction / est = verbe être<br>
+          - <span class="example">on/ont</span> : on = pronom indéfini / ont = verbe avoir<br>
+          - <span class="example">son/sont</span> : son = déterminant possessif / sont = verbe être
+        </div>
+        
+        <div class="law-box">
+          <strong>📌 3. La concordance des temps :</strong><br>
+          - Au discours indirect : présent → imparfait, passé composé → plus-que-parfait, futur → conditionnel.<br>
+          <span class="example">Il dit : "Je viendrai." → Il a dit qu'il <strong>viendrait</strong>.</span>
+        </div>
+      </div>
+
+      <!-- Conseils pour la rédaction -->
+      <div class="section-chapitre">
+        <h3>💡 CONSEILS POUR LA RÉDACTION</h3>
+        
+        <div class="note-box">
+          <strong>📌 À retenir :</strong><br>
+          - <span class="highlight">Relisez-vous</span> toujours pour corriger les fautes d'accord et de conjugaison<br>
+          - <span class="highlight">Variez les structures</span> de phrases (évitez les phrases trop longues ou trop courtes)<br>
+          - <span class="highlight">Utilisez des connecteurs logiques</span> (donc, cependant, néanmoins, par conséquent, etc.)<br>
+          - <span class="highlight">Évitez les répétitions</span> (utilisez des pronoms ou des synonymes)<br>
+          - <span class="highlight">Maîtrisez la ponctuation</span> (point, virgule, point-virgule, deux-points)
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>💡 RÉCAPITULATIF ET CONSEILS POUR LE BAC</h3>
+        
+        <div class="note-box">
+          <strong>📌 Points clés à retenir :</strong><br>
+          - <span class="highlight">Classes grammaticales</span> : savoir distinguer nature et fonction des mots<br>
+          - <span class="highlight">Pronoms personnels</span> : maîtriser les pronoms sujets, compléments, réfléchis<br>
+          - <span class="highlight">Voix active/passive</span> : savoir transformer une phrase<br>
+          - <span class="highlight">Discours direct/indirect</span> : connaître les règles de concordance des temps<br>
+          - <span class="highlight">Pronoms relatifs</span> : utiliser qui, que, dont, où correctement<br>
+          - <span class="highlight">Négation</span> : ne pas oublier la double négation (ne... pas)<br>
+          - <span class="highlight">Nominalisation</span> : enrichir son vocabulaire et varier les tournures
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions Français | Chapitre 2 : Grammaire — Conforme au programme 2024
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

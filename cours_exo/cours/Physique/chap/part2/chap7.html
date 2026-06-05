@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physique · Oscillations Électriques Libres : Circuit LC | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../..//style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem;
+    }
+    
+    .img-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(52,152,219,0.1);
+      border-left: 3px solid #3498db;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .formula {
+      font-family: monospace;
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2026</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2026 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../../index.html">Accueil</a> ›
+        <a href="../../../../Cours.html">Leçons</a> ›
+        <a href="../../Physique.html">Physique</a> › Électromagnétisme</a> › Chapitre 7
+      </div>
+      <div class="page-title">OSCILLATIONS ÉLECTRIQUES LIBRES <span>📡 CHAPITRE 7</span></div>
+      <div class="page-subtitle">Circuit LC, équation différentielle, pulsation propre, période, énergie — Électromagnétisme · Baccalauréat</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">📡</div>
+      <div class="subject-info">
+        <h3>Oscillations électriques libres</h3>
+        <p>Circuit LC · Équation différentielle · Pulsation propre ω₀ · Période T₀ · Échange d'énergie</p>
+      </div>
+      <div class="chapter-count">Cours complet</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>📡 INTRODUCTION</h3>
+        <p>Un circuit composé d'une <span class="highlight">bobine (L)</span> et d'un <span class="highlight">condensateur (C)</span> forme un <span class="highlight">circuit LC</span>. Ce circuit est capable d'entretenir des <span class="highlight">oscillations électriques libres</span> au cours desquelles l'énergie passe alternativement du condensateur (énergie électrique) à la bobine (énergie magnétique).</p>
+        
+        <div class="note-box">
+          <strong>📌 Analogie mécanique :</strong><br>
+          - Le circuit LC est analogue à un <span class="highlight">oscillateur mécanique (masse-ressort)</span><br>
+          - La charge q du condensateur ↔ position x<br>
+          - Le courant i = dq/dt ↔ vitesse v<br>
+          - L'énergie électrique ½·C·u² ↔ énergie potentielle élastique ½·k·x²<br>
+          - L'énergie magnétique ½·L·i² ↔ énergie cinétique ½·m·v²
+        </div>
+      </div>
+
+      <!-- I – CIRCUIT LC IDÉAL -->
+      <div class="section-chapitre">
+        <h3>🔋 I – CIRCUIT LC IDÉAL (SANS RÉSISTANCE)</h3>
+        
+        <div class="law-box">
+          <h4>Schéma et équation différentielle</h4>
+          <p>Circuit LC série : condensateur initialement chargé, bobine idéale (r = 0).</p>
+          <p>Loi des mailles : <span class="formula">u_C + u_L = 0</span></p>
+          <p>Avec <span class="formula">u_C = q/C</span> et <span class="formula">u_L = L·di/dt = L·d²q/dt²</span> :</p>
+          <p><span class="formula">L·d²q/dt² + q/C = 0</span></p>
+          <p>Soit : <span class="formula">d²q/dt² + (1/LC)·q = 0</span></p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Pulsation propre</h4>
+          <p>On pose <span class="formula">ω₀² = 1/(LC)</span></p>
+          <p>L'équation devient : <span class="formula">d²q/dt² + ω₀²·q = 0</span></p>
+          <p><span class="highlight">ω₀ = 1/√(LC)</span> (pulsation propre, rad/s)</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Solution générale</h4>
+          <p><span class="formula">q(t) = Q_m·cos(ω₀·t + φ)</span></p>
+          <p><span class="formula">i(t) = dq/dt = -Q_m·ω₀·sin(ω₀·t + φ)</span></p>
+          <p><span class="formula">u_C(t) = q/C = U_m·cos(ω₀·t + φ)</span> avec <span class="formula">U_m = Q_m/C</span></p>
+          <p>où Q_m et φ sont déterminés par les conditions initiales.</p>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Conditions initiales :</strong><br>
+          - Si à t=0, condensateur chargé (q(0)=Q₀, i(0)=0) → q(t)=Q₀·cos(ω₀·t)<br>
+          - Si à t=0, condensateur déchargé, courant max (i(0)=I₀) → q(t)=Q₀·sin(ω₀·t)
+        </div>
+      </div>
+
+      <!-- II – PÉRIODE DES OSCILLATIONS -->
+      <div class="section-chapitre">
+        <h3>⏱️ II – PÉRIODE DES OSCILLATIONS</h3>
+        
+        <div class="law-box">
+          <h4>Période propre</h4>
+          <p><span class="formula">T₀ = 2π/ω₀ = 2π·√(LC)</span></p>
+          <p>Formule de <span class="highlight">Thomson</span> : <span class="formula">T₀ = 2π√(LC)</span></p>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Remarques :</strong><br>
+          - La période est <span class="highlight">indépendante</span> de l'amplitude des oscillations<br>
+          - C'est le phénomène d'<span class="highlight">isochronisme</span> des oscillations (analogue au pendule simple)<br>
+          - En réalité, une résistance résiduelle provoque un amortissement
+        </div>
+      </div>
+
+      <!-- III – ÉNERGIE DANS LE CIRCUIT LC -->
+      <div class="section-chapitre">
+        <h3>⚡ III – ÉNERGIE DANS LE CIRCUIT LC</h3>
+        
+        <div class="law-box">
+          <h4>Énergie électrique (condensateur)</h4>
+          <p><span class="formula">E_e = ½·C·u_C² = ½·q²/C</span></p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Énergie magnétique (bobine)</h4>
+          <p><span class="formula">E_m = ½·L·i²</span></p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Conservation de l'énergie mécanique (circuit idéal)</h4>
+          <p><span class="formula">E_totale = E_e + E_m = constante = ½·Q₀²/C = ½·L·I₀²</span></p>
+          <p>L'énergie oscille entre le condensateur et la bobine sans pertes.</p>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Interprétation :</strong><br>
+          - À t = 0 : énergie maximale dans le condensateur (E = ½·C·U₀²)<br>
+          - À t = T/4 : énergie maximale dans la bobine (E = ½·L·I₀²)<br>
+          - À t = T/2 : énergie à nouveau maximale dans le condensateur (charge opposée)
+        </div>
+      </div>
+
+      <!-- IV – AMORTISSEMENT DES OSCILLATIONS -->
+      <div class="section-chapitre">
+        <h3>📉 IV – CIRCUIT RLC SÉRIE (AMORTISSEMENT)</h3>
+        
+        <div class="law-box">
+          <h4>Circuit réel avec résistance R</h4>
+          <p>En présence d'une résistance R (bobine réelle, résistance du circuit), l'énergie est dissipée par effet Joule.</p>
+          <p>Équation différentielle : <span class="formula">L·d²q/dt² + R·dq/dt + q/C = 0</span></p>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Régimes d'oscillations :</strong><br>
+          - <span class="highlight">Régime pseudo-périodique</span> (R faible) : oscillations amorties<br>
+          - <span class="highlight">Régime apériodique</span> (R forte) : retour à l'équilibre sans oscillation<br>
+          - <span class="highlight">Régime critique</span> (R = R_c) : retour le plus rapide sans oscillation
+        </div>
+      </div>
+
+      <!-- V – FORMULAIRE -->
+      <div class="section-chapitre">
+        <h3>📝 V – FORMULAIRE</h3>
+        
+        <div class="grid-formulas">
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Pulsation propre</strong><br>
+            <span class="formula">ω₀ = 1/√(LC)</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Période (Thomson)</strong><br>
+            <span class="formula">T₀ = 2π√(LC)</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Fréquence propre</strong><br>
+            <span class="formula">f₀ = 1/(2π√(LC))</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Charge q(t)</strong><br>
+            <span class="formula">q(t) = Q_m·cos(ω₀t+φ)</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Énergie totale</strong><br>
+            <span class="formula">E = ½·C·U₀² = ½·L·I₀²</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Condition de régime critique</strong><br>
+            <span class="formula">R_c = 2√(L/C)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Images du cours -->
+      <div class="section-chapitre">
+        <h3>📚 COURS COMPLET</h3>
+        
+        <div class="img-container">
+          <img src="img/c41.jpg" alt="Cours circuit LC 1">
+          <div class="img-caption">Fig. 1 – Circuit LC : schéma et constitution</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c42.jpg" alt="Cours circuit LC 2">
+          <div class="img-caption">Fig. 2 – Équation différentielle du circuit LC</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c43.jpg" alt="Cours circuit LC 3">
+          <div class="img-caption">Fig. 3 – Pulsation propre ω₀ = 1/√(LC)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c44.jpg" alt="Cours circuit LC 4">
+          <div class="img-caption">Fig. 4 – Période des oscillations (formule de Thomson)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c45.jpg" alt="Cours circuit LC 5">
+          <div class="img-caption">Fig. 5 – Énergie dans le circuit LC : échange électrique/magnétique</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c46.jpg" alt="Cours circuit LC 6">
+          <div class="img-caption">Fig. 6 – Circuit RLC : amortissement des oscillations</div>
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>💡 RÉCAPITULATIF ET CONSEILS</h3>
+        
+        <div class="note-box">
+          <strong>📌 Points clés à retenir :</strong><br>
+          - Le circuit LC est un <span class="highlight">oscillateur électrique idéal</span> (sans pertes)<br>
+          - Équation différentielle : <span class="formula">d²q/dt² + ω₀²·q = 0</span><br>
+          - <span class="highlight">Pulsation propre</span> : <span class="formula">ω₀ = 1/√(LC)</span><br>
+          - <span class="highlight">Période propre (Thomson)</span> : <span class="formula">T₀ = 2π√(LC)</span><br>
+          - La charge et le courant sont en <span class="highlight">quadrature de phase</span> (déphasage de π/2)<br>
+          - L'énergie oscille entre le condensateur et la bobine sans pertes (circuit idéal)<br>
+          - En présence de résistance, les oscillations sont <span class="highlight">amorties</span>
+        </div>
+        
+        <div class="law-box">
+          <strong>🎯 Méthode pour les exercices :</strong><br>
+          1. Identifier si le circuit est un LC idéal ou un RLC amorti<br>
+          2. Écrire l'équation différentielle à partir de la loi des mailles<br>
+          3. Déterminer ω₀ et T₀ à partir de L et C<br>
+          4. Écrire q(t) ou i(t) en fonction des conditions initiales<br>
+          5. Utiliser la conservation de l'énergie pour relier Q_m, U_m et I_m<br>
+          6. Pour un circuit amorti : déterminer le régime (pseudo-périodique, apériodique, critique)
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions Physique | Chapitre 7 : Oscillations électriques libres - Circuit LC — Conforme au programme 2026
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chimie · Réaction Acide Faible - Base Forte | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem;
+    }
+    
+    .img-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(155, 89, 182, 0.1);
+      border-left: 3px solid #9b59b6;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .formula {
+      font-family: monospace;
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .formula-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.8rem;
+      text-align: center;
+    }
+    
+    .formula-card .formula-name {
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2024</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../../index.html">Accueil</a> ›
+        <a href="../../../../Cours.html">Leçons</a> ›
+        <a href="../../Chimie.html">Chimie</a> › Chimie Minérale</a> › Chapitre 5
+      </div>
+      <div class="page-title">RÉACTION ACIDE FAIBLE - BASE FORTE <span>🧪 CHAPITRE 5</span></div>
+      <div class="page-subtitle">Effet tampon, solutions tampons, capacité tampon — Chimie Minérale · Baccalauréat</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">🧪</div>
+      <div class="subject-info">
+        <h3>Réaction acide faible - base forte</h3>
+        <p>Équation de Henderson-Hasselbalch · Solutions tampons · Capacité tampon · Applications</p>
+      </div>
+      <div class="chapter-count">Cours complet</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>🧪 INTRODUCTION</h3>
+        <p>La réaction entre un <span class="highlight">acide faible</span> et une <span class="highlight">base forte</span> est une réaction <span class="highlight">quasi-totale</span> qui conduit à la formation d'une <span class="highlight">solution tampon</span> avant l'équivalence. Une solution tampon est une solution dont le pH varie <span class="highlight">peu</span> par addition modérée d'acide ou de base. Ces solutions jouent un rôle fondamental en biologie (sang) et en chimie analytique.</p>
+        
+        <div class="note-box">
+          <strong>📌 Exemple :</strong><br>
+          Acide éthanoïque CH₃COOH (acide faible) + soude NaOH (base forte)<br>
+          <span class="formula">CH₃COOH + OH⁻ → CH₃COO⁻ + H₂O</span> (réaction totale)
+        </div>
+      </div>
+
+      <!-- I – RÉACTION ACIDE FAIBLE - BASE FORTE -->
+      <div class="section-chapitre">
+        <h3>⚡ I – RÉACTION ACIDE FAIBLE - BASE FORTE</h3>
+        
+        <div class="law-box">
+          <h4>Équation bilan</h4>
+          <p><span class="formula">AH + OH⁻ → A⁻ + H₂O</span></p>
+          <p>Cette réaction est <span class="highlight">quasi-totale</span> (constante K_r = K_a/K_e = K_a × 10¹⁴ très grande).</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Les trois zones du dosage</h4>
+          <ul>
+            <li><span class="highlight">Avant l'équivalence</span> : excès d'acide faible → mélange AH/A⁻ (solution tampon)</li>
+            <li><span class="highlight">À l'équivalence</span> : n_AH = n_OH⁻ → solution de base faible A⁻</li>
+            <li><span class="highlight">Après l'équivalence</span> : excès de base forte → pH déterminé par la base forte</li>
+          </ul>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Particularité :</strong> À la demi-équivalence (quand la moitié de l'acide a été neutralisé), on a [AH] = [A⁻] et donc <span class="formula">pH = pK_a</span>.
+        </div>
+      </div>
+
+      <!-- II – SOLUTIONS TAMPONS -->
+      <div class="section-chapitre">
+        <h3>📊 II – SOLUTIONS TAMPONS</h3>
+        
+        <div class="law-box">
+          <h4>Définition</h4>
+          <p>Une <span class="highlight">solution tampon</span> est un mélange d'un acide faible et de sa base conjuguée (ou d'une base faible et de son acide conjugué) en concentrations voisines. Elle maintient le pH stable lors de l'ajout modéré d'acide ou de base.</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Exemples de tampons</h4>
+          <ul>
+            <li><span class="highlight">Tampon acide</span> : CH₃COOH / CH₃COONa (pKₐ = 4,76)</li>
+            <li><span class="highlight">Tampon basique</span> : NH₄Cl / NH₃ (pKₐ = 9,25)</li>
+            <li><span class="highlight">Tampon phosphate</span> : H₂PO₄⁻ / HPO₄²⁻ (pKₐ = 7,2) → tampon physiologique</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- III – ÉQUATION DE HENDERSON-HASSELBALCH -->
+      <div class="section-chapitre">
+        <h3>📐 III – ÉQUATION DE HENDERSON-HASSELBALCH</h3>
+        
+        <div class="law-box">
+          <h4>Relation fondamentale</h4>
+          <p><span class="formula">pH = pK_a + log([base]/[acide])</span></p>
+          <p>où [base] = [A⁻] et [acide] = [AH]</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Conséquences</h4>
+          <ul>
+            <li>Si [base] = [acide] : <span class="formula">pH = pK_a</span></li>
+            <li>La zone tampon efficace est <span class="formula">pK_a ± 1</span> (c'est-à-dire [base]/[acide] entre 0,1 et 10)</li>
+            <li>Le pH ne dépend que du <span class="highlight">rapport</span> des concentrations, pas de leurs valeurs absolues</li>
+          </ul>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Remarque :</strong> L'équation de Henderson-Hasselbalch est valable lorsque les concentrations sont suffisamment élevées (C > 0,01 M) et que le rapport [base]/[acide] n'est pas extrême.
+        </div>
+      </div>
+
+      <!-- IV – CAPACITÉ TAMPON -->
+      <div class="section-chapitre">
+        <h3>⚖️ IV – CAPACITÉ TAMPON</h3>
+        
+        <div class="law-box">
+          <h4>Définition</h4>
+          <p>La <span class="highlight">capacité tampon</span> (ou pouvoir tampon) β mesure la résistance d'une solution aux variations de pH.</p>
+          <p><span class="formula">β = dC_B/dpH</span> (quantité de base forte à ajouter pour faire varier le pH d'une unité)</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Facteurs influençant la capacité tampon</h4>
+          <ul>
+            <li>Elle est <span class="highlight">maximale</span> quand [AH] = [A⁻] (pH = pK_a)</li>
+            <li>Elle augmente avec la <span class="highlight">concentration</span> du tampon</li>
+            <li>Zone efficace : <span class="formula">pK_a ± 1</span></li>
+          </ul>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Importance biologique :</strong><br>
+          - Le sang humain a un pH maintenu à 7,4 grâce au tampon <span class="formula">H₂CO₃/HCO₃⁻</span> (pKₐ = 6,35)<br>
+          - Un écart de pH de plus de 0,4 unité peut être mortel
+        </div>
+      </div>
+
+      <!-- V – FORMULAIRE -->
+      <div class="section-chapitre">
+        <h3>📝 V – FORMULAIRE RÉCAPITULATIF</h3>
+        
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Henderson-Hasselbalch</p>
+            <p><span class="formula">pH = pK_a + log([base]/[acide])</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">pH à la demi-équivalence</p>
+            <p><span class="formula">pH = pK_a</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Zone tampon efficace</p>
+            <p><span class="formula">pK_a ± 1</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Capacité tampon max</p>
+            <p><span class="formula">β_max quand [base]=[acide]</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Images du cours -->
+      <div class="section-chapitre">
+        <h3>📚 COURS COMPLET</h3>
+        
+        <div class="img-container">
+          <img src="img/c55.jpg" alt="Cours tampon 1">
+          <div class="img-caption">Fig. 1 – Réaction acide faible - base forte</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c56.jpg" alt="Cours tampon 2">
+          <div class="img-caption">Fig. 2 – Courbe de titrage acide faible - base forte</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c57.jpg" alt="Cours tampon 3">
+          <div class="img-caption">Fig. 3 – Principe des solutions tampons</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c58.jpg" alt="Cours tampon 4">
+          <div class="img-caption">Fig. 4 – Équation de Henderson-Hasselbalch et capacité tampon</div>
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>💡 RÉCAPITULATIF ET CONSEILS</h3>
+        
+        <div class="note-box">
+          <strong>📌 Points clés à retenir :</strong><br>
+          - Un <span class="highlight">tampon</span> est un mélange d'un acide faible et de sa base conjuguée<br>
+          - <span class="highlight">Équation de Henderson-Hasselbalch</span> : <span class="formula">pH = pK_a + log([base]/[acide])</span><br>
+          - La zone tampon efficace est <span class="formula">pK_a ± 1</span><br>
+          - À la <span class="highlight">demi-équivalence</span> : [base] = [acide] → <span class="formula">pH = pK_a</span><br>
+          - La <span class="highlight">capacité tampon</span> est maximale quand [base] = [acide] et augmente avec la concentration<br>
+          - Applications : sang (tampon bicarbonate), produits d'entretien, laboratoire
+        </div>
+        
+        <div class="law-box">
+          <strong>🎯 Méthode pour préparer un tampon à un pH donné :</strong><br>
+          1. Choisir un couple acide/base dont le pKₐ est proche du pH désiré<br>
+          2. Utiliser l'équation de Henderson-Hasselbalch pour déterminer le rapport [base]/[acide]<br>
+          3. Préparer la solution avec les concentrations appropriées<br>
+          4. Vérifier le pH avec un pH-mètre
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions Chimie | Chapitre 5 : Réaction acide faible - base forte — Conforme au programme 2024
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVT · Le Génie Génétique | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2026</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2026 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../index.html">Accueil</a> ›
+        <a href="../../../Cours.html">Leçons</a> ›
+        <a href="../SVT.html">SVT</a> › Chapitre 7
+      </div>
+      <div class="page-title">LE GÉNIE GÉNÉTIQUE <span>🧬 CHAPITRE 7</span></div>
+      <div class="page-subtitle">ADN recombinant, enzymes de restriction, plasmides, transgénèse, clonage, biotechnologies — Baccalauréat</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">🧬</div>
+      <div class="subject-info">
+        <h3>Génie génétique</h3>
+        <p>Transfert de gènes · Enzymes · Plasmides · Applications · Clonage</p>
+      </div>
+      <div class="chapter-count">Fiche complète</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>🧬 INTRODUCTION</h3>
+        <p>Le <span class="highlight">génie génétique</span> désigne les différents mécanismes utilisés pour transférer un gène d'un individu vers un autre sans qu'il y ait intervention des moyens naturels de la reproduction.</p>
+      </div>
+
+      <!-- I – DÉFINITIONS FONDAMENTALES -->
+      <div class="section-chapitre">
+        <h3>📚 I – DÉFINITIONS FONDAMENTALES</h3>
+        
+        <div class="note-box">
+          <strong>📌 Le gène :</strong> Séquence d'ADN transcrite en ARN<sub>m</sub>. Cette séquence peut être traduite en chaîne polypeptidique.
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 La mutation génétique :</strong> Modification de la séquence de nucléotides de l'ADN.
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Les enzymes :</strong> Protéines spécifiques utilisées pour accélérer une réaction.
+        </div>
+      </div>
+
+      <!-- II – LES ENZYMES DU GÉNIE GÉNÉTIQUE -->
+      <div class="section-chapitre">
+        <h3>⚙️ II – LES ENZYMES DU GÉNIE GÉNÉTIQUE</h3>
+        
+        <div class="enzyme-box">
+          <h4>1. Enzymes d'extraction (enzymes de restriction)</h4>
+          <p>Utilisées pour isoler l'ADN. Elles coupent l'ADN au niveau de séquences spécifiques.</p>
+          <p><span class="highlight">Exemple :</span> <span class="formula">Eco R1</span></p>
+        </div>
+        
+        <div class="enzyme-box">
+          <h4>2. Enzymes de liaison (ADN ligase)</h4>
+          <p>Utilisées pour intégrer les gènes dans le plasmide (coller les fragments d'ADN).</p>
+          <p><span class="highlight">Exemple :</span> <span class="formula">Ligase</span></p>
+        </div>
+        
+        <div class="enzyme-box">
+          <h4>3. Enzymes de transcription (Transcriptase inverse)</h4>
+          <p>Utilisées pour transformer l'ADN en ARN ou l'ARN en ADN.</p>
+          <p><span class="highlight">Exemple :</span> <span class="formula">Transcriptase reverse</span></p>
+        </div>
+      </div>
+
+      <!-- III – LE PLASMIDE -->
+      <div class="section-chapitre">
+        <h3>🧫 III – LE PLASMIDE</h3>
+        <p>Le <span class="highlight">plasmide</span> est une séquence d'ADN de forme circulaire (chez les bactéries) utilisée comme intermédiaire (<span class="highlight">vecteur</span>) pour transférer le gène de la cellule initiale vers la cellule hôte.</p>
+        
+        <div class="note-box">
+          <strong>📌 Caractéristiques du plasmide :</strong><br>
+          - ADN circulaire double brin<br>
+          - Capacité à se répliquer de façon autonome<br>
+          - Utilisé comme vecteur de clonage
+        </div>
+      </div>
+
+      <!-- IV – ÉTAPES DU TRANSFERT DE GÈNE -->
+      <div class="section-chapitre">
+        <h3>🔬 IV – ÉTAPES DU TRANSFERT DE GÈNE</h3>
+        
+        <div class="step-box">
+          <h4>Étape 1 : Extraction du gène</h4>
+          <p>Réalisée par :</p>
+          <ul>
+            <li>Enzyme de restriction : coupe le gène dans l'ADN</li>
+            <li>Transcription inverse : transformation d'ARN en ADN (ADNc)</li>
+          </ul>
+        </div>
+        
+        <div class="step-box">
+          <h4>Étape 2 : Intégration du gène dans le plasmide</h4>
+          <p>Utilisation des <span class="highlight">enzymes de liaison (ligase)</span> pour coller l'ADN du gène dans le plasmide. On obtient un <span class="highlight">plasmide recombinant</span> (ADN recombiné).</p>
+        </div>
+        
+        <div class="step-box">
+          <h4>Étape 3 : Implantation du plasmide hybride dans la cellule hôte</h4>
+          <p>Le plasmide recombinant est introduit dans la cellule hôte (ex: bactérie) par transformation.</p>
+        </div>
+        
+        <div class="step-box">
+          <h4>Étape 4 : Clonage de la cellule hôte</h4>
+          <p>Multiplication de la cellule hôte pour obtenir une <span class="highlight">colonie bactérienne</span> (clone) dont toutes les cellules possèdent le gène d'intérêt.</p>
+        </div>
+      </div>
+
+      <!-- V – APPLICATIONS DU GÉNIE GÉNÉTIQUE -->
+      <div class="section-chapitre">
+        <h3>💊 V – APPLICATIONS DU GÉNIE GÉNÉTIQUE</h3>
+        
+        <p>Le génie génétique suscite beaucoup d'espoir et d'optimisme. Ses perspectives sont immenses.</p>
+        
+        <div class="application-box">
+          <h4>1. Fabrication d'hormones et d'enzymes</h4>
+          <p>L'<span class="highlight">insuline humaine</span> a été fabriquée par génie génétique et est déjà commercialisée. Production d'hormone de croissance, facteurs de coagulation, etc.</p>
+        </div>
+        
+        <div class="application-box">
+          <h4>2. Fabrication de vaccins</h4>
+          <p>Vaccins recombinants (ex: vaccin contre l'hépatite B).</p>
+        </div>
+        
+        <div class="application-box">
+          <h4>3. Modification des gènes</h4>
+          <p>Chez les animaux et les végétaux pour l'amélioration des espèces (<span class="highlight">OGM</span> : Organismes Génétiquement Modifiés).</p>
+          <ul>
+            <li>Plantes résistantes aux herbicides ou aux insectes</li>
+            <li>Animaux transgéniques produisant des protéines d'intérêt</li>
+          </ul>
+        </div>
+        
+        <div class="application-box">
+          <h4>4. Technique de clonage</h4>
+          <p>Manipulation récente qui permet d'obtenir un individu sans passer par la fécondation (ex: brebis Dolly).</p>
+        </div>
+      </div>
+
+      <!-- VI – SCHÉMA RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>📊 VI – SCHÉMA RÉCAPITULATIF</h3>
+        
+        <div class="img-container">
+          <img src="img/a13.jpg" alt="Schéma du génie génétique">
+          <div class="img-caption">Fig. 1 – Étapes du génie génétique : extraction, intégration, transformation, clonage</div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Résumé du processus :</strong><br>
+          1. <span class="highlight">Enzyme de restriction</span> : coupe l'ADN et le plasmide<br>
+          2. <span class="highlight">Ligase</span> : insère le gène dans le plasmide → ADN recombinant<br>
+          3. <span class="highlight">Transformation</span> : introduction du plasmide dans la bactérie<br>
+          4. <span class="highlight">Clonage</span> : multiplication des bactéries transgéniques<br>
+          5. <span class="highlight">Expression</span> : production de la protéine d'intérêt
+        </div>
+      </div>
+
+      <!-- VII – PERSPECTIVES ET ENJEUX -->
+      <div class="section-chapitre">
+        <h3>🔮 VII – PERSPECTIVES ET ENJEUX</h3>
+        
+        <div class="note-box">
+          <strong>✨ Avantages potentiels :</strong><br>
+          - Production de médicaments (insuline, hormones, anticorps)<br>
+          - Thérapie génique (correction de maladies génétiques)<br>
+          - Amélioration des rendements agricoles<br>
+          - Production de biocarburants
+        </div>
+        
+        <div class="enzyme-box">
+          <strong>⚠️ Enjeux éthiques et sécuritaires :</strong><br>
+          - Impact environnemental des OGM<br>
+          - Risques pour la santé humaine<br>
+          - Questions éthiques sur le clonage humain<br>
+          - Nécessité d'une réglementation stricte
+        </div>
+      </div>
+
+      <!-- Récapitulatif -->
+      <div class="section-chapitre">
+        <h3>📝 RÉCAPITULATIF</h3>
+        <div class="note-box">
+          <strong>💡 À retenir :</strong><br>
+          - <span class="highlight">Enzymes de restriction</span> : "ciseaux moléculaires" qui coupent l'ADN<br>
+          - <span class="highlight">Ligase</span> : "colle moléculaire" qui soude les fragments d'ADN<br>
+          - <span class="highlight">Plasmide</span> : vecteur de clonage circulaire<br>
+          - <span class="highlight">ADN recombinant</span> : ADN contenant des gènes de différentes origines<br>
+          - <span class="highlight">Transgénèse</span> : transfert de gènes entre espèces différentes<br>
+          - <span class="highlight">Clonage</span> : obtention d'individus génétiquement identiques sans fécondation
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions SVT | Chapitre 7 : Le Génie Génétique — Conforme au programme 2026
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

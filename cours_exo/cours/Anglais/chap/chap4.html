@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>English · Reported Speech | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre .highlight-red {
+      color: #e74c3c;
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem;
+    }
+    
+    .img-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(230, 126, 34, 0.1);
+      border-left: 3px solid #e67e22;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .formula {
+      font-family: monospace;
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .grammar-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.8rem;
+      text-align: center;
+    }
+    
+    .grammar-card .grammar-name {
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    .example {
+      font-style: italic;
+      color: var(--gold);
+    }
+    
+    .table-reported {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .table-reported th, .table-reported td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 0.5px solid rgba(255,255,255,0.1);
+    }
+    
+    .table-reported th {
+      background: rgba(232,201,126,0.15);
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    .table-reported tr:last-child td {
+      border-bottom: none;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+      .table-reported th, .table-reported td {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2024</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../index.html">Accueil</a> ›
+        <a href="../../../Cours.html">Leçons</a> ›
+        <a href="../Anglais.html">English</a> › Chapter 4
+      </div>
+      <div class="page-title">REPORTED SPEECH <span>🇬🇧 CHAPTER 4</span></div>
+      <div class="page-subtitle">Direct and indirect speech · Tense changes · Pronouns · Questions · Commands</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">🇬🇧</div>
+      <div class="subject-info">
+        <h3>Reported Speech</h3>
+        <p>Direct vs Indirect speech · Tense transformations · Pronouns · Questions · Commands · Exclamations</p>
+      </div>
+      <div class="chapter-count">Complete lesson</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>📚 INTRODUCTION</h3>
+        <p>There are two ways of relating what a person has said: <span class="highlight">direct</span> and <span class="highlight">indirect (or reported) speech</span>.</p>
+        
+        <div class="law-box">
+          <strong>📌 Direct Speech:</strong><br>
+          We repeat the original speaker's exact words.<br>
+          <span class="example">He said, <strong>"I have lost my umbrella."</strong></span><br>
+          Remarks are placed between inverted commas, with a comma before the remark.
+        </div>
+        
+        <div class="law-box">
+          <strong>📌 Indirect (Reported) Speech:</strong><br>
+          We give the exact meaning without using the speaker's exact words.<br>
+          <span class="example">He said <strong>(that) he had lost his umbrella.</strong></span><br>
+          No comma after "say" in indirect speech. "That" can usually be omitted after "say" and "tell + object".
+        </div>
+      </div>
+
+      <!-- Tense Changes -->
+      <div class="section-chapitre">
+        <h3>🔄 TENSE CHANGES IN REPORTED SPEECH</h3>
+        
+        <table class="table-reported">
+          <thead>
+            <tr><th>Direct Speech</th><th>Reported Speech</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Present Simple</td><td>Past Simple</td></tr>
+            <tr><td>Present Continuous</td><td>Past Continuous</td></tr>
+            <tr><td>Present Perfect</td><td>Past Perfect</td></tr>
+            <tr><td>Past Simple</td><td>Past Perfect</td></tr>
+            <tr><td>Past Continuous</td><td>Past Perfect Continuous</td></tr>
+            <tr><td>will</td><td>would</td></tr>
+            <tr><td>can</td><td>could</td></tr>
+            <tr><td>may</td><td>might</td></tr>
+            <tr><td>must</td><td>had to / must</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pronoun and Adjective Changes -->
+      <div class="section-chapitre">
+        <h3>📝 PRONOUN AND ADJECTIVE CHANGES</h3>
+        
+        <div class="law-box">
+          <strong>📌 A. First and second person pronouns normally change to the third person</strong><br>
+          (I → he/she, me → him/her, my → his/her, mine → his/hers, we → they, us → them, our → their)<br><br>
+          <span class="example">She said, "he's <strong>my</strong> son". → She said that he was <strong>her</strong> son.</span><br>
+          <span class="example">"<strong>I</strong>'m ill", she said. → She said that <strong>she</strong> was ill.</span>
+        </div>
+        
+        <div class="law-box">
+          <strong>📌 B. THIS / THESE</strong><br>
+          "This" used in time expressions usually becomes "that".<br>
+          <span class="example">She said, "She's coming this week". → She said that she was coming that week.</span><br><br>
+          "This" and "that" used as adjectives usually change to "the".<br>
+          <span class="example">He said, "I bought this pearl for my mother" → He said he had bought the pearl for his mother.</span><br><br>
+          "This", "these" used as pronouns can become "it", "they/them".<br>
+          <span class="example">He said, "I found these beside the bed" → He said he had found them beside the bed.</span>
+        </div>
+      </div>
+
+      <!-- Time and Place Expressions -->
+      <div class="section-chapitre">
+        <h3>⏰ TIME AND PLACE EXPRESSIONS</h3>
+        
+        <table class="table-reported">
+          <thead>
+            <tr><th>Direct Speech</th><th>Reported Speech</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>now</td><td>then</td></tr>
+            <tr><td>today</td><td>that day</td></tr>
+            <tr><td>tonight</td><td>that night</td></tr>
+            <tr><td>yesterday</td><td>the day before / the previous day</td></tr>
+            <tr><td>tomorrow</td><td>the next day / the following day</td></tr>
+            <tr><td>this week/month/year</td><td>that week/month/year</td></tr>
+            <tr><td>last week/month/year</td><td>the previous week/month/year</td></tr>
+            <tr><td>next week/month/year</td><td>the following week/month/year</td></tr>
+            <tr><td>here</td><td>there</td></tr>
+            <tr><td>ago</td><td>before</td></tr>
+          </tbody>
+        </table>
+        
+        <div class="img-container">
+          <img src="img/6.png" alt="Time expressions">
+          <div class="img-caption">Fig. 1 – Time and place expression changes</div>
+        </div>
+      </div>
+
+      <!-- Questions in Indirect Speech -->
+      <div class="section-chapitre">
+        <h3>❓ QUESTIONS IN INDIRECT SPEECH</h3>
+        
+        <div class="law-box">
+          <strong>📌 Structure:</strong><br>
+          Direct question: He said, <strong>"Where is she going?"</strong><br>
+          Indirect question: He asked <strong>where she was going.</strong><br><br>
+          <strong>1. Using "ask" with indirect object:</strong><br>
+          <span class="example">He asked, "What have you got?" → He asked me what I had got.</span><br>
+          <span class="example">He said, "Mary, when is the next train?" → He asked Mary when the next train was.</span><br><br>
+          <strong>2. Question words (when, where, who, how, why, what) are repeated:</strong><br>
+          <span class="example">He said, "Why didn't you put on the brake?" → He asked her why she hadn't put on the brake.</span>
+        </div>
+      </div>
+
+      <!-- Commands, Requests, Advice -->
+      <div class="section-chapitre">
+        <h3>📢 COMMANDS, REQUESTS, ADVICE</h3>
+        
+        <div class="law-box">
+          <strong>📌 Structure:</strong><br>
+          Direct command: He said, <strong>"Lie down, Tom".</strong><br>
+          Indirect command: He told <strong>Tom to lie down.</strong><br><br>
+          <strong>Verbs used:</strong> advise, ask, beg, command, order, remind, tell, warn, etc.<br><br>
+          <span class="example">He said, "Get your coat, Tom!" → He told Tom to get his coat.</span><br><br>
+          <strong>Negative commands:</strong> "not + infinitive"<br>
+          <span class="example">"Don't swim out too far, boys", I said → I warned/told the boys not to swim out too far.</span>
+        </div>
+      </div>
+
+      <!-- Exclamations -->
+      <div class="section-chapitre">
+        <h3>❗ EXCLAMATIONS IN INDIRECT SPEECH</h3>
+        
+        <div class="law-box">
+          <strong>📌 Structure:</strong><br>
+          Exclamations usually become statements. The exclamation mark disappears.<br>
+          <strong>Exclamations with "What (a)..." or "How..."</strong> can be reported by "exclaim/say that":<br>
+          <span class="example">He said, "What a dreadful idea!" → He exclaimed that it was a dreadful idea.</span>
+        </div>
+      </div>
+
+      <!-- Offers and Suggestions -->
+      <div class="section-chapitre">
+        <h3>💡 OFFERS AND SUGGESTIONS</h3>
+        
+        <div class="grid-formulas">
+          <div class="grammar-card">
+            <p class="grammar-name">OFFERS</p>
+            <p><span class="example">"Shall I bring you some tea?"</span><br>
+            → He offered <strong>to bring me some tea.</strong></p>
+          </div>
+          <div class="grammar-card">
+            <p class="grammar-name">SUGGESTIONS</p>
+            <p><span class="example">"Shall we meet at the theatre?"</span><br>
+            → He suggested <strong>meeting at the theatre.</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Say and Tell -->
+      <div class="section-chapitre">
+        <h3>🗣️ SAY AND TELL AS INTRODUCTORY VERBS</h3>
+        
+        <div class="note-box">
+          <strong>📌 Key Differences:</strong><br>
+          - <span class="highlight">Say</span> can introduce a statement or follow it.<br>
+          <span class="example">Tom said, "I've just heard the news." or "I've just heard the news", Tom said.</span><br><br>
+          - <span class="highlight">Tell</span> requires the person addressed (tell me, tell him, tell us).<br>
+          <span class="example">He told me he was leaving.</span><br>
+          - Exception: tell lies/stories/the truth/the time (person addressed optional).<br>
+          <span class="example">He told (me) lies.</span>
+        </div>
+      </div>
+
+      <!-- Reported Orders Summary -->
+      <div class="section-chapitre">
+        <h3>📋 REPORTED ORDERS (SUMMARY)</h3>
+        
+        <div class="grid-formulas">
+          <div class="grammar-card">
+            <p class="grammar-name">"Go to bed!"</p>
+            <p>→ He told the child <strong>to go to bed.</strong></p>
+          </div>
+          <div class="grammar-card">
+            <p class="grammar-name">"Don't worry!"</p>
+            <p>→ He told her <strong>not to worry.</strong></p>
+          </div>
+          <div class="grammar-card">
+            <p class="grammar-name">"Be on time!"</p>
+            <p>→ He told me <strong>to be on time.</strong></p>
+          </div>
+          <div class="grammar-card">
+            <p class="grammar-name">"Don't smoke!"</p>
+            <p>→ He told us <strong>not to smoke.</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="section-chapitre">
+        <h3>📖 VISUAL REFERENCE</h3>
+        
+        <div class="img-container">
+          <img src="img/5.jpg" alt="Reported Speech Summary">
+          <div class="img-caption">Fig. 2 – Reported speech rules summary</div>
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>💡 SUMMARY & KEY POINTS</h3>
+        
+        <div class="note-box">
+          <strong>📌 Key Takeaways:</strong><br>
+          - <span class="highlight">Direct speech</span> uses exact words (quotation marks)<br>
+          - <span class="highlight">Indirect (reported) speech</span> reports meaning without exact words<br>
+          - <span class="highlight">Tenses usually change</span> (present → past, past → past perfect, will → would, etc.)<br>
+          - <span class="highlight">Pronouns change</span> (I → he/she, my → his/her, we → they, etc.)<br>
+          - <span class="highlight">Time/place expressions change</span> (now → then, today → that day, here → there, etc.)<br>
+          - <span class="highlight">Questions</span> use "asked + question word" (no inversion)<br>
+          - <span class="highlight">Commands/requests</span> use "told/asked + object + to + infinitive"<br>
+          - <span class="highlight">Suggestions/offers</span> use "suggested + -ing" or "offered + to + infinitive"
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — English Grammar | Chapter 4: Reported Speech — Conforms to Baccalaureate program 2024
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

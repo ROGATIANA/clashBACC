@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVT · La Génétique Humaine | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2026</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2026 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- en-tête -->
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../index.html">Accueil</a> ›
+        <a href="../../../Cours.html">Leçons</a> ›
+        <a href="../SVT.html">SVT</a> › Chapitre 4
+      </div>
+      <div class="page-title">LA GÉNÉTIQUE HUMAINE <span>🧬 CHAPITRE 4</span></div>
+      <div class="page-subtitle">Pédigrées, arbres généalogiques, maladies héréditaires, syndromes chromosomiques — Baccalauréat</div>
+    </div>
+
+    <!-- bannière matière -->
+    <div class="subject-banner">
+      <div class="subject-icon-large">👨‍👩‍👧‍👦</div>
+      <div class="subject-info">
+        <h3>Génétique humaine</h3>
+        <p>Pédigrées · Électrophorèse · Caryotypes · Maladies héréditaires</p>
+      </div>
+      <div class="chapter-count">Fiche complète</div>
+    </div>
+
+    <!-- CONTENU PRINCIPAL DU CHAPITRE -->
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>🧬 INTRODUCTION</h3>
+        <p>La génétique humaine obéit aux mêmes lois et principes de la génétique mendélienne. Cependant, elle n'est pas proportionnelle. Elle se base sur :</p>
+        <ul>
+          <li><span class="highlight">L'étude d'un pédigrée</span> (arbre généalogique)</li>
+          <li><span class="highlight">L'étude de l'ADN</span> (électrophorèse)</li>
+          <li><span class="highlight">L'étude des chromosomes</span></li>
+        </ul>
+      </div>
+
+      <!-- I – ÉTUDE DU PÉDIGRÉE -->
+      <div class="section-chapitre">
+        <h3>📊 I – ÉTUDE DU PÉDIGRÉE</h3>
+        
+        <h4>Détermination du génotype</h4>
+        <p>Pour déterminer un génotype à partir d'un pédigrée, on doit d'abord répondre à une question fondamentale :</p>
+        <p><span class="highlight">L'allèle de la maladie (TARE) est-il récessif ou dominant ?</span></p>
+        
+        <div class="img-container">
+          <img src="img/h1.png" alt="Analyse pédigrée">
+          <div class="img-caption">Fig. 1 – Exemple d'arbre généalogique</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/h2.png" alt="Cas possibles">
+          <div class="img-caption">Fig. 2 – Tous les cas possibles</div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Règles à suivre :</strong> Suivez les règles dans le tableau ci-dessous pour déterminer le mode de transmission.
+        </div>
+        
+        <div class="img-container">
+          <img src="img/h3.png" alt="Tableau des règles">
+          <div class="img-caption">Fig. 3 – Règles pour déterminer le mode de transmission</div>
+        </div>
+      </div>
+
+      <!-- II – ANALYSE DE L'ADN -->
+      <div class="section-chapitre">
+        <h3>🧪 II – ANALYSE DE L'ADN (ÉLECTROPHORÈSE)</h3>
+        
+        <div class="note-box">
+          <strong>📌 Règle :</strong> Celui qui présente 2 types d'ADN est <span class="highlight">hybride (hétérozygote)</span> ; celui qui a 1 seul type d'ADN est de <span class="highlight">race pure (homozygote)</span>.
+        </div>
+        
+        <div class="img-container">
+          <img src="img/h4.png" alt="Principe électrophorèse">
+          <div class="img-caption">Fig. 4 – Principe de l'électrophorèse</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/h5.png" alt="Exemple électrophorèse">
+          <div class="img-caption">Fig. 5 – Exemple d'analyse par électrophorèse</div>
+        </div>
+      </div>
+
+      <!-- III – ANALYSE PAR GÉNÉRATIONS -->
+      <div class="section-chapitre">
+        <h3>👨‍👩‍👧‍👦 III – ANALYSE PAR GÉNÉRATIONS</h3>
+        
+        <p>Pour déterminer l'allèle de la maladie à partir des générations :</p>
+        
+        <div class="img-container">
+          <img src="img/h6.png" alt="Analyse générationnelle">
+          <div class="img-caption">Fig. 6 – Analyse des générations</div>
+        </div>
+        
+        <h4>Cas des Zymogrammes</h4>
+        <div class="img-container">
+          <img src="img/h7.png" alt="Zymogrammes">
+          <div class="img-caption">Fig. 7 – Analyse par zymogrammes</div>
+        </div>
+      </div>
+
+      <!-- IV – CALCUL DES RISQUES -->
+      <div class="section-chapitre">
+        <h3>⚠️ IV – CALCUL DES RISQUES (Maladie récessive autosomale)</h3>
+        
+        <div class="note-box">
+          <strong>📌 Donnée :</strong> Fréquence des hybrides (hétérozygotes) dans la population = <span class="formula">1/30</span>
+        </div>
+        
+        <div class="risk-box">
+          <h4>Cas 1 : Deux parents sains ayant un enfant sain</h4>
+          <p>Risque d'avoir un enfant malade : <span class="formula">1/30 × 1/30 × 1/4</span></p>
+        </div>
+        
+        <div class="risk-box">
+          <h4>Cas 2 : Deux parents sains ayant un enfant malade</h4>
+          <p>Risque d'avoir un enfant malade : <span class="formula">1 × 1 × 1/4</span></p>
+          <ul>
+            <li>Enfant malade : <span class="formula">1/4</span></li>
+            <li>Garçon malade : <span class="formula">1/4 = 1/2 × 1/2</span></li>
+            <li>Parmi les garçons : <span class="formula">1/2 = 1 × 1/2</span></li>
+            <li>Parmi les filles : <span class="formula">0 = 1 × 0</span></li>
+          </ul>
+        </div>
+        
+        <div class="risk-box">
+          <h4>Cas 3 : Père malade (taré) et mère saine ayant un enfant sain</h4>
+          <p>Risque d'avoir un enfant malade : <span class="formula">1 × 1/30 × 1/2</span></p>
+        </div>
+        
+        <div class="risk-box">
+          <h4>Cas 4 : Père malade (taré) et mère saine ayant un enfant malade</h4>
+          <p>Risque d'avoir un enfant malade : <span class="formula">1 × 1 × 1/2</span></p>
+          <ul>
+            <li>Enfant malade : <span class="formula">1/2</span></li>
+            <li>Garçon malade : <span class="formula">1/2 × 1/2</span></li>
+            <li>Parmi les garçons : <span class="formula">1/2</span></li>
+            <li>Parmi les filles : <span class="formula">1/2</span></li>
+          </ul>
+        </div>
+        
+        <div class="risk-box">
+          <h4>Cas 5 : Deux parents sains ayant une fille malade et un garçon sain marié avec une fille saine</h4>
+          <p>Risque d'avoir un enfant malade : <span class="formula">2/3 × 1/30 × 1/4</span></p>
+        </div>
+        
+        <div class="note-box">
+          <strong>🧬 Diagnostic prénatal :</strong> Technique utilisée pour déterminer la situation du fœtus pendant la grossesse. Les types sont le <span class="highlight">caryotype</span> et le <span class="highlight">zymogramme</span>.
+        </div>
+      </div>
+
+      <!-- V – HYPOTHÈSES POSSIBLES -->
+      <div class="section-chapitre">
+        <h3>🔬 V – HYPOTHÈSES POSSIBLES</h3>
+        
+        <p>Dans les exercices, si on ne peut pas déterminer directement l'allèle de la maladie à partir du pédigrée, on retient et on rejette des hypothèses possibles. On peut ensuite confirmer l'allèle de la maladie par analyse des électrophorèses, zymogrammes ou caryotypes.</p>
+        
+        <div class="hypothesis">
+          <strong>📌 Hypothèse 1 :</strong> Gène autosomal récessif
+        </div>
+        <div class="hypothesis">
+          <strong>📌 Hypothèse 2 :</strong> Gène autosomal dominant
+        </div>
+        <div class="hypothesis">
+          <strong>📌 Hypothèse 3 :</strong> Gène porté par X récessif
+        </div>
+        <div class="hypothesis">
+          <strong>📌 Hypothèse 4 :</strong> Gène porté par X dominant
+        </div>
+        <div class="hypothesis">
+          <strong>📌 Hypothèse 5 :</strong> Gène porté par Y
+        </div>
+      </div>
+
+      <!-- VI – ANOMALIES CHROMOSOMIQUES -->
+      <div class="section-chapitre">
+        <h3>🧬 VI – ANOMALIES CHROMOSOMIQUES (SYNDROMES)</h3>
+        
+        <div class="syndrome-card">
+          <h4>1. Syndrome de Klinefelter</h4>
+          <p><span class="highlight">Formule chromosomique :</span> <span class="formula">2n = 44A + XXY</span></p>
+          <p><span class="highlight">Caractéristiques :</span> Stérilité, régression des caractères sexuels secondaires, retard mental.</p>
+        </div>
+        
+        <div class="syndrome-card">
+          <h4>2. Syndrome de Down (Trisomie 21)</h4>
+          <p><span class="highlight">Formule chromosomique :</span></p>
+          <ul>
+            <li>Chez le mâle : <span class="formula">2n = 45A + XY</span></li>
+            <li>Chez la femelle : <span class="formula">2n = 45A + XX</span></li>
+          </ul>
+        </div>
+        
+        <div class="syndrome-card">
+          <h4>3. Syndrome de Turner (Theiner)</h4>
+          <p><span class="highlight">Formule chromosomique :</span> <span class="formula">2n = 44A + X</span></p>
+          <p><span class="highlight">Caractéristiques :</span> Monosomie X, femelle stérile.</p>
+        </div>
+        
+        <div class="syndrome-card">
+          <h4>4. Autres syndromes</h4>
+          <ul>
+            <li><span class="formula">2n = 44A + XXX</span> (Triple X)</li>
+            <li><span class="formula">2n = 44A + XYY</span> (Syndrome du double Y)</li>
+            <li><span class="formula">2n = 44A + Y</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- VII – MALADIES HÉRÉDITAIRES -->
+      <div class="section-chapitre">
+        <h3>🩺 VII – MALADIES HÉRÉDITAIRES</h3>
+        
+        <div class="risk-box">
+          <h4>Hémophilie</h4>
+          <p>Maladie sanguine héréditaire qui empêche la coagulation sanguine. L'allèle est porté par le chromosome <span class="highlight">X</span> et est <span class="highlight">récessif gonosomal</span>.</p>
+          <p><span class="highlight">Caractéristique :</span> Absence de coagulation sanguine.</p>
+        </div>
+        
+        <div class="risk-box">
+          <h4>Daltonisme</h4>
+          <p>Trouble de la vision des couleurs. L'allèle est <span class="highlight">récessif</span> et porté par le chromosome <span class="highlight">X</span>.</p>
+        </div>
+        
+        <div class="risk-box">
+          <h4>Albinisme</h4>
+          <p>Maladie héréditaire <span class="highlight">récessive autosomale</span>. Mutation responsable de l'absence de pigmentation sombre (mélanine). Le caractère normal (pigmentation) domine l'albinisme.</p>
+        </div>
+      </div>
+
+      <!-- Récapitulatif -->
+      <div class="section-chapitre">
+        <h3>📝 RÉCAPITULATIF</h3>
+        <div class="note-box">
+          <strong>💡 À retenir :</strong><br>
+          - <span class="highlight">Pédigrée</span> : outil d'étude de la transmission des caractères chez l'humain.<br>
+          - <span class="highlight">Électrophorèse</span> : permet de distinguer homozygotes et hétérozygotes.<br>
+          - <span class="highlight">Diagnostic prénatal</span> : caryotype et zymogramme.<br>
+          - <span class="highlight">Maladies récessives autosomales</span> : albinisme.<br>
+          - <span class="highlight">Maladies liées à X</span> : hémophilie, daltonisme.<br>
+          - <span class="highlight">Syndromes chromosomiques</span> : Klinefelter (XXY), Down (trisomie 21), Turner (X0).
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions SVT | Chapitre 4 : La Génétique Humaine — Conforme au programme 2026
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // logo spin
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    // sidebar mobile toggle
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

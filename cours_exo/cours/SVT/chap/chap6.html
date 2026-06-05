@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVT · Immunité | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2026</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2026 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../index.html">Accueil</a> ›
+        <a href="../../../Cours.html">Leçons</a> ›
+        <a href="../SVT.html">SVT</a> › Chapitre 6
+      </div>
+      <div class="page-title">IMMUNITÉ <span>🛡️ CHAPITRE 6</span></div>
+      <div class="page-subtitle">Immunité non-spécifique et spécifique, lymphocytes, anticorps, vaccination, SIDA — Baccalauréat</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">🛡️</div>
+      <div class="subject-info">
+        <h3>Système immunitaire</h3>
+        <p>Barrières naturelles · Phagocytose · Lymphocytes · Anticorps · Vaccination · SIDA</p>
+      </div>
+      <div class="chapter-count">Fiche complète</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>🛡️ INTRODUCTION</h3>
+        <p>Notre environnement est peuplé de nombreux organismes étrangers dont la plupart est souvent pathogénique. Malgré ceci, les atteintes sont rares. Certaines maladies n'affectent le corps qu'une seule fois dans la vie de l'individu. Le corps possède des moyens de défense constitués d'organes et de cellules formant l'ensemble du système immunitaire.</p>
+        
+        <div class="note-box">
+          <strong>📌 Deux formes d'immunité :</strong><br>
+          - <span class="highlight">Immunité non-spécifique (naturelle)</span><br>
+          - <span class="highlight">Immunité spécifique</span>
+        </div>
+      </div>
+
+      <!-- I – IMMUNITÉ NON-SPÉCIFIQUE -->
+      <div class="section-chapitre">
+        <h3>🔬 I – IMMUNITÉ NON-SPÉCIFIQUE (NATURELLE)</h3>
+        <p>Due à des barrières naturelles, la réaction inflammatoire et la phagocytose.</p>
+        
+        <h4>1 – Barrières naturelles</h4>
+        <ul>
+          <li><span class="highlight">Barrière mécanique</span> : la peau, imperméable aux microbes</li>
+          <li><span class="highlight">Barrière chimique</span> : larmes, salive, sueur, suc gastrique, muqueuse (contiennent des enzymes destructrices de microbes)</li>
+          <li><span class="highlight">Barrière écologique</span> : bactéries non-pathogènes limitant l'activité de certains corps</li>
+        </ul>
+        
+        <h4>2 – Réaction inflammatoire</h4>
+        <p>Lorsque les barrières naturelles ne parviennent pas à empêcher l'infiltration du microbe, la défense naturelle fait intervenir d'autres moyens. La réaction inflammatoire est l'ensemble des réactions locales, vasculaires et cellulaires suite à la pénétration d'un corps étranger.</p>
+        <p>Lorsqu'un corps étranger pénètre, certaines cellules sécrètent des <span class="highlight">médiateurs d'inflammation</span> comme l'<span class="highlight">histamine</span> (sécrétée par les <span class="highlight">mastocytes</span>). La libération de ces médiateurs provoque localement des rougeurs, gonflements, douleurs et augmentation de température. L'objectif est l'orientation du sang vers la zone infectée.</p>
+        
+        <h4>3 – Phagocytose</h4>
+        <p>Capacité de certaines cellules phagocytes à identifier un corps étranger, l'entourer par des <span class="highlight">pseudopodes</span>, puis l'ingérer et le digérer grâce aux enzymes des <span class="highlight">lysosomes</span>.</p>
+        <p>Parmi les phagocytes : <span class="highlight">macrophages</span> et <span class="highlight">monocytes</span>.</p>
+        
+        <div class="img-container">
+          <img src="img/b1.jpg" alt="Phagocytose">
+          <div class="img-caption">Fig. 1 – Phagocytose</div>
+        </div>
+        
+        <h4>4 – Hormones et système complément</h4>
+        <p>Certaines hormones ont des effets enzymatiques et agissent pour la destruction de l'antigène. Le <span class="highlight">système complément</span> (protéines) facilite la phagocytose en se fixant sur les cellules antigéniques.</p>
+        
+        <div class="note-box">
+          <strong>📌 Types de globules blancs :</strong><br>
+          - <span class="highlight">Macrophages et Monocytes</span> : immunité naturelle<br>
+          - <span class="highlight">Lymphocytes</span> : immunité spécifique
+        </div>
+      </div>
+
+      <!-- II – NOTION DU SOI ET NON-SOI -->
+      <div class="section-chapitre">
+        <h3>🧬 II – NOTION DU SOI ET NON-SOI</h3>
+        <p>Le corps humain lutte contre le corps étranger (<span class="highlight">Non-soi</span> ou antigène) sans agir sur les cellules du <span class="highlight">Soi</span>.</p>
+        
+        <p><span class="highlight">Antigène</span> : tout corps étranger susceptible d'être reconnu et de déclencher une réponse immunitaire. Les antigènes présentent à leur surface des déterminants antigéniques (<span class="highlight">épitopes</span>).</p>
+        
+        <p><span class="highlight">Caractéristiques des antigènes :</span></p>
+        <ul>
+          <li>Pouvoir pathogénique (provoquer des maladies)</li>
+          <li>Pouvoir immunogénique (déclencher une réaction immunitaire)</li>
+        </ul>
+        
+        <h4>CMH (Complexe Majeur d'Hystocompatibilité)</h4>
+        <ul>
+          <li><span class="highlight">CMH₁</span> : sur toutes les cellules nucléées (sauf cellules sexuelles et globules rouges)</li>
+          <li><span class="highlight">CMH₂</span> : sur les cellules immunitaires</li>
+        </ul>
+        
+        <div class="note-box">
+          <strong>📌 Position génétique du CMH :</strong> Les gènes du CMH se trouvent sur le <span class="highlight">chromosome n°6</span>.<br>
+          - Gènes déterminant CMH₁ : A (25 allèles), B (50 allèles), C (10 allèles)<br>
+          - Gènes déterminant CMH₂ : D<sub>P</sub> (5), D<sub>Q</sub> (10), D<sub>R</sub> (15)<br>
+          <span class="highlight">Propriétés du CMH :</span> Polyallélie, Codominance, Liaison absolue
+        </div>
+        
+        <div class="image-grid-chap">
+          <div class="img-card"><img src="img/b2.jpg" alt="Transfusion sanguine"><div class="img-caption">Transfusion sanguine</div></div>
+          <div class="img-card"><img src="img/b3.png" alt="Groupes sanguins"><div class="img-caption">Groupes sanguins</div></div>
+        </div>
+      </div>
+
+      <!-- III – IMMUNITÉ SPÉCIFIQUE -->
+      <div class="section-chapitre">
+        <h3>⚡ III – IMMUNITÉ SPÉCIFIQUE</h3>
+        <p>Si l'immunité non-spécifique est incapable de détruire le microbe, l'immunité spécifique intervient par l'intermédiaire des <span class="highlight">lymphocytes</span>. Ce type d'immunité est transférable d'un individu à un autre.</p>
+        
+        <div class="note-box">
+          <strong>📌 Deux types d'immunité spécifique :</strong><br>
+          - <span class="highlight">RIM<sub>C</sub></span> (Réponse Immunitaire à Médiation Cellulaire) : transférable par les cellules<br>
+          - <span class="highlight">RIM<sub>H</sub></span> (Réponse Immunitaire à Médiation Hormonale) : transférable par le sérum
+        </div>
+        
+        <div class="img-container">
+          <img src="img/b4.png" alt="Organes immunitaires">
+          <div class="img-caption">Fig. 2 – Organes immunitaires</div>
+        </div>
+      </div>
+
+      <!-- IV – RIMC -->
+      <div class="section-chapitre">
+        <h3>🧫 IV – RIM<sub>C</sub> (Immunité cellulaire)</h3>
+        <p>Utilise les <span class="highlight">lymphocytes T</span>. Les lymphocytes sont formés par les organes immunitaires.</p>
+        
+        <p><span class="highlight">Types de lymphocytes :</span></p>
+        <ul>
+          <li><span class="highlight">Lymphocytes B (LB)</span> : production d'anticorps (RIM<sub>H</sub>)</li>
+          <li><span class="highlight">Lymphocytes T (LT)</span> : produits par la moelle osseuse, ganglions lymphatiques et rate. Dans le thymus, les LT acquièrent l'immunocompétence.</li>
+        </ul>
+        
+        <p>Dans le thymus, les LT se distinguent en <span class="highlight">LT<sub>4</sub></span> (helper) et <span class="highlight">LT<sub>8</sub></span> (cytotoxiques).</p>
+        
+        <h4>Phases de la RIM<sub>C</sub></h4>
+        <ul>
+          <li><span class="highlight">Phase d'induction</span> : reconnaissance LT-antigène, sécrétion d'IL<sub>1</sub> par les macrophages</li>
+          <li><span class="highlight">Phase d'amplification</span> : activation LT<sub>4</sub> qui sécrète IL<sub>2</sub> → activation et reproduction des LT<sub>8</sub> → transformation en LT<sub>C</sub> (cytotoxiques)</li>
+          <li><span class="highlight">Phase effectrice</span> : les LT<sub>C</sub> détruisent l'antigène par libération de <span class="highlight">perforine</span> → formation de pores → entrée d'eau et de sels → éclatement de l'antigène</li>
+        </ul>
+        
+        <div class="image-grid-chap">
+          <div class="img-card"><img src="img/b5.jpg" alt="RIMC"><div class="img-caption">RIM<sub>C</sub></div></div>
+          <div class="img-card"><img src="img/b6.jpg" alt="LT cytotoxique"><div class="img-caption">Action des LT<sub>C</sub></div></div>
+        </div>
+      </div>
+
+      <!-- V – RIMH -->
+      <div class="section-chapitre">
+        <h3>💉 V – RIM<sub>H</sub> (Immunité humorale)</h3>
+        <p>Utilise les anticorps présents dans le sérum sanguin.</p>
+        
+        <h4>Phases de formation des anticorps</h4>
+        <ul>
+          <li><span class="highlight">Phase d'induction</span> : activation des LB après reconnaissance avec l'antigène, interaction avec LT<sub>4</sub> et macrophages, sécrétion d'IL<sub>1</sub></li>
+          <li><span class="highlight">Phase d'amplification</span> : LT<sub>4</sub> sécrète IL<sub>4</sub> (reproduction des LB) et IL<sub>6</sub> (transformation LB → plasmocytes)</li>
+          <li><span class="highlight">Phase effectrice</span> : les plasmocytes sécrètent les anticorps dans le sang (sérum) → destruction des antigènes</li>
+        </ul>
+        
+        <div class="img-container">
+          <img src="img/b7.png" alt="Formation anticorps">
+          <div class="img-caption">Fig. 3 – Formation des anticorps</div>
+        </div>
+        
+        <h4>Rôles des anticorps (Immunoglobulines)</h4>
+        <ul>
+          <li>Empêchent la liaison des antigènes avec les cellules du corps</li>
+          <li>Empêchent les toxines microbiennes</li>
+          <li>Facilitent la phagocytose</li>
+        </ul>
+        
+        <div class="image-grid-chap">
+          <div class="img-card"><img src="img/b8.png" alt="Anticorps"><div class="img-caption">Structure des anticorps</div></div>
+          <div class="img-card"><img src="img/b9.png" alt="Action anticorps"><div class="img-caption">Action des anticorps</div></div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/b10.png" alt="Immunoglobulines">
+          <div class="img-caption">Fig. 4 – Classes d'immunoglobulines</div>
+        </div>
+      </div>
+
+      <!-- VI – COOPÉRATION IMMUNITAIRE -->
+      <div class="section-chapitre">
+        <h3>🤝 VI – COOPÉRATION IMMUNITAIRE</h3>
+        <p>La destruction de l'antigène nécessite parfois la coopération entre RIM<sub>C</sub> et RIM<sub>H</sub>.</p>
+        
+        <div class="img-container">
+          <img src="img/b11.jpg" alt="Coopération immunitaire">
+          <div class="img-caption">Fig. 5 – Coopération entre lymphocytes B et T</div>
+        </div>
+      </div>
+
+      <!-- VII – VACCINATION ET SÉROTHÉRAPIE -->
+      <div class="section-chapitre">
+        <h3>💊 VII – VACCINATION ET SÉROTHÉRAPIE</h3>
+        
+        <div class="note-box">
+          <strong>📌 Vaccination :</strong> Sensibilisation du corps contre un microbe pour qu'il produise une <span class="highlight">mémoire immunitaire</span>.<br>
+          Exemple : vaccin BCG contre la tuberculose (Bacille de Koch traité pour perdre son pouvoir pathogène mais garder son pouvoir immunogénique).
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Sérothérapie :</strong> Injection de sérum sanguin provenant d'un individu immunisé contre un antigène spécifique. Le sérum contient des anticorps spécifiques utilisables comme traitement.
+        </div>
+      </div>
+
+      <!-- VIII – DYSFONCTIONNEMENTS -->
+      <div class="section-chapitre">
+        <h3>⚠️ VIII – DYSFONCTIONNEMENTS DU SYSTÈME IMMUNITAIRE</h3>
+        
+        <div class="disease-box">
+          <h4>1 – Allergie</h4>
+          <p>Réaction violente (hypersensibilité) à des antigènes normalement tolérés appelés <span class="highlight">allergènes</span> (poussière, grains de pollen...).</p>
+          <ul>
+            <li><span class="highlight">Phase 1</span> : hypersensibilité immédiate → sécrétion massive d'histamine</li>
+            <li><span class="highlight">Phase 2</span> : hypersensibilité retardée → sécrétion d'IL et production d'IgE</li>
+          </ul>
+        </div>
+        
+        <div class="disease-box">
+          <h4>2 – Maladie auto-immune</h4>
+          <p>Troubles dus à une agressivité du système immunitaire vis-à-vis de l'organisme (rupture de la tolérance du soi).</p>
+          <div class="img-container"><img src="img/b12.png" alt="Maladies auto-immunes"><div class="img-caption">Exemples de maladies auto-immunes</div></div>
+        </div>
+        
+        <div class="disease-box">
+          <h4>3 – SIDA (Syndrome d'Immunodéficience Acquise)</h4>
+          <p>Maladie regroupant : maladies opportunistes, tuberculose, développement de cellules cancéreuses, perte des moyens de défense.</p>
+          <p><span class="highlight">Cause : VIH</span> (Virus de l'Immunodéficience Humaine), un <span class="highlight">rétrovirus</span> contenant deux molécules d'ARN accompagnées d'une enzyme de transcription inverse.</p>
+          
+          <div class="img-container">
+            <img src="img/b13.png" alt="VIH">
+            <div class="img-caption">Fig. 6 – Structure du VIH</div>
+          </div>
+          
+          <p><span class="highlight">Cellules cibles du VIH :</span> Macrophages et LT<sub>4</sub>.</p>
+          <p><span class="highlight">Modes de transmission :</span> Voie sexuelle, voie sanguine, de la mère au fœtus.</p>
+          
+          <h4>Mode d'action du VIH :</h4>
+          <ul>
+            <li>Fixation du VIH sur les récepteurs CD<sub>4</sub></li>
+            <li>Injection de l'ARN viral dans le cytoplasme</li>
+            <li>Transcription inverse : ARN → ADN viral</li>
+            <li>Greffe de l'ADN viral dans le génome de LT<sub>4</sub></li>
+            <li>Transcription ADN → ARN viral</li>
+            <li>Synthèse des protéines virales et production de nouveaux virus</li>
+          </ul>
+          
+          <div class="img-container">
+            <img src="img/b14.jpg" alt="Action VIH">
+            <div class="img-caption">Fig. 7 – Cycle de réplication du VIH</div>
+          </div>
+          
+          <p><span class="highlight">Trois phases de la maladie :</span> Phase silencieuse → Phase mineure → Phase déclarée du SIDA</p>
+          
+          <div class="img-container">
+            <img src="img/b15.jpg" alt="Évolution SIDA">
+            <div class="img-caption">Fig. 8 – Évolution de l'infection par le VIH</div>
+          </div>
+          
+          <p><span class="highlight">Prévention :</span> Utilisation de seringues à usage unique, contrôle du sang avant transfusion, éviter les rapports à risque (absence de traitement ou vaccin efficace).</p>
+        </div>
+      </div>
+
+      <!-- IX – MOYENS THÉRAPEUTIQUES -->
+      <div class="section-chapitre">
+        <h3>💊 IX – MOYENS THÉRAPEUTIQUES</h3>
+        <ul>
+          <li><span class="highlight">Vaccination</span> : fabrication d'anticorps et de cellules mémoire</li>
+          <li><span class="highlight">Sérothérapie</span> : injection de sérum contenant des anticorps spécifiques → immunité immédiate</li>
+          <li><span class="highlight">Greffe d'organes immunitaires</span> : transfert d'un organe immunitaire</li>
+          <li><span class="highlight">Traitement immunomodulateur (antibiotiques)</span> : utilisation de substances stimulatrices comme les interleukines (IL)</li>
+        </ul>
+        
+        <div class="img-container">
+          <img src="img/b16.png" alt="Propriétés immunité">
+          <div class="img-caption">Fig. 9 – Propriétés de l'immunité spécifique</div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Propriétés de l'immunité spécifique :</strong><br>
+          - Spécificité de l'antigène<br>
+          - Mémoire immunitaire<br>
+          - Transférabilité<br>
+          - Diversité
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions SVT | Chapitre 6 : Immunité — Conforme au programme 2026
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

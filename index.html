@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MMFNRR – Préparation Baccalauréat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── OVERLAY mobile ── -->
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <!-- ════════════════ SIDEBAR ════════════════ -->
+  <aside class="sidebar" id="sidebar">
+
+<div class="logo-wrap" id="logoWrap" title="Cliquer pour faire tourner">
+  <div class="logo-ring"></div>
+  <img src="img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+</div>
+
+<div class="sidebar-title">PRÉPA<span>BACC</span></div>
+<div class="sidebar-sub">MMFNRR · 2026</div>
+
+<nav class="sidebar-nav">
+
+  <a href="../index.html" class="nav-item active">
+<div class="nav-icon">🏠</div>
+<div class="nav-body">
+  <div class="nav-label">Accueil</div>
+  <div class="nav-desc">Page principale</div>
+</div>
+  </a>
+
+  <a href="cours_exo/Cours.html" class="nav-item">
+<div class="nav-icon">📖</div>
+<div class="nav-body">
+  <div class="nav-label">Leçons / Cours</div>
+  <div class="nav-desc">Fiches de révision</div>
+</div>
+  </a>
+  <a href="cours_exo/Exercice.html" class="nav-item">
+<div class="nav-icon">✏️</div>
+<div class="nav-body">
+  <div class="nav-label">Sujets Bacc</div>
+  <div class="nav-desc">Annales officielles</div>
+</div>
+  </a>
+  <a href="Info/Info.html" class="nav-item">
+<div class="nav-icon">📝</div>
+<div class="nav-body">
+  <div class="nav-label">A propos</div>
+  <div class="nav-desc">Informations sur le site</div>
+</div>
+  </a>
+</nav>
+
+<div class="sidebar-footer">
+  <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+  <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2026 · 🇲🇬</div>
+</div>
+
+  </aside>
+
+  <!-- ════════════════ MAIN ════════════════ -->
+  <main class="main">
+
+<!-- topbar mobile -->
+<div class="topbar">
+  <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+  <button class="hamburger" id="hamburger" onclick="toggleSidebar()" aria-label="Menu">
+<span></span><span></span><span></span>
+  </button>
+</div>
+
+<!-- hero banner -->
+<div class="hero-banner">
+  <div class="hero-badges">
+<span class="badge badge-gold">BACCALAURÉAT</span>
+<span class="badge badge-white">TERMINALE</span>
+  </div>
+  <h2>BIENVENUE SUR<br><span>PRÉPABACC</span></h2>
+  <p>Accédez à vos leçons, exercic et sujets d'annales pour réussir votre baccalauréat.</p>
+</div>
+
+<!-- stats -->
+<div class="stats-row">
+  <div class="stat-box">
+<div class="stat-val">10</div>
+<div class="stat-lbl">Matières disponibles</div>
+  </div>
+  <div class="stat-box">
+<div class="stat-val">80+</div>
+<div class="stat-lbl">Sujets d'annales</div>
+  </div>
+</div>
+
+<!-- cards -->
+<div class="section">
+  <div class="section-heading">
+<h3>MODULES</h3>
+<div class="section-line"></div>
+  </div>
+
+  <div class="card-grid">
+
+<a href="cours_exo/Cours.html" class="card cours">
+  <div class="card-top">
+<div class="card-icon-big">📖</div>
+<div class="card-num">01</div>
+  </div>
+  <div>
+<div class="card-label">Leçons / Cours</div>
+<div class="card-desc">Fiches claires et structurées par matière pour maîtriser le programme.</div>
+  </div>
+  <div class="card-footer">
+<span class="card-count">Maths · SVT · Philo · Français…</span>
+<span class="card-arrow">›</span>
+  </div>
+</a>
+
+<a href="cours_exo/Exercice.html" class="card sujet">
+  <div class="card-top">
+<div class="card-icon-big">📝</div>
+<div class="card-num">02</div>
+  </div>
+  <div>
+<div class="card-label">Sujets Bacc</div>
+<div class="card-desc">Annales et épreuves officielles des sessions précédentes.</div>
+  </div>
+  <div class="card-footer">
+<span class="card-count">Annales 2000 – 2026</span>
+<span class="card-arrow">›</span>
+  </div>
+</a>
+
+<a href="Info/Info.html" class="card exo">
+  <div class="card-top">
+<div class="card-icon-big">✏️</div>
+<div class="card-num">03</div>
+  </div>
+  <div>
+<div class="card-label">A Propos</div>
+<div class="card-desc">informartion de la site web et l'auteur</div>
+  </div>
+  <div class="card-footer">
+<span class="card-count">Contact · lien</span>
+<span class="card-arrow">›</span>
+  </div>
+</a>
+
+  </div>
+</div>
+
+  </main>
+
+  <script>
+/* logo spin */
+const logoImg  = document.getElementById('logoImg');
+const logoWrap = document.getElementById('logoWrap');
+logoWrap.addEventListener('click', () => {
+  logoImg.classList.remove('spinning');
+  void logoImg.offsetWidth;
+  logoImg.classList.add('spinning');
+  logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+});
+
+/* sidebar mobile */
+const sidebar   = document.getElementById('sidebar');
+const hamburger = document.getElementById('hamburger');
+const overlay   = document.getElementById('overlay');
+
+function toggleSidebar() {
+  const open = sidebar.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  overlay.classList.toggle('visible', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+
+function closeSidebar() {
+  sidebar.classList.remove('open');
+  hamburger.classList.remove('open');
+  overlay.classList.remove('visible');
+  document.body.style.overflow = '';
+}
+
+/* active nav item */
+document.querySelectorAll('.nav-item').forEach(item => {
+  item.addEventListener('click', function() {
+document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+this.classList.add('active');
+  });
+});
+  </script>
+
+</body>
+</html>

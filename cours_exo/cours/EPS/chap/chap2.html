@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EPS · Les Sports Collectifs | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(39, 174, 96, 0.1);
+      border-left: 3px solid #27ae60;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .button-area {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+    
+    .btn-chapitre {
+      display: inline-block;
+      background: rgba(39, 174, 96, 0.15);
+      border: 1px solid rgba(39, 174, 96, 0.3);
+      border-radius: 10px;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      color: var(--text-on-dark);
+      transition: all 0.3s ease;
+      text-align: center;
+      flex: 1;
+      min-width: 150px;
+    }
+    
+    .btn-chapitre:hover {
+      background: rgba(39, 174, 96, 0.3);
+      transform: translateY(-2px);
+    }
+    
+    .btn-chapitre strong {
+      color: var(--gold);
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 0.2rem;
+    }
+    
+    .sport-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.8rem;
+      text-align: center;
+    }
+    
+    .sport-card .sport-name {
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+      .btn-chapitre {
+        padding: 0.6rem 1rem;
+        min-width: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2024</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../index.html">Accueil</a> ›
+        <a href="../../../Cours.html">Leçons</a> ›
+        <a href="../EPS.html">EPS</a> › Partie 2
+      </div>
+      <div class="page-title">LES SPORTS COLLECTIFS <span>🏀 PARTIE 2</span></div>
+      <div class="page-subtitle">Basketball, Volleyball, Handball, Football, Rugby</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">🏀</div>
+      <div class="subject-info">
+        <h3>Sports Collectifs</h3>
+        <p>Basketball · Volleyball · Handball · Football · Rugby</p>
+      </div>
+      <div class="chapter-count">5 disciplines</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>🏀 INTRODUCTION</h3>
+        <p>Les <span class="highlight">sports collectifs</span> sont des disciplines où deux équipes s'affrontent autour d'un ballon (ou d'un objet) avec des règles spécifiques. Chaque sport a ses propres contraintes : le terrain, le nombre de joueurs, les règles de déplacement, le système de points. Ce chapitre présente les principaux sports collectifs pratiqués dans le cadre de l'EPS.</p>
+        
+        <div class="note-box">
+          <strong>📌 Objectifs :</strong><br>
+          - Connaître les règles fondamentales de chaque sport<br>
+          - Comprendre les stratégies de jeu<br>
+          - Maîtriser le vocabulaire spécifique<br>
+          - Se préparer pour l'épreuve théorique du Baccalauréat
+        </div>
+      </div>
+
+      <!-- Navigation vers les sous-chapitres -->
+      <div class="section-chapitre">
+        <h3>📖 DISCIPLINES</h3>
+        
+        <div class="button-area">
+          <a href="1/chp1fr.html" class="btn-chapitre">
+            <strong>🏀</strong>
+            Le basketball
+          </a>
+          <a href="1/chp2fr.html" class="btn-chapitre">
+            <strong>🏐</strong>
+            Le volleyball
+          </a>
+          <a href="1/chp3fr.html" class="btn-chapitre">
+            <strong>🤾</strong>
+            Le handball
+          </a>
+          <a href="1/chp4fr.html" class="btn-chapitre">
+            <strong>⚽</strong>
+            Le football
+          </a>
+          <a href="1/chp5fr.html" class="btn-chapitre">
+            <strong>🏉</strong>
+            Le rugby
+          </a>
+        </div>
+      </div>
+
+      <!-- Aperçu des disciplines -->
+      <div class="section-chapitre">
+        <h3>🔍 APERÇU DES DISCIPLINES</h3>
+        
+        <div class="grid-formulas">
+          <div class="sport-card">
+            <p class="sport-name">🏀 Basketball</p>
+            <p>5 contre 5. Objectif : marquer des paniers (2pts, 3pts, 1pt). Durée : 4x10 min. Interdiction de marcher avec le ballon (dribble obligatoire).</p>
+          </div>
+          <div class="sport-card">
+            <p class="sport-name">🏐 Volleyball</p>
+            <p>6 contre 6. Objectif : faire tomber le ballon dans le camp adverse. 3 touches maximum par équipe. Le ballon ne doit pas toucher le sol.</p>
+          </div>
+          <div class="sport-card">
+            <p class="sport-name">🤾 Handball</p>
+            <p>7 contre 7 (6 joueurs + 1 gardien). Objectif : marquer des buts. Terrain : 40x20m. Surface : zone des 6m réservée au gardien.</p>
+          </div>
+          <div class="sport-card">
+            <p class="sport-name">⚽ Football</p>
+            <p>11 contre 11. Objectif : marquer des buts. Interdiction de toucher le ballon avec les mains (sauf le gardien). Terrain : 90-120m.</p>
+          </div>
+          <div class="sport-card">
+            <p class="sport-name">🏉 Rugby</p>
+            <p>15 contre 15 (rugby à XV). Objectif : marquer des essais (5pts) ou des drops (3pts). Ballon ovale. Le jeu se joue à la main ou au pied.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Règles communes aux sports collectifs -->
+      <div class="section-chapitre">
+        <h3>📏 RÈGLES COMMUNES AUX SPORTS COLLECTIFS</h3>
+        
+        <div class="law-box">
+          <strong>📌 Principes généraux :</strong><br><br>
+          - <span class="highlight">Terrain</span> : espace délimité avec des lignes spécifiques<br>
+          - <span class="highlight">Ballon</span> : objet commun aux deux équipes<br>
+          - <span class="highlight">Équipes</span> : nombre de joueurs déterminé (5, 6, 7, 11 ou 15)<br>
+          - <span class="highlight">Temps de jeu</span> : durée fixée par les règles<br>
+          - <span class="highlight">Arbitrage</span> : un ou plusieurs arbitres veillent au respect des règles<br>
+          - <span class="highlight">Contacts</span> : tolérance variable selon le sport (football → peu, rugby → beaucoup)
+        </div>
+      </div>
+
+      <!-- Basketball -->
+      <div class="section-chapitre">
+        <h3>🏀 BASKETBALL - RÈGLES ESSENTIELLES</h3>
+        
+        <div class="law-box">
+          <strong>📌 Règles fondamentales :</strong><br><br>
+          - <span class="highlight">Terrain</span> : 28m x 15m. Ligne des 3 points à 6,75m<br>
+          - <span class="highlight">Durée</span> : 4 quarts-temps de 10 minutes (mi-temps 15 min)<br>
+          - <span class="highlight">Marche</span> : interdiction de marcher sans dribbler (2 pas maximum)<br>
+          - <span class="highlight">Dribble</span> : rebond du ballon au sol<br>
+          - <span class="highlight">Double dribble</span> : arrêt du dribble puis reprise → faute<br>
+          - <span class="highlight">Marquage</span> : 2 points (intérieur), 3 points (extérieur), 1 point (lancer franc)<br>
+          - <span class="highlight">24 secondes</span> : temps maximum pour tirer après la remise en jeu
+        </div>
+      </div>
+
+      <!-- Volleyball -->
+      <div class="section-chapitre">
+        <h3>🏐 VOLLEYBALL - RÈGLES ESSENTIELLES</h3>
+        
+        <div class="law-box">
+          <strong>📌 Règles fondamentales :</strong><br><br>
+          - <span class="highlight">Terrain</span> : 18m x 9m. Filet à 2,43m (hommes) / 2,24m (femmes)<br>
+          - <span class="highlight">Points</span> : un set se joue en 25 points (différence de 2)<br>
+          - <span class="highlight">Manche</span> : match en 3 sets gagnants (au meilleur des 5)<br>
+          - <span class="highlight">Touches</span> : 3 touches maximum par équipe (bloc non compté)<br>
+          - <span class="highlight">Service</span> : derrière la ligne de fond. Le ballon peut toucher le filet<br>
+          - <span class="highlight">Rotation</span> : les joueurs tournent dans le sens horaire après chaque service gagné<br>
+          - <span class="highlight">Double touche</span> : un même joueur ne peut pas toucher le ballon deux fois consécutivement
+        </div>
+      </div>
+
+      <!-- Handball -->
+      <div class="section-chapitre">
+        <h3>🤾 HANDBALL - RÈGLES ESSENTIELLES</h3>
+        
+        <div class="law-box">
+          <strong>📌 Règles fondamentales :</strong><br><br>
+          - <span class="highlight">Terrain</span> : 40m x 20m. Zone des 6m (surface de but)<br>
+          - <span class="highlight">Temps</span> : 2x30 minutes (mi-temps 10-15 min)<br>
+          - <span class="highlight">Déplacement</span> : 3 pas maximum avec le ballon, puis dribble ou passe<br>
+          - <span class="highlight">Zone</span> : seuls les gardiens peuvent pénétrer dans la zone des 6m<br>
+          - <span class="highlight">Contact</span> : toléré, mais pas de faute brutale<br>
+          - <span class="highlight">Sanctions</span> : avertissement (jaune), exclusion 2 min (rouge), disqualification (noir)<br>
+          - <span class="highlight">But</span> : 2m de haut x 3m de large
+        </div>
+      </div>
+
+      <!-- Football -->
+      <div class="section-chapitre">
+        <h3>⚽ FOOTBALL - RÈGLES ESSENTIELLES</h3>
+        
+        <div class="law-box">
+          <strong>📌 Règles fondamentales :</strong><br><br>
+          - <span class="highlight">Terrain</span> : 90-120m x 45-90m. Surface de réparation (16,5m)<br>
+          - <span class="highlight">Temps</span> : 2x45 minutes (mi-temps 15 min)<br>
+          - <span class="highlight">Main</span> : interdiction de toucher le ballon avec les mains (sauf gardien dans sa surface)<br>
+          - <span class="highlight">Hors-jeu</span> : un joueur est hors-jeu s'il est plus proche de la ligne de but adverse que le ballon et l'avant-dernier défenseur<br>
+          - <span class="highlight">Coups de pied arrêtés</span> : coup franc direct/indirect, penalty (11m), corner, touche<br>
+          - <span class="highlight">Cartons</span> : jaune (avertissement), rouge (exclusion)<br>
+          - <span class="highlight">But</span> : 2,44m de haut x 7,32m de large
+        </div>
+      </div>
+
+      <!-- Rugby -->
+      <div class="section-chapitre">
+        <h3>🏉 RUGBY (RÈGLES ESSENTIELLES)</h3>
+        
+        <div class="law-box">
+          <strong>📌 Règles fondamentales :</strong><br><br>
+          - <span class="highlight">Terrain</span> : max 100m x 70m. En-but jusqu'à 22m<br>
+          - <span class="highlight">Temps</span> : 2x40 minutes (mi-temps 10-15 min)<br>
+          - <span class="highlight">Ballon ovale</span> : se joue à la main ou au pied<br>
+          - <span class="highlight">Passe en avant</span> : interdiction de passer le ballon vers l'avant<br>
+          - <span class="highlight">Plaquage</span> : uniquement sur le porteur du ballon, ceinture ou en dessous<br>
+          - <span class="highlight">Mêlée</span> : 8 joueurs par équipe se regroupent pour disputer le ballon<br>
+          - <span class="highlight">Points</span> : essai (5pts), transformation (2pts), drop (3pts), pénalité (3pts)
+        </div>
+      </div>
+
+      <!-- Vocabulaire commun -->
+      <div class="section-chapitre">
+        <h3>📝 VOCABULAIRE COMMUN AUX SPORTS COLLECTIFS</h3>
+        
+        <div class="grid-formulas">
+          <div class="sport-card">
+            <p class="sport-name">Attaque</p>
+            <p>Phase où l'équipe cherche à marquer.</p>
+          </div>
+          <div class="sport-card">
+            <p class="sport-name">Défense</p>
+            <p>Phase où l'équipe cherche à empêcher l'adversaire de marquer.</p>
+          </div>
+          <div class="sport-card">
+            <p class="sport-name">Contre-attaque</p>
+            <p>Transition rapide défense → attaque.</p>
+          </div>
+          <div class="sport-card">
+            <p class="sport-name">Marquage</p>
+            <p>Surveillance d'un adversaire (individuel ou zone).</p>
+          </div>
+          <div class="sport-card">
+            <p class="sport-name">Passe</p>
+            <p>Transmission du ballon entre deux coéquipiers.</p>
+          </div>
+          <div class="sport-card">
+            <p class="sport-name">Coup d'envoi / remise en jeu</p>
+            <p>Reprise du jeu après un arrêt.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conseils pour l'évaluation -->
+      <div class="section-chapitre">
+        <h3>💡 CONSEILS POUR L'ÉVALUATION</h3>
+        
+        <div class="note-box">
+          <strong>📌 Recommandations :</strong><br>
+          - <span class="highlight">Connaître les règles</span> de base de chaque sport (nombre de joueurs, durée, points)<br>
+          - <span class="highlight">Maîtriser le vocabulaire</span> spécifique de chaque discipline<br>
+          - <span class="highlight">Savoir décrire une action</span> technique (tir, passe, dribble, service, etc.)<br>
+          - <span class="highlight">Comprendre les placements</span> des joueurs sur le terrain<br>
+          - <span class="highlight">Revoir les dimensions</span> des terrains et les équipements<br>
+          - <span class="highlight">S'entraîner sur des QCM</span> pour mémoriser les règles
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>💡 RÉCAPITULATIF</h3>
+        
+        <div class="note-box">
+          <strong>📌 Points clés à retenir :</strong><br>
+          - <span class="highlight">Basketball</span> : 5 joueurs, 24 secondes, interdiction de marcher<br>
+          - <span class="highlight">Volleyball</span> : 6 joueurs, 3 touches, filet, rotation<br>
+          - <span class="highlight">Handball</span> : 7 joueurs, 3 pas, zone des 6m<br>
+          - <span class="highlight">Football</span> : 11 joueurs, main interdite, hors-jeu<br>
+          - <span class="highlight">Rugby</span> : 15 joueurs, ballon ovale, passe en avant interdite<br>
+          - <span class="highlight">Vocabulaire commun</span> : attaque, défense, passe, marquage
+        </div>
+      </div>
+
+      <!-- Citation sportive -->
+      <div class="section-chapitre">
+        <div class="law-box" style="text-align: center;">
+          <strong>💪 "Un sport collectif, c'est la somme des talents individuels au service d'un objectif commun."</strong><br>
+          <span class="example">— Anonyme</span>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — EPS | Partie 2 : Les Sports Collectifs — Conforme au programme 2024
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

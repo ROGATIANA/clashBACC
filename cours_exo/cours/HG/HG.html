@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histoire-Géographie – MMFNRR PrépaBacc</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-wrap" id="logoWrap">
+            <div class="logo-ring"></div>
+            <img src="../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+        </div>
+        <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+        <div class="sidebar-sub">MMFNRR · 2024</div>
+
+        <nav class="sidebar-nav">
+            <a href="../../../index.html" class="nav-item">
+                <div class="nav-icon">🏠</div>
+                <div class="nav-body">
+                    <div class="nav-label">Accueil</div>
+                    <div class="nav-desc">Page principale</div>
+                </div>
+            </a>
+
+            <a href="../../../cours_exo/Cours.html" class="nav-item active">
+                <div class="nav-icon">📖</div>
+                <div class="nav-body">
+                    <div class="nav-label">Leçons / Cours</div>
+                    <div class="nav-desc">Fiches de révision</div>
+                </div>
+            </a>
+            <a href="../../../cours_exo/Exercice.html" class="nav-item">
+                <div class="nav-icon">✏️</div>
+                <div class="nav-body">
+                    <div class="nav-label">Sujets Bacc</div>
+                    <div class="nav-desc">Annales officielles</div>
+                </div>
+            </a>
+            <a href="../../../Info/Info.html" class="nav-item">
+                <div class="nav-icon">📝</div>
+                <div class="nav-body">
+                    <div class="nav-label">A propos</div>
+                    <div class="nav-desc">Informations sur le site</div>
+                </div>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+            <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
+        </div>
+    </aside>
+    
+    <main class="main">
+        <div class="topbar">
+            <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+            <button class="hamburger" id="hamburger" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
+        </div>
+
+        <div class="page-header">
+            <div class="breadcrumb">
+                <a href="../../../index.html">Accueil</a> › 
+                <a href="../../../cours_exo/Cours.html">Leçons</a> › 
+                <span>Histoire-Géographie</span>
+            </div>
+            <div class="page-title">HISTOIRE & <span>GÉOGRAPHIE</span></div>
+            <div class="page-subtitle">Cours complets pour le Baccalauréat</div>
+        </div>
+
+        <div class="subject-banner">
+            <div class="subject-icon-large">🌍</div>
+            <div class="subject-info">
+                <h3>Histoire-Géographie</h3>
+                <p>Choisissez votre langue d'étude : Malagasy ou Français</p>
+            </div>
+            <div class="chapter-count">2 langues disponibles</div>
+        </div>
+
+        <div class="section">
+            <div class="section-heading">
+                <h3>SÉLECTIONNEZ LA LANGUE</h3>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="language-grid">
+                <div class="lang-card">
+                    <a href="Chap/malagsy.html" class="lang-link">
+                        <img src="img/mlg.jpg" alt="Malagasy">
+                        <div class="lang-title">Malagasy</div>
+                    </a>
+                </div>
+
+                <div class="lang-card">
+                    <a href="Chap/francais.html" class="lang-link">
+                        <img src="img/fr.jpg" alt="Français">
+                        <div class="lang-title">Français</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+    /* logo spin */
+    const logoImg  = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    /* sidebar mobile */
+    const sidebar   = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay   = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+    </script>
+</body>
+</html>

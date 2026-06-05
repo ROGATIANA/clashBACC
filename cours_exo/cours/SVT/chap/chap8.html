@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVT · Cartographie | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2026</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2026 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../index.html">Accueil</a> ›
+        <a href="../../../Cours.html">Leçons</a> ›
+        <a href="../SVT.html">SVT</a> › Chapitre 8
+      </div>
+      <div class="page-title">CARTOGRAPHIE <span>🗺️ CHAPITRE 8</span></div>
+      <div class="page-subtitle">Cartographie génétique, cartes factorielles, linkage, distance génétique — Baccalauréat</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">🗺️</div>
+      <div class="subject-info">
+        <h3>Cartographie génétique</h3>
+        <p>Localisation des gènes · Carte factorielle · Crossing-over · Pourcentage de recombinés</p>
+      </div>
+      <div class="chapter-count">Fiche complète</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>🗺️ INTRODUCTION</h3>
+        <p>La <span class="highlight">cartographie génétique</span> est une technique qui permet de déterminer la position relative des gènes sur un chromosome. Elle repose sur l'étude de la fréquence des recombinaisons entre gènes liés.</p>
+        
+        <div class="note-box">
+          <strong>📌 Objectifs de la cartographie :</strong><br>
+          - Localiser les gènes sur les chromosomes<br>
+          - Déterminer l'ordre des gènes<br>
+          - Calculer les distances génétiques (cM - centiMorgans)<br>
+          - Établir des cartes factorielles
+        </div>
+      </div>
+
+      <!-- I – GÈNES LIÉS ET CROSSING-OVER -->
+      <div class="section-chapitre">
+        <h3>🧬 I – GÈNES LIÉS ET CROSSING-OVER</h3>
+        
+        <p>Des gènes sont dits <span class="highlight">liés</span> lorsqu'ils sont situés sur le même chromosome. La <span class="highlight">recombinaison homologue (crossing-over)</span> qui se produit en prophase I de méiose peut échanger des allèles entre chromosomes homologues.</p>
+        
+        <div class="note-box">
+          <strong>📌 Conséquences :</strong><br>
+          - <span class="highlight">Gènes indépendants</span> : situés sur des chromosomes différents → 50% de recombinés<br>
+          - <span class="highlight">Gènes liés</span> : situés sur le même chromosome → &lt; 50% de recombinés<br>
+          - Plus les gènes sont éloignés, plus le taux de recombinaison est élevé
+        </div>
+      </div>
+
+      <!-- II – CALCUL DE LA DISTANCE GÉNÉTIQUE -->
+      <div class="section-chapitre">
+        <h3>📏 II – CALCUL DE LA DISTANCE GÉNÉTIQUE</h3>
+        
+        <p>La distance génétique entre deux gènes est proportionnelle au pourcentage de descendants recombinés issus d'un croisement-test.</p>
+        
+        <div class="note-box">
+          <strong>📌 Formule :</strong><br>
+          <span class="formula">% de recombinés = (Nombre d'individus recombinés / Nombre total d'individus) × 100</span><br><br>
+          <span class="highlight">1% de recombinés = 1 cM (centiMorgan) = 1 u.m. (unité de map)</span>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/g1.jpg" alt="Cartographie">
+          <div class="img-caption">Fig. 1 – Principe de la cartographie génétique</div>
+        </div>
+      </div>
+
+      <!-- III – ÉTABLISSEMENT D'UNE CARTE FACTORIELLE -->
+      <div class="section-chapitre">
+        <h3>📊 III – ÉTABLISSEMENT D'UNE CARTE FACTORIELLE</h3>
+        
+        <p>Pour trois gènes liés (A, B, C), on détermine :</p>
+        <ul>
+          <li>Le pourcentage de recombinaison entre A et B : <span class="formula">AB%</span></li>
+          <li>Le pourcentage de recombinaison entre B et C : <span class="formula">BC%</span></li>
+          <li>Le pourcentage de recombinaison entre A et C : <span class="formula">AC%</span></li>
+        </ul>
+        
+        <p>Si <span class="formula">AB% + BC% ≈ AC%</span>, alors l'ordre des gènes est <span class="highlight">A - B - C</span>.</p>
+        
+        <div class="image-grid-chap">
+          <div class="img-card">
+            <img src="img/g2.jpg" alt="Carte factorielle 1">
+            <div class="img-caption">Fig. 2 – Construction d'une carte factorielle</div>
+          </div>
+          <div class="img-card">
+            <img src="img/g3.jpg" alt="Carte factorielle 2">
+            <div class="img-caption">Fig. 3 – Exemple de carte génétique</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IV – MÉTHODES DE CARTOGRAPHIE -->
+      <div class="section-chapitre">
+        <h3>🔬 IV – MÉTHODES DE CARTOGRAPHIE</h3>
+        
+        <h4>1. Cartographie par croisement-test (test-cross)</h4>
+        <p>On croise un individu hétérozygote avec un individu homozygote récessif. L'analyse de la descendance permet de calculer les fréquences de recombinaison.</p>
+        
+        <div class="img-container">
+          <img src="img/g4.jpg" alt="Test-cross cartographie">
+          <div class="img-caption">Fig. 4 – Principe du test-cross pour la cartographie</div>
+        </div>
+        
+        <h4>2. Cartographie par interférence</h4>
+        <p>Lorsqu'un crossing-over se produit entre deux gènes, cela peut influencer la probabilité d'un autre crossing-over à proximité.</p>
+        
+        <div class="img-container">
+          <img src="img/g5.jpg" alt="Interférence">
+          <div class="img-caption">Fig. 5 – Notion d'interférence chromosomique</div>
+        </div>
+      </div>
+
+      <!-- V – APPLICATIONS DE LA CARTOGRAPHIE -->
+      <div class="section-chapitre">
+        <h3>💊 V – APPLICATIONS DE LA CARTOGRAPHIE</h3>
+        
+        <div class="image-grid-chap">
+          <div class="img-card">
+            <img src="img/g6.jpg" alt="Application 1">
+            <div class="img-caption">Fig. 6 – Cartographie du génome humain</div>
+          </div>
+          <div class="img-card">
+            <img src="img/g7.jpg" alt="Application 2">
+            <div class="img-caption">Fig. 7 – Localisation de gènes de maladies</div>
+          </div>
+        </div>
+        
+        <ul>
+          <li><span class="highlight">Cartographie du génome humain</span> (Projet Génome Humain)</li>
+          <li><span class="highlight">Localisation de gènes responsables de maladies héréditaires</span></li>
+          <li><span class="highlight">Amélioration des espèces végétales et animales</span> (sélection assistée par marqueurs)</li>
+          <li><span class="highlight">Diagnostic prénatal</span> et conseil génétique</li>
+          <li><span class="highlight">Phylogénie et évolution</span> (comparaison de génomes)</li>
+        </ul>
+        
+        <div class="image-grid-chap">
+          <div class="img-card">
+            <img src="img/g8.jpg" alt="Application 3">
+            <div class="img-caption">Fig. 8 – Carte génétique humaine</div>
+          </div>
+          <div class="img-card">
+            <img src="img/g9.jpg" alt="Application 4">
+            <div class="img-caption">Fig. 9 – Cartographie comparée</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VI – EXEMPLE DE CALCUL -->
+      <div class="section-chapitre">
+        <h3>📝 VI – EXEMPLE DE CALCUL DE DISTANCE</h3>
+        
+        <div class="note-box">
+          <strong>📌 Enoncé :</strong><br>
+          On croise une drosophile [corps gris, ailes longues] avec une drosophile [corps noir, ailes vestigiales].<br>
+          En F₁, toutes les drosophiles sont [corps gris, ailes longues].<br>
+          On réalise un test-cross : F₁ × [corps noir, ailes vestigiales].<br>
+          Résultats : 960 [gris, longues], 940 [noir, vestigiales], 60 [gris, vestigiales], 40 [noir, longues].
+        </div>
+        
+        <h4>Calcul du pourcentage de recombinés :</h4>
+        <p>Individus recombinés = 60 + 40 = 100<br>
+        Total = 960 + 940 + 60 + 40 = 2000<br>
+        <span class="formula">% recombinés = (100 / 2000) × 100 = 5%</span><br>
+        Distance génétique = <span class="highlight">5 cM</span></p>
+        
+        <div class="note-box">
+          <strong>💡 Interprétation :</strong><br>
+          Les gènes de la couleur du corps et de la forme des ailes sont <span class="highlight">liés</span> sur le même chromosome, distants de <span class="highlight">5 cM</span>.
+        </div>
+      </div>
+
+      <!-- VII – RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>📝 RÉCAPITULATIF</h3>
+        <div class="note-box">
+          <strong>💡 Points clés à retenir :</strong><br>
+          - <span class="highlight">Gènes liés</span> : situés sur le même chromosome, transmis ensemble<br>
+          - <span class="highlight">Crossing-over</span> : échange de segments entre chromosomes homologues en méiose<br>
+          - <span class="highlight">Taux de recombinaison</span> : proportion de gamètes recombinés<br>
+          - <span class="highlight">1% de recombinés = 1 cM</span> (unité de distance génétique)<br>
+          - <span class="highlight">Carte factorielle</span> : représentation linéaire de l'ordre et des distances entre gènes<br>
+          - <span class="highlight">Test-cross</span> : outil essentiel pour la cartographie génétique
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions SVT | Chapitre 8 : Cartographie génétique — Conforme au programme 2026
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>
