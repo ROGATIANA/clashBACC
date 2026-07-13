@@ -12,10 +12,7 @@
 <body>
 
   <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
-
-  <!-- ════ SIDEBAR ════ -->
   <aside class="sidebar" id="sidebar">
-
     <div class="logo-wrap" id="logoWrap" title="Cliquer pour faire tourner">
       <div class="logo-ring"></div>
       <img src="../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
@@ -25,7 +22,6 @@
     <div class="sidebar-sub">MMFNRR · 2026</div>
 
     <nav class="sidebar-nav">
-
       <a href="../index.html" class="nav-item">
         <div class="nav-icon">🏠</div>
         <div class="nav-body">
@@ -63,159 +59,131 @@
       <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
       <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2026 · 🇲🇬</div>
     </div>
-
   </aside>
 
-  <!-- ════ MAIN ════ -->
   <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
 
-<div class="topbar">
-  <div class="topbar-brand">PRÉPA<span>BACC</span></div>
-  <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
-<span></span><span></span><span></span>
-  </button>
-</div>
+    <div class="page-header">
+      <div class="page-header-left">
+        <div class="breadcrumb"><a href="../index.html">Accueil</a> › Leçons</div>
+        <div class="page-title">LEÇONS &amp; <span>COURS</span></div>
+        <div class="page-subtitle">Sélectionnez une matière pour accéder aux fiches de révision</div>
+      </div>
 
-<!-- page header -->
-<div class="page-header">
-  <div class="page-header-left">
-<div class="breadcrumb"><a href="../index.html">Accueil</a> › Leçons</div>
-<div class="page-title">LEÇONS &amp; <span>COURS</span></div>
-<div class="page-subtitle">Sélectionnez une matière pour accéder aux fiches de révision</div>
-  </div>
-  <div class="count-pill">10 MATIÈRES</div>
-</div>
+      <div class="count-pill">10 MATIÈRES</div>
+    </div>
 
-<!-- toolbar -->
-<div class="toolbar">
-  <div class="search-wrap">
-<span class="search-icon">🔍</span>
-<input type="text" id="searchInput" placeholder="Rechercher une matière…" oninput="filterCards()" />
-  </div>
-</div>
+    <div class="toolbar">
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Rechercher une matière…">
+      </div>
+    </div>
 
-<!-- subject grid -->
-<div class="section">
-  <div class="section-heading">
-    <h3>TOUTES LES MATIÈRES</h3>
-    <div class="section-line"></div>
-  </div>
+    <div class="section">
+      <div class="section-heading">
+        <h3>TOUTES LES MATIÈRES</h3>
+        <div class="section-line"></div>
+      </div>
 
-  <div class="subject-grid" id="subjectGrid">
+      <div class="subject-grid" id="subjectGrid">
+        <a href="cours/SVT/SVT.html" class="subject-card s-svt" data-name="svt sciences vie terre biologie">
+          <div class="subject-icon-wrap">🌿</div>
+          <div class="subject-label">SVT</div>
+          <div class="subject-full">Sciences de la Vie et de la Terre</div>
+          <div class="subject-arrow">↓</div>
+        </a>
 
-    <a href="cours/SVT/SVT.html" class="subject-card s-svt" data-name="svt sciences vie terre biologie">
-      <div class="subject-icon-wrap">🌿</div>
-      <div class="subject-label">SVT</div>
-      <div class="subject-full">Sciences de la Vie et de la Terre</div>
-      <div class="subject-arrow">↓</div>
-    </a>
+        <a href="cours/Physique/Physique.html" class="subject-card s-pc" data-name="physique">
+          <div class="subject-icon-wrap">⚡</div>
+          <div class="subject-label">Physique</div>
+          <div class="subject-full">Physique générale</div>
+          <div class="subject-arrow">↓</div>
+        </a>
 
-    <a href="cours/Physique/Physique.html" class="subject-card s-pc" data-name="physique">
-      <div class="subject-icon-wrap">⚡</div>
-      <div class="subject-label">Physique</div>
-      <div class="subject-full">Physique générale</div>
-      <div class="subject-arrow">↓</div>
-    </a>
+        <a href="cours/Chimie/Chimie.html" class="subject-card s-chi" data-name="chimie">
+          <div class="subject-icon-wrap">🧪</div>
+          <div class="subject-label">Chimie</div>
+          <div class="subject-full">Chimie générale</div>
+          <div class="subject-arrow">↓</div>
+        </a>
 
-    <a href="cours/Chimie/Chimie.html" class="subject-card s-chi" data-name="chimie">
-      <div class="subject-icon-wrap">🧪</div>
-      <div class="subject-label">Chimie</div>
-      <div class="subject-full">Chimie générale</div>
-      <div class="subject-arrow">↓</div>
-    </a>
+        <a href="cours/MTH/MTH.html" class="subject-card s-mth" data-name="mathématiques maths">
+          <div class="subject-icon-wrap">📐</div>
+          <div class="subject-label">Maths</div>
+          <div class="subject-full">Mathématiques</div>
+          <div class="subject-arrow">↓</div>
+        </a>
 
-    <a href="cours/MTH/MTH.html" class="subject-card s-mth" data-name="mathématiques maths">
-      <div class="subject-icon-wrap">📐</div>
-      <div class="subject-label">Maths</div>
-      <div class="subject-full">Mathématiques</div>
-      <div class="subject-arrow">↓</div>
-    </a>
+        <a href="cours/Anglais/Anglais.html" class="subject-card s-ang" data-name="anglais english">
+          <div class="subject-icon-wrap">🇬🇧</div>
+          <div class="subject-label">Anglais</div>
+          <div class="subject-full">Langue anglaise</div>
+          <div class="subject-arrow">↓</div>
+        </a>
 
-    <a href="cours/Anglais/Anglais.html" class="subject-card s-ang" data-name="anglais english">
-      <div class="subject-icon-wrap">🇬🇧</div>
-      <div class="subject-label">Anglais</div>
-      <div class="subject-full">Langue anglaise</div>
-      <div class="subject-arrow">↓</div>
-    </a>
+        <a href="cours/FRS/FRS.html" class="subject-card s-frs" data-name="français littérature">
+          <div class="subject-icon-wrap">📚</div>
+          <div class="subject-label">Français</div>
+          <div class="subject-full">Langue & littérature française</div>
+          <div class="subject-arrow">↓</div>
+        </a>
 
-    <a href="cours/FRS/FRS.html" class="subject-card s-frs" data-name="français littérature">
-      <div class="subject-icon-wrap">📚</div>
-      <div class="subject-label">Français</div>
-      <div class="subject-full">Langue & littérature française</div>
-      <div class="subject-arrow">↓</div>
-    </a>
+        <a href="cours/MLG/MLG.html" class="subject-card s-mlg" data-name="malagasy malgache">
+          <div class="subject-icon-wrap">🇲🇬</div>
+          <div class="subject-label">Malagasy</div>
+          <div class="subject-full">Teny Malagasy</div>
+          <div class="subject-arrow">↓</div>
+        </a>
 
-    <a href="cours/MLG/MLG.html" class="subject-card s-mlg" data-name="malagasy malgache">
-      <div class="subject-icon-wrap">🇲🇬</div>
-      <div class="subject-label">Malagasy</div>
-      <div class="subject-full">Teny Malagasy</div>
-      <div class="subject-arrow">↓</div>
-    </a>
+        <a href="cours/HG/HG.html" class="subject-card s-hg" data-name="histoire géographie histo geo">
+          <div class="subject-icon-wrap">🌍</div>
+          <div class="subject-label">Histo-Géo</div>
+          <div class="subject-full">Histoire &amp; Géographie</div>
+          <div class="subject-arrow">↓</div>
+        </a>
 
-    <a href="cours/HG/HG.html" class="subject-card s-hg" data-name="histoire géographie histo geo">
-      <div class="subject-icon-wrap">🌍</div>
-      <div class="subject-label">Histo-Géo</div>
-      <div class="subject-full">Histoire &amp; Géographie</div>
-      <div class="subject-arrow">↓</div>
-    </a>
+        <a href="cours/PHILO/PHILO.html" class="subject-card s-phi" data-name="philosophie filozofia philo">
+          <div class="subject-icon-wrap">🧠</div>
+          <div class="subject-label">Philo</div>
+          <div class="subject-full">Filozofia / Philosophie</div>
+          <div class="subject-arrow">↓</div>
+        </a>
 
-    <a href="cours/PHILO/PHILO.html" class="subject-card s-phi" data-name="philosophie filozofia philo">
-      <div class="subject-icon-wrap">🧠</div>
-      <div class="subject-label">Philo</div>
-      <div class="subject-full">Filozofia / Philosophie</div>
-      <div class="subject-arrow">↓</div>
-    </a>
-
-    <a href="cours/EPS/EPS.html" class="subject-card s-eps" data-name="eps éducation physique sport">
-      <div class="subject-icon-wrap">🏃</div>
-      <div class="subject-label">EPS</div>
-      <div class="subject-full">Éducation Physique & Sportive</div>
-      <div class="subject-arrow">↓</div>
-    </a>
-
-  </div>
-</div>
-
+        <a href="cours/EPS/EPS.html" class="subject-card s-eps" data-name="eps éducation physique sport">
+          <div class="subject-icon-wrap">🏃</div>
+          <div class="subject-label">EPS</div>
+          <div class="subject-full">Éducation Physique & Sportive</div>
+          <div class="subject-arrow">↓</div>
+        </a>
+      </div>
+    </div>
   </main>
 
   <script>
-/* logo spin */
-const logoImg  = document.getElementById('logoImg');
-const logoWrap = document.getElementById('logoWrap');
-logoWrap.addEventListener('click', () => {
-  logoImg.classList.remove('spinning');
-  void logoImg.offsetWidth;
-  logoImg.classList.add('spinning');
-  logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
-});
+    const sidebar   = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay   = document.getElementById('overlay');
 
-/* sidebar mobile */
-const sidebar   = document.getElementById('sidebar');
-const hamburger = document.getElementById('hamburger');
-const overlay   = document.getElementById('overlay');
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
 
-function toggleSidebar() {
-  const open = sidebar.classList.toggle('open');
-  hamburger.classList.toggle('open', open);
-  overlay.classList.toggle('visible', open);
-  document.body.style.overflow = open ? 'hidden' : '';
-}
-
-function closeSidebar() {
-  sidebar.classList.remove('open');
-  hamburger.classList.remove('open');
-  overlay.classList.remove('visible');
-  document.body.style.overflow = '';
-}
-
-/* search filter */
-function filterCards() {
-  const q = document.getElementById('searchInput').value.toLowerCase();
-  document.querySelectorAll('.subject-card').forEach(card => {
-    const txt = card.dataset.name + ' ' + card.innerText.toLowerCase();
-    card.style.display = txt.includes(q) ? '' : 'none';
-  });
-}
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
   </script>
 
 </body>

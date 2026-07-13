@@ -102,7 +102,7 @@
 
         <div class="recall-section">
             <div class="chapter-card recall-card">
-                <a href="Chap/resume.html" class="chapter-link">
+                <a href="#" class="chapter-link">
                     <div class="chapter-number">📘 RÉSUMÉ</div>
                     <div class="chapter-info">
                         <div class="chapter-title">Formulaire & notions clés</div>
@@ -115,7 +115,7 @@
 
         <div class="recall-section">
             <div class="chapter-card recall-card">
-                <a href="chap/rappel.html" class="chapter-link">
+                <a href="#" class="chapter-link">
                     <div class="chapter-number">📌 RAPPELS</div>
                     <div class="chapter-info">
                         <div class="chapter-title">Notions fondamentales</div>
@@ -131,7 +131,7 @@
                 <div class="part-title">PARTIE 1 : CHIMIE ORGANIQUE</div>
                 <div class="chapters-grid">
                     <div class="chapter-card">
-                        <a href="Chap/part1/chap1.html" class="chapter-link">
+                        <a href="#" class="chapter-link">
                             <div class="chapter-number">CHAPITRE 1</div>
                             <div class="chapter-info">
                                 <div class="chapter-title">Les Alcools</div>
@@ -142,7 +142,7 @@
                     </div>
 
                     <div class="chapter-card">
-                        <a href="Chap/part1/chap2.html" class="chapter-link">
+                        <a href="#" class="chapter-link">
                             <div class="chapter-number">CHAPITRE 2</div>
                             <div class="chapter-info">
                                 <div class="chapter-title">Les Amines</div>
@@ -153,7 +153,7 @@
                     </div>
 
                     <div class="chapter-card">
-                        <a href="Chap/part1/chap3.html" class="chapter-link">
+                        <a href="#" class="chapter-link">
                             <div class="chapter-number">CHAPITRE 3</div>
                             <div class="chapter-info">
                                 <div class="chapter-title">Les Acides Carboxyliques Et Dérivés</div>
@@ -164,7 +164,7 @@
                     </div>
 
                     <div class="chapter-card">
-                        <a href="Chap/part1/chap4.html" class="chapter-link">
+                        <a href="#" class="chapter-link">
                             <div class="chapter-number">CHAPITRE 4</div>
                             <div class="chapter-info">
                                 <div class="chapter-title">Cinétique Chimique</div>
@@ -182,7 +182,7 @@
                 <div class="part-title">PARTIE 2 : CHIMIE MINÉRALE</div>
                 <div class="chapters-grid">
                     <div class="chapter-card">
-                        <a href="Chap/part2/chap1.html" class="chapter-link">
+                        <a href="#" class="chapter-link">
                             <div class="chapter-number">CHAPITRE 1</div>
                             <div class="chapter-info">
                                 <div class="chapter-title">pH d'une Solution Aqueuse</div>
@@ -192,7 +192,7 @@
                     </div>
 
                     <div class="chapter-card">
-                        <a href="Chap/part2/chap2.html" class="chapter-link">
+                        <a href="#" class="chapter-link">
                             <div class="chapter-number">CHAPITRE 2</div>
                             <div class="chapter-info">
                                 <div class="chapter-title">Acide Fort - Base Forte</div>
@@ -202,7 +202,7 @@
                     </div>
 
                     <div class="chapter-card">
-                        <a href="Chap/part2/chap3.html" class="chapter-link">
+                        <a href="#" class="chapter-link">
                             <div class="chapter-number">CHAPITRE 3</div>
                             <div class="chapter-info">
                                 <div class="chapter-title">Acide Faible - Base Faible</div>
@@ -213,7 +213,7 @@
                     </div>
 
                     <div class="chapter-card">
-                        <a href="Chap/part2/chap4.html" class="chapter-link">
+                        <a href="#" class="chapter-link">
                             <div class="chapter-number">CHAPITRE 4</div>
                             <div class="chapter-info">
                                 <div class="chapter-title">Constante d'Acidité</div>
@@ -224,7 +224,7 @@
                     </div>
 
                     <div class="chapter-card">
-                        <a href="Chap/part2/chap5.html" class="chapter-link">
+                        <a href="#" class="chapter-link">
                             <div class="chapter-number">CHAPITRE 5</div>
                             <div class="chapter-info">
                                 <div class="chapter-title">Réaction Acide Faible - Base Forte</div>
@@ -235,7 +235,7 @@
                     </div>
 
                     <div class="chapter-card">
-                        <a href="Chap/part2/chap6.html" class="chapter-link">
+                        <a href="#" class="chapter-link">
                             <div class="chapter-number">CHAPITRE 6</div>
                             <div class="chapter-info">
                                 <div class="chapter-title">Les Acides α-Aminés</div>
@@ -246,7 +246,7 @@
                     </div>
 
                     <div class="chapter-card">
-                        <a href="Chap/part2/chap7.html" class="chapter-link">
+                        <a href="#" class="chapter-link">
                             <div class="chapter-number">CHAPITRE 7</div>
                             <div class="chapter-info">
                                 <div class="chapter-title">Documents Annexes</div>
@@ -260,19 +260,9 @@
         </div>
     </main>
     <script>
-        const logoImg = document.getElementById('logoImg');
-        logoWrap = document.getElementById('logoWrap');
-
-        if (logoWrap) logoWrap.addEventListener('click', () => {
-            logoImg.classList.remove('spinning');
-            void logoImg.offsetWidth;
-            logoImg.classList.add('spinning');
-            logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
-        });
-
-        const sidebar = document.getElementById('sidebar'), 
-        hamburger = document.getElementById('hamburger'), 
-        overlay = document.getElementById('overlay');
+        const sidebar   = document.getElementById('sidebar');
+        const hamburger = document.getElementById('hamburger');
+        const overlay   = document.getElementById('overlay');
 
         function toggleSidebar() {
             const open = sidebar.classList.toggle('open');
@@ -280,6 +270,7 @@
             overlay.classList.toggle('visible', open);
             document.body.style.overflow = open ? 'hidden' : '';
         }
+
         function closeSidebar() {
             sidebar.classList.remove('open');
             hamburger.classList.remove('open');

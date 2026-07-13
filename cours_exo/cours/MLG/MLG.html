@@ -91,7 +91,7 @@
 
             <div class="chapters-grid">
                 <div class="chapter-card">
-                    <a href="Chap/chap1.html" class="chapter-link">
+                    <a href="#" class="chapter-link">
                         <div class="chapter-number">FIZARANA 1</div>
                         <div class="chapter-info">
                             <div class="chapter-title">Literatiora</div>
@@ -102,7 +102,7 @@
                 </div>
 
                 <div class="chapter-card">
-                    <a href="Chap/chap2.html" class="chapter-link">
+                    <a href="#" class="chapter-link">
                         <div class="chapter-number">FIZARANA 2</div>
                         <div class="chapter-info">
                             <div class="chapter-title">Riba</div>
@@ -113,7 +113,7 @@
                 </div>
 
                 <div class="chapter-card">
-                    <a href="Chap/chap3.html" class="chapter-link">
+                    <a href="#" class="chapter-link">
                         <div class="chapter-number">FIZARANA 3</div>
                         <div class="chapter-info">
                             <div class="chapter-title">Boky Vakivakim-piainana</div>
@@ -124,7 +124,7 @@
                 </div>
 
                 <div class="chapter-card">
-                    <a href="Chap/fampiasana.html" class="chapter-link">
+                    <a href="#" class="chapter-link">
                         <div class="chapter-number">FAMPIASANA</div>
                         <div class="chapter-info">
                             <div class="chapter-title">Fampiharana</div>
@@ -135,7 +135,7 @@
                 </div>
 
                 <div class="chapter-card">
-                    <a href="Chap/ohbln.html" class="chapter-link">
+                    <a href="#" class="chapter-link">
                         <div class="chapter-number">BY MMFNRR</div>
                         <div class="chapter-info">
                             <div class="chapter-title">Ohabolana sy Oham-pitenenana</div>
@@ -147,37 +147,25 @@
             </div>
         </div>
     </main>
+
     <script>
-    /* logo spin */
-    const logoImg  = document.getElementById('logoImg');
-    const logoWrap = document.getElementById('logoWrap');
-    if (logoWrap) {
-      logoWrap.addEventListener('click', () => {
-        logoImg.classList.remove('spinning');
-        void logoImg.offsetWidth;
-        logoImg.classList.add('spinning');
-        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
-      });
-    }
+        const sidebar   = document.getElementById('sidebar');
+        const hamburger = document.getElementById('hamburger');
+        const overlay   = document.getElementById('overlay');
 
-    /* sidebar mobile */
-    const sidebar   = document.getElementById('sidebar');
-    const hamburger = document.getElementById('hamburger');
-    const overlay   = document.getElementById('overlay');
+        function toggleSidebar() {
+            const open = sidebar.classList.toggle('open');
+            hamburger.classList.toggle('open', open);
+            overlay.classList.toggle('visible', open);
+            document.body.style.overflow = open ? 'hidden' : '';
+        }
 
-    function toggleSidebar() {
-      const open = sidebar.classList.toggle('open');
-      hamburger.classList.toggle('open', open);
-      overlay.classList.toggle('visible', open);
-      document.body.style.overflow = open ? 'hidden' : '';
-    }
-
-    function closeSidebar() {
-      sidebar.classList.remove('open');
-      hamburger.classList.remove('open');
-      overlay.classList.remove('visible');
-      document.body.style.overflow = '';
-    }
-  </script>
+        function closeSidebar() {
+            sidebar.classList.remove('open');
+            hamburger.classList.remove('open');
+            overlay.classList.remove('visible');
+            document.body.style.overflow = '';
+        }
+    </script>
 </body>
 </html>

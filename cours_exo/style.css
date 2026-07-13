@@ -1,6 +1,3 @@
-/* ════════════════════════════════════════════════════
-   RESET + VARIABLES
-════════════════════════════════════════════════════ */
 *, *::before, *::after{
   box-sizing:border-box;
   margin:0;
@@ -16,18 +13,6 @@
   --text-on-dark:#f0e6cc;
   --radius:14px;
   --sidebar-w:260px;
-
-  /* couleurs */
-  --c-svt:#4caf82;
-  --c-pc:#5b9bd5;
-  --c-chi:#e07b54;
-  --c-mth:#e8c97e;
-  --c-ang:#7b8fe8;
-  --c-frs:#d47cb4;
-  --c-mlg:#e87b7b;
-  --c-hg:#78c4b8;
-  --c-phi:#b47cd8;
-  --c-eps:#7bc47b;
 }
 
 html,body{
@@ -42,9 +27,6 @@ body{
   min-height:100vh;
 }
 
-/* ════════════════════════════════════════════════════
-   SIDEBAR
-════════════════════════════════════════════════════ */
 .sidebar{
   width:var(--sidebar-w);
   min-height:100vh;
@@ -62,7 +44,6 @@ body{
   transition:transform .28s cubic-bezier(.4,0,.2,1);
 }
 
-/* logo */
 .logo-wrap{
   position:relative;
   cursor:pointer;
@@ -91,16 +72,6 @@ body{
   pointer-events:none;
 }
 
-@keyframes spin-once{
-  from{transform:rotate(0deg);}
-  to{transform:rotate(360deg);}
-}
-
-.spinning{
-  animation:spin-once .85s cubic-bezier(.4,0,.2,1);
-}
-
-/* titre */
 .sidebar-title{
   font-family:'Bebas Neue',sans-serif;
   font-size:1.9rem;
@@ -124,7 +95,6 @@ body{
   margin-bottom:2rem;
 }
 
-/* navigation */
 .sidebar-nav{
   width:100%;
   display:flex;
@@ -183,7 +153,6 @@ body{
   margin-top:1px;
 }
 
-/* footer */
 .sidebar-footer{
   width:100%;
   padding-top:1.25rem;
@@ -206,9 +175,6 @@ body{
   line-height:1.6;
 }
 
-/* ════════════════════════════════════════════════════
-   TOPBAR
-════════════════════════════════════════════════════ */
 .topbar{
   display:none;
   align-items:center;
@@ -275,9 +241,6 @@ body{
   display:block;
 }
 
-/* ════════════════════════════════════════════════════
-   MAIN
-════════════════════════════════════════════════════ */
 .main{
   margin-left:var(--sidebar-w);
   flex:1;
@@ -286,7 +249,6 @@ body{
   min-height:100vh;
 }
 
-/* header */
 .page-header{
   padding: 2.5rem 3rem 2rem;
   border-bottom:.5px solid rgba(255,255,255,.06);
@@ -339,7 +301,6 @@ body{
   white-space:nowrap;
 }
 
-/* toolbar */
 .toolbar{
   padding:1rem 3rem;
   border-bottom:.5px solid rgba(255,255,255,.05);
@@ -384,9 +345,6 @@ body{
   pointer-events:none;
 }
 
-/* ════════════════════════════════════════════════════
-   SECTION
-════════════════════════════════════════════════════ */
 .section{
   padding:2rem 3rem;
   flex:1;
@@ -422,14 +380,12 @@ body{
   background:rgba(255,255,255,.07);
 }
 
-/* grid */
-.subject-grid{
+.subject-grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 12px;
 }
 
-/* cards */
 .subject-card{
   background: var(--navy);
   border: .5px solid rgba(255,255,255,.09);
@@ -463,18 +419,6 @@ body{
   background:var(--navy-mid);
 }
 
-/* couleurs */
-.s-svt::before{background:var(--c-svt);}
-.s-pc::before{background:var(--c-pc);}
-.s-chi::before{background:var(--c-chi);}
-.s-mth::before{background:var(--c-mth);}
-.s-ang::before{background:var(--c-ang);}
-.s-frs::before{background:var(--c-frs);}
-.s-mlg::before{background:var(--c-mlg);}
-.s-hg::before{background:var(--c-hg);}
-.s-phi::before{background:var(--c-phi);}
-.s-eps::before{background:var(--c-eps);}
-
 .subject-icon-wrap{
   width:48px;
   height:48px;
@@ -485,17 +429,6 @@ body{
   font-size:22px;
   background:rgba(255,255,255,.05);
 }
-
-.s-svt .subject-icon-wrap{background:rgba(76,175,130,.12);}
-.s-pc .subject-icon-wrap{background:rgba(91,155,213,.12);}
-.s-chi .subject-icon-wrap{background:rgba(224,123,84,.12);}
-.s-mth .subject-icon-wrap{background:rgba(232,201,126,.12);}
-.s-ang .subject-icon-wrap{background:rgba(123,143,232,.12);}
-.s-frs .subject-icon-wrap{background:rgba(212,124,180,.12);}
-.s-mlg .subject-icon-wrap{background:rgba(232,123,123,.12);}
-.s-hg .subject-icon-wrap{background:rgba(120,196,184,.12);}
-.s-phi .subject-icon-wrap{background:rgba(180,124,216,.12);}
-.s-eps .subject-icon-wrap{background:rgba(123,196,123,.12);}
 
 .subject-label{
   font-family:'Bebas Neue',sans-serif;
@@ -523,9 +456,7 @@ body{
   transform:translateY(2px);
 }
 
-/* ════════════════════════════════════════════════════
-   RESPONSIVE
-════════════════════════════════════════════════════ */
+
 @media (max-width:1200px){
   .subject-grid{
 grid-template-columns:repeat(4,1fr);
