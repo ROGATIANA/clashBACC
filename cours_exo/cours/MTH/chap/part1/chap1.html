@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mathématiques · Nombres Complexes | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre .highlight-red {
+      color: #e74c3c;
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem;
+    }
+    
+    .img-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(241, 196, 15, 0.1);
+      border-left: 3px solid #f1c40f;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .formula {
+      font-family: monospace;
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .formula-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.8rem;
+      text-align: center;
+    }
+    
+    .formula-card .formula-name {
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2024</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../../index.html">Accueil</a> ›
+        <a href="../../../../Cours.html">Leçons</a> ›
+        <a href="../../MTH.html">Mathématiques</a> › Algèbre & Analyse</a> › Chapitre 1
+      </div>
+      <div class="page-title">NOMBRES COMPLEXES <span>📐 CHAPITRE 1</span></div>
+      <div class="page-subtitle">Forme algébrique, trigonométrique, exponentielle, équations, racines n-ièmes — Mathématiques · Baccalauréat</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">📐</div>
+      <div class="subject-info">
+        <h3>Nombres complexes</h3>
+        <p>Ensemble ℂ · Conjugué · Module · Argument · Équations · Racines n-ièmes</p>
+      </div>
+      <div class="chapter-count">Cours complet</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>📐 INTRODUCTION</h3>
+        <p>L'ensemble des <span class="highlight">nombres complexes</span>, noté ℂ, est une extension de l'ensemble des nombres réels ℝ. Il permet de résoudre des équations polynomiales qui n'ont pas de solution réelle, comme <span class="formula">x² + 1 = 0</span>. Les nombres complexes sont largement utilisés en mathématiques, en physique, en électronique et en traitement du signal.</p>
+        
+        <div class="note-box">
+          <strong>📌 Unité imaginaire :</strong><br>
+          <span class="formula">i² = -1</span><br>
+          Tout nombre complexe s'écrit <span class="formula">z = a + ib</span> où a et b sont des réels.<br>
+          a = <span class="highlight">partie réelle</span> Re(z), b = <span class="highlight">partie imaginaire</span> Im(z)
+        </div>
+      </div>
+
+      <!-- I – VISION GÉOMÉTRIQUE -->
+      <div class="section-chapitre">
+        <h3>📊 I – VISION GÉOMÉTRIQUE D'UN NOMBRE COMPLEXE</h3>
+        
+        <div class="img-container">
+          <img src="img/n1.png" alt="Vision géométrique 1">
+          <div class="img-caption">Fig. 1 – Plan complexe et représentation géométrique</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/n2.png" alt="Vision géométrique 2">
+          <div class="img-caption">Fig. 2 – Affixe d'un point dans le plan complexe</div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Plan complexe (plan d'Argand) :</strong><br>
+          - L'axe des abscisses est l'<span class="highlight">axe réel</span> (partie réelle)<br>
+          - L'axe des ordonnées est l'<span class="highlight">axe imaginaire</span> (partie imaginaire)<br>
+          - À tout point M(x,y) correspond l'affixe <span class="formula">z = x + iy</span>
+        </div>
+      </div>
+
+      <!-- II – ENSEMBLE DES NOMBRES COMPLEXES -->
+      <div class="section-chapitre">
+        <h3>📚 II – ENSEMBLE DES NOMBRES COMPLEXES</h3>
+        
+        <div class="img-container">
+          <img src="img/n3.png" alt="Ensemble des complexes">
+          <div class="img-caption">Fig. 3 – Inclusion des ensembles : ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ ⊂ ℂ</div>
+        </div>
+      </div>
+
+      <!-- III – CONJUGUÉ -->
+      <div class="section-chapitre">
+        <h3>🔄 III – CONJUGUÉ D'UN NOMBRE COMPLEXE</h3>
+        
+        <div class="img-container">
+          <img src="img/n4.png" alt="Conjugué">
+          <div class="img-caption">Fig. 4 – Définition et propriétés du conjugué</div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Propriétés du conjugué :</strong><br>
+          - <span class="formula">\overline{z_1 + z_2} = \bar{z_1} + \bar{z_2}</span><br>
+          - <span class="formula">\overline{z_1·z_2} = \bar{z_1}·\bar{z_2}</span><br>
+          - <span class="formula">z·\bar{z} = |z|²</span><br>
+          - <span class="formula">z est réel ⇔ z = \bar{z}</span><br>
+          - <span class="formula">z est imaginaire pur ⇔ z = -\bar{z}</span>
+        </div>
+      </div>
+
+      <!-- IV – MODULE -->
+      <div class="section-chapitre">
+        <h3>📏 IV – MODULE D'UN NOMBRE COMPLEXE</h3>
+        
+        <div class="img-container">
+          <img src="img/n5.png" alt="Module">
+          <div class="img-caption">Fig. 5 – Définition et propriétés du module</div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Propriétés du module :</strong><br>
+          - <span class="formula">|z| = √(a² + b²)</span><br>
+          - <span class="formula">|z₁·z₂| = |z₁|·|z₂|</span><br>
+          - <span class="formula">|z₁/z₂| = |z₁|/|z₂|</span> (z₂ ≠ 0)<br>
+          - <span class="formula">|z₁ + z₂| ≤ |z₁| + |z₂|</span> (inégalité triangulaire)
+        </div>
+      </div>
+
+      <!-- V – ARGUMENT -->
+      <div class="section-chapitre">
+        <h3>🎯 V – ARGUMENT D'UN NOMBRE COMPLEXE</h3>
+        
+        <div class="img-container">
+          <img src="img/n6.png" alt="Argument 1">
+          <div class="img-caption">Fig. 6 – Définition de l'argument</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/n7.png" alt="Argument 2">
+          <div class="img-caption">Fig. 7 – Propriétés de l'argument</div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Propriétés de l'argument :</strong><br>
+          - <span class="formula">arg(z₁·z₂) = arg(z₁) + arg(z₂) [2π]</span><br>
+          - <span class="formula">arg(z₁/z₂) = arg(z₁) - arg(z₂) [2π]</span><br>
+          - <span class="formula">arg(z^n) = n·arg(z) [2π]</span><br>
+          - <span class="formula">arg(\bar{z}) = -arg(z) [2π]</span>
+        </div>
+      </div>
+
+      <!-- VI – ÉQUATION DU SECOND DEGRÉ -->
+      <div class="section-chapitre">
+        <h3>📐 VI – ÉQUATION DU SECOND DEGRÉ</h3>
+        
+        <div class="img-container">
+          <img src="img/n8.png" alt="Équation second degré 1">
+          <div class="img-caption">Fig. 8 – Résolution dans ℂ (discriminant)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/n9.png" alt="Équation second degré 2">
+          <div class="img-caption">Fig. 9 – Exemples de résolution</div>
+        </div>
+        
+        <div class="law-box">
+          <strong>📌 Résolution dans ℂ :</strong><br>
+          Pour <span class="formula">az² + bz + c = 0</span> (a ≠ 0) :<br>
+          - Discriminant <span class="formula">Δ = b² - 4ac</span><br>
+          - Si Δ ≥ 0 : racines réelles <span class="formula">z = (-b ± √Δ)/(2a)</span><br>
+          - Si Δ < 0 : racines complexes conjuguées <span class="formula">z = (-b ± i√|Δ|)/(2a)</span>
+        </div>
+      </div>
+
+      <!-- VII – ARGUMENT D'UN COMPLEXE NON NUL -->
+      <div class="section-chapitre">
+        <h3>🎯 VII – ARGUMENT D'UN NOMBRE COMPLEXE NON NUL</h3>
+        
+        <div class="img-container">
+          <img src="img/n10.png" alt="Argument non nul">
+          <div class="img-caption">Fig. 10 – Calcul de l'argument</div>
+        </div>
+      </div>
+
+      <!-- VIII – NOTATION EXPONENTIELLE -->
+      <div class="section-chapitre">
+        <h3>📈 VIII – NOTATION EXPONENTIELLE</h3>
+        
+        <div class="img-container">
+          <img src="img/n11.png" alt="Notation exponentielle 1">
+          <div class="img-caption">Fig. 11 – Formule d'Euler et notation exponentielle</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/n12.png" alt="Notation exponentielle 2">
+          <div class="img-caption">Fig. 12 – Exemples de passage à la forme exponentielle</div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Formules d'Euler :</strong><br>
+          - <span class="formula">e^{iθ} = cos θ + i sin θ</span><br>
+          - <span class="formula">cos θ = (e^{iθ} + e^{-iθ})/2</span><br>
+          - <span class="formula">sin θ = (e^{iθ} - e^{-iθ})/(2i)</span>
+        </div>
+      </div>
+
+      <!-- IX – INTERPRÉTATION GÉOMÉTRIQUE -->
+      <div class="section-chapitre">
+        <h3>📐 IX – INTERPRÉTATION GÉOMÉTRIQUE</h3>
+        
+        <div class="img-container">
+          <img src="img/n13.png" alt="Interprétation géométrique 1">
+          <div class="img-caption">Fig. 13 – Translation et rotation dans le plan complexe</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/n14.png" alt="Interprétation géométrique 2">
+          <div class="img-caption">Fig. 14 – Distance entre deux points</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/n15.png" alt="Interprétation géométrique 3">
+          <div class="img-caption">Fig. 15 – Angles et arguments</div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Transformations :</strong><br>
+          - Translation : <span class="formula">z' = z + t</span><br>
+          - Rotation de centre O et d'angle θ : <span class="formula">z' = e^{iθ}·z</span><br>
+          - Homothétie de centre O et de rapport k > 0 : <span class="formula">z' = k·z</span><br>
+          - Similitude directe : <span class="formula">z' = αz + β</span> (α, β ∈ ℂ)
+        </div>
+      </div>
+
+      <!-- X – RACINE N-IÈME DE L'UNITÉ -->
+      <div class="section-chapitre">
+        <h3>🔄 X – RACINE n-ième DE L'UNITÉ</h3>
+        
+        <div class="img-container">
+          <img src="img/n16.png" alt="Racine n-ième unité 1">
+          <div class="img-caption">Fig. 16 – Définition des racines n-ièmes de l'unité</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/n17.png" alt="Racine n-ième unité 2">
+          <div class="img-caption">Fig. 17 – Propriétés des racines de l'unité</div>
+        </div>
+        
+        <div class="law-box">
+          <strong>📌 Racines n-ièmes de l'unité :</strong><br>
+          <span class="formula">z^n = 1</span> a pour solutions : <span class="formula">z_k = e^{2ikπ/n}</span> pour k = 0, 1, ..., n-1<br>
+          Les racines sont disposées sur le cercle unité, sommets d'un polygone régulier.
+        </div>
+      </div>
+
+      <!-- XI – RACINES n-ièmes COMPLEXES -->
+      <div class="section-chapitre">
+        <h3>🔄 XI – RACINES n-ièmes COMPLEXES D'UN NOMBRE COMPLEXE</h3>
+        
+        <div class="img-container">
+          <img src="img/n18.png" alt="Racines complexes 1">
+          <div class="img-caption">Fig. 18 – Racines n-ièmes d'un complexe</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/n19.png" alt="Racines complexes 2">
+          <div class="img-caption">Fig. 19 – Exemples de calcul</div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Racines n-ièmes d'un complexe Z :</strong><br>
+          Si <span class="formula">Z = re^{iθ}</span>, alors les solutions de <span class="formula">z^n = Z</span> sont :<br>
+          <span class="formula">z_k = r^{1/n}·e^{i(θ + 2kπ)/n}</span>, pour k = 0, 1, ..., n-1
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>💡 RÉCAPITULATIF ET CONSEILS</h3>
+        
+        <div class="note-box">
+          <strong>📌 Points clés à retenir :</strong><br>
+          - <span class="highlight">Forme algébrique</span> : <span class="formula">z = a + ib</span> (a = Re(z), b = Im(z))<br>
+          - <span class="highlight">Conjugué</span> : <span class="formula">\bar{z} = a - ib</span><br>
+          - <span class="highlight">Module</span> : <span class="formula">|z| = √(a² + b²)</span><br>
+          - <span class="highlight">Argument</span> : <span class="formula">θ = arg(z)</span> tel que <span class="formula">tan θ = b/a</span><br>
+          - <span class="highlight">Forme trigonométrique</span> : <span class="formula">z = r(cos θ + i sin θ)</span><br>
+          - <span class="highlight">Forme exponentielle</span> : <span class="formula">z = re^{iθ}</span><br>
+          - <span class="highlight">Formules d'Euler</span> : <span class="formula">e^{iθ} = cos θ + i sin θ</span><br>
+          - <span class="highlight">Formule de Moivre</span> : <span class="formula">(cos θ + i sin θ)^n = cos(nθ) + i sin(nθ)</span>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions Mathématiques | Chapitre 1 : Nombres complexes — Conforme au programme 2024
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

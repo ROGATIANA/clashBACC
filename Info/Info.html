@@ -13,73 +13,74 @@
 <body>
 
   <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <!-- ════ SIDEBAR ════ -->
   <aside class="sidebar" id="sidebar">
-    <div class="logo-wrap" id="logoWrap">
-      <div class="logo-ring"></div>
-      <img src="../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
-    </div>
+<div class="logo-wrap" id="logoWrap">
+  <div class="logo-ring"></div>
+  <img src="../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+</div>
+<div class="sidebar-title">PRÉPA<span>BACC</span></div>
+<div class="sidebar-sub">MMFNRR · 2026</div>
 
-    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
-    <div class="sidebar-sub">MMFNRR · 2026</div>
+<nav class="sidebar-nav">
+  <a href="../index.html" class="nav-item">
+<div class="nav-icon">🏠</div>
+<div class="nav-body">
+  <div class="nav-label">Accueil</div>
+  <div class="nav-desc">Page principale</div>
+</div>
+  </a>
+  <a href="../cours_exo/Cours.html" class="nav-item">
+<div class="nav-icon">📖</div>
+<div class="nav-body">
+  <div class="nav-label">Leçons / Cours</div>
+  <div class="nav-desc">Fiches de révision</div>
+</div>
+  </a>
+  <a href="../cours_exo/Exercice.html" class="nav-item">
+<div class="nav-icon">✏️</div>
+<div class="nav-body">
+  <div class="nav-label">Sujets Bacc</div>
+  <div class="nav-desc">Annales officielles</div>
+</div>
+  </a>
+  <a href="../Info/Info.html" class="nav-item active">
+<div class="nav-icon">📝</div>
+<div class="nav-body">
+  <div class="nav-label">A propos</div>
+  <div class="nav-desc">Informations sur le site</div>
+</div>
+  </a>
+</nav>
 
-    <nav class="sidebar-nav">
-      <a href="../index.html" class="nav-item">
-        <div class="nav-icon">🏠</div>
-        <div class="nav-body">
-          <div class="nav-label">Accueil</div>
-          <div class="nav-desc">Page principale</div>
-        </div>
-      </a>
-
-      <a href="../cours_exo/Cours.html" class="nav-item">
-        <div class="nav-icon">📖</div>
-        <div class="nav-body">
-          <div class="nav-label">Leçons / Cours</div>
-          <div class="nav-desc">Fiches de révision</div>
-        </div>
-      </a>
-
-      <a href="../cours_exo/Exercice.html" class="nav-item">
-        <div class="nav-icon">✏️</div>
-        <div class="nav-body">
-          <div class="nav-label">Sujets Bacc</div>
-          <div class="nav-desc">Annales officielles</div>
-        </div>
-      </a>
-
-      <a href="../Info/Info.html" class="nav-item active">
-        <div class="nav-icon">📝</div>
-        <div class="nav-body">
-          <div class="nav-label">A propos</div>
-          <div class="nav-desc">Informations sur le site</div>
-        </div>
-      </a>
-    </nav>
-
-    <div class="sidebar-footer">
-      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
-      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2026 · 🇲🇬</div>
-    </div>
+<div class="sidebar-footer">
+  <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+  <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2026 · 🇲🇬</div>
+</div>
   </aside>
 
+  <!-- ════ MAIN ════ -->
   <main class="main">
-    <div class="topbar">
-      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
-      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
 
-    <div class="hero-banner">
-      <div class="hero-badges">
-        <span class="badge badge-gold">BACCALAURÉAT</span>
-        <span class="badge badge-white">TERMINALE</span>
-      </div>
+<div class="topbar">
+  <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+  <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+<span></span><span></span><span></span>
+  </button>
+</div>
 
-      <h2>A <span>PROPOS</span></h2>
-      <p>Accédez à l'information sur ce site et les contact de l'auteur</p>
-    </div>
+<!-- hero banner -->
+<div class="hero-banner">
+  <div class="hero-badges">
+<span class="badge badge-gold">BACCALAURÉAT</span>
+<span class="badge badge-white">TERMINALE</span>
+  </div>
+  <h2>A <span>PROPOS</span></h2>
+  <p>Accédez à l'information sur ce site et les contact de l'auteur</p>
+</div>
 
+<!-- Contenu principal -->
     <div class="section">
       <div class="section-heading">
         <h3>PRÉSENTATION</h3>
@@ -101,6 +102,7 @@
       </div>
     </div>
 
+    <!-- Section contact -->
     <div class="section">
       <div class="section-heading">
         <h3>CONTACT</h3>
@@ -128,6 +130,7 @@
       </div>
     </div>
 
+    <!-- Footer copyright -->
     <div class="copyright-footer">
       <p>Copyright &copy; MAMPIHAVANA-MAMISOA Fonohery Nérée Riantsoa Rogatiana</p>
     </div>
@@ -135,6 +138,19 @@
   </main>
 
   <script>
+    /* logo spin */
+    const logoImg  = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    /* sidebar mobile */
     const sidebar   = document.getElementById('sidebar');
     const hamburger = document.getElementById('hamburger');
     const overlay   = document.getElementById('overlay');

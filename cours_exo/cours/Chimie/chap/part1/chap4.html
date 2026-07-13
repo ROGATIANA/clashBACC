@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chimie · Cinétique Chimique | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem;
+    }
+    
+    .img-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(155, 89, 182, 0.1);
+      border-left: 3px solid #9b59b6;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .formula {
+      font-family: monospace;
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .formula-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.8rem;
+      text-align: center;
+    }
+    
+    .formula-card .formula-name {
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2024</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../../index.html">Accueil</a> ›
+        <a href="../../../../Cours.html">Leçons</a> ›
+        <a href="../../Chimie.html">Chimie</a> › Chimie Organique</a> › Chapitre 4
+      </div>
+      <div class="page-title">CINÉTIQUE CHIMIQUE <span>⏱️ CHAPITRE 4</span></div>
+      <div class="page-subtitle">Vitesse de réaction, lois de vitesse, mécanismes réactionnels — Chimie · Baccalauréat</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">⏱️</div>
+      <div class="subject-info">
+        <h3>Cinétique chimique</h3>
+        <p>Vitesse de réaction · Lois de vitesse · Ordre de réaction · Temps de demi-réaction · Loi d'Arrhénius</p>
+      </div>
+      <div class="chapter-count">Cours complet</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>⏱️ INTRODUCTION</h3>
+        <p>La <span class="highlight">cinétique chimique</span> est l'étude de la <span class="highlight">vitesse des réactions chimiques</span> et des facteurs qui l'influencent (température, concentration, catalyseur). Elle permet de comprendre le mécanisme des réactions et de prédire leur évolution dans le temps.</p>
+        
+        <div class="note-box">
+          <strong>📌 Notions clés :</strong><br>
+          - <span class="highlight">Vitesse de réaction</span> : variation de la concentration par unité de temps<br>
+          - <span class="highlight">Loi de vitesse</span> : relation entre la vitesse et les concentrations des réactifs<br>
+          - <span class="highlight">Ordre de réaction</span> : exposant dans la loi de vitesse<br>
+          - <span class="highlight">Temps de demi-réaction</span> : temps au bout duquel la moitié du réactif a réagi
+        </div>
+      </div>
+
+      <!-- I – VITESSE DE RÉACTION -->
+      <div class="section-chapitre">
+        <h3>📊 I – VITESSE DE RÉACTION</h3>
+        
+        <div class="law-box">
+          <h4>Définition</h4>
+          <p>Pour une réaction : <span class="formula">aA + bB → cC + dD</span></p>
+          <p>La vitesse volumique de réaction s'écrit :</p>
+          <p><span class="formula">v = (1/V)·dξ/dt = (1/a)·(-d[A]/dt) = (1/b)·(-d[B]/dt) = (1/c)·(d[C]/dt) = (1/d)·(d[D]/dt)</span></p>
+          <p>Unité : <span class="highlight">mol·L⁻¹·s⁻¹</span></p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Vitesse instantanée et vitesse moyenne</h4>
+          <ul>
+            <li><span class="highlight">Vitesse moyenne</span> : <span class="formula">v_m = Δ[A]/Δt</span> (entre deux instants)</li>
+            <li><span class="highlight">Vitesse instantanée</span> : <span class="formula">v = -d[A]/dt</span> (à un instant précis)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- II – LOI DE VITESSE -->
+      <div class="section-chapitre">
+        <h3>📐 II – LOI DE VITESSE</h3>
+        
+        <div class="law-box">
+          <h4>Expression générale</h4>
+          <p><span class="formula">v = k·[A]^α·[B]^β</span></p>
+          <p>où :</p>
+          <ul>
+            <li><span class="formula">k</span> : constante de vitesse (dépend de T)</li>
+            <li><span class="formula">α, β</span> : ordres partiels par rapport à A et B</li>
+            <li><span class="formula">α + β</span> : ordre global de la réaction</li>
+          </ul>
+        </div>
+        
+        <div class="law-box">
+          <h4>Réaction d'ordre 0</h4>
+          <p><span class="formula">v = k</span> → <span class="formula">[A](t) = [A]₀ - k·t</span><br>
+          Temps de demi-réaction : <span class="formula">t₁/₂ = [A]₀/(2k)</span></p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Réaction d'ordre 1</h4>
+          <p><span class="formula">v = k·[A]</span> → <span class="formula">[A](t) = [A]₀·e^{-kt}</span><br>
+          <span class="formula">ln([A]₀/[A]) = k·t</span><br>
+          Temps de demi-réaction : <span class="formula">t₁/₂ = ln 2 / k</span> (indépendant de [A]₀)</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Réaction d'ordre 2</h4>
+          <p><span class="formula">v = k·[A]²</span> → <span class="formula">1/[A](t) = 1/[A]₀ + k·t</span><br>
+          Temps de demi-réaction : <span class="formula">t₁/₂ = 1/(k·[A]₀)</span></p>
+        </div>
+      </div>
+
+      <!-- III – DÉTERMINATION DE L'ORDRE -->
+      <div class="section-chapitre">
+        <h3>🔬 III – DÉTERMINATION DE L'ORDRE</h3>
+        
+        <div class="note-box">
+          <strong>📌 Méthodes :</strong><br>
+          - <span class="highlight">Méthode intégrale</span> : tracer [A](t), ln[A](t) ou 1/[A](t) en fonction du temps<br>
+          - <span class="highlight">Méthode différentielle</span> : tracer ln v en fonction de ln[A]<br>
+          - <span class="highlight">Méthode des temps de demi-réaction</span> : étudier t₁/₂ en fonction de [A]₀
+        </div>
+        
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Ordre 0</p>
+            <p>[A] = f(t) : droite<br>pente = -k</p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Ordre 1</p>
+            <p>ln[A] = f(t) : droite<br>pente = -k</p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Ordre 2</p>
+            <p>1/[A] = f(t) : droite<br>pente = k</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- IV – LOI D'ARRHÉNIUS -->
+      <div class="section-chapitre">
+        <h3>🌡️ IV – LOI D'ARRHÉNIUS</h3>
+        
+        <div class="law-box">
+          <h4>Relation entre k et la température</h4>
+          <p><span class="formula">k = A·e^{-E_a/RT}</span></p>
+          <p>ou sous forme logarithmique : <span class="formula">ln k = ln A - E_a/(RT)</span></p>
+          <p>où :</p>
+          <ul>
+            <li><span class="formula">A</span> : facteur de fréquence (ou facteur pré-exponentiel)</li>
+            <li><span class="formula">E_a</span> : énergie d'activation (J/mol ou kJ/mol)</li>
+            <li><span class="formula">R</span> = 8,314 J·mol⁻¹·K⁻¹</li>
+            <li><span class="formula">T</span> : température (K)</li>
+          </ul>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Interprétation :</strong><br>
+          - Plus <span class="formula">E_a</span> est faible, plus la réaction est rapide<br>
+          - Une augmentation de température accélère la réaction (augmentation de k)<br>
+          - La représentation <span class="formula">ln k = f(1/T)</span> est une droite de pente <span class="formula">-E_a/R</span>
+        </div>
+      </div>
+
+      <!-- V – MÉCANISMES RÉACTIONNELS -->
+      <div class="section-chapitre">
+        <h3>🔧 V – MÉCANISMES RÉACTIONNELS</h3>
+        
+        <div class="law-box">
+          <h4>Définition</h4>
+          <p>Un <span class="highlight">mécanisme réactionnel</span> décrit la succession d'étapes élémentaires par lesquelles une réaction chimique a lieu.</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Étape déterminante</h4>
+          <p>L'étape la plus lente (celle qui a la plus haute énergie d'activation) est l'<span class="highlight">étape cinétiquement déterminante</span>. La loi de vitesse globale est celle de cette étape.</p>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Catalyseur :</strong><br>
+          - Un catalyseur augmente la vitesse de réaction en <span class="highlight">diminuant l'énergie d'activation</span><br>
+          - Il n'apparaît pas dans le bilan final de la réaction<br>
+          - Catalyse homogène (même phase) ou hétérogène (phase différente)
+        </div>
+      </div>
+
+      <!-- VI – FORMULAIRE -->
+      <div class="section-chapitre">
+        <h3>📝 VI – FORMULAIRE RÉCAPITULATIF</h3>
+        
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Vitesse de réaction</p>
+            <p><span class="formula">v = (1/V)·dξ/dt<br>= -d[A]/dt</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Ordre 0</p>
+            <p><span class="formula">[A] = [A]₀ - kt<br>t₁/₂ = [A]₀/(2k)</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Ordre 1</p>
+            <p><span class="formula">[A] = [A]₀e^{-kt}<br>t₁/₂ = ln 2/k</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Ordre 2</p>
+            <p><span class="formula">1/[A] = 1/[A]₀ + kt<br>t₁/₂ = 1/(k[A]₀)</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Loi d'Arrhénius</p>
+            <p><span class="formula">k = A·e^{-E_a/RT}<br>ln k = ln A - E_a/(RT)</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Images du cours -->
+      <div class="section-chapitre">
+        <h3>📚 COURS COMPLET</h3>
+        
+        <div class="img-container">
+          <img src="img/c23.jpg" alt="Cours cinétique 1">
+          <div class="img-caption">Fig. 1 – Introduction à la cinétique chimique</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c24.jpg" alt="Cours cinétique 2">
+          <div class="img-caption">Fig. 2 – Vitesse de réaction (moyenne et instantanée)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c25.jpg" alt="Cours cinétique 3">
+          <div class="img-caption">Fig. 3 – Loi de vitesse et ordre de réaction</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c26.jpg" alt="Cours cinétique 4">
+          <div class="img-caption">Fig. 4 – Réaction d'ordre 1 (décroissance exponentielle)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c27.jpg" alt="Cours cinétique 5">
+          <div class="img-caption">Fig. 5 – Réaction d'ordre 2 (décroissance hyperbolique)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c28.jpg" alt="Cours cinétique 6">
+          <div class="img-caption">Fig. 6 – Temps de demi-réaction (ordre 0, 1, 2)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c29.jpg" alt="Cours cinétique 7">
+          <div class="img-caption">Fig. 7 – Détermination graphique de l'ordre</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c30.jpg" alt="Cours cinétique 8">
+          <div class="img-caption">Fig. 8 – Loi d'Arrhénius et énergie d'activation</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c31.jpg" alt="Cours cinétique 9">
+          <div class="img-caption">Fig. 9 – Mécanismes réactionnels et catalyse</div>
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>💡 RÉCAPITULATIF ET CONSEILS</h3>
+        
+        <div class="note-box">
+          <strong>📌 Points clés à retenir :</strong><br>
+          - La <span class="highlight">vitesse de réaction</span> dépend de la concentration des réactifs et de la température<br>
+          - Pour une réaction d'<span class="highlight">ordre 1</span>, le temps de demi-réaction est <span class="highlight">indépendant</span> de la concentration initiale<br>
+          - La <span class="highlight">loi d'Arrhénius</span> relie k à la température : <span class="formula">ln k = ln A - E_a/(RT)</span><br>
+          - La <span class="highlight">catalyse</span> diminue l'énergie d'activation sans être consommée<br>
+          - L'<span class="highlight">étape déterminante</span> est l'étape la plus lente du mécanisme
+        </div>
+        
+        <div class="law-box">
+          <strong>🎯 Méthode pour déterminer l'ordre :</strong><br>
+          1. Tracer [A] = f(t) → si droite : ordre 0<br>
+          2. Tracer ln[A] = f(t) → si droite : ordre 1<br>
+          3. Tracer 1/[A] = f(t) → si droite : ordre 2<br>
+          4. Utiliser la méthode des temps de demi-réaction
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions Chimie | Chapitre 4 : Cinétique chimique — Conforme au programme 2024
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

@@ -74,7 +74,7 @@
             </div>
             <div class="chapters-grid">
                 <div class="chapter-card">
-                    <a href="#" class="chapter-link">
+                    <a href="Chap/chap1.html" class="chapter-link">
                         <div class="chapter-number">CHAPTER 1</div>
                         <div class="chapter-info">
                             <div class="chapter-title">English Auxiliary</div>
@@ -84,7 +84,7 @@
                 </div>
 
                 <div class="chapter-card">
-                    <a href="#" class="chapter-link">
+                    <a href="Chap/chap2.html" class="chapter-link">
                         <div class="chapter-number">CHAPTER 2</div>
                         <div class="chapter-info">
                             <div class="chapter-title">Question Tag</div>
@@ -95,7 +95,7 @@
                 </div>
 
                 <div class="chapter-card">
-                    <a href="#" class="chapter-link">
+                    <a href="Chap/chap3.html" class="chapter-link">
                         <div class="chapter-number">CHAPTER 3</div>
                         <div class="chapter-info">
                             <div class="chapter-title">Active & Passive Voice</div>
@@ -105,7 +105,7 @@
                     </a>
                 </div>
                 <div class="chapter-card">
-                    <a href="#" class="chapter-link">
+                    <a href="Chap/chap4.html" class="chapter-link">
                         <div class="chapter-number">CHAPTER 4</div>
                         <div class="chapter-info">
                             <div class="chapter-title">Reported Speech</div>
@@ -115,7 +115,7 @@
                     </a>
                 </div>
                 <div class="chapter-card">
-                    <a href="#" class="chapter-link">
+                    <a href="Chap/chap5.html" class="chapter-link">
                         <div class="chapter-number">CHAPTER 5</div>
                         <div class="chapter-info">
                             <div class="chapter-title">Grammar</div>
@@ -125,7 +125,7 @@
                     </a>
                 </div>
                 <div class="chapter-card">
-                    <a href="#" class="chapter-link">
+                    <a href="Chap/chap6.html" class="chapter-link">
                         <div class="chapter-number">CHAPTER 6</div>
                         <div class="chapter-info">
                             <div class="chapter-title">Have/Get Something Done</div>
@@ -135,7 +135,7 @@
                     </a>
                 </div>
                 <div class="chapter-card">
-                    <a href="#" class="chapter-link">
+                    <a href="Chap/chap7.html" class="chapter-link">
                         <div class="chapter-number">CHAPTER 7</div>
                         <div class="chapter-info">
                             <div class="chapter-title">English Tenses</div>
@@ -148,23 +148,36 @@
     </main>
     
     <script>
-        const sidebar   = document.getElementById('sidebar');
-        const hamburger = document.getElementById('hamburger');
-        const overlay   = document.getElementById('overlay');
+    /* logo spin */
+    const logoImg  = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
 
-        function toggleSidebar() {
-            const open = sidebar.classList.toggle('open');
-            hamburger.classList.toggle('open', open);
-            overlay.classList.toggle('visible', open);
-            document.body.style.overflow = open ? 'hidden' : '';
-        }
+    /* sidebar mobile */
+    const sidebar   = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay   = document.getElementById('overlay');
 
-        function closeSidebar() {
-            sidebar.classList.remove('open');
-            hamburger.classList.remove('open');
-            overlay.classList.remove('visible');
-            document.body.style.overflow = '';
-        }
-    </script>
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
 </body>
 </html>

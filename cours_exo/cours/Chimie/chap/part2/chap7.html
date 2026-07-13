@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chimie · Documents Annexes | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem;
+    }
+    
+    .img-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(155, 89, 182, 0.1);
+      border-left: 3px solid #9b59b6;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .formula {
+      font-family: monospace;
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .formula-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.8rem;
+      text-align: center;
+    }
+    
+    .formula-card .formula-name {
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    .table-annexe {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .table-annexe th, .table-annexe td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 0.5px solid rgba(255,255,255,0.1);
+    }
+    
+    .table-annexe th {
+      background: rgba(232,201,126,0.15);
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    .table-annexe tr:last-child td {
+      border-bottom: none;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+      .table-annexe th, .table-annexe td {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2024</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../../index.html">Accueil</a> ›
+        <a href="../../../../Cours.html">Leçons</a> ›
+        <a href="../../Chimie.html">Chimie</a> › Chimie Minérale</a> › Chapitre 7
+      </div>
+      <div class="page-title">DOCUMENTS ANNEXES <span>📚 CHAPITRE 7</span></div>
+      <div class="page-subtitle">Tables et documents complémentaires pour les révisions — Baccalauréat</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">📚</div>
+      <div class="subject-info">
+        <h3>Documents annexes</h3>
+        <p>Tables de données · Constantes · Formules · Rappels essentiels</p>
+      </div>
+      <div class="chapter-count">Documentation</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>📚 INTRODUCTION</h3>
+        <p>Ce chapitre regroupe les <span class="highlight">documents annexes</span> utiles pour la résolution des exercices de chimie : tables de constantes, formules essentielles, classification périodique simplifiée, indicateurs colorés, etc. Ces documents sont fournis lors des épreuves du Baccalauréat.</p>
+        
+        <div class="note-box">
+          <strong>📌 Utilisation :</strong><br>
+          - À consulter régulièrement lors des révisions<br>
+          - À utiliser lors des exercices pour retrouver rapidement une constante<br>
+          - À maîtriser pour les épreuves du Baccalauréat
+        </div>
+      </div>
+
+      <!-- I – CONSTANTES FONDAMENTALES -->
+      <div class="section-chapitre">
+        <h3>📊 I – CONSTANTES FONDAMENTALES</h3>
+        
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Constante d'Avogadro</p>
+            <p><span class="formula">N_A = 6,02 × 10²³ mol⁻¹</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Constante des gaz parfaits</p>
+            <p><span class="formula">R = 8,314 J·mol⁻¹·K⁻¹</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Produit ionique de l'eau</p>
+            <p><span class="formula">K_e = 1,0 × 10⁻¹⁴ (à 25°C)</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Volume molaire (CNTP)</p>
+            <p><span class="formula">V_m = 22,4 L·mol⁻¹</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Constante de Faraday</p>
+            <p><span class="formula">F = 96 485 C·mol⁻¹</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Vitesse de la lumière</p>
+            <p><span class="formula">c = 3,00 × 10⁸ m·s⁻¹</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- II – TABLE DES pKₐ DES PRINCIPAUX COUPLES -->
+      <div class="section-chapitre">
+        <h3>📋 II – pKₐ DES PRINCIPAUX COUPLES ACIDE/BASE</h3>
+        
+        <table class="table-annexe">
+          <thead>
+            <tr><th>Acide</th><th>Base conjuguée</th><th>pKₐ (25°C)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>HCl (acide chlorhydrique)</td><td>Cl⁻</td><td>&lt; 0 (fort)</td></tr>
+            <tr><td>HNO₃ (acide nitrique)</td><td>NO₃⁻</td><td>≈ -1,4 (fort)</td></tr>
+            <tr><td>H₃PO₄ (acide phosphorique)</td><td>H₂PO₄⁻</td><td>2,1</td></tr>
+            <tr><td>HF (acide fluorhydrique)</td><td>F⁻</td><td>3,2</td></tr>
+            <tr><td>CH₃COOH (acide éthanoïque)</td><td>CH₃COO⁻</td><td>4,76</td></tr>
+            <tr><td>H₂CO₃ (acide carbonique)</td><td>HCO₃⁻</td><td>6,35 (pKₐ₁)</td></tr>
+            <tr><td>H₂PO₄⁻ (dihydrogénophosphate)</td><td>HPO₄²⁻</td><td>7,2 (pKₐ₂)</td></tr>
+            <tr><td>NH₄⁺ (ammonium)</td><td>NH₃</td><td>9,25</td></tr>
+            <tr><td>HCO₃⁻ (hydrogénocarbonate)</td><td>CO₃²⁻</td><td>10,33 (pKₐ₂)</td></tr>
+            <tr><td>HPO₄²⁻ (hydrogénophosphate)</td><td>PO₄³⁻</td><td>12,3 (pKₐ₃)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- III – INDICATEURS COLORÉS -->
+      <div class="section-chapitre">
+        <h3>🎨 III – INDICATEURS COLORÉS</h3>
+        
+        <table class="table-annexe">
+          <thead>
+            <tr><th>Indicateur</th><th>Zone de virage</th><th>Couleur acide</th><th>Couleur basique</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Hélianthine (méthylorange)</td><td>3,1 - 4,4</td><td>Rouge</td><td>Jaune</td></tr>
+            <tr><td>Bleu de bromothymol (BBT)</td><td>6,0 - 7,6</td><td>Jaune</td><td>Bleu</td></tr>
+            <tr><td>Phénolphtaléine</td><td>8,2 - 10,0</td><td>Incolore</td><td>Rose</td></tr>
+            <tr><td>Rouge de méthyle</td><td>4,2 - 6,2</td><td>Rouge</td><td>Jaune</td></tr>
+            <tr><td>Bleu de thymol</td><td>8,0 - 9,6</td><td>Jaune</td><td>Bleu</td></tr>
+          </tbody>
+        </table>
+        
+        <div class="note-box">
+          <strong>📌 Choix de l'indicateur pour un dosage :</strong><br>
+          - Acide fort - Base forte → indicateur avec zone de virage autour de 7 (BBT)<br>
+          - Acide faible - Base forte → indicateur avec zone de virage basique (phénolphtaléine)<br>
+          - Base faible - Acide fort → indicateur avec zone de virage acide (hélianthine)
+        </div>
+      </div>
+
+      <!-- IV – PRÉFIXES DU SYSTÈME INTERNATIONAL -->
+      <div class="section-chapitre">
+        <h3>📏 IV – PRÉFIXES DU SYSTÈME INTERNATIONAL</h3>
+        
+        <table class="table-annexe">
+          <thead>
+            <tr><th>Préfixe</th><th>Symbole</th><th>Facteur</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>giga</td><td>G</td><td>10⁹</td></tr>
+            <tr><td>méga</td><td>M</td><td>10⁶</td></tr>
+            <tr><td>kilo</td><td>k</td><td>10³</td></tr>
+            <tr><td>déci</td><td>d</td><td>10⁻¹</td></tr>
+            <tr><td>centi</td><td>c</td><td>10⁻²</td></tr>
+            <tr><td>milli</td><td>m</td><td>10⁻³</td></tr>
+            <tr><td>micro</td><td>μ</td><td>10⁻⁶</td></tr>
+            <tr><td>nano</td><td>n</td><td>10⁻⁹</td></tr>
+            <tr><td>pico</td><td>p</td><td>10⁻¹²</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- V – FORMULES ESSENTIELLES -->
+      <div class="section-chapitre">
+        <h3>📝 V – FORMULES ESSENTIELLES</h3>
+        
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Concentration molaire</p>
+            <p><span class="formula">C = n / V</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Quantité de matière</p>
+            <p><span class="formula">n = m / M = C·V = N / N_A = V_gaz / V_m</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Dilution</p>
+            <p><span class="formula">C₀·V₀ = C·V</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">pH</p>
+            <p><span class="formula">pH = -log[H₃O⁺]</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Acide fort</p>
+            <p><span class="formula">pH = -log C</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Base forte</p>
+            <p><span class="formula">pH = 14 + log C</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Acide faible</p>
+            <p><span class="formula">pH = ½(pK_a - log C)</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Henderson-Hasselbalch</p>
+            <p><span class="formula">pH = pK_a + log([base]/[acide])</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VI – CLASSIFICATION PÉRIODIQUE SIMPLIFIÉE -->
+      <div class="section-chapitre">
+        <h3>🧪 VI – CLASSIFICATION PÉRIODIQUE SIMPLIFIÉE</h3>
+        
+        <div class="note-box">
+          <strong>📌 Masses molaires des principaux éléments :</strong><br>
+          - H = 1,0 g/mol &nbsp;&nbsp;| C = 12,0 g/mol &nbsp;&nbsp;| N = 14,0 g/mol &nbsp;&nbsp;| O = 16,0 g/mol<br>
+          - F = 19,0 g/mol &nbsp;&nbsp;| Na = 23,0 g/mol &nbsp;| Mg = 24,3 g/mol &nbsp;| Al = 27,0 g/mol<br>
+          - Si = 28,1 g/mol &nbsp;| P = 31,0 g/mol &nbsp;&nbsp;| S = 32,1 g/mol &nbsp;&nbsp;| Cl = 35,5 g/mol<br>
+          - K = 39,1 g/mol &nbsp;&nbsp;| Ca = 40,1 g/mol &nbsp;| Fe = 55,8 g/mol &nbsp;| Cu = 63,5 g/mol<br>
+          - Zn = 65,4 g/mol &nbsp;| Br = 80,0 g/mol &nbsp;| Ag = 107,9 g/mol &nbsp;| I = 126,9 g/mol<br>
+          - Au = 197,0 g/mol &nbsp;| Hg = 200,6 g/mol &nbsp;| Pb = 207,2 g/mol
+        </div>
+      </div>
+
+      <!-- Image du cours -->
+      <div class="section-chapitre">
+        <h3>📚 DOCUMENTS COMPLÉMENTAIRES</h3>
+        
+        <div class="img-container">
+          <img src="img/c70.jpg" alt="Documents annexes">
+          <div class="img-caption">Fig. 1 – Tables et documents annexes pour la chimie</div>
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>💡 CONSEILS D'UTILISATION</h3>
+        
+        <div class="note-box">
+          <strong>📌 Pour les révisions :</strong><br>
+          - Ces documents sont souvent <span class="highlight">fournis lors des épreuves</span> du Baccalauréat<br>
+          - Il est important de <span class="highlight">savoir les utiliser</span> rapidement et efficacement<br>
+          - <span class="highlight">S'entraîner</span> à retrouver les formules et constantes sans aide extérieure<br>
+          - Maîtriser les <span class="highlight">indicateurs colorés</span> et leurs zones de virage<br>
+          - Connaître les <span class="highlight">pKₐ des couples usuels</span> par cœur
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions Chimie | Chapitre 7 : Documents annexes — Conforme au programme 2024
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

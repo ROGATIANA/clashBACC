@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physique · Applications Des Bases De La Dynamique | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre .highlight-red {
+      color: #e74c3c;
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem;
+    }
+    
+    .img-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    
+    .image-grid-chap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+    
+    .image-grid-chap .img-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.5rem;
+      text-align: center;
+      flex: 1;
+      min-width: 250px;
+    }
+    
+    .image-grid-chap .img-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(52,152,219,0.1);
+      border-left: 3px solid #3498db;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .formula {
+      font-family: monospace;
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2026</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2026 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../../index.html">Accueil</a> ›
+        <a href="../../../../Cours.html">Leçons</a> ›
+        <a href="../../Physique.html">Physique</a> › Mécanique</a> › Chapitre 3
+      </div>
+      <div class="page-title">APPLICATIONS DES BASES DE LA DYNAMIQUE <span>📐 CHAPITRE 3</span></div>
+      <div class="page-subtitle">Mouvements sur plan incliné, frottements, pendules, systèmes de poulies — Mécanique · Baccalauréat</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">📐</div>
+      <div class="subject-info">
+        <h3>Applications de la dynamique</h3>
+        <p>Plan incliné · Frottements · Pendule simple · Machines de Atwood · Forces de liaison</p>
+      </div>
+      <div class="chapter-count">Cours complet</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>📐 INTRODUCTION</h3>
+        <p>Ce chapitre applique le <span class="highlight">Principe Fondamental de la Dynamique (PFD)</span> à des situations concrètes : mouvements sur plan incliné, systèmes avec frottements, pendules, et systèmes de poulies. La méthode consiste à faire le bilan des forces, appliquer <span class="formula">ΣF = m·a</span>, et résoudre les équations obtenues.</p>
+        
+        <div class="note-box">
+          <strong>📌 Étapes clés :</strong><br>
+          - Choisir un <span class="highlight">référentiel galiléen</span><br>
+          - Définir le <span class="highlight">système</span> étudié<br>
+          - Faire le <span class="highlight">bilan des forces extérieures</span><br>
+          - Appliquer le <span class="highlight">PFD</span> et projeter sur les axes<br>
+          - Résoudre pour obtenir <span class="highlight">l'accélération</span> puis les équations horaires
+        </div>
+      </div>
+
+      <!-- APPLICATIONS CLASSIQUES -->
+      <div class="section-chapitre">
+        <h3>⚙️ APPLICATIONS CLASSIQUES</h3>
+        
+        <div class="law-box">
+          <h4>1. Mouvement sur plan incliné (sans frottement)</h4>
+          <p>Bilan des forces : <span class="formula">\vec{P}</span> (poids) + <span class="formula">\vec{R}_N</span> (réaction normale)</p>
+          <p>Projection sur l'axe parallèle au plan : <span class="formula">m·g·sinα = m·a</span></p>
+          <p><span class="highlight">Accélération : a = g·sinα</span></p>
+          <p>Le mouvement est rectiligne uniformément accéléré.</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>2. Mouvement sur plan incliné (avec frottement)</h4>
+          <p>Bilan des forces : <span class="formula">\vec{P}</span> + <span class="formula">\vec{R}_N</span> + <span class="formula">\vec{f}</span></p>
+          <p>Projection : <span class="formula">m·g·sinα - μ·m·g·cosα = m·a</span></p>
+          <p><span class="highlight">Accélération : a = g·(sinα - μ·cosα)</span></p>
+          <p>Condition de descente : <span class="formula">tanα > μ</span></p>
+        </div>
+        
+        <div class="law-box">
+          <h4>3. Pendule simple</h4>
+          <p>Bilan des forces : <span class="formula">\vec{P}</span> + <span class="formula">\vec{T}</span> (tension du fil)</p>
+          <p>Pour les petites oscillations : <span class="formula">θ'' + (g/L)·θ = 0</span></p>
+          <p><span class="highlight">Période : T = 2π√(L/g)</span></p>
+          <p>La période est indépendante de la masse et de l'amplitude (pour les petits angles).</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>4. Machine de Atwood (deux masses suspendues)</h4>
+          <p>Soient m₁ et m₂ avec m₁ > m₂.</p>
+          <p>Équations : <span class="formula">m₁·g - T = m₁·a</span> et <span class="formula">T - m₂·g = m₂·a</span></p>
+          <p><span class="highlight">Accélération : a = (m₁ - m₂)·g / (m₁ + m₂)</span></p>
+          <p><span class="highlight">Tension : T = 2·m₁·m₂·g / (m₁ + m₂)</span></p>
+        </div>
+        
+        <div class="law-box">
+          <h4>5. Système de poulies (deux masses sur plan incliné)</h4>
+          <p>Pour m₁ sur plan incliné (angle α, sans frottement) et m₂ suspendue :</p>
+          <p><span class="formula">m₂·g - m₁·g·sinα = (m₁ + m₂)·a</span></p>
+          <p><span class="highlight">Accélération : a = (m₂ - m₁·sinα)·g / (m₁ + m₂)</span></p>
+        </div>
+      </div>
+
+      <!-- Images du cours -->
+      <div class="section-chapitre">
+        <h3>📚 COURS COMPLET</h3>
+        
+        <div class="img-container">
+          <img src="img/029.jpg" alt="Cours applications dynamique 1">
+          <div class="img-caption">Fig. 1 – Plan incliné sans frottement</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/030.jpg" alt="Cours applications dynamique 2">
+          <div class="img-caption">Fig. 2 – Diagramme des forces sur plan incliné</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/031.jpg" alt="Cours applications dynamique 3">
+          <div class="img-caption">Fig. 3 – Équations du mouvement sur plan incliné</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/032.jpg" alt="Cours applications dynamique 4">
+          <div class="img-caption">Fig. 4 – Plan incliné avec frottement</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/033.jpg" alt="Cours applications dynamique 5">
+          <div class="img-caption">Fig. 5 – Coefficient de frottement et seuil de mouvement</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/034.jpg" alt="Cours applications dynamique 6">
+          <div class="img-caption">Fig. 6 – Pendule simple : forces et équations</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/035.jpg" alt="Cours applications dynamique 7">
+          <div class="img-caption">Fig. 7 – Période du pendule simple</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/036.jpg" alt="Cours applications dynamique 8">
+          <div class="img-caption">Fig. 8 – Machine de Atwood (deux masses)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/037.jpg" alt="Cours applications dynamique 9">
+          <div class="img-caption">Fig. 9 – Résolution de la machine de Atwood</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/038.jpg" alt="Cours applications dynamique 10">
+          <div class="img-caption">Fig. 10 – Système avec poulie et plan incliné</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/039.jpg" alt="Cours applications dynamique 11">
+          <div class="img-caption">Fig. 11 – Deux corps reliés par une poulie</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/040.jpg" alt="Cours applications dynamique 12">
+          <div class="img-caption">Fig. 12 – Forces de liaison et tension du fil</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/041.jpg" alt="Cours applications dynamique 13">
+          <div class="img-caption">Fig. 13 – Exercice type : système à deux corps</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/042.jpg" alt="Cours applications dynamique 14">
+          <div class="img-caption">Fig. 14 – Résolution complète d'un système</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/043.jpg" alt="Cours applications dynamique 15">
+          <div class="img-caption">Fig. 15 – Mouvement avec force variable</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/044.jpg" alt="Cours applications dynamique 16">
+          <div class="img-caption">Fig. 16 – Application au mouvement circulaire</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/045.jpg" alt="Cours applications dynamique 17">
+          <div class="img-caption">Fig. 17 – Exercices types corrigés</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/046.jpg" alt="Cours applications dynamique 18">
+          <div class="img-caption">Fig. 18 – Récapitulatif et formules clés</div>
+        </div>
+      </div>
+
+      <!-- FORMULES RÉCAPITULATIVES -->
+      <div class="section-chapitre">
+        <h3>📝 FORMULES À RETENIR</h3>
+        
+        <div class="grid-formulas">
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Plan incliné (sans frottement)</strong><br>
+            <span class="formula">a = g·sinα</span><br>
+            <span class="formula">v = g·sinα·t</span><br>
+            <span class="formula">x = ½·g·sinα·t²</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Plan incliné (avec frottement)</strong><br>
+            <span class="formula">a = g·(sinα - μ·cosα)</span><br>
+            Condition : <span class="formula">tanα > μ</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Pendule simple</strong><br>
+            <span class="formula">T = 2π√(L/g)</span><br>
+            <span class="formula">ω = √(g/L)</span><br>
+            <span class="formula">θ(t) = θ₀·cos(ωt + φ)</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Machine de Atwood</strong><br>
+            <span class="formula">a = (m₁ - m₂)·g/(m₁ + m₂)</span><br>
+            <span class="formula">T = 2·m₁·m₂·g/(m₁ + m₂)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>💡 RÉCAPITULATIF ET CONSEILS</h3>
+        
+        <div class="note-box">
+          <strong>📌 Points clés à retenir :</strong><br>
+          - Toujours <span class="highlight">faire le diagramme des forces</span> avant tout calcul<br>
+          - <span class="highlight">Choisir un repère adapté</span> (axe parallèle au mouvement pour simplifier)<br>
+          - Les <span class="highlight">forces de frottement</span> s'opposent toujours au mouvement relatif<br>
+          - La <span class="highlight">tension d'un fil</span> est la même de part et d'autre d'une poulie idéale<br>
+          - Le <span class="highlight">pendule simple</span> n'est isochrone que pour les petites oscillations<br>
+          - Vérifier la <span class="highlight">cohérence des unités</span> (m, kg, s, N)
+        </div>
+        
+        <div class="law-box">
+          <strong>🎯 Méthode systématique :</strong><br>
+          1. Système étudié<br>
+          2. Référentiel galiléen<br>
+          3. Bilan des forces<br>
+          4. Application du PFD (<span class="formula">ΣF = m·a</span>)<br>
+          5. Projection sur les axes<br>
+          6. Résolution (a, v, x, T)<br>
+          7. Analyse des résultats
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions Physique | Chapitre 3 : Applications des bases de la dynamique — Conforme au programme 2026
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

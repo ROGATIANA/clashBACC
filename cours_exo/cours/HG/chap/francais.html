@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Histoire-Géographie · Français | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(149, 165, 166, 0.1);
+      border-left: 3px solid #95a5a6;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .button-area {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+    
+    .btn-chapitre {
+      display: inline-block;
+      background: rgba(149, 165, 166, 0.15);
+      border: 1px solid rgba(149, 165, 166, 0.3);
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      text-decoration: none;
+      color: var(--text-on-dark);
+      transition: all 0.3s ease;
+      text-align: center;
+      flex: 1;
+      min-width: 180px;
+    }
+    
+    .btn-chapitre:hover {
+      background: rgba(149, 165, 166, 0.3);
+      transform: translateY(-2px);
+    }
+    
+    .btn-chapitre strong {
+      color: var(--gold);
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+    
+    .btn-chapitre .btn-desc {
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+    
+    .hg-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.8rem;
+      text-align: center;
+    }
+    
+    .hg-card .hg-name {
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+      .btn-chapitre {
+        padding: 0.7rem 1rem;
+        min-width: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2024</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../index.html">Accueil</a> ›
+        <a href="../../../Cours.html">Leçons</a> ›
+        <a href="../HG.html">Histoire-Géographie</a> › Français
+      </div>
+      <div class="page-title">HISTOIRE & GÉOGRAPHIE <span>🌍 FRANÇAIS</span></div>
+      <div class="page-subtitle">Cours complets pour le Baccalauréat</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">🌍</div>
+      <div class="subject-info">
+        <h3>Histoire & Géographie</h3>
+        <p>Cours complets pour le Baccalauréat en français</p>
+      </div>
+      <div class="chapter-count">3 parties</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Navigation vers les parties -->
+      <div class="section-chapitre">
+        <h3>📖 PARTIES</h3>
+        
+        <div class="button-area">
+          <a href="1/9.html" class="btn-chapitre">
+            <strong>1ʳᵉ partie</strong>
+            <span class="btn-desc">Histoire</span>
+          </a>
+          <a href="1/8.html" class="btn-chapitre">
+            <strong>2ᵉ partie</strong>
+            <span class="btn-desc">Géographie</span>
+          </a>
+          <a href="1/chp3fr.html" class="btn-chapitre">
+            <strong>3ᵉ partie</strong>
+            <span class="btn-desc">Résumé</span>
+          </a>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Histoire-Géographie (Français) | Conforme au programme 2024
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

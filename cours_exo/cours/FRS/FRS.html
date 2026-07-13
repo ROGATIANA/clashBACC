@@ -93,7 +93,7 @@
             </div>
             <div class="chapters-grid">
                 <div class="chapter-card">
-                    <a href="#" class="chapter-link">
+                    <a href="Chap/chap1.html" class="chapter-link">
                         <div class="chapter-number">CHAPITRE 1</div>
                         <div class="chapter-info">
                             <div class="chapter-title">Le Texte</div>
@@ -104,7 +104,7 @@
                 </div>
 
                 <div class="chapter-card">
-                    <a href="#" class="chapter-link">
+                    <a href="Chap/chap2.html" class="chapter-link">
                         <div class="chapter-number">CHAPITRE 2</div>
                         <div class="chapter-info">
                             <div class="chapter-title">Grammaire</div>
@@ -115,7 +115,7 @@
                 </div>
 
                 <div class="chapter-card">
-                    <a href="#" class="chapter-link">
+                    <a href="Chap/chap3.html" class="chapter-link">
                         <div class="chapter-number">CHAPITRE 3</div>
                         <div class="chapter-info">
                             <div class="chapter-title">Développements</div>
@@ -129,23 +129,36 @@
     </main>
 
     <script>
-        const sidebar   = document.getElementById('sidebar');
-        const hamburger = document.getElementById('hamburger');
-        const overlay   = document.getElementById('overlay');
+    /* logo spin */
+    const logoImg  = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
 
-        function toggleSidebar() {
-            const open = sidebar.classList.toggle('open');
-            hamburger.classList.toggle('open', open);
-            overlay.classList.toggle('visible', open);
-            document.body.style.overflow = open ? 'hidden' : '';
-        }
+    /* sidebar mobile */
+    const sidebar   = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay   = document.getElementById('overlay');
 
-        function closeSidebar() {
-            sidebar.classList.remove('open');
-            hamburger.classList.remove('open');
-            overlay.classList.remove('visible');
-            document.body.style.overflow = '';
-        }
-    </script>
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
 </body>
 </html>

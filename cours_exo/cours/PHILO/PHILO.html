@@ -87,7 +87,7 @@
             </div>
             <div class="chapters-grid">
                 <div class="chapter-card">
-                    <a href="#" class="chapter-link">
+                    <a href="Chap/Lesona_feno.html" class="chapter-link">
                         <div class="chapter-number">FIZARANA 1</div>
                         <div class="chapter-info">
                             <div class="chapter-title">Lesona Feno</div>
@@ -98,7 +98,7 @@
                 </div>
 
                 <div class="chapter-card">
-                    <a href="#" class="chapter-link">
+                    <a href="Chap/fiz2.html" class="chapter-link">
                         <div class="chapter-number">FIZARANA 2</div>
                         <div class="chapter-info">
                             <div class="chapter-title">Fomba Famoaboasan-kevitra</div>
@@ -109,7 +109,7 @@
                 </div>
 
                 <div class="chapter-card">
-                    <a href="#" class="chapter-link">
+                    <a href="Chap/fiz3.html" class="chapter-link">
                         <div class="chapter-number">FIZARANA 3</div>
                         <div class="chapter-info">
                             <div class="chapter-title">Paik'Ady Mahomby</div>
@@ -120,7 +120,7 @@
                 </div>
 
                 <div class="chapter-card">
-                    <a href="#" class="chapter-link">
+                    <a href="Chap/fiz4.html" class="chapter-link">
                         <div class="chapter-number">FIZARANA 4</div>
                         <div class="chapter-info">
                             <div class="chapter-title">Laza Adina Misy Valiny</div>
@@ -131,7 +131,7 @@
                 </div>
 
                 <div class="chapter-card">
-                    <a href="#" class="chapter-link">
+                    <a href="Chap/citation.html" class="chapter-link">
                         <div class="chapter-number">BY MMFNRR</div>
                         <div class="chapter-info">
                             <div class="chapter-title">Tenina Mpandinika</div>
@@ -145,23 +145,36 @@
     </main>
 
     <script>
-        const sidebar   = document.getElementById('sidebar');
-        const hamburger = document.getElementById('hamburger');
-        const overlay   = document.getElementById('overlay');
+    /* logo spin */
+    const logoImg  = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
 
-        function toggleSidebar() {
-            const open = sidebar.classList.toggle('open');
-            hamburger.classList.toggle('open', open);
-            overlay.classList.toggle('visible', open);
-            document.body.style.overflow = open ? 'hidden' : '';
-        }
+    /* sidebar mobile */
+    const sidebar   = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay   = document.getElementById('overlay');
 
-        function closeSidebar() {
-            sidebar.classList.remove('open');
-            hamburger.classList.remove('open');
-            overlay.classList.remove('visible');
-            document.body.style.overflow = '';
-        }
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
     </script>
 </body>
 </html>

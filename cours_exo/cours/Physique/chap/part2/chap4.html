@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physique · Induction Électromagnétique | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../..//style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre .highlight-red {
+      color: #e74c3c;
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem;
+    }
+    
+    .img-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    
+    .image-grid-chap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+    
+    .image-grid-chap .img-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.5rem;
+      text-align: center;
+      flex: 1;
+      min-width: 250px;
+    }
+    
+    .image-grid-chap .img-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(52,152,219,0.1);
+      border-left: 3px solid #3498db;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .formula {
+      font-family: monospace;
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2026</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2026 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../../index.html">Accueil</a> ›
+        <a href="../../../../Cours.html">Leçons</a> ›
+        <a href="../../Physique.html">Physique</a> › Électromagnétisme</a> › Chapitre 4
+      </div>
+      <div class="page-title">INDUCTION ÉLECTROMAGNÉTIQUE <span>⚡ CHAPITRE 4</span></div>
+      <div class="page-subtitle">Loi de Faraday, flux magnétique, force électromotrice induite, loi de Lenz — Électromagnétisme · Baccalauréat</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">⚡</div>
+      <div class="subject-info">
+        <h3>Induction électromagnétique</h3>
+        <p>Flux magnétique · Loi de Faraday · Loi de Lenz · FEM induite · Applications</p>
+      </div>
+      <div class="chapter-count">Cours complet</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>⚡ INTRODUCTION</h3>
+        <p>L'<span class="highlight">induction électromagnétique</span> a été découverte par Michael Faraday en 1831. Elle décrit la création d'une <span class="highlight">force électromotrice (FEM)</span> dans un circuit lorsqu'il est soumis à une variation de flux magnétique. Ce phénomène est à la base du fonctionnement des <span class="highlight">alternateurs</span>, <span class="highlight">transformateurs</span> et <span class="highlight">dynamos</span>.</p>
+        
+        <div class="note-box">
+          <strong>📌 Expérience fondamentale :</strong><br>
+          - Déplacer un aimant près d'une bobine → apparition d'un courant induit<br>
+          - La variation du flux magnétique est la cause du courant induit<br>
+          - Le courant induit s'oppose à la variation qui l'a créé (loi de Lenz)
+        </div>
+      </div>
+
+      <!-- I – FLUX MAGNÉTIQUE -->
+      <div class="section-chapitre">
+        <h3>🧲 I – FLUX MAGNÉTIQUE</h3>
+        
+        <div class="law-box">
+          <h4>Définition</h4>
+          <p>Le flux magnétique à travers une surface S, placée dans un champ magnétique uniforme <span class="formula">\vec{B}</span>, est :</p>
+          <p><span class="formula">Φ = \vec{B}·\vec{S} = B·S·cosθ</span></p>
+          <p>où :</p>
+          <ul>
+            <li>Φ : flux magnétique (weber, Wb)</li>
+            <li>B : champ magnétique (T)</li>
+            <li>S : surface (m²)</li>
+            <li>θ : angle entre <span class="formula">\vec{B}</span> et la normale à la surface</li>
+          </ul>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Unités :</strong><br>
+          - 1 weber = 1 T·m²<br>
+          - Le flux est une grandeur <span class="highlight">scalaire</span> (peut être positif ou négatif selon l'orientation)
+        </div>
+        
+        <div class="law-box">
+          <h4>Flux à travers une bobine</h4>
+          <p>Pour une bobine plate de N spires : <span class="formula">Φ_total = N·Φ_{une spire} = N·B·S·cosθ</span></p>
+        </div>
+      </div>
+
+      <!-- II – LOI DE FARADAY -->
+      <div class="section-chapitre">
+        <h3>📜 II – LOI DE FARADAY</h3>
+        
+        <div class="law-box">
+          <h4>Énoncé</h4>
+          <p>La force électromotrice (FEM) induite dans un circuit est égale à l'opposé de la dérivée du flux magnétique par rapport au temps.</p>
+          <p><span class="formula">e = -dΦ/dt</span></p>
+          <p>Pour une bobine de N spires : <span class="formula">e = -N·dΦ/dt</span></p>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Conséquences :</strong><br>
+          - Une FEM induite n'apparaît que si le <span class="highlight">flux varie</span> (dΦ/dt ≠ 0)<br>
+          - La valeur de la FEM dépend de la <span class="highlight">rapidité de variation</span> du flux<br>
+          - Le signe "-" est donné par la <span class="highlight">loi de Lenz</span>
+        </div>
+      </div>
+
+      <!-- III – LOI DE LENZ -->
+      <div class="section-chapitre">
+        <h3>🔄 III – LOI DE LENZ</h3>
+        
+        <div class="law-box">
+          <h4>Énoncé</h4>
+          <p>Le courant induit circule dans un sens tel que les effets électromagnétiques qu'il produit s'opposent à la cause qui lui a donné naissance.</p>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Exemples d'application :</strong><br>
+          - Aimant s'approchant d'une bobine : le courant induit crée un champ qui repousse l'aimant<br>
+          - Aimant s'éloignant d'une bobine : le courant induit crée un champ qui attire l'aimant<br>
+          - Cela traduit la <span class="highlight">conservation de l'énergie</span> (il faut fournir un travail pour créer le courant)
+        </div>
+      </div>
+
+      <!-- IV – DIFFÉRENTES SITUATIONS D'INDUCTION -->
+      <div class="section-chapitre">
+        <h3>📐 IV – DIFFÉRENTES SITUATIONS D'INDUCTION</h3>
+        
+        <div class="grid-formulas">
+          <div class="note-box" style="margin:0;">
+            <strong>📌 1. Mouvement d'un aimant</strong><br>
+            Variation de B dans la bobine<br>
+            <span class="formula">e = -N·S·dB/dt</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 2. Rotation d'une spire</strong><br>
+            Variation de l'angle θ<br>
+            <span class="formula">Φ = N·B·S·cos(ωt)</span><br>
+            <span class="formula">e = N·B·S·ω·sin(ωt)</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 3. Déformation du circuit</strong><br>
+            Variation de la surface S<br>
+            <span class="formula">e = -B·dS/dt</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 4. Tige mobile sur rails</strong><br>
+            Variation de surface<br>
+            <span class="formula">e = -B·L·v</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- V – FORCE ÉLECTROMOTRICE DE MOUVEMENT -->
+      <div class="section-chapitre">
+        <h3>🚄 V – FORCE ÉLECTROMOTRICE DE MOUVEMENT (FEM de Lorentz)</h3>
+        
+        <div class="law-box">
+          <h4>Origine</h4>
+          <p>Lorsqu'un conducteur se déplace dans un champ magnétique, les électrons libres subissent la force de Lorentz, créant une séparation de charges et donc une FEM.</p>
+          <p><span class="formula">e = \int (\vec{v} ∧ \vec{B})·d\vec{ℓ}</span></p>
+          <p>Pour une tige de longueur L se déplaçant perpendiculairement à B :</p>
+          <p><span class="formula">e = B·L·v</span></p>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Interprétation :</strong> La FEM de mouvement est une conséquence directe de la force de Lorentz. Elle est à l'origine du courant induit dans les alternateurs.
+        </div>
+      </div>
+
+      <!-- VI – APPLICATIONS -->
+      <div class="section-chapitre">
+        <h3>🔧 VI – APPLICATIONS DE L'INDUCTION</h3>
+        
+        <div class="law-box">
+          <h4>1. Alternateur</h4>
+          <p>Une bobine tourne dans un champ magnétique. La variation périodique du flux produit une FEM alternative sinusoïdale.</p>
+          <p><span class="formula">e(t) = N·B·S·ω·sin(ωt)</span></p>
+        </div>
+        
+        <div class="law-box">
+          <h4>2. Transformateur</h4>
+          <p>Un courant variable dans le primaire crée un flux variable qui induit une FEM dans le secondaire.</p>
+          <p><span class="formula">U₂/U₁ = N₂/N₁</span></p>
+        </div>
+        
+        <div class="law-box">
+          <h4>3. Freinage électromagnétique</h4>
+          <p>Les courants induits (courants de Foucault) dans une plaque métallique en mouvement dans un champ magnétique créent des forces qui s'opposent au mouvement.</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>4. Cartes à puce et lecteurs RFID</h4>
+          <p>Une antenne émettrice crée un champ variable qui induit un courant dans l'antenne de la carte pour l'alimenter.</p>
+        </div>
+      </div>
+
+      <!-- VII – FORMULAIRE -->
+      <div class="section-chapitre">
+        <h3>📝 VII – FORMULAIRE</h3>
+        
+        <div class="grid-formulas">
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Flux magnétique</strong><br>
+            <span class="formula">Φ = B·S·cosθ</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Loi de Faraday</strong><br>
+            <span class="formula">e = -dΦ/dt</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Bobine (N spires)</strong><br>
+            <span class="formula">e = -N·dΦ/dt</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Alternateur</strong><br>
+            <span class="formula">e = N·B·S·ω·sin(ωt)</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Tige mobile</strong><br>
+            <span class="formula">e = B·L·v</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Transformateur</strong><br>
+            <span class="formula">U₂/U₁ = N₂/N₁</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Images du cours -->
+      <div class="section-chapitre">
+        <h3>📚 COURS COMPLET</h3>
+        
+        <div class="img-container">
+          <img src="img/c21.jpg" alt="Cours induction 1">
+          <div class="img-caption">Fig. 1 – Expérience de Faraday (aimant et bobine)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c22.jpg" alt="Cours induction 2">
+          <div class="img-caption">Fig. 2 – Flux magnétique et ses variations</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c23.jpg" alt="Cours induction 3">
+          <div class="img-caption">Fig. 3 – Loi de Faraday et force électromotrice</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c24.jpg" alt="Cours induction 4">
+          <div class="img-caption">Fig. 4 – Loi de Lenz (sens du courant induit)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c25.jpg" alt="Cours induction 5">
+          <div class="img-caption">Fig. 5 – Tige mobile dans un champ magnétique</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c26.jpg" alt="Cours induction 6">
+          <div class="img-caption">Fig. 6 – Principe de l'alternateur</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c27.jpg" alt="Cours induction 7">
+          <div class="img-caption">Fig. 7 – Applications et exercices types</div>
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>💡 RÉCAPITULATIF ET CONSEILS</h3>
+        
+        <div class="note-box">
+          <strong>📌 Points clés à retenir :</strong><br>
+          - Le <span class="highlight">flux magnétique</span> s'écrit <span class="formula">Φ = B·S·cosθ</span><br>
+          - Une <span class="highlight">FEM induite</span> apparaît si et seulement si <span class="formula">dΦ/dt ≠ 0</span><br>
+          - Loi de Faraday : <span class="formula">e = -dΦ/dt</span><br>
+          - Loi de Lenz : le courant induit <span class="highlight">s'oppose à la cause</span> qui l'a créé<br>
+          - Il existe deux types d'induction : <span class="highlight">induction de Neumann</span> (champ variable) et <span class="highlight">induction de Lorentz</span> (mouvement)<br>
+          - Applications : alternateur, transformateur, freinage électromagnétique, RFID
+        </div>
+        
+        <div class="law-box">
+          <strong>🎯 Méthode pour les exercices :</strong><br>
+          1. Calculer le flux Φ(t) en fonction du temps<br>
+          2. Dériver pour obtenir la FEM : <span class="formula">e(t) = -dΦ/dt</span><br>
+          3. Déterminer le sens du courant avec la loi de Lenz<br>
+          4. Pour une tige mobile : <span class="formula">e = B·L·v</span>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions Physique | Chapitre 4 : Induction électromagnétique — Conforme au programme 2026
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physique · Formulaire & notions clés | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* styles spécifiques pour le contenu du résumé */
+    .resume-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem;
+    }
+    
+    .img-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .formula-box {
+      background: rgba(52,152,219,0.1);
+      border-left: 3px solid #3498db;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+      font-family: monospace;
+      font-size: 1.1rem;
+    }
+    
+    .formula {
+      font-family: monospace;
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .formula-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.8rem;
+      text-align: center;
+    }
+    
+    .formula-card p {
+      margin-bottom: 0.3rem;
+    }
+    
+    .formula-card .formula-name {
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    @media (max-width: 640px) {
+      .resume-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2026</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2026 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- en-tête -->
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../index.html">Accueil</a> ›
+        <a href="../../../Cours.html">Leçons</a> ›
+        <a href="../Physique.html">Physique</a> › Résumé
+      </div>
+      <div class="page-title">FORMULAIRE & NOTIONS CLÉS <span>📘 PHYSIQUE</span></div>
+      <div class="page-subtitle">Rappels des formules essentielles et définitions fondamentales — Baccalauréat</div>
+    </div>
+
+    <!-- bannière matière -->
+    <div class="subject-banner">
+      <div class="subject-icon-large">⚡</div>
+      <div class="subject-info">
+        <h3>Formulaire de Physique</h3>
+        <p>Mécanique · Électromagnétisme · Physique nucléaire</p>
+      </div>
+      <div class="chapter-badge">📌 Résumé complet</div>
+    </div>
+
+    <!-- CONTENU PRINCIPAL DU RÉSUMÉ -->
+    <div class="resume-content">
+      
+      <!-- Images du résumé original -->
+      <div class="section-chapitre">
+        <h3>📊 RÉCAPITULATIF DES FORMULES</h3>
+        
+        <div class="img-container">
+          <img src="img/r_1.jpg" alt="Formulaire physique page 1">
+          <div class="img-caption">Fig. 1 – Formulaire de physique (partie 1)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/r_2.jpg" alt="Formulaire physique page 2">
+          <div class="img-caption">Fig. 2 – Formulaire de physique (partie 2)</div>
+        </div>
+      </div>
+
+      <!-- PARTIE 1 : MÉCANIQUE -->
+      <div class="section-chapitre">
+        <h3>📐 PARTIE 1 : MÉCANIQUE</h3>
+        
+        <h4>Cinématique</h4>
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Vitesse moyenne</p>
+            <p><span class="formula">v = d / Δt</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Accélération moyenne</p>
+            <p><span class="formula">a = Δv / Δt</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Position (MRUA)</p>
+            <p><span class="formula">x = x₀ + v₀t + ½at²</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Relation vitesse-position</p>
+            <p><span class="formula">v² = v₀² + 2a(x - x₀)</span></p>
+          </div>
+        </div>
+        
+        <h4>Dynamique (Lois de Newton)</h4>
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">2ᵉ loi de Newton</p>
+            <p><span class="formula">ΣF = m·a</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Poids</p>
+            <p><span class="formula">P = m·g</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Force de frottement</p>
+            <p><span class="formula">f = μ·N</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Travail d'une force</p>
+            <p><span class="formula">W = F·d·cosθ</span></p>
+          </div>
+        </div>
+        
+        <h4>Énergie</h4>
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Énergie cinétique</p>
+            <p><span class="formula">E<sub>c</sub> = ½mv²</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Énergie potentielle (pesanteur)</p>
+            <p><span class="formula">E<sub>pp</sub> = m·g·h</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Énergie potentielle élastique</p>
+            <p><span class="formula">E<sub>pe</sub> = ½k·x²</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Théorème de l'énergie cinétique</p>
+            <p><span class="formula">ΔE<sub>c</sub> = ΣW</span></p>
+          </div>
+        </div>
+        
+        <h4>Gravitation universelle</h4>
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Loi de gravitation</p>
+            <p><span class="formula">F = G·m₁·m₂ / d²</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Intensité de pesanteur</p>
+            <p><span class="formula">g = G·M<sub>T</sub> / R<sub>T</sub>²</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Vitesse de satellisation</p>
+            <p><span class="formula">v = √(G·M / r)</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">3ᵉ loi de Kepler</p>
+            <p><span class="formula">T² / r³ = constante</span></p>
+          </div>
+        </div>
+        
+        <h4>Oscillations mécaniques</h4>
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Période (ressort)</p>
+            <p><span class="formula">T = 2π√(m/k)</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Période (pendule simple)</p>
+            <p><span class="formula">T = 2π√(L/g)</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Pulsation</p>
+            <p><span class="formula">ω = 2π / T = √(k/m)</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PARTIE 2 : ÉLECTROMAGNÉTISME -->
+      <div class="section-chapitre">
+        <h3>⚡ PARTIE 2 : ÉLECTROMAGNÉTISME</h3>
+        
+        <h4>Champ magnétique</h4>
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Force de Lorentz</p>
+            <p><span class="formula">F = q·v·B·sinθ</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Loi de Laplace</p>
+            <p><span class="formula">F = I·L·B·sinθ</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Rayon de courbure</p>
+            <p><span class="formula">R = m·v / (q·B)</span></p>
+          </div>
+        </div>
+        
+        <h4>Induction électromagnétique</h4>
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Flux magnétique</p>
+            <p><span class="formula">Φ = B·S·cosθ</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Loi de Faraday</p>
+            <p><span class="formula">e = -dΦ/dt</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Force électromotrice</p>
+            <p><span class="formula">e = -ΔΦ/Δt</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Auto-induction</p>
+            <p><span class="formula">e = -L·di/dt</span></p>
+          </div>
+        </div>
+        
+        <h4>Circuits électriques</h4>
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Loi d'Ohm</p>
+            <p><span class="formula">U = R·I</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Condensateur (charge)</p>
+            <p><span class="formula">q = C·U</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Énergie du condensateur</p>
+            <p><span class="formula">E = ½C·U²</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Constante de temps RC</p>
+            <p><span class="formula">τ = R·C</span></p>
+          </div>
+        </div>
+        
+        <h4>Circuits oscillants</h4>
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Période LC</p>
+            <p><span class="formula">T = 2π√(LC)</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Pulsation propre</p>
+            <p><span class="formula">ω₀ = 1/√(LC)</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Impédance (RLC)</p>
+            <p><span class="formula">Z = √(R² + (Lω - 1/Cω)²)</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Fréquence de résonance</p>
+            <p><span class="formula">f₀ = 1/(2π√(LC))</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PARTIE 3 : PHYSIQUE NUCLÉAIRE -->
+      <div class="section-chapitre">
+        <h3>☢️ PARTIE 3 : PHYSIQUE NUCLÉAIRE</h3>
+        
+        <h4>Masse et énergie</h4>
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Équivalence masse-énergie</p>
+            <p><span class="formula">E = Δm·c²</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Défaut de masse</p>
+            <p><span class="formula">Δm = (Z·m<sub>p</sub> + N·m<sub>n</sub>) - m<sub>noyau</sub></span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Énergie de liaison</p>
+            <p><span class="formula">E<sub>l</sub> = Δm·c²</span></p>
+          </div>
+        </div>
+        
+        <h4>Radioactivité</h4>
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Loi de décroissance</p>
+            <p><span class="formula">N(t) = N₀·e<sup>-λt</sup></span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Demi-vie</p>
+            <p><span class="formula">t<sub>1/2</sub> = ln(2)/λ</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Activité</p>
+            <p><span class="formula">A(t) = λ·N(t) = A₀·e<sup>-λt</sup></span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Temps de vie moyen</p>
+            <p><span class="formula">τ = 1/λ = t<sub>1/2</sub>/ln(2)</span></p>
+          </div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Constantes fondamentales :</strong><br>
+          - <span class="formula">c = 3,00 × 10⁸ m/s</span> (vitesse de la lumière)<br>
+          - <span class="formula">G = 6,67 × 10⁻¹¹ N·m²·kg⁻²</span> (constante de gravitation)<br>
+          - <span class="formula">k = 9,0 × 10⁹ N·m²·C⁻²</span> (constante de Coulomb)<br>
+          - <span class="formula">e = 1,60 × 10⁻¹⁹ C</span> (charge élémentaire)<br>
+          - <span class="formula">m<sub>e</sub> = 9,11 × 10⁻³¹ kg</span> (masse de l'électron)<br>
+          - <span class="formula">m<sub>p</sub> = 1,67 × 10⁻²⁷ kg</span> (masse du proton)<br>
+          - <span class="formula">N<sub>A</sub> = 6,02 × 10²³ mol⁻¹</span> (nombre d'Avogadro)
+        </div>
+      </div>
+
+      <!-- CONSEILS POUR LE BAC -->
+      <div class="section-chapitre">
+        <h3>💡 CONSEILS POUR LE BACCALAURÉAT</h3>
+        <div class="note-box">
+          <strong>📌 À retenir :</strong><br>
+          - Toujours <span class="highlight">lire attentivement l'énoncé</span> et identifier les grandeurs connues<br>
+          - <span class="highlight">Vérifier les unités</span> avant tout calcul (convertir en SI si nécessaire)<br>
+          - <span class="highlight">Écrire la formule littérale</span> avant l'application numérique<br>
+          - <span class="highlight">Soigner la rédaction</span> et justifier chaque étape du raisonnement<br>
+          - <span class="highlight">Vérifier la cohérence du résultat</span> (ordre de grandeur, signe, unité)<br>
+          - Maîtriser les <span class="highlight">notions d'énergie et de puissance</span> (très fréquentes)
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions Physique | Formulaire conforme au programme 2026
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // logo spin
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    // sidebar mobile toggle
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

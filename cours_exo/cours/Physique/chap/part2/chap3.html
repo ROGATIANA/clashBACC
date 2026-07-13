@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physique · Loi De Laplace | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre .highlight-red {
+      color: #e74c3c;
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem;
+    }
+    
+    .img-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    
+    .image-grid-chap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+    
+    .image-grid-chap .img-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.5rem;
+      text-align: center;
+      flex: 1;
+      min-width: 250px;
+    }
+    
+    .image-grid-chap .img-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(52,152,219,0.1);
+      border-left: 3px solid #3498db;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .formula {
+      font-family: monospace;
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2026</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2026 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../../index.html">Accueil</a> ›
+        <a href="../../../../Cours.html">Leçons</a> ›
+        <a href="../../Physique.html">Physique</a> › Électromagnétisme</a> › Chapitre 3
+      </div>
+      <div class="page-title">LOI DE LAPLACE <span>🔧 CHAPITRE 3</span></div>
+      <div class="page-subtitle">Force sur un conducteur parcouru par un courant, moteur électrique, galvanomètre — Électromagnétisme · Baccalauréat</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">🔧</div>
+      <div class="subject-info">
+        <h3>Loi de Laplace</h3>
+        <p>Force électromagnétique · Conducteur dans un champ magnétique · Moteur électrique · Applications</p>
+      </div>
+      <div class="chapter-count">Cours complet</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>🔧 INTRODUCTION</h3>
+        <p>La <span class="highlight">loi de Laplace</span> (ou force de Laplace) décrit la force exercée par un champ magnétique sur un conducteur électrique parcouru par un courant. Cette force est à la base du fonctionnement des <span class="highlight">moteurs électriques</span>, des <span class="highlight">haut-parleurs</span> et des <span class="highlight">galvanomètres</span>.</p>
+        
+        <div class="note-box">
+          <strong>📌 Différence avec la force de Lorentz :</strong><br>
+          - <span class="highlight">Force de Lorentz</span> : s'exerce sur une particule chargée isolée<br>
+          - <span class="highlight">Force de Laplace</span> : s'exerce sur un conducteur (ensemble de charges) parcouru par un courant
+        </div>
+      </div>
+
+      <!-- I – LOI DE LAPLACE -->
+      <div class="section-chapitre">
+        <h3>⚡ I – LOI DE LAPLACE</h3>
+        
+        <div class="law-box">
+          <h4>Expression vectorielle</h4>
+          <p>Pour un élément de conducteur <span class="formula">d\vec{ℓ}</span> parcouru par un courant I, placé dans un champ magnétique <span class="formula">\vec{B}</span> :</p>
+          <p><span class="formula">d\vec{F} = I·d\vec{ℓ} ∧ \vec{B}</span></p>
+          <p>où :</p>
+          <ul>
+            <li>I : intensité du courant (A)</li>
+            <li><span class="formula">d\vec{ℓ}</span> : vecteur élément de longueur (dans le sens du courant)</li>
+            <li><span class="formula">\vec{B}</span> : champ magnétique (T)</li>
+          </ul>
+        </div>
+        
+        <div class="law-box">
+          <h4>Pour un conducteur rectiligne</h4>
+          <p>Si le conducteur est rectiligne, de longueur L, parcouru par un courant I, placé dans un champ uniforme <span class="formula">\vec{B}</span> faisant un angle α avec le conducteur :</p>
+          <p><span class="formula">F = I·L·B·sinα</span></p>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Caractéristiques :</strong><br>
+          - La force est <span class="highlight">perpendiculaire</span> au plan formé par le conducteur et le champ magnétique<br>
+          - Le sens est donné par la <span class="highlight">règle des trois doigts</span> (ou règle de la main droite)<br>
+          - Si le conducteur est <span class="highlight">parallèle</span> au champ (α = 0° ou 180°) : force nulle<br>
+          - Si le conducteur est <span class="highlight">perpendiculaire</span> au champ (α = 90°) : force maximale
+        </div>
+      </div>
+
+      <!-- II – RÈGLE DÉTERMINATION DU SENS -->
+      <div class="section-chapitre">
+        <h3>🖐️ II – RÈGLE DES TROIS DOIGTS (RÈGLE DE LA MAIN DROITE)</h3>
+        
+        <div class="law-box">
+          <h4>Pour la force de Laplace</h4>
+          <ul>
+            <li><span class="highlight">Pouce</span> : sens du courant I</li>
+            <li><span class="highlight">Index</span> : sens du champ magnétique <span class="formula">\vec{B}</span></li>
+            <li><span class="highlight">Majeur</span> : sens de la force de Laplace <span class="formula">\vec{F}</span></li>
+          </ul>
+          <p><span class="highlight">Règle du tire-bouchon</span> : également utilisable pour déterminer le sens de la force.</p>
+        </div>
+      </div>
+
+      <!-- III – CAS PARTICULIERS -->
+      <div class="section-chapitre">
+        <h3>📐 III – CAS PARTICULIERS</h3>
+        
+        <div class="law-box">
+          <h4>Cadre rectangulaire dans un champ magnétique</h4>
+          <p>Un cadre parcouru par un courant I, placé dans un champ magnétique uniforme, est soumis à un <span class="highlight">couple de forces</span> qui tend à l'orienter perpendiculairement au champ.</p>
+          <p><span class="highlight">Moment du couple :</span> <span class="formula">Γ = N·I·S·B·sinθ</span></p>
+          <p>où :</p>
+          <ul>
+            <li>N : nombre de spires</li>
+            <li>S : surface du cadre (m²)</li>
+            <li>θ : angle entre la normale au cadre et <span class="formula">\vec{B}</span></li>
+          </ul>
+        </div>
+        
+        <div class="law-box">
+          <h4>Spire circulaire</h4>
+          <p>Une spire circulaire de rayon R, parcourue par un courant I, placée dans un champ magnétique uniforme, subit également un couple de forces.</p>
+          <p><span class="highlight">Moment magnétique :</span> <span class="formula">\vec{μ} = N·I·\vec{S}</span></p>
+          <p><span class="highlight">Couple :</span> <span class="formula">\vec{Γ} = \vec{μ} ∧ \vec{B}</span></p>
+        </div>
+      </div>
+
+      <!-- IV – APPLICATIONS TECHNOLOGIQUES -->
+      <div class="section-chapitre">
+        <h3>🔧 IV – APPLICATIONS TECHNOLOGIQUES</h3>
+        
+        <div class="law-box">
+          <h4>1. Moteur électrique</h4>
+          <p>Un moteur électrique transforme l'énergie électrique en énergie mécanique. Il est constitué d'une bobine (rotor) placée dans un champ magnétique (stator). Le courant dans la bobine crée une force de Laplace qui la fait tourner. Un collecteur inverse le courant à chaque demi-tour pour maintenir la rotation.</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>2. Galvanomètre (appareil de mesure de courant)</h4>
+          <p>Un galvanomètre utilise la force de Laplace pour dévier une aiguille proportionnellement au courant. Une bobine mobile placée dans un champ magnétique est soumise à un couple proportionnel à I. L'aiguille solidaire de la bobine indique la valeur du courant.</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>3. Haut-parleur électrodynamique</h4>
+          <p>Une bobine mobile (solidaire d'une membrane) est parcourue par un courant variable (signal audio) dans un champ magnétique fixe. La force de Laplace fait vibrer la membrane, produisant des ondes sonores.</p>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Rail de Laplace :</strong> Une tige métallique posée sur deux rails parallèles, parcourue par un courant, subit une force de Laplace qui la met en mouvement. C'est un modèle simple de moteur linéaire.
+        </div>
+      </div>
+
+      <!-- V – FORMULAIRE -->
+      <div class="section-chapitre">
+        <h3>📝 V – FORMULAIRE</h3>
+        
+        <div class="grid-formulas">
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Force sur un conducteur</strong><br>
+            <span class="formula">F = I·L·B·sinα</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Force élémentaire</strong><br>
+            <span class="formula">dF = I·dℓ·B·sinα</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Couple sur un cadre</strong><br>
+            <span class="formula">Γ = N·I·S·B·sinθ</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Moment magnétique</strong><br>
+            <span class="formula">μ = N·I·S</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Couple (vecteur)</strong><br>
+            <span class="formula">\vec{Γ} = \vec{μ} ∧ \vec{B}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Images du cours -->
+      <div class="section-chapitre">
+        <h3>📚 COURS COMPLET</h3>
+        
+        <div class="img-container">
+          <img src="img/c14.jpg" alt="Cours loi de Laplace 1">
+          <div class="img-caption">Fig. 1 – Principe de la force de Laplace</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c15.jpg" alt="Cours loi de Laplace 2">
+          <div class="img-caption">Fig. 2 – Conducteur rectiligne dans un champ magnétique</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c16.jpg" alt="Cours loi de Laplace 3">
+          <div class="img-caption">Fig. 3 – Règle des trois doigts (sens de la force)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c17.jpg" alt="Cours loi de Laplace 4">
+          <div class="img-caption">Fig. 4 – Cadre dans un champ magnétique (couple de forces)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c18.jpg" alt="Cours loi de Laplace 5">
+          <div class="img-caption">Fig. 5 – Principe du moteur électrique</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c19.jpg" alt="Cours loi de Laplace 6">
+          <div class="img-caption">Fig. 6 – Principe du galvanomètre</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c20.jpg" alt="Cours loi de Laplace 7">
+          <div class="img-caption">Fig. 7 – Applications pratiques et exercices types</div>
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>💡 RÉCAPITULATIF ET CONSEILS</h3>
+        
+        <div class="note-box">
+          <strong>📌 Points clés à retenir :</strong><br>
+          - La <span class="highlight">force de Laplace</span> s'exerce sur un <span class="highlight">conducteur parcouru par un courant</span> dans un champ magnétique<br>
+          - Son intensité : <span class="formula">F = I·L·B·sinα</span><br>
+          - Elle est <span class="highlight">maximale</span> quand le conducteur est perpendiculaire au champ (α = 90°)<br>
+          - Elle est <span class="highlight">nulle</span> quand le conducteur est parallèle au champ (α = 0°)<br>
+          - Le sens est donné par la <span class="highlight">règle des trois doigts</span><br>
+          - Un cadre dans un champ magnétique subit un <span class="highlight">couple</span> qui tend à l'orienter<br>
+          - Applications : <span class="highlight">moteur électrique</span>, <span class="highlight">galvanomètre</span>, <span class="highlight">haut-parleur</span>
+        </div>
+        
+        <div class="law-box">
+          <strong>🎯 Méthode pour les exercices :</strong><br>
+          1. Identifier le sens du courant dans le conducteur<br>
+          2. Déterminer la direction et le sens du champ magnétique<br>
+          3. Appliquer la règle des trois doigts pour le sens de la force<br>
+          4. Calculer l'intensité : <span class="formula">F = I·L·B·sinα</span><br>
+          5. Pour un cadre : calculer le couple <span class="formula">Γ = N·I·S·B·sinθ</span>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions Physique | Chapitre 3 : Loi de Laplace — Conforme au programme 2026
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>English · Active & Passive Voice | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre .highlight-red {
+      color: #e74c3c;
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem;
+    }
+    
+    .img-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(230, 126, 34, 0.1);
+      border-left: 3px solid #e67e22;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .formula {
+      font-family: monospace;
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .grammar-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.8rem;
+      text-align: center;
+    }
+    
+    .grammar-card .grammar-name {
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    .example {
+      font-style: italic;
+      color: var(--gold);
+    }
+    
+    .table-voice {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .table-voice th, .table-voice td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 0.5px solid rgba(255,255,255,0.1);
+    }
+    
+    .table-voice th {
+      background: rgba(232,201,126,0.15);
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    .table-voice tr:last-child td {
+      border-bottom: none;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+      .table-voice th, .table-voice td {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2024</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../index.html">Accueil</a> ›
+        <a href="../../../Cours.html">Leçons</a> ›
+        <a href="../Anglais.html">English</a> › Chapter 3
+      </div>
+      <div class="page-title">ACTIVE & PASSIVE VOICE <span>🇬🇧 CHAPTER 3</span></div>
+      <div class="page-subtitle">Understanding the difference and how to transform between active and passive voice</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">🇬🇧</div>
+      <div class="subject-info">
+        <h3>Active & Passive Voice</h3>
+        <p>Active voice · Passive voice · Transformation rules · Verb conjugations</p>
+      </div>
+      <div class="chapter-count">Complete lesson</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>📚 INTRODUCTION</h3>
+        <p><span class="highlight">Active Voice</span> describes a sentence where the <span class="highlight">subject performs the action</span> stated by the verb.</p>
+        <p>In <span class="highlight">Passive Voice</span> sentences, the <span class="highlight">subject is acted upon</span> by the verb.</p>
+        
+        <div class="note-box">
+          <strong>📌 Basic Structure:</strong><br>
+          <strong>Active:</strong> Subject + Verb + Object<br>
+          <strong>Passive:</strong> Object + be + past participle + (by + subject)
+        </div>
+      </div>
+
+      <!-- Comparison Table -->
+      <div class="section-chapitre">
+        <h3>📊 ACTIVE vs PASSIVE VOICE</h3>
+        
+        <div class="grid-formulas">
+          <div class="grammar-card">
+            <p class="grammar-name">Active Voice</p>
+            <p>The subject performs the action</p>
+            <div class="example">The dog <strong>bit</strong> the man.</div>
+            <div class="example">She <strong>writes</strong> a letter.</div>
+            <div class="example">They <strong>built</strong> a house.</div>
+          </div>
+          <div class="grammar-card">
+            <p class="grammar-name">Passive Voice</p>
+            <p>The subject receives the action</p>
+            <div class="example">The man <strong>was bitten</strong> by the dog.</div>
+            <div class="example">A letter <strong>is written</strong> by her.</div>
+            <div class="example">A house <strong>was built</strong> by them.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transformation Table -->
+      <div class="section-chapitre">
+        <h3>🔄 TRANSFORMATION RULES</h3>
+        
+        <table class="table-voice">
+          <thead>
+            <tr><th>Tense</th><th>Active Voice</th><th>Passive Voice</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Present Simple</td><td>She writes a letter</td><td>A letter <strong>is written</strong> by her</td></tr>
+            <tr><td>Present Continuous</td><td>She is writing a letter</td><td>A letter <strong>is being written</strong> by her</td></tr>
+            <tr><td>Present Perfect</td><td>She has written a letter</td><td>A letter <strong>has been written</strong> by her</td></tr>
+            <tr><td>Past Simple</td><td>She wrote a letter</td><td>A letter <strong>was written</strong> by her</td></tr>
+            <tr><td>Past Continuous</td><td>She was writing a letter</td><td>A letter <strong>was being written</strong> by her</td></tr>
+            <tr><td>Past Perfect</td><td>She had written a letter</td><td>A letter <strong>had been written</strong> by her</td></tr>
+            <tr><td>Future Simple (will)</td><td>She will write a letter</td><td>A letter <strong>will be written</strong> by her</td></tr>
+            <tr><td>Future Simple (going to)</td><td>She is going to write a letter</td><td>A letter <strong>is going to be written</strong> by her</td></tr>
+            <tr><td>Modal verbs (can, must, etc.)</td><td>She can write a letter</td><td>A letter <strong>can be written</strong> by her</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- When to Use Passive Voice -->
+      <div class="section-chapitre">
+        <h3>💡 WHEN TO USE PASSIVE VOICE</h3>
+        
+        <div class="law-box">
+          <strong>📌 We use passive voice when:</strong><br><br>
+          - <span class="highlight">The agent (doer) is unknown or unimportant</span><br>
+          <div class="example">My wallet <strong>was stolen</strong>. (I don't know who stole it)</div><br>
+          - <span class="highlight">We want to emphasize the action or the receiver</span><br>
+          <div class="example">The president <strong>was elected</strong> in 2020.</div><br>
+          - <span class="highlight">In formal or scientific writing</span><br>
+          <div class="example">The experiment <strong>was conducted</strong> under controlled conditions.</div>
+        </div>
+      </div>
+
+      <!-- When to Avoid Passive Voice -->
+      <div class="section-chapitre">
+        <h3>⚠️ WHEN TO AVOID PASSIVE VOICE</h3>
+        
+        <div class="note-box">
+          <strong>📌 Avoid passive voice when:</strong><br><br>
+          - The active voice is <span class="highlight">clearer and more direct</span><br>
+          - You want to be <span class="highlight">more engaging</span> (especially in narrative writing)<br>
+          - The agent is <span class="highlight">important</span> to the meaning<br><br>
+          <div class="example"><strong>Better (Active):</strong> Shakespeare wrote Hamlet.<br>
+          <strong>Less effective (Passive):</strong> Hamlet was written by Shakespeare.</div>
+        </div>
+      </div>
+
+      <!-- Common Passive Voice Mistakes -->
+      <div class="section-chapitre">
+        <h3>❌ COMMON MISTAKES TO AVOID</h3>
+        
+        <div class="law-box">
+          <strong>📌 Mistakes:</strong><br><br>
+          - <span class="highlight">Forgetting the "be" verb</span><br>
+          <div class="example">❌ The letter written by her.<br>
+          ✅ The letter <strong>was written</strong> by her.</div><br>
+          - <span class="highlight">Wrong past participle form</span><br>
+          <div class="example">❌ The cake was ate.<br>
+          ✅ The cake was <strong>eaten</strong>.</div>
+        </div>
+      </div>
+
+      <!-- Images -->
+      <div class="section-chapitre">
+        <h3>📖 VISUAL REFERENCES</h3>
+        
+        <div class="img-container">
+          <img src="img/3.jpg" alt="Active vs Passive Voice">
+          <div class="img-caption">Fig. 1 – Active vs Passive Voice comparison</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/4.jpg" alt="Passive Voice Formation">
+          <div class="img-caption">Fig. 2 – How to form passive voice (be + past participle)</div>
+        </div>
+      </div>
+
+      <!-- Quick Reference -->
+      <div class="section-chapitre">
+        <h3>📝 QUICK REFERENCE</h3>
+        
+        <div class="grid-formulas">
+          <div class="grammar-card">
+            <p class="grammar-name">Passive Formula</p>
+            <p><strong>be + past participle</strong><br>
+            The "be" verb changes according to tense</p>
+          </div>
+          <div class="grammar-card">
+            <p class="grammar-name">The word "by"</p>
+            <p>Used to introduce the agent (the doer)<br>
+            <span class="example">The book was written <strong>by</strong> Jane Austen.</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>💡 SUMMARY & KEY POINTS</h3>
+        
+        <div class="note-box">
+          <strong>📌 Key Takeaways:</strong><br>
+          - <span class="highlight">Active Voice:</span> Subject performs the action (Subject + Verb + Object)<br>
+          - <span class="highlight">Passive Voice:</span> Subject receives the action (Object + be + past participle + by + subject)<br>
+          - The passive voice is formed with <span class="highlight">"be" + past participle</span><br>
+          - Use passive voice when the <span class="highlight">agent is unknown</span> or <span class="highlight">unimportant</span><br>
+          - Use passive voice to <span class="highlight">emphasize the action or receiver</span><br>
+          - Avoid passive voice when active voice is <span class="highlight">clearer and more direct</span><br>
+          - Only <span class="highlight">transitive verbs</span> (verbs that take an object) can be used in passive voice
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — English Grammar | Chapter 3: Active & Passive Voice — Conforms to Baccalaureate program 2024
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

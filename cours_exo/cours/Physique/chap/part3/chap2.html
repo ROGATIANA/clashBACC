@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physique Nucléaire · Radioactivité : Réactions Nucléaires | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../..//style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem;
+    }
+    
+    .img-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(52,152,219,0.1);
+      border-left: 3px solid #3498db;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .formula {
+      font-family: monospace;
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2026</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2026 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../../index.html">Accueil</a> ›
+        <a href="../../../../Cours.html">Leçons</a> ›
+        <a href="../../Physique.html">Physique</a> › Physique Nucléaire</a> › Chapitre 2
+      </div>
+      <div class="page-title">RADIOACTIVITÉ : RÉACTIONS NUCLÉAIRES <span>☢️ CHAPITRE 2</span></div>
+      <div class="page-subtitle">Désintégrations α, β, γ · Loi de décroissance · Demi-vie · Datation · Applications médicales</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">☢️</div>
+      <div class="subject-info">
+        <h3>Radioactivité</h3>
+        <p>Désintégrations α, β⁻, β⁺, γ · Loi de décroissance exponentielle · Demi-vie · Applications</p>
+      </div>
+      <div class="chapter-count">Cours complet</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>☢️ INTRODUCTION</h3>
+        <p>La <span class="highlight">radioactivité</span> est un phénomène naturel par lequel des noyaux atomiques instables (<span class="highlight">radionucléides</span>) se transforment spontanément en d'autres noyaux en émettant des particules et/ou un rayonnement électromagnétique. Découverte par Henri Becquerel en 1896, puis étudiée par Pierre et Marie Curie.</p>
+        
+        <div class="note-box">
+          <strong>📌 Noyaux instables :</strong><br>
+          - Excès de protons ou de neutrons<br>
+          - Rapport N/Z trop faible ou trop élevé (N = nombre de neutrons, Z = nombre de protons)<br>
+          - Noyaux trop lourds (A > 208)
+        </div>
+      </div>
+
+      <!-- I – TYPES DE RADIOACTIVITÉ -->
+      <div class="section-chapitre">
+        <h3>📡 I – TYPES DE RADIOACTIVITÉ</h3>
+        
+        <div class="law-box">
+          <h4>1. Radioactivité α (alpha)</h4>
+          <p>Émission d'un noyau d'hélium <span class="formula">₂He⁴</span> (2 protons + 2 neutrons).</p>
+          <p><span class="formula">^A_Z X → ^{A-4}_{Z-2} Y + ^4_2 He</span></p>
+          <p>Exemple : <span class="formula">²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He</span></p>
+          <ul>
+            <li>Pouvoir de pénétration <span class="highlight">faible</span> (arrêté par une feuille de papier)</li>
+            <li>Pouvoir ionisant <span class="highlight">très élevé</span></li>
+            <li>Noyaux lourds (A > 200)</li>
+          </ul>
+        </div>
+        
+        <div class="law-box">
+          <h4>2. Radioactivité β⁻ (bêta moins)</h4>
+          <p>Émission d'un électron et d'un antineutrino. Un neutron se transforme en proton.</p>
+          <p><span class="formula">^A_Z X → ^A_{Z+1} Y + e⁻ + \bar{ν}_e</span></p>
+          <p>Exemple : <span class="formula">¹⁴₆C → ¹⁴₇N + e⁻ + \bar{ν}_e</span></p>
+          <ul>
+            <li>Pouvoir de pénétration <span class="highlight">moyen</span> (arrêté par une plaque d'aluminium)</li>
+            <li>Noyaux riches en neutrons (excès de neutrons)</li>
+          </ul>
+        </div>
+        
+        <div class="law-box">
+          <h4>3. Radioactivité β⁺ (bêta plus)</h4>
+          <p>Émission d'un positon (anti-électron) et d'un neutrino. Un proton se transforme en neutron.</p>
+          <p><span class="formula">^A_Z X → ^A_{Z-1} Y + e⁺ + ν_e</span></p>
+          <p>Exemple : <span class="formula">²²₁₁Na → ²²₁₀Ne + e⁺ + ν_e</span></p>
+          <ul>
+            <li>Radioactivité artificielle (produite en laboratoire)</li>
+            <li>Noyaux riches en protons</li>
+          </ul>
+        </div>
+        
+        <div class="law-box">
+          <h4>4. Radioactivité γ (gamma)</h4>
+          <p>Émission d'un photon de haute énergie. Le noyau passe d'un état excité à l'état fondamental.</p>
+          <p><span class="formula">^A_Z X^* → ^A_Z X + γ</span></p>
+          <ul>
+            <li>Pouvoir de pénétration <span class="highlight">très élevé</span> (arrêté par une épaisse couche de plomb ou de béton)</li>
+            <li>S'accompagne souvent d'une désintégration α ou β</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- II – LOI DE DÉCROISSANCE RADIOACTIVE -->
+      <div class="section-chapitre">
+        <h3>📉 II – LOI DE DÉCROISSANCE RADIOACTIVE</h3>
+        
+        <div class="law-box">
+          <h4>Loi statistique</h4>
+          <p>La désintégration d'un noyau est un phénomène <span class="highlight">aléatoire</span> et <span class="highlight">indépendant</span>. Pour un grand nombre de noyaux, on observe une décroissance exponentielle.</p>
+          <p><span class="formula">N(t) = N₀·e^{-λt}</span></p>
+          <p>où :</p>
+          <ul>
+            <li>N₀ : nombre de noyaux à t = 0</li>
+            <li>N(t) : nombre de noyaux à l'instant t</li>
+            <li>λ : constante radioactive (s⁻¹)</li>
+          </ul>
+        </div>
+        
+        <div class="law-box">
+          <h4>Activité</h4>
+          <p>L'activité A(t) d'un échantillon est le nombre de désintégrations par seconde.</p>
+          <p><span class="formula">A(t) = -dN/dt = λ·N(t) = A₀·e^{-λt}</span></p>
+          <p>Unité : <span class="highlight">becquerel (Bq)</span> (1 Bq = 1 désintégration/s)</p>
+          <p>Ancienne unité : 1 curie (Ci) = 3,7×10¹⁰ Bq</p>
+        </div>
+      </div>
+
+      <!-- III – DEMI-VIE ET TEMPS DE VIE MOYEN -->
+      <div class="section-chapitre">
+        <h3>⏱️ III – DEMI-VIE (PÉRIODE RADIOACTIVE)</h3>
+        
+        <div class="law-box">
+          <h4>Définition</h4>
+          <p>La <span class="highlight">demi-vie t₁/₂</span> (ou période) est le temps au bout duquel la moitié des noyaux d'un échantillon radioactif se sont désintégrés.</p>
+          <p><span class="formula">N(t₁/₂) = N₀/2</span></p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Relation entre λ et t₁/₂</h4>
+          <p><span class="formula">N₀/2 = N₀·e^{-λ·t₁/₂}</span> → <span class="formula">1/2 = e^{-λ·t₁/₂}</span></p>
+          <p><span class="formula">λ·t₁/₂ = ln 2</span> → <span class="formula">t₁/₂ = ln 2 / λ</span> ≈ <span class="formula">0,693 / λ</span></p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Temps de vie moyen τ</h4>
+          <p><span class="formula">τ = 1/λ = t₁/₂ / ln 2 ≈ 1,44·t₁/₂</span></p>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Exemples de demi-vie :</strong><br>
+          - Carbone 14 : t₁/₂ = 5730 ans (datation archéologique)<br>
+          - Uranium 238 : t₁/₂ = 4,5 milliards d'années (datation géologique)<br>
+          - Iode 131 : t₁/₂ = 8 jours (médecine nucléaire)<br>
+          - Polonium 212 : t₁/₂ = 0,3 µs (très instable)
+        </div>
+      </div>
+
+      <!-- IV – DATATION PAR LE CARBONE 14 -->
+      <div class="section-chapitre">
+        <h3>🦴 IV – DATATION PAR LE CARBONE 14</h3>
+        
+        <div class="law-box">
+          <h4>Principe</h4>
+          <p>Le carbone 14 est produit dans l'atmosphère par les rayons cosmiques. Les êtres vivants l'absorbent (photosynthèse, chaîne alimentaire). À la mort, l'absorption cesse et le ¹⁴C se désintègre (β⁻).</p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Calcul de l'âge</h4>
+          <p><span class="formula">N(t) = N₀·e^{-λt}</span> → <span class="formula">t = (1/λ)·ln(N₀/N(t))</span></p>
+          <p>En utilisant l'activité : <span class="formula">t = (t₁/₂/ln 2)·ln(A₀/A(t))</span></p>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Limitations :</strong><br>
+          - Jusqu'à environ 50 000 ans (après, trop peu de carbone 14)<br>
+          - Nécessite une étalonnage (variation de ¹⁴C dans l'atmosphère)
+        </div>
+      </div>
+
+      <!-- V – APPLICATIONS DE LA RADIOACTIVITÉ -->
+      <div class="section-chapitre">
+        <h3>🏥 V – APPLICATIONS DE LA RADIOACTIVITÉ</h3>
+        
+        <div class="law-box">
+          <h4>1. Médecine nucléaire</h4>
+          <ul>
+            <li><span class="highlight">Imagerie médicale</span> : scintigraphie, TEP (Tomographie par Émission de Positons), SPECT</li>
+            <li><span class="highlight">Radiothérapie</span> : destruction des cellules cancéreuses (cobalt 60, iridium 192)</li>
+            <li><span class="highlight">Traceurs radioactifs</span> : iode 131 pour la thyroïde, technétium 99m pour l'imagerie</li>
+          </ul>
+        </div>
+        
+        <div class="law-box">
+          <h4>2. Datation</h4>
+          <ul>
+            <li>Carbone 14 : datation des matières organiques (archéologie, paléontologie)</li>
+            <li>Uranium-plomb : datation des roches et de la Terre (géologie)</li>
+            <li>Potassium-argon : datation des roches volcaniques</li>
+          </ul>
+        </div>
+        
+        <div class="law-box">
+          <h4>3. Industrie</h4>
+          <ul>
+            <li>Contrôle non destructif (gammagraphie)</li>
+            <li>Mesure d'épaisseur, de niveau, de densité</li>
+            <li>Stérilisation (irradiation des aliments, matériel médical)</li>
+          </ul>
+        </div>
+        
+        <div class="law-box">
+          <h4>4. Production d'énergie</h4>
+          <ul>
+            <li>Centrales nucléaires (fission)</li>
+            <li>Générateurs thermoélectriques pour les missions spatiales (sonde Voyager, Perseverance)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- VI – FORMULAIRE -->
+      <div class="section-chapitre">
+        <h3>📝 VI – FORMULAIRE</h3>
+        
+        <div class="grid-formulas">
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Loi de décroissance</strong><br>
+            <span class="formula">N(t) = N₀·e^{-λt}</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Activité</strong><br>
+            <span class="formula">A(t) = A₀·e^{-λt}</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Demi-vie</strong><br>
+            <span class="formula">t₁/₂ = ln 2 / λ</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Temps de vie moyen</strong><br>
+            <span class="formula">τ = 1/λ</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Lien t₁/₂ et λ</strong><br>
+            <span class="formula">λ = ln 2 / t₁/₂</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Désintégration α</strong><br>
+            <span class="formula">A → A-4, Z → Z-2</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Images du cours -->
+      <div class="section-chapitre">
+        <h3>📚 COURS COMPLET</h3>
+        
+        <div class="img-container">
+          <img src="img/c65.jpg" alt="Cours radioactivité 1">
+          <div class="img-caption">Fig. 1 – Introduction à la radioactivité (Becquerel, Curie)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c66.jpg" alt="Cours radioactivité 2">
+          <div class="img-caption">Fig. 2 – Radioactivité α (noyau d'hélium)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c67.jpg" alt="Cours radioactivité 3">
+          <div class="img-caption">Fig. 3 – Radioactivité β⁻ (émission électron)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c68.jpg" alt="Cours radioactivité 4">
+          <div class="img-caption">Fig. 4 – Radioactivité β⁺ (émission positon)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c69.jpg" alt="Cours radioactivité 5">
+          <div class="img-caption">Fig. 5 – Radioactivité γ (rayonnement électromagnétique)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c70.jpg" alt="Cours radioactivité 6">
+          <div class="img-caption">Fig. 6 – Loi de décroissance exponentielle N(t) = N₀e^{-λt}</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c71.jpg" alt="Cours radioactivité 7">
+          <div class="img-caption">Fig. 7 – Demi-vie t₁/₂ (période radioactive)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c72.jpg" alt="Cours radioactivité 8">
+          <div class="img-caption">Fig. 8 – Datation par le carbone 14</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/c73.jpg" alt="Cours radioactivité 9">
+          <div class="img-caption">Fig. 9 – Applications médicales et industrielles de la radioactivité</div>
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>💡 RÉCAPITULATIF ET CONSEILS</h3>
+        
+        <div class="note-box">
+          <strong>📌 Points clés à retenir :</strong><br>
+          - La <span class="highlight">radioactivité α</span> : émission d'hélium, peu pénétrante, très ionisante<br>
+          - La <span class="highlight">radioactivité β⁻</span> : n → p + e⁻, pouvoir pénétrant moyen<br>
+          - La <span class="highlight">radioactivité β⁺</span> : p → n + e⁺ (radioactivité artificielle)<br>
+          - La <span class="highlight">radioactivité γ</span> : photon haute énergie, très pénétrante<br>
+          - <span class="highlight">Loi de décroissance</span> : <span class="formula">N(t) = N₀·e^{-λt}</span><br>
+          - <span class="highlight">Demi-vie t₁/₂</span> : <span class="formula">t₁/₂ = ln 2 / λ</span><br>
+          - Applications : médecine, datation, industrie, énergie
+        </div>
+        
+        <div class="law-box">
+          <strong>🎯 Méthode pour les exercices :</strong><br>
+          1. Identifier le type de désintégration (α, β⁻, β⁺, γ)<br>
+          2. Écrire l'équation de désintégration en conservant A et Z<br>
+          3. Pour un calcul de temps : <span class="formula">N(t) = N₀·e^{-λt}</span><br>
+          4. Utiliser la demi-vie : <span class="formula">λ = ln 2 / t₁/₂</span><br>
+          5. Pour la datation : <span class="formula">t = (t₁/₂/ln 2)·ln(A₀/A(t))</span>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions Physique | Chapitre 2 : Radioactivité - Réactions nucléaires — Conforme au programme 2026
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

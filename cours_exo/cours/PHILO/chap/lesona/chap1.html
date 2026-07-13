@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Philosophie · Ny Fifandraisan'ny Olona sy ny Filozofia | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem;
+    }
+    
+    .img-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(52, 73, 94, 0.1);
+      border-left: 3px solid #34495e;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .philo-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.8rem;
+      text-align: center;
+    }
+    
+    .philo-card .philo-name {
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2024</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../../index.html">Accueil</a> ›
+        <a href="../../../../Cours.html">Leçons</a> ›
+        <a href="../../PHILO.html">Philosophie</a> ›
+        <a href="../lesona_feno.html">Lesona Feno</a> › Fizarana 1
+      </div>
+      <div class="page-title">NY FIFANDRAISAN'NY OLONA SY NY FILOZOFIA <span>🤔 FIZARANA 1</span></div>
+      <div class="page-subtitle">Fandinihana ny antony mahatonga ny olona hilozoka amin'ny filozofia</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">🤔</div>
+      <div class="subject-info">
+        <h3>Fifandraisan'ny Olona sy ny Filozofia</h3>
+        <p>Ny filozofia dia manampy antsika hahatakatra ny tena sy ny tontolo misy antsika</p>
+      </div>
+      <div class="chapter-count">Cours complet</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>📚 FAMPIDIRANA</h3>
+        <p>Ny <span class="highlight">filozofia</span> dia avy amin'ny teny grika hoe <span class="highlight">"philosophia"</span> izay midika hoe <span class="highlight">"fitiavana fahendrena"</span>. Ny olona dia mampiasa ny filozofia mba hahatakarana ny tenany sy ny tontolo misy azy. Ny fanontaniana toy ny hoe "Iza moa aho?", "Inona ny fahamarinana?", "Inona ny soa?" dia anisan'ny fanontaniana fototry ny filozofia.</p>
+        
+        <div class="note-box">
+          <strong>📌 Tanjona :</strong><br>
+          - Mahatakatra ny dikan'ny filozofia<br>
+          - Mahatakatra ny maha-zava-dehibe ny filozofia eo amin'ny fiainana<br>
+          - Mahay mametraka fanontaniana filozofika<br>
+          - Mahay manome valiny misy heviny
+        </div>
+      </div>
+
+      <!-- Inona no atao hoe Filozofia? -->
+      <div class="section-chapitre">
+        <h3>🤔 INONA NO ATAO HOE FILOZOFIA?</h3>
+        
+        <div class="law-box">
+          <strong>📌 Famaritana :</strong><br>
+          Ny filozofia dia fandinihana lalina momba ny olana fototra misy eo amin'ny fiainana :<br>
+          - Ny fahalalana (épistémologie)<br>
+          - Ny fahamarinana<br>
+          - Ny soatoavina (éthique)<br>
+          - Ny fisiana (métaphysique)<br>
+          - Ny saina<br>
+          - Ny fiteny
+        </div>
+        
+        <div class="grid-formulas">
+          <div class="philo-card">
+            <p class="philo-name">Fahalalana</p>
+            <p>Ahoana no ahafantarantsika zavatra? Inona ny fahalalana marina?</p>
+          </div>
+          <div class="philo-card">
+            <p class="philo-name">Fahamarinana</p>
+            <p>Inona no atao hoe fahamarinana? Misy marina tanteraka ve?</p>
+          </div>
+          <div class="philo-card">
+            <p class="philo-name">Soatoavina</p>
+            <p>Inona ny tsara? Inona ny ratsy? Ahoana no tokony hiainantsika?</p>
+          </div>
+          <div class="philo-card">
+            <p class="philo-name">Fisiana</p>
+            <p>Inona no misy? Nahoana no misy zavatra fa tsy tsy misy?</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Antony mahatonga ny olona hilozoka amin'ny filozofia -->
+      <div class="section-chapitre">
+        <h3>🤔 ANTONY MAHATONGA NY OLONA HILOZOKA AMIN'NY FILOZOFIA</h3>
+        
+        <div class="law-box">
+          <strong>📌 Ireto ny antony lehibe :</strong><br><br>
+          <strong>1. Ny faniriana hahafantatra (étonnement / fahagagana)</strong><br>
+          Araka an'i Aristote, ny filozofia dia manomboka amin'ny fahagagana. Mahagaga antsika ny zavatra hitantsika, ka tiana ho fantatra ny antony.<br><br>
+          <strong>2. Ny fisalasalana (doute)</strong><br>
+          Araka an'i Descartes, ny fisalasalana dia dingana voalohany hahatongavana amin'ny fahamarinana. Tokony hisalasala amin'ny zavatra rehetra isika aloha.<br><br>
+          <strong>3. Ny faniriana hanatsara ny fiainana</strong><br>
+          Ny filozofia dia manampy antsika hahita ny fomba tsara indrindra hiainana, ny soa sy ny rariny.<br><br>
+          <strong>4. Ny loza sy ny fahoriana eo amin'ny fiainana</strong><br>
+          Matetika ny olona no miverina amin'ny filozofia rehefa sendra zava-tsarotra eo amin'ny fiainana.
+        </div>
+      </div>
+
+      <!-- Sampana filozofia -->
+      <div class="section-chapitre">
+        <h3>📚 SAMBANA FILOZOFIA</h3>
+        
+        <div class="grid-formulas">
+          <div class="philo-card">
+            <p class="philo-name">Métaphysique</p>
+            <p>Mandinika ny fisiana sy ny zava-misy tsy hita maso.</p>
+          </div>
+          <div class="philo-card">
+            <p class="philo-name">Épistémologie</p>
+            <p>Mandinika ny fahalalana sy ny fomba ahazoana azy.</p>
+          </div>
+          <div class="philo-card">
+            <p class="philo-name">Éthique</p>
+            <p>Mandinika ny soatoavina sy ny fitondran-tena.</p>
+          </div>
+          <div class="philo-card">
+            <p class="philo-name">Esthétique</p>
+            <p>Mandinika ny hatsarana sy ny zavakanto.</p>
+          </div>
+          <div class="philo-card">
+            <p class="philo-name">Logique</p>
+            <p>Mandinika ny fomba fisainana sy ny fitsipiny.</p>
+          </div>
+          <div class="philo-card">
+            <p class="philo-name">Philosophie politique</p>
+            <p>Mandinika ny fiaraha-monina, ny fahefana, ny rariny.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Images du cours -->
+      <div class="section-chapitre">
+        <h3>📚 SARY MANAMPY</h3>
+        
+        <div class="img-container">
+          <img src="img/t1.jpg" alt="Filozofia 1">
+          <div class="img-caption">Sary 1 – Inona no atao hoe filozofia?</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/t2.jpg" alt="Filozofia 2">
+          <div class="img-caption">Sary 2 – Ny fahagagana (étonnement) ao amin'ny filozofia</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/t3.jpg" alt="Filozofia 3">
+          <div class="img-caption">Sary 3 – Filozofa malaza sy ny hevitr'izy ireo</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/t4.jpg" alt="Filozofia 4">
+          <div class="img-caption">Sary 4 – Ny sampan'ny filozofia</div>
+        </div>
+      </div>
+
+      <!-- Fanazaran-tena -->
+      <div class="section-chapitre">
+        <h3>✍️ FANAZARAN-TENA</h3>
+        
+        <div class="law-box">
+          <strong>📌 Fanontaniana hamaly :</strong><br><br>
+          1. Inona no atao hoe filozofia? Hazavao.<br>
+          2. Inona ny antony lehibe mahatonga ny olona hilozoka amin'ny filozofia?<br>
+          3. Lazao ny sampan'ny filozofia dimy ary hazavao ny ataon'ny tsirairay.<br>
+          4. Araka an'i Aristote, ahoana no anombohan'ny filozofia?<br>
+          5. Ahoana no anampian'ny filozofia antsika eo amin'ny fiainana andavanandro?
+        </div>
+      </div>
+
+      <!-- Citation -->
+      <div class="section-chapitre">
+        <div class="law-box" style="text-align: center;">
+          <strong>💪 "Mieritreritra aho, koa misy aho." (Cogito ergo sum)</strong><br>
+          <span class="example">— René Descartes</span>
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>💡 FAMINTINANA</h3>
+        
+        <div class="note-box">
+          <strong>📌 Zava-dehibe hotadidina :</strong><br>
+          - <span class="highlight">Filozofia</span> : fitiavana fahendrena, fandinihana lalina ny fiainana<br>
+          - <span class="highlight">Antony mahatonga ny olona hilozoka amin'ny filozofia</span> : fahagagana, fisalasalana, faniriana hanatsara ny fiainana, loza<br>
+          - <span class="highlight">Sampan'ny filozofia</span> : métaphysique, épistémologie, éthique, esthétique, logique, philosophie politique<br>
+          - <span class="highlight">Filozofa malaza</span> : Aristote, Descartes, Platon, Socrates<br>
+          - Ny filozofia dia <span class="highlight">manampy antsika hisaina</span> sy hahatakatra ny tena sy ny tontolo
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Philosophie (Malagasy) | Fizarana 1 : Ny fifandraisan'ny olona sy ny filozofia — Mifanaraka amin'ny programa 2024
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

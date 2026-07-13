@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Philosophie · Laza Adina Misy Valiny | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem;
+    }
+    
+    .img-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(52, 73, 94, 0.1);
+      border-left: 3px solid #34495e;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .qa-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.8rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .question {
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2024</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../index.html">Accueil</a> ›
+        <a href="../../../Cours.html">Leçons</a> ›
+        <a href="../PHILO.html">Philosophie</a> › Laza Adina Misy Valiny
+      </div>
+      <div class="page-title">LAZA ADINA MISY VALINY <span>❓ FIZARANA 4</span></div>
+      <div class="page-subtitle">Questions fréquentes avec réponses modèles pour le Baccalauréat</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">❓</div>
+      <div class="subject-info">
+        <h3>Laza Adina Misy Valiny</h3>
+        <p>Questions fréquentes en philosophie et réponses modèles</p>
+      </div>
+      <div class="chapter-count">Cours complet</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>📚 FAMPIDIRANA</h3>
+        <p>Ity fizarana ity dia manome <span class="highlight">fanontaniana apetraka matetika (laza adina)</span> momba ny filozofia, miaraka amin'ny <span class="highlight">valiny modely (corrigés types)</span>. Ireo fanontaniana ireo dia matetika hita amin'ny fanadinana Baccalauréat. Ny tanjona dia ny hanampy anao hahazo hevitra sy hanamora ny fanomananao ny fanadinana.</p>
+        
+        <div class="note-box">
+          <strong>📌 Torohevitra :</strong><br>
+          - Aza ataovy tsianjery fotsiny ny valiny, fa <span class="highlight">azonao tsara ny hevitra</span><br>
+          - <span class="highlight">Manovaova ny valiny</span> araka ny lohahevitra omena<br>
+          - Mampiasà <span class="highlight">ohatra sy citation</span> hanamafisana ny hevitrao
+        </div>
+      </div>
+
+      <!-- Fanontaniana 1 -->
+      <div class="section-chapitre">
+        <h3>❓ FANONTANIANA 1 : Inona no atao hoe filozofia?</h3>
+        
+        <div class="qa-card">
+          <span class="question">📌 Valiny :</span><br>
+          Ny filozofia dia fandinihana lalina momba ny olana fototra misy eo amin'ny fiainana. Avy amin'ny teny grika hoe "philosophia" izy io, izay midika hoe "fitiavana fahendrena".<br><br>
+          <strong>Ny sampan'ny filozofia :</strong><br>
+          - <span class="highlight">Métaphysique</span> : mandinika ny fisiana<br>
+          - <span class="highlight">Épistémologie</span> : mandinika ny fahalalana<br>
+          - <span class="highlight">Éthique</span> : mandinika ny soatoavina<br>
+          - <span class="highlight">Logique</span> : mandinika ny fomba fisainana<br><br>
+          <strong>Ohatra :</strong> Araka an'i Descartes, ny filozofia dia manomboka amin'ny fisalasalana (doute).
+        </div>
+      </div>
+
+      <!-- Fanontaniana 2 -->
+      <div class="section-chapitre">
+        <h3>❓ FANONTANIANA 2 : Inona ny maha samy hafa ny siansa sy ny filozofia?</h3>
+        
+        <div class="qa-card">
+          <span class="question">📌 Valiny :</span><br><br>
+          <strong>Ny siansa :</strong><br>
+          - Mikaroka ny zava-misy azo tsapain-tanana<br>
+          - Mampiasa fanandramana (expérimentation)<br>
+          - Manome valiny azo antoka sy azo hamarinina<br>
+          - Mijery ny "manao ahoana?" (comment?)<br><br>
+          <strong>Ny filozofia :</strong><br>
+          - Mikaroka ny antony fototra (cause première)<br>
+          - Mampiasa fisainana lojika (raisonnement)<br>
+          - Mametraka fanontaniana tsy misy valiny azo antoka<br>
+          - Mijery ny "maninona?" (pourquoi?)<br><br>
+          <strong>Ohatra :</strong> Ny siansa dia milaza fa ny rano dia mangotraka amin'ny 100°C, fa ny filozofia kosa mametraka fanontaniana hoe "Nahoana no misy rano fa tsy tsy misy?"
+        </div>
+      </div>
+
+      <!-- Fanontaniana 3 -->
+      <div class="section-chapitre">
+        <h3>❓ FANONTANIANA 3 : Inona ny hevitr'i Descartes hoe "Mieritreritra aho, koa misy aho"?</h3>
+        
+        <div class="qa-card">
+          <span class="question">📌 Valiny :</span><br>
+          Io dia fehezanteny malaza nataon'i <span class="highlight">René Descartes</span> (1596-1650), filozofa frantsay. Ny heviny dia :<br><br>
+          - <span class="highlight">Mieritreritra aho</span> → misy fisainana mitranga (mametraka fanontaniana, misalasala, mahatsapa)<br>
+          - <span class="highlight">Koa misy aho</span> → satria misy fisainana, dia tsy maintsy misy ilay misaina<br><br>
+          <strong>Ny dingana :</strong><br>
+          1. Descartes dia nanomboka tamin'ny fisalasalana momba ny zavatra rehetra (doute méthodique)<br>
+          2. Nanontany tena hoe : misy zavatra azo antoka ve?<br>
+          3. Tonga saina fa tsy azo iadian-kevitra ny fisian'ny fisainana<br>
+          4. Niafara tamin'ny fehin-kevitra fa misy ilay misaina (izany hoe ny tenany)<br><br>
+          <strong>Fiantraikany :</strong> Io no fototry ny filozofia maoderina.
+        </div>
+      </div>
+
+      <!-- Fanontaniana 4 -->
+      <div class="section-chapitre">
+        <h3>❓ FANONTANIANA 4 : Inona ny hevitr'i Rousseau hoe "Teraka afaka ny olona, saingy na aiza na aiza dia misy gadra"?</h3>
+        
+        <div class="qa-card">
+          <span class="question">📌 Valiny :</span><br>
+          Io dia fehezanteny malaza nataon'i <span class="highlight">Jean-Jacques Rousseau</span> (1712-1778), filozofa frantsay. Ny heviny dia :<br><br>
+          - <span class="highlight">Teraka afaka ny olona</span> → ny olombelona dia manana fahalalahana voajanahary hatrany am-bohoka (liberté naturelle)<br>
+          - <span class="highlight">Saingy na aiza na aiza dia misy gadra</span> → ao anatin'ny fiaraha-monina dia voafehy ny fahalalahan'ny olona (lalàna, fahefana, fomba amam-panao)<br><br>
+          <strong>Ny vahaolana :</strong> Rousseau dia manolotra ny "kontrakta sosialy" (contrat social), izay ahafahan'ny olona miara-miaina sady mitahiry ny fahalalahany.
+        </div>
+      </div>
+
+      <!-- Fanontaniana 5 -->
+      <div class="section-chapitre">
+        <h3>❓ FANONTANIANA 5 : Inona no atao hoe rariny?</h3>
+        
+        <div class="qa-card">
+          <span class="question">📌 Valiny :</span><br>
+          Ny rariny (justice) dia fitsipika fototra ao amin'ny fiaraha-monina izay miantoka fa ny olona tsirairay dia mahazo izay tokony ho azy.<br><br>
+          <strong>Karazana rariny :</strong><br>
+          - <span class="highlight">Rariny ara-dalàna</span> : ny lalàna dia ampiharina amin'ny olona rehetra<br>
+          - <span class="highlight">Rariny ara-tsosialy</span> : ny harena sy ny fahafahana dia zaraina araka ny rariny<br>
+          - <span class="highlight">Rariny ara-pitsarana</span> : ny olona dia tsaraina araka ny asany<br><br>
+          <strong>Filozofa malaza :</strong><br>
+          - <span class="highlight">Platon</span> : ny rariny dia ny fanaovan'ny olona tsirairay ny asany<br>
+          - <span class="highlight">Aristote</span> : mitovy ny zavatra mitovy, tsy mitovy ny zavatra tsy mitovy<br>
+          - <span class="highlight">John Rawls</span> : ny rariny dia ny fanomezana tombony ho an'ny mahantra indrindra
+        </div>
+      </div>
+
+      <!-- Fanontaniana 6 -->
+      <div class="section-chapitre">
+        <h3>❓ FANONTANIANA 6 : Inona no atao hoe fahalalahana?</h3>
+        
+        <div class="qa-card">
+          <span class="question">📌 Valiny :</span><br>
+          Ny fahalalahana (liberté) dia fahafahana manao izay tiana nefa tsy manitsakitsaka ny fahalalahan'ny hafa.<br><br>
+          <strong>Karazana fahalalahana :</strong><br>
+          - <span class="highlight">Fahalalahana ara-batana</span> : afaka mihetsika araka izay tiana<br>
+          - <span class="highlight">Fahalalahana ara-tsaina</span> : afaka misaina sy mino araka izay tiana<br>
+          - <span class="highlight">Fahalalahana ara-politika</span> : afaka mifidy sy milaza ny hevitra<br><br>
+          <strong>Filozofa malaza :</strong><br>
+          - <span class="highlight">John Locke</span> : ny olona dia manana fahalalahana voajanahary<br>
+          - <span class="highlight">John Stuart Mill</span> : ny fahalalahana dia tsy azo fehezina raha tsy mampidi-doza ny hafa<br>
+          - <span class="highlight">Jean-Paul Sartre</span> : "Ny olona dia voaozona ho afaka"
+        </div>
+      </div>
+
+      <!-- Images du cours -->
+      <div class="section-chapitre">
+        <h3>📚 SARY MANAMPY</h3>
+        
+        <div class="img-container">
+          <img src="img/f1.jpg" alt="Laza adina 1">
+          <div class="img-caption">Sary 1 – Fanontaniana sy valiny momba ny filozofia</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/f2.jpg" alt="Laza adina 2">
+          <div class="img-caption">Sary 2 – Fanontaniana sy valiny momba ny siansa</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/f3.jpg" alt="Laza adina 3">
+          <div class="img-caption">Sary 3 – Fanontaniana sy valiny momba ny fiaraha-monina</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/f4.jpg" alt="Laza adina 4">
+          <div class="img-caption">Sary 4 – Fanontaniana sy valiny momba ny fahalalahana</div>
+        </div>
+      </div>
+
+      <!-- Fanazaran-tena -->
+      <div class="section-chapitre">
+        <h3>✍️ FANAZARAN-TENA</h3>
+        
+        <div class="law-box">
+          <strong>📌 Fanontaniana hampiharina :</strong><br><br>
+          1. Inona no atao hoe filozofia? Hazavao amin'ny teninao.<br>
+          2. Inona ny maha samy hafa ny siansa sy ny filozofia?<br>
+          3. Hazavao ny hevitr'i Descartes hoe "Mieritreritra aho, koa misy aho".<br>
+          4. Hazavao ny hevitr'i Rousseau hoe "Teraka afaka ny olona, saingy na aiza na aiza dia misy gadra".<br>
+          5. Inona no atao hoe rariny? Inona ny karazany?<br>
+          6. Inona no atao hoe fahalalahana? Ahoana no ifandraisany amin'ny adidy?
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>💡 FAMINTINANA</h3>
+        
+        <div class="note-box">
+          <strong>📌 Zava-dehibe hotadidina :</strong><br>
+          - <span class="highlight">Filozofia</span> : fandinihana lalina momba ny olana fototra<br>
+          - <span class="highlight">Descartes</span> : "Mieritreritra aho, koa misy aho" — ny fisainana no fototry ny fisiana<br>
+          - <span class="highlight">Rousseau</span> : "Teraka afaka ny olona, saingy na aiza na aiza dia misy gadra" — ny fahalalahana sy ny fiaraha-monina<br>
+          - <span class="highlight">Rariny</span> : fitsipika fototra miantoka ny zon'ny olona tsirairay<br>
+          - <span class="highlight">Fahalalahana</span> : fahafahana manao izay tiana nefa tsy manitsakitsaka ny hafa<br>
+          - <span class="highlight">Fampiasana valiny</span> : aza ataovy tsianjery fotsiny fa ampifanaraho amin'ny lohahevitra
+        </div>
+      </div>
+
+      <!-- Citation -->
+      <div class="section-chapitre">
+        <div class="law-box" style="text-align: center;">
+          <strong>💪 "Ny fahalalana dia jiro, ny tsy fahalalana dia aizina."</strong><br>
+          <span class="example">— Ohabolana malagasy</span>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Philosophie (Malagasy) | Fizarana 4 : Laza Adina Misy Valiny — Mifanaraka amin'ny programa 2024
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

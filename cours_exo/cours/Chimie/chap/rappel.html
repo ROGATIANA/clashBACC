@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chimie · Notions fondamentales | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* styles spécifiques pour le contenu des rappels */
+    .rappel-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre .highlight-red {
+      color: #e74c3c;
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem;
+    }
+    
+    .img-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    
+    .image-grid-chap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+    
+    .image-grid-chap .img-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.5rem;
+      text-align: center;
+      flex: 1;
+      min-width: 180px;
+    }
+    
+    .image-grid-chap .img-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .step-box {
+      background: rgba(52,152,219,0.1);
+      border-left: 3px solid #3498db;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .formula {
+      font-family: monospace;
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .formula-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.8rem;
+      text-align: center;
+    }
+    
+    .formula-card p {
+      margin-bottom: 0.3rem;
+    }
+    
+    .formula-card .formula-name {
+      color: var(--gold);
+      font-weight: bold;
+    }
+    
+    @media (max-width: 640px) {
+      .rappel-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2024</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- en-tête -->
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../index.html">Accueil</a> ›
+        <a href="../../../Cours.html">Leçons</a> ›
+        <a href="../Chimie.html">Chimie</a> › Rappels
+      </div>
+      <div class="page-title">NOTIONS FONDAMENTALES <span>📘 CHIMIE</span></div>
+      <div class="page-subtitle">Concentrations, masses volumiques, densité, préparation des solutions — Baccalauréat</div>
+    </div>
+
+    <!-- bannière matière -->
+    <div class="subject-banner">
+      <div class="subject-icon-large">🧪</div>
+      <div class="subject-info">
+        <h3>Prérequis indispensables</h3>
+        <p>Concentrations · Dilutions · Préparation de solutions</p>
+      </div>
+      <div class="chapter-badge">📌 Notions fondamentales</div>
+    </div>
+
+    <!-- CONTENU PRINCIPAL DES RAPPELS -->
+    <div class="rappel-content">
+      
+      <!-- I – Concentration molaire -->
+      <div class="section-chapitre">
+        <h3>⚗️ I – CONCENTRATION MOLAIRE</h3>
+        <p>La concentration molaire d'un constituant <span class="highlight">A</span>, dissous dans un volume <span class="highlight">V</span> de solution, est égale au quotient de la quantité de <span class="highlight">A</span> dissous, soit <span class="highlight">n(A)</span>, par le volume <span class="highlight">V</span> de la solution. Elle est notée <span class="highlight">C(A)</span>, ou <span class="highlight">[A]</span> et s'exprime généralement en <span class="highlight">mol/L</span>.</p>
+        
+        <div class="img-container">
+          <img src="img/ch1.png" alt="Formule concentration molaire">
+          <div class="img-caption">Fig. 1 – Concentration molaire : C(A) = n(A) / V</div>
+        </div>
+      </div>
+
+      <!-- II – Concentration massique -->
+      <div class="section-chapitre">
+        <h3>⚖️ II – CONCENTRATION MASSIQUE</h3>
+        <p>La concentration massique d'un constituant <span class="highlight">A</span>, dissous dans un volume <span class="highlight">V</span> de solution, est égale au quotient de la masse <span class="highlight">m(A)</span> du constituant <span class="highlight">A</span> par le volume <span class="highlight">V</span> de la solution. Elle est notée <span class="highlight">t(A)</span> et s'exprime généralement en <span class="highlight">g/L</span>.</p>
+        
+        <div class="img-container">
+          <img src="img/ch2.png" alt="Formule concentration massique">
+          <div class="img-caption">Fig. 2 – Concentration massique : t(A) = m(A) / V</div>
+        </div>
+      </div>
+
+      <!-- III – Masse volumique -->
+      <div class="section-chapitre">
+        <h3>📊 III – MASSE VOLUMIQUE</h3>
+        <p>La masse volumique <span class="highlight">μ</span> d'un corps est égale au quotient de la masse <span class="highlight">m</span> du corps par son volume <span class="highlight">V</span>.</p>
+        
+        <div class="img-container">
+          <img src="img/ch3.png" alt="Formule masse volumique">
+          <div class="img-caption">Fig. 3 – Masse volumique : μ = m / V</div>
+        </div>
+      </div>
+
+      <!-- IV – Densité -->
+      <div class="section-chapitre">
+        <h3>🎯 IV – DENSITÉ</h3>
+        <p>La densité d'un corps par rapport à un corps de référence est égale au quotient de la masse <span class="highlight">m</span> d'un volume <span class="highlight">V</span> de ce corps par la masse <span class="highlight">m₀</span> d'un même volume <span class="highlight">V</span> du corps de référence, pris dans les mêmes conditions de température et de pression.</p>
+        
+        <div class="img-container">
+          <img src="img/ch4.png" alt="Formule densité 1">
+          <div class="img-caption">Fig. 4 – Densité : d = m / m₀</div>
+        </div>
+        
+        <p>Elle est aussi égale au rapport de la masse volumique <span class="highlight">μ</span> du corps à celle <span class="highlight">μ₀</span> du corps de référence.</p>
+        
+        <div class="img-container">
+          <img src="img/ch5.png" alt="Formule densité 2">
+          <div class="img-caption">Fig. 5 – Densité : d = μ / μ₀</div>
+        </div>
+      </div>
+
+      <!-- V – Pourcentage massique -->
+      <div class="section-chapitre">
+        <h3>📈 V – POURCENTAGE MASSIQUE</h3>
+        <p>Le pourcentage massique <span class="highlight">P(A)</span> d'un constituant <span class="highlight">A</span> dans un mélange est égal à cent fois le quotient de la masse <span class="highlight">m(A)</span> de <span class="highlight">A</span> dans le mélange par la masse <span class="highlight">m</span> de ce mélange, <span class="highlight">m(A)</span> et <span class="highlight">m</span> étant exprimés dans la même unité.</p>
+        
+        <div class="img-container">
+          <img src="img/ch6.png" alt="Formule pourcentage massique">
+          <div class="img-caption">Fig. 6 – Pourcentage massique : P(A) = (m(A)/m) × 100</div>
+        </div>
+      </div>
+
+      <!-- VI – Concentration d'une solution commerciale -->
+      <div class="section-chapitre">
+        <h3>🧪 VI – CONCENTRATION D'UNE SOLUTION COMMERCIALE</h3>
+        <p>Soit une solution commerciale de densité <span class="highlight">d</span>, contenant en masse <span class="highlight">P%</span> de produit de masse molaire <span class="highlight">M</span>. La concentration <span class="highlight">C₀</span> de cette solution est :</p>
+        
+        <div class="img-container">
+          <img src="img/ch7.png" alt="Formule concentration solution commerciale">
+          <div class="img-caption">Fig. 7 – Concentration d'une solution commerciale</div>
+        </div>
+      </div>
+
+      <!-- VII – Préparation des solutions -->
+      <div class="section-chapitre">
+        <h3>🔬 VII – PRÉPARATION DES SOLUTIONS</h3>
+        
+        <p>Avant de procéder aux expériences, il faut nécessairement connaître les produits. Ceci demande alors une parfaite maîtrise de la préparation des solutions.</p>
+        
+        <div class="note-box">
+          <strong>📌 Conseils préliminaires :</strong><br>
+          - Trouver les récipients pour mettre les solutions<br>
+          - Trouver de l'eau (de l'eau propre est un minimum, de l'eau distillée est idéale)<br>
+          - Peser les produits purs (utiliser les balances disponibles)<br>
+          - Ne jamais mettre de produit chimique directement sur le plateau → utiliser un récipient<br>
+          - Mieux vaut utiliser la <span class="highlight">pesée à tare constante</span>
+        </div>
+
+        <h4>1. Par dissolution d'un composé solide</h4>
+        
+        <div class="step-box">
+          <strong>🎯 Objectif :</strong><br>
+          Préparer un volume <span class="highlight">V</span> de solution de concentration <span class="highlight">C</span> par dissolution d'un composé de masse molaire <span class="highlight">M</span>.<br>
+          La masse <span class="highlight">m</span> à dissoudre vaut : <span class="formula">m = M × C × V</span><br>
+          (m en g, M en g/mol, V en L, C en mol/L)
+        </div>
+        
+        <div class="step-box">
+          <strong>📝 Réalisation pratique :</strong><br>
+          Soit à préparer, par exemple, <span class="highlight">200 mL</span> de solution de sulfate de cuivre (II) de concentration <span class="highlight">0,2000 mol/L</span> à partir de CuSO₄, 5H₂O de masse molaire M = 249,7 g/mol.<br>
+          <span class="formula">m = 249,7 × 0,200 × 0,200 = 2,50 g</span>
+        </div>
+        
+        <div class="image-grid-chap">
+          <div class="img-card">
+            <img src="img/ch8.png" alt="Étape 1 pesée">
+            <div class="img-caption">1ʳᵉ étape : Pesée précise du solide</div>
+          </div>
+          <div class="img-card">
+            <img src="img/ch9.png" alt="Étape 2 transfert">
+            <div class="img-caption">2ᵉ étape : Transfert dans la fiole jaugée</div>
+          </div>
+        </div>
+        
+        <div class="image-grid-chap">
+          <div class="img-card">
+            <img src="img/ch10.png" alt="Étape 3 dissolution">
+            <div class="img-caption">3ᵉ étape : Remplissage et agitation</div>
+          </div>
+          <div class="img-card">
+            <img src="img/ch11.png" alt="Étape 4 ajustement">
+            <div class="img-caption">4ᵉ étape : Ajustement au trait de jauge</div>
+          </div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/ch12.png" alt="Étape 5 homogénéisation">
+          <div class="img-caption">5ᵉ étape : Homogénéisation</div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 N.B. :</strong> La solution ainsi préparée est stockée dans un flacon étiqueté.
+        </div>
+
+        <h4>2. Par dilution d'une solution de concentration connue</h4>
+        
+        <div class="step-box">
+          <strong>🎯 Objectif :</strong><br>
+          Préparer un volume <span class="highlight">V</span> de solution de concentration <span class="highlight">C</span> par dilution d'une solution de concentration <span class="highlight">C₀</span> connue précisément.<br>
+          Le volume <span class="highlight">V₀</span> à prélever vaut : <span class="formula">V₀ = (C × V) / C₀</span><br>
+          (C et C₀ en mol/L, V et V₀ dans la même unité)
+        </div>
+        
+        <div class="step-box">
+          <strong>📝 Réalisation pratique :</strong><br>
+          Soit à préparer, par exemple, <span class="highlight">50 mL</span> de solution de permanganate de potassium de concentration <span class="highlight">2,00 × 10⁻² mol/L</span> par dilution d'une solution mère à <span class="highlight">0,200 mol/L</span>.
+        </div>
+        
+        <div class="img-container">
+          <img src="img/ch14.png" alt="Calcul dilution">
+          <div class="img-caption">Calcul du volume à prélever : V₀ = 5,0 mL</div>
+        </div>
+        
+        <div class="image-grid-chap">
+          <div class="img-card">
+            <img src="img/ch15.png" alt="Prélèvement pipette">
+            <div class="img-caption">1ʳᵉ étape : Prélèvement à la pipette jaugée</div>
+          </div>
+          <div class="img-card">
+            <img src="img/ch16.png" alt="Transfert fiole">
+            <div class="img-caption">2ᵉ étape : Transfert dans la fiole jaugée</div>
+          </div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Suite de la préparation :</strong><br>
+          - Ajout d'eau distillée (pissette puis pipette simple) jusqu'au trait de jauge<br>
+          - Rebouchage et retournement plusieurs fois pour homogénéiser<br>
+          - Stockage dans un flacon étiqueté
+        </div>
+
+        <h4>3. Par dilution d'une solution commerciale</h4>
+        
+        <div class="step-box">
+          <strong>🎯 Objectif :</strong><br>
+          Préparer un volume <span class="highlight">V</span> de solution de concentration <span class="highlight">C</span> par dilution d'une solution de densité <span class="highlight">d</span>, contenant en masse <span class="highlight">P%</span> de produit de masse molaire <span class="highlight">M</span>.<br>
+          La concentration de la solution commerciale est : 
+        </div>
+        
+        <div class="img-container">
+          <img src="img/ch17.png" alt="Concentration commerciale">
+          <div class="img-caption">Concentration de la solution commerciale</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/ch18.png" alt="Volume à prélever">
+          <div class="img-caption">Volume V₀ à prélever</div>
+        </div>
+        
+        <div class="step-box">
+          <strong>📝 Réalisation pratique :</strong><br>
+          Soit à préparer, par exemple, <span class="highlight">200 mL</span> de solution d'acide chlorhydrique à <span class="highlight">0,50 mol/L</span> par dilution d'une solution commerciale de densité <span class="highlight">d = 1,16</span> contenant <span class="highlight">37%</span> de HCl.
+        </div>
+        
+        <div class="img-container">
+          <img src="img/ch19.png" alt="Calcul commercial">
+          <div class="img-caption">Calcul du volume à prélever : V₀ = 8,4 mL</div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 N.B. :</strong> La solution ainsi préparée est stockée dans un flacon étiqueté.
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF DES FORMULES -->
+      <div class="section-chapitre">
+        <h3>📝 RÉCAPITULATIF DES FORMULES</h3>
+        
+        <div class="grid-formulas">
+          <div class="formula-card">
+            <p class="formula-name">Concentration molaire</p>
+            <p><span class="formula">C = n / V</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Concentration massique</p>
+            <p><span class="formula">t = m / V</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Masse volumique</p>
+            <p><span class="formula">μ = m / V</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Densité</p>
+            <p><span class="formula">d = μ / μ₀ = m / m₀</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Pourcentage massique</p>
+            <p><span class="formula">P(%) = (m(A)/m) × 100</span></p>
+          </div>
+          <div class="formula-card">
+            <p class="formula-name">Dilution</p>
+            <p><span class="formula">C₀ × V₀ = C × V</span></p>
+          </div>
+        </div>
+        
+        <div class="note-box">
+          <strong>💡 À retenir :</strong><br>
+          - Une dilution ne modifie pas la <span class="highlight">quantité de matière</span> (n = C·V = constante)<br>
+          - La <span class="highlight">concentration massique</span> est liée à la concentration molaire par : <span class="formula">t = C × M</span><br>
+          - Pour une solution commerciale : <span class="formula">C₀ = (P × d × 10) / M</span> (avec C₀ en mol/L, d sans unité)
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions Chimie | Notions fondamentales — Conforme au programme 2024
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // logo spin
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    // sidebar mobile toggle
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

@@ -88,14 +88,14 @@
 
             <div class="language-grid">
                 <div class="lang-card">
-                    <a href="#" class="lang-link">
+                    <a href="Chap/malagsy.html" class="lang-link">
                         <img src="img/mlg.jpg" alt="Malagasy">
                         <div class="lang-title">Malagasy</div>
                     </a>
                 </div>
 
                 <div class="lang-card">
-                    <a href="#" class="lang-link">
+                    <a href="Chap/francais.html" class="lang-link">
                         <img src="img/fr.jpg" alt="Français">
                         <div class="lang-title">Français</div>
                     </a>
@@ -105,23 +105,36 @@
     </main>
 
     <script>
-        const sidebar   = document.getElementById('sidebar');
-        const hamburger = document.getElementById('hamburger');
-        const overlay   = document.getElementById('overlay');
+    /* logo spin */
+    const logoImg  = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
 
-        function toggleSidebar() {
-            const open = sidebar.classList.toggle('open');
-            hamburger.classList.toggle('open', open);
-            overlay.classList.toggle('visible', open);
-            document.body.style.overflow = open ? 'hidden' : '';
-        }
+    /* sidebar mobile */
+    const sidebar   = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay   = document.getElementById('overlay');
 
-        function closeSidebar() {
-            sidebar.classList.remove('open');
-            hamburger.classList.remove('open');
-            overlay.classList.remove('visible');
-            document.body.style.overflow = '';
-        }
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
     </script>
 </body>
 </html>

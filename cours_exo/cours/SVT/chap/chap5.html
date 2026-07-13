@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVT · Le Système Nerveux | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2026</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2026 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../index.html">Accueil</a> ›
+        <a href="../../../Cours.html">Leçons</a> ›
+        <a href="../SVT.html">SVT</a> › Chapitre 5
+      </div>
+      <div class="page-title">LE SYSTÈME NERVEUX <span>🧠 CHAPITRE 5</span></div>
+      <div class="page-subtitle">Structure du système nerveux, neurones, potentiels d'action, synapses, activité réflexe — Baccalauréat</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">🧠</div>
+      <div class="subject-info">
+        <h3>Système nerveux</h3>
+        <p>Centre nerveux · Tissu nerveux · Influx nerveux · Synapses · Réflexes</p>
+      </div>
+      <div class="chapter-count">Fiche complète</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>🧠 INTRODUCTION</h3>
+        <p>Le fonctionnement d'un organisme nécessite une communication entre les différents organes. Le système nerveux, constitué des centres nerveux et des nerfs, assure la communication nerveuse.</p>
+      </div>
+
+      <!-- I – CENTRE NERVEUX -->
+      <div class="section-chapitre">
+        <h3>📌 I – CENTRE NERVEUX (NÉVRAXE)</h3>
+        <p>Composé de l'encéphale et de la moelle épinière.</p>
+        
+        <h4>1 – Encéphale</h4>
+        <p>Entouré par un tissu osseux et des méninges (dure-mère, pie-mère et arachnoïde) qui assurent la protection du centre nerveux. L'encéphale est formé par le <span class="highlight">cerveau</span>, le <span class="highlight">cervelet</span> et le <span class="highlight">bulbe rachidien</span>.</p>
+        
+        <div class="img-container">
+          <img src="img/j1.jpg" alt="Encéphale">
+          <div class="img-caption">Fig. 1 – Structure de l'encéphale</div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Rôles du centre nerveux :</strong> Traducteur, coordinateur, intégrateur, amplificateur, analyseur.
+        </div>
+        
+        <h4>2 – Moelle épinière</h4>
+        <p>Cordon long blanc logé dans la colonne vertébrale, entouré par les méninges et les tissus osseux. Formée de deux substances : grise et blanche.</p>
+        
+        <div class="img-container">
+          <img src="img/j2.jpg" alt="Moelle épinière">
+          <div class="img-caption">Fig. 2 – Structure de la moelle épinière</div>
+        </div>
+      </div>
+
+      <!-- II – TISSU NERVEUX -->
+      <div class="section-chapitre">
+        <h3>🔬 II – TISSU NERVEUX</h3>
+        <p>Ensemble des cellules nerveuses regroupées en unité fonctionnelle.</p>
+        
+        <h4>1 – Substance grise</h4>
+        <p>Structure montrant des corps cellulaires reliés par des cellules gliales pour la nutrition du tissu nerveux.</p>
+        <div class="img-container"><img src="img/j3.jpg" alt="Substance grise"><div class="img-caption">Fig. 3 – Substance grise</div></div>
+        
+        <h4>2 – Substance blanche</h4>
+        <p>Renferme les axones nerveux myélinisés.</p>
+        
+        <h4>3 – Nerf</h4>
+        <p>Ensemble des fibres nerveuses.</p>
+        <div class="img-container"><img src="img/j4.jpg" alt="Nerf"><div class="img-caption">Fig. 4 – Structure d'un nerf</div></div>
+        
+        <h4>4 – Cellule nerveuse (Neurone)</h4>
+        <p>Unité de fonctionnement du système nerveux, spécialisée dans la conduction de l'influx nerveux. La cellule nerveuse ne se divise pas.</p>
+        <div class="image-grid-chap">
+          <div class="img-card"><img src="img/j5.jpg" alt="Neurone"><div class="img-caption">Structure du neurone</div></div>
+          <div class="img-card"><img src="img/j6.jpg" alt="Types neurones"><div class="img-caption">Types de neurones</div></div>
+        </div>
+        
+        <h4>5 – Types de corps cellulaires selon leur localisation</h4>
+        <div class="img-container"><img src="img/j7.jpg" alt="Localisation neurones"><div class="img-caption">Fig. 5 – Localisation des corps cellulaires</div></div>
+        
+        <h4>6 – Ganglion nerveux</h4>
+        <p>Tissu conjonctif renfermant des corps cellulaires en dehors du centre nerveux.</p>
+        
+        <h4>7 – Fibres nerveuses</h4>
+        <p>Axone ou dendrite d'une cellule nerveuse. Types : <span class="highlight">fibre myélinisée</span> et <span class="highlight">fibre amyélinisée</span>.</p>
+        
+        <h4>8 – Synapse</h4>
+        <p>Zone de contact entre l'arborisation terminale d'un neurone et une autre cellule nerveuse. Comporte une cellule présynaptique, une cellule postsynaptique et une fente synaptique.</p>
+        
+        <div class="img-container"><img src="img/j8.jpg" alt="Synapse"><div class="img-caption">Fig. 6 – Structure de la synapse</div></div>
+        
+        <p><span class="highlight">Types de synapses neuroneuroniques :</span></p>
+        <ul>
+          <li>Synapse axo-dendritique</li>
+          <li>Synapse axo-somatique</li>
+          <li>Synapse axo-axonique</li>
+        </ul>
+      </div>
+
+      <!-- III – PROPRIÉTÉS DU TISSU NERVEUX -->
+      <div class="section-chapitre">
+        <h3>⚡ III – PROPRIÉTÉS DU TISSU NERVEUX</h3>
+        
+        <h4>Excitabilité</h4>
+        <p><span class="highlight">Excitants :</span> mécanique (piqûre, pincement), thermique (chaud/froid), chimique (acide), électrique (le meilleur car on peut doser l'intensité).</p>
+        
+        <div class="note-box">
+          <strong>📌 Conditions nécessaires pour un excitant efficace :</strong><br>
+          - <span class="highlight">Intensité minimale (seuil)</span> : valeur minimale pour obtenir une réponse. Pour un excitant électrique, le seuil est appelé <span class="highlight">Rhéobase</span>.<br>
+          - <span class="highlight">Temps utile</span> : durée minimale nécessaire pour un excitant égal à la rhéobase.<br>
+          - <span class="highlight">Chronaxie</span> : durée nécessaire pour un excitant égal au double de la rhéobase.
+        </div>
+        
+        <div class="img-container"><img src="img/j9.jpg" alt="Courbe intensité-durée"><div class="img-caption">Fig. 7 – Courbe intensité-durée (chronaxie)</div></div>
+      </div>
+
+      <!-- IV – POTENTIEL DE REPOS -->
+      <div class="section-chapitre">
+        <h3>🔋 IV – POTENTIEL DE REPOS (PR)</h3>
+        
+        <div class="img-container"><img src="img/j10.jpg" alt="Galvanomètre"><div class="img-caption">Fig. 8 – Galvanomètre</div></div>
+        <div class="img-container"><img src="img/j11.jpg" alt="Oscilloscope"><div class="img-caption">Fig. 9 – Oscilloscope cathodique</div></div>
+        
+        <p>Le potentiel de repos est la différence de potentiel entre la surface de la fibre nerveuse et son intérieur. Cette DDP est toujours négative, de l'ordre de <span class="formula">-70 mV</span>. La surface de la fibre est chargée positivement, le milieu intérieur négativement.</p>
+        
+        <div class="image-grid-chap">
+          <div class="img-card"><img src="img/j12.jpg" alt="PR 1"><div class="img-caption">Mesure du PR</div></div>
+          <div class="img-card"><img src="img/j13.jpg" alt="PR 2"><div class="img-caption">Valeur du PR</div></div>
+        </div>
+        
+        <h4>Origine ionique du potentiel de repos</h4>
+        <p>Le liquide intracellulaire est plus riche en <span class="formula">K⁺</span> qu'en <span class="formula">Na⁺</span>, tandis que le liquide extracellulaire est plus riche en <span class="formula">Na⁺</span> qu'en <span class="formula">K⁺</span>. Cette répartition inégale des charges et des ions explique le PR.</p>
+        
+        <div class="ion-box">
+          <strong>🔬 Canaux de voltage dépendant (CVD) :</strong> Au moment du potentiel de repos, les CVD sont <span class="highlight">fermés</span>.
+        </div>
+        
+        <div class="image-grid-chap">
+          <div class="img-card"><img src="img/j14.jpg" alt="Ions PR"><div class="img-caption">Répartition ionique</div></div>
+          <div class="img-card"><img src="img/j15.jpg" alt="Canaux"><div class="img-caption">Canaux ioniques</div></div>
+        </div>
+      </div>
+
+      <!-- V – POTENTIEL D'ACTION -->
+      <div class="section-chapitre">
+        <h3>⚡ V – POTENTIEL D'ACTION (PA)</h3>
+        <p>Aspect électrique de l'influx nerveux.</p>
+        
+        <div class="img-container"><img src="img/j16.jpg" alt="PA diphasique"><div class="img-caption">Fig. 10 – Potentiel d'action diphasique</div></div>
+        
+        <p><span class="highlight">Analyse du PA diphasique :</span></p>
+        <ul>
+          <li><span class="highlight">A – Artefact</span> : instant de l'excitation</li>
+          <li><span class="highlight">AB – Temps de latence</span> : durée pour que l'influx passe de l'électrode excitatrice à la première électrode réceptrice</li>
+          <li><span class="highlight">BC – Phase de dépolarisation</span> : négativité en R₁</li>
+          <li><span class="highlight">CD – Phase de repolarisation</span> : la négativité a dépassé R₁</li>
+        </ul>
+        
+        <h4>Potentiel d'action monophasique</h4>
+        <div class="img-container"><img src="img/j17.jpg" alt="PA monophasique"><div class="img-caption">Fig. 11 – Enregistrement monophasique</div></div>
+        
+        <h4>Origine ionique du potentiel d'action</h4>
+        <div class="img-container"><img src="img/j18.jpg" alt="Ions PA"><div class="img-caption">Fig. 12 – Mécanisme ionique du PA</div></div>
+        
+        <div class="note-box">
+          <strong>📌 Mécanisme :</strong><br>
+          - Dépolarisation : ouverture des CVD Na⁺ → entrée massive de Na⁺<br>
+          - Repolarisation : fermeture des canaux Na⁺, ouverture des canaux K⁺ → sortie de K⁺<br>
+          - Hyperpolarisation : ouverture prolongée des canaux K⁺
+        </div>
+      </div>
+
+      <!-- VI – POTENTIEL LOCAL -->
+      <div class="section-chapitre">
+        <h3>📊 VI – POTENTIEL LOCAL (Potentiel membranaire)</h3>
+        <p>Les stimulations infraliminaires engendrent des potentiels locaux qui augmentent en amplitude. Ils ne nécessitent pas d'intensité seuil et ne sont pas propagables. Marqués par l'ouverture des canaux chimio-dépendants (CCD).</p>
+        
+        <div class="image-grid-chap">
+          <div class="img-card"><img src="img/j19.jpg" alt="Potentiel local"><div class="img-caption">Potentiel local</div></div>
+          <div class="img-card"><img src="img/j20.jpg" alt="Sommation"><div class="img-caption">Sommation</div></div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Période réfractaire :</strong> La membrane de la fibre nerveuse est inexcitable au moment et juste après un potentiel d'action.
+        </div>
+      </div>
+
+      <!-- VII – SYNAPSE NEURONEURONIQUE -->
+      <div class="section-chapitre">
+        <h3>🔗 VII – SYNAPSE NEURONEURONIQUE</h3>
+        
+        <div class="image-grid-chap">
+          <div class="img-card"><img src="img/j21.jpg" alt="Synapse excitatrice"><div class="img-caption">Synapse excitatrice</div></div>
+          <div class="img-card"><img src="img/j22.jpg" alt="Mécanisme synaptique"><div class="img-caption">Mécanisme de la synapse</div></div>
+        </div>
+        
+        <p>L'excitation d'une cellule présynaptique provoque l'arrivée d'un potentiel présynaptique et l'ouverture des CVD Ca²⁺. Les ions Ca²⁺ déclenchent l'exocytose des vésicules synaptiques et la libération de neurotransmetteurs (<span class="highlight">Acétylcholine</span>) dans la fente synaptique.</p>
+        
+        <div class="note-box">
+          <strong>📌 Types de synapses :</strong><br>
+          - <span class="highlight">Synapse excitatrice</span> : médiateur = Acétylcholine → PPSE<br>
+          - <span class="highlight">Synapse inhibitrice</span> : médiateur = GABA → PPSI
+        </div>
+        
+        <div class="img-container"><img src="img/j23.jpg" alt="Sommation spatiale"><div class="img-caption">Fig. 13 – Sommation spatiale</div></div>
+        <div class="img-container"><img src="img/j24.jpg" alt="Sommation temporelle"><div class="img-caption">Fig. 14 – Sommation temporelle</div></div>
+        
+        <p><span class="highlight">Types de sommation :</span></p>
+        <ul>
+          <li>Sommation spatiale : deux excitations d'intensités différentes</li>
+          <li>Sommation temporelle : deux excitations de même intensité</li>
+          <li>Sommation spatio-temporelle : mélange</li>
+        </ul>
+      </div>
+
+      <!-- VIII – COMPARAISON FIBRE / NERF -->
+      <div class="section-chapitre">
+        <h3>📈 VIII – COMPARAISON ENTRE FIBRE ET NERF</h3>
+        
+        <div class="image-grid-chap">
+          <div class="img-card"><img src="img/j25.jpg" alt="Fibre tout ou rien"><div class="img-caption">Fibre : loi du tout ou rien</div></div>
+          <div class="img-card"><img src="img/j26.jpg" alt="Nerf recrutement"><div class="img-caption">Nerf : loi du recrutement</div></div>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Conclusion :</strong><br>
+          - <span class="highlight">Fibre</span> : obéit à la loi du <span class="highlight">tout ou rien</span> (amplitude constante)<br>
+          - <span class="highlight">Nerf</span> : obéit à la loi du <span class="highlight">recrutement</span> (amplitude croissante)
+        </div>
+      </div>
+
+      <!-- IX – MODE DE PROPAGATION -->
+      <div class="section-chapitre">
+        <h3>🏃 IX – MODE DE PROPAGATION DE L'INFLUX NERVEUX</h3>
+        
+        <div class="image-grid-chap">
+          <div class="img-card"><img src="img/j27.jpg" alt="Propagation"><div class="img-caption">Types de propagation</div></div>
+          <div class="img-card"><img src="img/j28.jpg" alt="Vitesse"><div class="img-caption">Facteurs de vitesse</div></div>
+        </div>
+        
+        <ul>
+          <li><span class="highlight">Fibre amyélinisée</span> : conduction continue (de proche en proche)</li>
+          <li><span class="highlight">Fibre myélinisée</span> : conduction saltatoire (d'un nœud de Ranvier à l'autre)</li>
+        </ul>
+        
+        <div class="note-box">
+          <strong>📌 Facteurs de variation de la vitesse :</strong><br>
+          - La vitesse augmente avec le diamètre de la fibre<br>
+          - La vitesse augmente avec la température<br>
+          - La vitesse dépend de la nature de la fibre
+        </div>
+        
+        <div class="img-container"><img src="img/j29.jpg" alt="PA complexe"><div class="img-caption">Fig. 15 – Potentiel d'action complexe</div></div>
+        <div class="img-container"><img src="img/j30.jpg" alt="Calcul vitesse"><div class="img-caption">Fig. 16 – Calcul de la vitesse : V = d/t</div></div>
+      </div>
+
+      <!-- X – ACTIVITÉ RÉFLEXE -->
+      <div class="section-chapitre">
+        <h3>🦵 X – ACTIVITÉ RÉFLEXE</h3>
+        <p>Réaction motrice involontaire en réponse à une stimulation.</p>
+        
+        <div class="note-box">
+          <strong>📌 Caractéristiques des réflexes :</strong> Automatique, prévisible, involontaire, spécifique, stéréotypique.
+        </div>
+        
+        <h4>Réflexe myotatique</h4>
+        <p>Contraction ou relâchement du muscle à la suite d'une stimulation ou d'un étirement (ex: réflexe rotulien, réflexe achilléen).</p>
+        
+        <div class="image-grid-chap">
+          <div class="img-card"><img src="img/j31.jpg" alt="Arc réflexe"><div class="img-caption">Arc réflexe</div></div>
+          <div class="img-card"><img src="img/j33.jpg" alt="Schéma réflexe"><div class="img-caption">Schéma de l'arc réflexe</div></div>
+        </div>
+        
+        <h4>Expérience de Magendie</h4>
+        <div class="img-container"><img src="img/j34.jpg" alt="Magendie"><div class="img-caption">Fig. 17 – Expérience de Magendie</div></div>
+        <p>Section des racines dorsales → perte de sensibilité. Section des racines ventrales → perte de motricité.</p>
+        
+        <h4>Expérience de Waller</h4>
+        <div class="img-container"><img src="img/j35.jpg" alt="Waller"><div class="img-caption">Fig. 18 – Expérience de Waller</div></div>
+        
+        <div class="img-container"><img src="img/j36.jpg" alt="Réflexe étirement"><div class="img-caption">Fig. 19 – Réflexe d'étirement</div></div>
+        <div class="img-container"><img src="img/j37.jpg" alt="Fuseau neuromusculaire"><div class="img-caption">Fig. 20 – Fuseau neuromusculaire (FNM)</div></div>
+        
+        <h4>Réflexe conditionnel (Expérience de Pavlov)</h4>
+        <div class="img-container"><img src="img/j38.jpg" alt="Pavlov"><div class="img-caption">Fig. 21 – Expérience de Pavlov</div></div>
+        
+        <div class="note-box">
+          <strong>📌 Délai synaptique :</strong> Temps nécessaire pour la conduction à travers une synapse (0,3 à 0,5 ms).<br>
+          Nombre de synapses = Temps mis en jeu / Délai synaptique
+        </div>
+      </div>
+
+      <!-- Récapitulatif -->
+      <div class="section-chapitre">
+        <h3>📝 RÉCAPITULATIF DES CANAUX IONIQUES</h3>
+        <ul>
+          <li><span class="highlight">Canaux de fuite</span> : toujours ouverts</li>
+          <li><span class="highlight">Canaux chimio-dépendants (CCD)</span> : ouverture sans seuil → PPSE</li>
+          <li><span class="highlight">Canaux voltage-dépendants (CVD)</span> : ouverture nécessite la rhéobase → PA</li>
+          <li><span class="highlight">Canaux Ca²⁺</span> : sur membrane présynaptique → libération des neurotransmetteurs</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions SVT | Chapitre 5 : Le Système Nerveux — Conforme au programme 2026
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>

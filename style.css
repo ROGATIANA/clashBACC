@@ -1,3 +1,4 @@
+/* ── RESET ─────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -28,6 +29,9 @@ body {
   min-height: 100vh;
 }
 
+/* ════════════════════════════════════════════════════
+   SIDEBAR
+════════════════════════════════════════════════════ */
 .sidebar {
   width: var(--sidebar-w);
   min-height: 100vh;
@@ -70,6 +74,14 @@ body {
   border: 1.5px solid var(--gold);
   opacity: 0.3;
   pointer-events: none;
+}
+
+@keyframes spin-once {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.spinning {
+  animation: spin-once 0.85s cubic-bezier(.4,0,.2,1);
 }
 
 /* app name */
@@ -303,6 +315,7 @@ body {
   max-width: 480px;
 }
 
+/* ── stats row */
 .stats-row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -331,6 +344,7 @@ body {
   margin-top: 4px;
 }
 
+/* ── cards section */
 .section {
   padding: 2rem 3rem;
   flex: 1;
@@ -356,6 +370,7 @@ body {
   background: rgba(255,255,255,0.08);
 }
 
+/* card grid */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -394,6 +409,18 @@ body {
 
 .card:hover::before {
   opacity: 1;
+}
+
+.card.cours::before {
+  background: var(--gold);
+}
+
+.card.exo::before {
+  background: #64c8a0;
+}
+
+.card.sujet::before {
+  background: #b47cd8;
 }
 
 .card-icon-big {
@@ -454,6 +481,9 @@ body {
   transform: translateX(4px);
 }
 
+/* ════════════════════════════════════════════════════
+   RESPONSIVE — tablette ≤ 900px
+════════════════════════════════════════════════════ */
 @media (max-width: 900px) {
   .card-grid {
     grid-template-columns: 1fr 1fr;
@@ -472,6 +502,9 @@ body {
   }
 }
 
+/* ════════════════════════════════════════════════════
+   RESPONSIVE — mobile ≤ 640px
+════════════════════════════════════════════════════ */
 @media (max-width: 640px) {
 
   .sidebar {

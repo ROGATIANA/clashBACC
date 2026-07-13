@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physique · Oscillations Mécaniques Libres | PRÉPA BACC MMFNRR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+  <style>
+    .chapter-content {
+      padding: 1rem 3rem 3rem;
+    }
+    
+    .section-chapitre {
+      background: var(--navy);
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 0.5px solid rgba(255,255,255,0.08);
+    }
+    
+    .section-chapitre h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    
+    .section-chapitre h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .section-chapitre p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+    
+    .section-chapitre .highlight {
+      color: var(--gold);
+      font-weight: 500;
+    }
+    
+    .section-chapitre .highlight-red {
+      color: #e74c3c;
+      font-weight: 500;
+    }
+    
+    .section-chapitre ul, .section-chapitre ol {
+      margin: 1rem 0 1rem 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    
+    .section-chapitre li {
+      margin-bottom: 0.3rem;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+      padding: 0.5rem;
+    }
+    
+    .img-caption {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+    
+    .image-grid-chap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+    
+    .image-grid-chap .img-card {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+      padding: 0.5rem;
+      text-align: center;
+      flex: 1;
+      min-width: 250px;
+    }
+    
+    .image-grid-chap .img-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    
+    .note-box {
+      background: rgba(232,201,126,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .note-box strong {
+      color: var(--gold);
+    }
+    
+    .law-box {
+      background: rgba(52,152,219,0.1);
+      border-left: 3px solid #3498db;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+    
+    .formula {
+      font-family: monospace;
+      background: rgba(0,0,0,0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    
+    .grid-formulas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    @media (max-width: 640px) {
+      .chapter-content {
+        padding: 1rem 1.25rem 2rem;
+      }
+      .section-chapitre {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-wrap" id="logoWrap">
+      <div class="logo-ring"></div>
+      <img src="../../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
+    </div>
+    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+    <div class="sidebar-sub">MMFNRR · 2026</div>
+    <nav class="sidebar-nav">
+      <a href="../../../../../index.html" class="nav-item">
+        <div class="nav-icon">🏠</div>
+        <div class="nav-body">
+          <div class="nav-label">Accueil</div>
+          <div class="nav-desc">Page principale</div>
+        </div>
+      </a>
+      <a href="../../../../Cours.html" class="nav-item active">
+        <div class="nav-icon">📖</div>
+        <div class="nav-body">
+          <div class="nav-label">Leçons / Cours</div>
+          <div class="nav-desc">Fiches de révision</div>
+        </div>
+      </a>
+      <a href="../../../../Exercice.html" class="nav-item">
+        <div class="nav-icon">✏️</div>
+        <div class="nav-body">
+          <div class="nav-label">Sujets Bacc</div>
+          <div class="nav-desc">Annales officielles</div>
+        </div>
+      </a>
+      <a href="../../../../../Info/Info.html" class="nav-item">
+        <div class="nav-icon">📝</div>
+        <div class="nav-body">
+          <div class="nav-label">A propos</div>
+          <div class="nav-desc">Informations sur le site</div>
+        </div>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2026 · 🇲🇬</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../../../../../index.html">Accueil</a> ›
+        <a href="../../../../Cours.html">Leçons</a> ›
+        <a href="../../Physique.html">Physique</a> › Mécanique</a> › Chapitre 5
+      </div>
+      <div class="page-title">OSCILLATIONS MÉCANIQUES LIBRES <span>🔄 CHAPITRE 5</span></div>
+      <div class="page-subtitle">Ressort, pendule élastique, équation différentielle, énergie — Mécanique · Baccalauréat</div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="subject-icon-large">🔄</div>
+      <div class="subject-info">
+        <h3>Oscillations mécaniques libres</h3>
+        <p>Système masse-ressort · Équation différentielle · Période · Énergie mécanique</p>
+      </div>
+      <div class="chapter-count">Cours complet</div>
+    </div>
+
+    <div class="chapter-content">
+      
+      <!-- Introduction -->
+      <div class="section-chapitre">
+        <h3>🔄 INTRODUCTION</h3>
+        <p>Un <span class="highlight">oscillateur mécanique</span> est un système qui effectue un mouvement de va-et-vient autour d'une position d'équilibre. Les oscillations sont dites <span class="highlight">libres</span> lorsqu'elles s'effectuent sans entretien extérieur, sous l'action des forces internes (rappel) et éventuellement des frottements.</p>
+        
+        <div class="note-box">
+          <strong>📌 Systèmes étudiés :</strong><br>
+          - <span class="highlight">Système masse-ressort horizontal</span><br>
+          - <span class="highlight">Système masse-ressort vertical</span><br>
+          - <span class="highlight">Pendule élastique</span><br>
+          - <span class="highlight">Oscillations amorties</span>
+        </div>
+      </div>
+
+      <!-- I – SYSTÈME MASSE-RESSORT HORIZONTAL -->
+      <div class="section-chapitre">
+        <h3>📏 I – SYSTÈME MASSE-RESSORT HORIZONTAL</h3>
+        
+        <div class="law-box">
+          <h4>Mise en équation (PFD)</h4>
+          <p>Soit une masse m attachée à un ressort de raideur k, posée sur un support horizontal sans frottement. La position x est repérée par rapport à la position d'équilibre.</p>
+          <p>Force de rappel : <span class="formula">F = -k·x</span> (loi de Hooke)</p>
+          <p>Application du PFD : <span class="formula">m·x'' = -k·x</span></p>
+          <p><span class="highlight">Équation différentielle : x'' + (k/m)·x = 0</span></p>
+          <p>Soit <span class="formula">x'' + ω₀²·x = 0</span> avec <span class="formula">ω₀² = k/m</span></p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Solution de l'équation différentielle</h4>
+          <p><span class="formula">x(t) = X_m·cos(ω₀·t + φ)</span></p>
+          <p>où :</p>
+          <ul>
+            <li><span class="formula">X_m</span> : amplitude (m)</li>
+            <li><span class="formula">ω₀ = √(k/m)</span> : pulsation propre (rad/s)</li>
+            <li><span class="formula">φ</span> : phase à l'origine (rad)</li>
+          </ul>
+        </div>
+        
+        <div class="law-box">
+          <h4>Période propre</h4>
+          <p><span class="formula">T₀ = 2π/ω₀ = 2π·√(m/k)</span></p>
+          <p><span class="highlight">La période est indépendante de l'amplitude (isochronisme).</span></p>
+        </div>
+      </div>
+
+      <!-- II – SYSTÈME MASSE-RESSORT VERTICAL -->
+      <div class="section-chapitre">
+        <h3>⬇️ II – SYSTÈME MASSE-RESSORT VERTICAL</h3>
+        
+        <div class="law-box">
+          <h4>Position d'équilibre</h4>
+          <p>À l'équilibre : <span class="formula">m·g = k·Δℓ₀</span> → <span class="formula">Δℓ₀ = m·g/k</span></p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Mise en équation</h4>
+          <p>En prenant l'origine à la position d'équilibre :</p>
+          <p><span class="formula">m·z'' = -k·z</span></p>
+          <p>Soit <span class="formula">z'' + (k/m)·z = 0</span> (même équation qu'horizontal)</p>
+          <p><span class="highlight">Même pulsation et même période :</span> <span class="formula">T₀ = 2π·√(m/k)</span></p>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Remarque :</strong> La pesanteur n'influence pas la période des oscillations, elle modifie seulement la position d'équilibre.
+        </div>
+      </div>
+
+      <!-- III – ÉNERGIE MÉCANIQUE -->
+      <div class="section-chapitre">
+        <h3>⚡ III – ÉNERGIE MÉCANIQUE DE L'OSCILLATEUR</h3>
+        
+        <div class="law-box">
+          <h4>Énergie potentielle élastique</h4>
+          <p><span class="formula">E_pe = ½·k·x²</span></p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Énergie cinétique</h4>
+          <p><span class="formula">E_c = ½·m·v² = ½·m·(x')²</span></p>
+        </div>
+        
+        <div class="law-box">
+          <h4>Énergie mécanique (sans frottement)</h4>
+          <p><span class="formula">E_m = E_c + E_pe = ½·k·X_m² = constante</span></p>
+          <p>L'énergie mécanique se conserve : elle passe de la forme potentielle à la forme cinétique et inversement.</p>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Expression en fonction du temps :</strong><br>
+          - <span class="formula">E_c(t) = ½·k·X_m²·sin²(ω₀t+φ)</span><br>
+          - <span class="formula">E_pe(t) = ½·k·X_m²·cos²(ω₀t+φ)</span>
+        </div>
+      </div>
+
+      <!-- IV – OSCILLATIONS LIBRES AMORTIES -->
+      <div class="section-chapitre">
+        <h3>📉 IV – OSCILLATIONS LIBRES AMORTIES</h3>
+        
+        <div class="law-box">
+          <h4>Avec frottement fluide</h4>
+          <p>Force de frottement : <span class="formula">F_f = -λ·v</span> (λ : coefficient de frottement)</p>
+          <p>Équation différentielle : <span class="formula">m·x'' + λ·x' + k·x = 0</span></p>
+          <p>Soit <span class="formula">x'' + (λ/m)·x' + (k/m)·x = 0</span></p>
+        </div>
+        
+        <div class="note-box">
+          <strong>📌 Régimes d'oscillations :</strong><br>
+          - <span class="highlight">Régime pseudo-périodique</span> (faible amortissement) : oscillations décroissantes<br>
+          - <span class="highlight">Régime apériodique</span> (fort amortissement) : retour à l'équilibre sans oscillation<br>
+          - <span class="highlight">Régime critique</span> (amortissement critique) : retour le plus rapide
+        </div>
+      </div>
+
+      <!-- V – ASSOCIATION DE RESSORTS -->
+      <div class="section-chapitre">
+        <h3>🔗 V – ASSOCIATION DE RESSORTS</h3>
+        
+        <div class="grid-formulas">
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Ressorts en série</strong><br>
+            <span class="formula">1/k_eq = 1/k₁ + 1/k₂</span><br>
+            <span class="formula">T = 2π·√(m/k_eq)</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Ressorts en parallèle</strong><br>
+            <span class="formula">k_eq = k₁ + k₂</span><br>
+            <span class="formula">T = 2π·√(m/k_eq)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Images du cours -->
+      <div class="section-chapitre">
+        <h3>📚 COURS COMPLET</h3>
+        
+        <div class="img-container">
+          <img src="img/056.jpg" alt="Cours oscillations 1">
+          <div class="img-caption">Fig. 1 – Système masse-ressort horizontal</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/057.jpg" alt="Cours oscillations 2">
+          <div class="img-caption">Fig. 2 – Équation différentielle et solution</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/058.jpg" alt="Cours oscillations 3">
+          <div class="img-caption">Fig. 3 – Période et pulsation propre</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/059.jpg" alt="Cours oscillations 4">
+          <div class="img-caption">Fig. 4 – Système masse-ressort vertical</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/060.jpg" alt="Cours oscillations 5">
+          <div class="img-caption">Fig. 5 – Énergie mécanique de l'oscillateur</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/061.jpg" alt="Cours oscillations 6">
+          <div class="img-caption">Fig. 6 – Variation de l'énergie au cours du temps</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/062.jpg" alt="Cours oscillations 7">
+          <div class="img-caption">Fig. 7 – Oscillations amorties (régimes)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/063.jpg" alt="Cours oscillations 8">
+          <div class="img-caption">Fig. 8 – Association de ressorts (série et parallèle)</div>
+        </div>
+        
+        <div class="img-container">
+          <img src="img/064.jpg" alt="Cours oscillations 9">
+          <div class="img-caption">Fig. 9 – Récapitulatif et exercices types</div>
+        </div>
+      </div>
+
+      <!-- FORMULES RÉCAPITULATIVES -->
+      <div class="section-chapitre">
+        <h3>📝 FORMULES À RETENIR</h3>
+        
+        <div class="grid-formulas">
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Loi de Hooke</strong><br>
+            <span class="formula">F = -k·x</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Équation différentielle</strong><br>
+            <span class="formula">x'' + ω₀²·x = 0</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Pulsation propre</strong><br>
+            <span class="formula">ω₀ = √(k/m)</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Période propre</strong><br>
+            <span class="formula">T₀ = 2π·√(m/k)</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Solution</strong><br>
+            <span class="formula">x(t) = X_m·cos(ω₀t+φ)</span>
+          </div>
+          <div class="note-box" style="margin:0;">
+            <strong>📌 Énergie mécanique</strong><br>
+            <span class="formula">E_m = ½·k·X_m²</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RÉCAPITULATIF -->
+      <div class="section-chapitre">
+        <h3>💡 RÉCAPITULATIF ET CONSEILS</h3>
+        
+        <div class="note-box">
+          <strong>📌 Points clés à retenir :</strong><br>
+          - L'<span class="highlight">équation différentielle</span> caractérise le mouvement : <span class="formula">x'' + (k/m)·x = 0</span><br>
+          - La <span class="highlight">pulsation propre</span> dépend de k et m : <span class="formula">ω₀ = √(k/m)</span><br>
+          - La <span class="highlight">période</span> est indépendante de l'amplitude (isochronisme)<br>
+          - L'<span class="highlight">énergie mécanique</span> se conserve dans les oscillations non amorties<br>
+          - Les frottements provoquent un <span class="highlight">amortissement</span> (diminution de l'amplitude)<br>
+          - En série : <span class="formula">1/k_eq = 1/k₁ + 1/k₂</span> ; en parallèle : <span class="formula">k_eq = k₁ + k₂</span>
+        </div>
+        
+        <div class="law-box">
+          <strong>🎯 Méthode pour les exercices :</strong><br>
+          1. Identifier le système et les forces<br>
+          2. Appliquer le PFD pour obtenir l'équation différentielle<br>
+          3. Identifier <span class="formula">ω₀²</span> et en déduire T₀<br>
+          4. Écrire la solution <span class="formula">x(t)</span> avec les conditions initiales<br>
+          5. Calculer l'énergie mécanique si demandé
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
+        PRÉPA BACC MMFNRR — Révisions Physique | Chapitre 5 : Oscillations mécaniques libres — Conforme au programme 2026
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const logoImg = document.getElementById('logoImg');
+    const logoWrap = document.getElementById('logoWrap');
+    if (logoWrap) {
+      logoWrap.addEventListener('click', () => {
+        logoImg.classList.remove('spinning');
+        void logoImg.offsetWidth;
+        logoImg.classList.add('spinning');
+        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+      });
+    }
+
+    const sidebar = document.getElementById('sidebar');
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+
+    function toggleSidebar() {
+      const open = sidebar.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      overlay.classList.toggle('visible', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      hamburger.classList.remove('open');
+      overlay.classList.remove('visible');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>s
