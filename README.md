@@ -11,7 +11,7 @@
 
 **PRÉPABACC** est une plateforme éducative en ligne conçue pour aider les élèves de Terminale à préparer efficacement leur Baccalauréat. Elle centralise des fiches de cours structurées, des sujets d'annales et des ressources interactives pour 10 matières principales.
 
-> **Accès au site :** [https://rogatiana.github.io/clashBACC/](https://rogatiana.github.io/clashBACC/)
+> **Accès au site :** [https://rogatiana.github.io/clashBACC/](https://rogatiana.github.io/clashBACC/index.html)
 
 ---
 
