@@ -6,7 +6,6 @@
     <title>Anglais – MMFNRR PrépaBacc</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
     <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
@@ -20,19 +19,31 @@
         <nav class="sidebar-nav">
             <a href="../../../index.html" class="nav-item">
                 <div class="nav-icon">🏠</div>
-                <div class="nav-body"><div class="nav-label">Accueil</div><div class="nav-desc">Page principale</div></div>
+                <div class="nav-body">
+                    <div class="nav-label">Accueil</div>
+                    <div class="nav-desc">Page principale</div>
+                </div>
             </a>
             <a href="../../../cours_exo/Cours.html" class="nav-item active">
                 <div class="nav-icon">📖</div>
-                <div class="nav-body"><div class="nav-label">Leçons / Cours</div><div class="nav-desc">Fiches de révision</div></div>
+                <div class="nav-body">
+                    <div class="nav-label">Leçons / Cours</div>
+                    <div class="nav-desc">Fiches de révision</div>
+                </div>
             </a>
             <a href="../../../cours_exo/Exercice.html" class="nav-item">
                 <div class="nav-icon">✏️</div>
-                <div class="nav-body"><div class="nav-label">Sujets Bacc</div><div class="nav-desc">Annales officielles</div></div>
+                <div class="nav-body">
+                    <div class="nav-label">Sujets Bacc</div>
+                    <div class="nav-desc">Annales officielles</div>
+                </div>
             </a>
             <a href="../../../Info/Info.html" class="nav-item">
                 <div class="nav-icon">📝</div>
-                <div class="nav-body"><div class="nav-label">A propos</div><div class="nav-desc">Informations sur le site</div></div>
+                <div class="nav-body">
+                    <div class="nav-label">A propos</div>
+                    <div class="nav-desc">Informations sur le site</div>
+                </div>
             </a>
         </nav>
         <div class="sidebar-footer">
@@ -43,16 +54,18 @@
     <main class="main">
         <div class="topbar">
             <div class="topbar-brand">PRÉPA<span>BACC</span></div>
-            <button class="hamburger" id="hamburger" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
+            <button class="hamburger" id="hamburger" onclick="toggleSidebar()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
 
         <div class="page-header">
             <div class="breadcrumb">
-                <a href="../../../index.html">Accueil</a> › 
-                <a href="../../../cours_exo/Cours.html">Leçons</a> › 
+                <a href="../../../index.html">Accueil</a> ›
+                <a href="../../../cours_exo/Cours.html">Leçons</a> ›
                 <span>Anglais</span>
             </div>
-            <div class="page-title">ENGLISH 
+            <div class="page-title">ENGLISH
                 <span>LANGUAGE</span>
             </div>
             <div class="page-subtitle">Grammar, tenses, and language skills for the Baccalaureate</div>
@@ -79,7 +92,8 @@
                         <div class="chapter-info">
                             <div class="chapter-title">English Auxiliary</div>
                             <div class="chapter-desc">Auxiliaires modaux : can, could, may, might, must, shall, should, will, would</div>
-                        </div><div class="chapter-arrow">→</div>
+                        </div>
+                        <div class="chapter-arrow">→</div>
                     </a>
                 </div>
 
@@ -104,6 +118,7 @@
                         <div class="chapter-arrow">→</div>
                     </a>
                 </div>
+
                 <div class="chapter-card">
                     <a href="chap/chap4.html" class="chapter-link">
                         <div class="chapter-number">CHAPTER 4</div>
@@ -114,6 +129,7 @@
                         <div class="chapter-arrow">→</div>
                     </a>
                 </div>
+
                 <div class="chapter-card">
                     <a href="chap/chap5.html" class="chapter-link">
                         <div class="chapter-number">CHAPTER 5</div>
@@ -124,6 +140,7 @@
                         <div class="chapter-arrow">→</div>
                     </a>
                 </div>
+
                 <div class="chapter-card">
                     <a href="chap/chap6.html" class="chapter-link">
                         <div class="chapter-number">CHAPTER 6</div>
@@ -134,6 +151,7 @@
                         <div class="chapter-arrow">→</div>
                     </a>
                 </div>
+
                 <div class="chapter-card">
                     <a href="chap/chap7.html" class="chapter-link">
                         <div class="chapter-number">CHAPTER 7</div>
@@ -141,44 +159,42 @@
                             <div class="chapter-title">English Tenses</div>
                             <div class="chapter-desc">Tous les temps anglais : present, past, future, perfect, continuous</div>
                         </div>
-                        <div class ="chapter-arrow">→</div>
+                        <div class="chapter-arrow">→</div>
                     </a>
                 </div>
             </div>
         </div>
     </main>
-    
+
     <script>
-    /* logo spin */
-    const logoImg  = document.getElementById('logoImg');
-    const logoWrap = document.getElementById('logoWrap');
-    if (logoWrap) {
-      logoWrap.addEventListener('click', () => {
-        logoImg.classList.remove('spinning');
-        void logoImg.offsetWidth;
-        logoImg.classList.add('spinning');
-        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
-      });
-    }
+        const logoImg = document.getElementById('logoImg');
+        const logoWrap = document.getElementById('logoWrap');
+        if (logoWrap) {
+            logoWrap.addEventListener('click', () => {
+                logoImg.classList.remove('spinning');
+                void logoImg.offsetWidth;
+                logoImg.classList.add('spinning');
+                logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+            });
+        }
 
-    /* sidebar mobile */
-    const sidebar   = document.getElementById('sidebar');
-    const hamburger = document.getElementById('hamburger');
-    const overlay   = document.getElementById('overlay');
+        const sidebar = document.getElementById('sidebar');
+        const hamburger = document.getElementById('hamburger');
+        const overlay = document.getElementById('overlay');
 
-    function toggleSidebar() {
-      const open = sidebar.classList.toggle('open');
-      hamburger.classList.toggle('open', open);
-      overlay.classList.toggle('visible', open);
-      document.body.style.overflow = open ? 'hidden' : '';
-    }
+        function toggleSidebar() {
+            const open = sidebar.classList.toggle('open');
+            hamburger.classList.toggle('open', open);
+            overlay.classList.toggle('visible', open);
+            document.body.style.overflow = open ? 'hidden' : '';
+        }
 
-    function closeSidebar() {
-      sidebar.classList.remove('open');
-      hamburger.classList.remove('open');
-      overlay.classList.remove('visible');
-      document.body.style.overflow = '';
-    }
-  </script>
+        function closeSidebar() {
+            sidebar.classList.remove('open');
+            hamburger.classList.remove('open');
+            overlay.classList.remove('visible');
+            document.body.style.overflow = '';
+        }
+    </script>
 </body>
 </html>

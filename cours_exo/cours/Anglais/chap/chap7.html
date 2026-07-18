@@ -1,489 +1,596 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>English · English Tenses | PRÉPA BACC MMFNRR</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css" />
-  <style>
-    .chapter-content {
-      padding: 1rem 3rem 3rem;
-    }
-    
-    .section-chapitre {
-      background: var(--navy);
-      border-radius: var(--radius);
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-      border: 0.5px solid rgba(255,255,255,0.08);
-    }
-    
-    .section-chapitre h3 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.5rem;
-      color: var(--gold);
-      margin-bottom: 1rem;
-      letter-spacing: 1px;
-    }
-    
-    .section-chapitre h4 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.2rem;
-      color: #fff;
-      margin: 1rem 0 0.5rem;
-    }
-    
-    .section-chapitre p {
-      line-height: 1.6;
-      margin-bottom: 1rem;
-      color: rgba(255,255,255,0.85);
-    }
-    
-    .section-chapitre .highlight {
-      color: var(--gold);
-      font-weight: 500;
-    }
-    
-    .section-chapitre .highlight-red {
-      color: #e74c3c;
-      font-weight: 500;
-    }
-    
-    .section-chapitre ul, .section-chapitre ol {
-      margin: 1rem 0 1rem 2rem;
-      color: rgba(255,255,255,0.85);
-      line-height: 1.6;
-    }
-    
-    .section-chapitre li {
-      margin-bottom: 0.3rem;
-    }
-    
-    .img-container {
-      text-align: center;
-      margin: 1.5rem 0;
-    }
-    
-    .img-container img {
-      max-width: 100%;
-      border-radius: 12px;
-      background: rgba(0,0,0,0.2);
-      padding: 0.5rem;
-    }
-    
-    .img-caption {
-      font-size: 12px;
-      color: rgba(255,255,255,0.4);
-      margin-top: 0.5rem;
-      text-align: center;
-    }
-    
-    .note-box {
-      background: rgba(232,201,126,0.1);
-      border-left: 3px solid var(--gold);
-      padding: 1rem;
-      margin: 1rem 0;
-      border-radius: 0 10px 10px 0;
-    }
-    
-    .note-box strong {
-      color: var(--gold);
-    }
-    
-    .law-box {
-      background: rgba(230, 126, 34, 0.1);
-      border-left: 3px solid #e67e22;
-      padding: 1rem;
-      margin: 1rem 0;
-      border-radius: 0 10px 10px 0;
-    }
-    
-    .formula {
-      font-family: monospace;
-      background: rgba(0,0,0,0.3);
-      padding: 0.2rem 0.5rem;
-      border-radius: 5px;
-      display: inline-block;
-    }
-    
-    .grid-formulas {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-      margin: 1rem 0;
-    }
-    
-    .grammar-card {
-      background: rgba(0,0,0,0.2);
-      border-radius: 10px;
-      padding: 0.8rem;
-      text-align: center;
-    }
-    
-    .grammar-card .grammar-name {
-      color: var(--gold);
-      font-weight: bold;
-    }
-    
-    .example {
-      font-style: italic;
-      color: var(--gold);
-    }
-    
-    .tense-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0;
-      background: rgba(0,0,0,0.2);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    
-    .tense-table th, .tense-table td {
-      padding: 0.75rem;
-      text-align: left;
-      border-bottom: 0.5px solid rgba(255,255,255,0.1);
-    }
-    
-    .tense-table th {
-      background: rgba(232,201,126,0.15);
-      color: var(--gold);
-      font-weight: bold;
-    }
-    
-    .tense-table tr:last-child td {
-      border-bottom: none;
-    }
-    
-    @media (max-width: 640px) {
-      .chapter-content {
-        padding: 1rem 1.25rem 2rem;
-      }
-      .section-chapitre {
-        padding: 1rem;
-      }
-      .tense-table th, .tense-table td {
-        padding: 0.5rem;
-        font-size: 0.75rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English · English Tenses | PRÉPA BACC MMFNRR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+        .chapter-content {
+            padding: 1rem 3rem 3rem;
+        }
+
+        .section-chapitre {
+            background: var(--navy);
+            border-radius: var(--radius);
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border: 0.5px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .section-chapitre h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .section-chapitre h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            color: #fff;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .section-chapitre p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .section-chapitre .highlight {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .section-chapitre .highlight-red {
+            color: #e74c3c;
+            font-weight: 500;
+        }
+
+        .section-chapitre ul,
+        .section-chapitre ol {
+            margin: 1rem 0 1rem 2rem;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+        }
+
+        .section-chapitre li {
+            margin-bottom: 0.3rem;
+        }
+
+        .img-container {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 0.5rem;
+        }
+
+        .img-caption {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+
+        .note-box {
+            background: rgba(232, 201, 126, 0.1);
+            border-left: 3px solid var(--gold);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .note-box strong {
+            color: var(--gold);
+        }
+
+        .law-box {
+            background: rgba(230, 126, 34, 0.1);
+            border-left: 3px solid #e67e22;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .formula {
+            font-family: monospace;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .grid-formulas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .grammar-card {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 0.8rem;
+            text-align: center;
+        }
+
+        .grammar-card .grammar-name {
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .example {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .tense-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .tense-table th,
+        .tense-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tense-table th {
+            background: rgba(232, 201, 126, 0.15);
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .tense-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .pied {
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 12px;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 640px) {
+            .chapter-content {
+                padding: 1rem 1.25rem 2rem;
+            }
+            .section-chapitre {
+                padding: 1rem;
+            }
+            .tense-table th,
+            .tense-table td {
+                padding: 0.5rem;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
 
-  <aside class="sidebar" id="sidebar">
-    <div class="logo-wrap" id="logoWrap">
-      <div class="logo-ring"></div>
-      <img src="../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
-    </div>
-    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
-    <div class="sidebar-sub">MMFNRR · 2024</div>
-    <nav class="sidebar-nav">
-      <a href="../../../../index.html" class="nav-item">
-        <div class="nav-icon">🏠</div>
-        <div class="nav-body">
-          <div class="nav-label">Accueil</div>
-          <div class="nav-desc">Page principale</div>
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-wrap" id="logoWrap">
+            <div class="logo-ring"></div>
+            <img src="../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
         </div>
-      </a>
-      <a href="../../../Cours.html" class="nav-item active">
-        <div class="nav-icon">📖</div>
-        <div class="nav-body">
-          <div class="nav-label">Leçons / Cours</div>
-          <div class="nav-desc">Fiches de révision</div>
+        <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+        <div class="sidebar-sub">MMFNRR · 2024</div>
+        <nav class="sidebar-nav">
+            <a href="../../../../index.html" class="nav-item">
+                <div class="nav-icon">🏠</div>
+                <div class="nav-body">
+                    <div class="nav-label">Accueil</div>
+                    <div class="nav-desc">Page principale</div>
+                </div>
+            </a>
+            <a href="../../../Cours.html" class="nav-item active">
+                <div class="nav-icon">📖</div>
+                <div class="nav-body">
+                    <div class="nav-label">Leçons / Cours</div>
+                    <div class="nav-desc">Fiches de révision</div>
+                </div>
+            </a>
+            <a href="../../../Exercice.html" class="nav-item">
+                <div class="nav-icon">✏️</div>
+                <div class="nav-body">
+                    <div class="nav-label">Sujets Bacc</div>
+                    <div class="nav-desc">Annales officielles</div>
+                </div>
+            </a>
+            <a href="../../../../Info/Info.html" class="nav-item">
+                <div class="nav-icon">📝</div>
+                <div class="nav-body">
+                    <div class="nav-label">A propos</div>
+                    <div class="nav-desc">Informations sur le site</div>
+                </div>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+            <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
         </div>
-      </a>
-      <a href="../../../Exercice.html" class="nav-item">
-        <div class="nav-icon">✏️</div>
-        <div class="nav-body">
-          <div class="nav-label">Sujets Bacc</div>
-          <div class="nav-desc">Annales officielles</div>
+    </aside>
+
+    <main class="main">
+        <div class="topbar">
+            <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+            <button class="hamburger" id="hamburger" onclick="toggleSidebar()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-      </a>
-      <a href="../../../../Info/Info.html" class="nav-item">
-        <div class="nav-icon">📝</div>
-        <div class="nav-body">
-          <div class="nav-label">A propos</div>
-          <div class="nav-desc">Informations sur le site</div>
+
+        <div class="page-header">
+            <div class="breadcrumb">
+                <a href="../../../../index.html">Accueil</a> ›
+                <a href="../../../Cours.html">Leçons</a> ›
+                <a href="../Anglais.html">English</a> › Chapter 7
+            </div>
+            <div class="page-title">ENGLISH TENSES <span>🇬🇧 CHAPTER 7</span></div>
+            <div class="page-subtitle">Complete guide to English verb tenses: present, past, future, perfect, continuous</div>
         </div>
-      </a>
-    </nav>
-    <div class="sidebar-footer">
-      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
-      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
-    </div>
-  </aside>
 
-  <main class="main">
-    <div class="topbar">
-      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
-      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-
-    <div class="page-header">
-      <div class="breadcrumb">
-        <a href="../../../../index.html">Accueil</a> ›
-        <a href="../../../Cours.html">Leçons</a> ›
-        <a href="../Anglais.html">English</a> › Chapter 7
-      </div>
-      <div class="page-title">ENGLISH TENSES <span>🇬🇧 CHAPTER 7</span></div>
-      <div class="page-subtitle">Complete guide to English verb tenses: present, past, future, perfect, continuous</div>
-    </div>
-
-    <div class="subject-banner">
-      <div class="subject-icon-large">🇬🇧</div>
-      <div class="subject-info">
-        <h3>English Tenses</h3>
-        <p>Present · Past · Future · Perfect · Continuous · Affirmative · Negative · Questions</p>
-      </div>
-      <div class="chapter-count">Complete lesson</div>
-    </div>
-
-    <div class="chapter-content">
-      
-      <!-- Introduction -->
-      <div class="section-chapitre">
-        <h3>📚 INTRODUCTION</h3>
-        <p>English verb tenses indicate <span class="highlight">when an action occurs</span> (past, present, future) and <span class="highlight">how it occurs</span> (simple, continuous, perfect, perfect continuous). Mastering tenses is essential for clear and accurate communication.</p>
-        
-        <div class="note-box">
-          <strong>📌 Three main time frames:</strong><br>
-          - <span class="highlight">Present</span> : actions happening now or regularly<br>
-          - <span class="highlight">Past</span> : actions already completed<br>
-          - <span class="highlight">Future</span> : actions that will happen
+        <div class="subject-banner">
+            <div class="subject-icon-large">🇬🇧</div>
+            <div class="subject-info">
+                <h3>English Tenses</h3>
+                <p>Present · Past · Future · Perfect · Continuous · Affirmative · Negative · Questions</p>
+            </div>
+            <div class="chapter-count">Complete lesson</div>
         </div>
-      </div>
 
-      <!-- Overview Table -->
-      <div class="section-chapitre">
-        <h3>📊 TENSE OVERVIEW</h3>
-        
-        <table class="tense-table">
-          <thead>
-            <tr><th>Tense</th><th>Affirmative</th><th>Negative</th><th>Question</th><th>Use</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Present Simple</td><td>I <strong>work</strong></td><td>I <strong>don't work</strong></td><td><strong>Do</strong> I work?</td><td>habits, facts, routines</td></tr>
-            <tr><td>Present Continuous</td><td>I <strong>am working</strong></td><td>I <strong>am not working</strong></td><td><strong>Am</strong> I working?</td><td>actions happening now</td></tr>
-            <tr><td>Present Perfect</td><td>I <strong>have worked</strong></td><td>I <strong>haven't worked</strong></td><td><strong>Have</strong> I worked?</td><td>past → present connection</td></tr>
-            <tr><td>Present Perfect Continuous</td><td>I <strong>have been working</strong></td><td>I <strong>haven't been working</strong></td><td><strong>Have</strong> I been working?</td><td>duration from past to now</td></tr>
-            <tr><td>Past Simple</td><td>I <strong>worked</strong></td><td>I <strong>didn't work</strong></td><td><strong>Did</strong> I work?</td><td>completed past actions</td></tr>
-            <tr><td>Past Continuous</td><td>I <strong>was working</strong></td><td>I <strong>wasn't working</strong></td><td><strong>Was</strong> I working?</td><td>actions in progress in the past</td></tr>
-            <tr><td>Past Perfect</td><td>I <strong>had worked</strong></td><td>I <strong>hadn't worked</strong></td><td><strong>Had</strong> I worked?</td><td>past before another past</td></tr>
-            <tr><td>Past Perfect Continuous</td><td>I <strong>had been working</strong></td><td>I <strong>hadn't been working</strong></td><td><strong>Had</strong> I been working?</td><td>duration before a past event</td></tr>
-            <tr><td>Future Simple (will)</td><td>I <strong>will work</strong></td><td>I <strong>won't work</strong></td><td><strong>Will</strong> I work?</td><td>predictions, promises, decisions</td></tr>
-            <tr><td>Future (going to)</td><td>I <strong>am going to work</strong></td><td>I <strong>am not going to work</strong></td><td><strong>Am</strong> I going to work?</td><td>plans, intentions</td></tr>
-            <tr><td>Future Continuous</td><td>I <strong>will be working</strong></td><td>I <strong>won't be working</strong></td><td><strong>Will</strong> I be working?</td><td>actions in progress in the future</td></tr>
-            <tr><td>Future Perfect</td><td>I <strong>will have worked</strong></td><td>I <strong>won't have worked</strong></td><td><strong>Will</strong> I have worked?</td><td>completed before a future time</td></tr>
-          </tbody>
-        </table>
-      </div>
+        <div class="chapter-content">
 
-      <!-- Present Tenses -->
-      <div class="section-chapitre">
-        <h3>📖 PRESENT TENSES</h3>
-        
-        <div class="grid-formulas">
-          <div class="grammar-card">
-            <p class="grammar-name">Present Simple</p>
-            <p><span class="example">She <strong>works</strong> in an office.</span><br>
-            <span class="example">The sun <strong>rises</strong> in the east.</span></p>
-          </div>
-          <div class="grammar-card">
-            <p class="grammar-name">Present Continuous</p>
-            <p><span class="example">She <strong>is working</strong> right now.</span><br>
-            <span class="example">I <strong>am studying</strong> for my exam.</span></p>
-          </div>
-          <div class="grammar-card">
-            <p class="grammar-name">Present Perfect</p>
-            <p><span class="example">She <strong>has worked</strong> here since 2015.</span><br>
-            <span class="example">I <strong>have finished</strong> my homework.</span></p>
-          </div>
-          <div class="grammar-card">
-            <p class="grammar-name">Present Perfect Continuous</p>
-            <p><span class="example">She <strong>has been working</strong> for three hours.</span><br>
-            <span class="example">I <strong>have been waiting</strong> for an hour.</span></p>
-          </div>
+            <div class="section-chapitre">
+                <h3>📚 INTRODUCTION</h3>
+                <p>English verb tenses indicate <span class="highlight">when an action occurs</span> (past, present, future) and <span class="highlight">how it occurs</span> (simple, continuous, perfect, perfect continuous). Mastering tenses is essential for clear and accurate communication.</p>
+
+                <div class="note-box">
+                    <strong>📌 Three main time frames:</strong><br>
+                    - <span class="highlight">Present</span> : actions happening now or regularly<br>
+                    - <span class="highlight">Past</span> : actions already completed<br>
+                    - <span class="highlight">Future</span> : actions that will happen
+                </div>
+            </div>
+
+            <div class="section-chapitre">
+                <h3>📊 TENSE OVERVIEW</h3>
+
+                <table class="tense-table">
+                    <thead>
+                        <tr>
+                            <th>Tense</th>
+                            <th>Affirmative</th>
+                            <th>Negative</th>
+                            <th>Question</th>
+                            <th>Use</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Present Simple</td>
+                            <td>I <strong>work</strong></td>
+                            <td>I <strong>don't work</strong></td>
+                            <td><strong>Do</strong> I work?</td>
+                            <td>habits, facts, routines</td>
+                        </tr>
+                        <tr>
+                            <td>Present Continuous</td>
+                            <td>I <strong>am working</strong></td>
+                            <td>I <strong>am not working</strong></td>
+                            <td><strong>Am</strong> I working?</td>
+                            <td>actions happening now</td>
+                        </tr>
+                        <tr>
+                            <td>Present Perfect</td>
+                            <td>I <strong>have worked</strong></td>
+                            <td>I <strong>haven't worked</strong></td>
+                            <td><strong>Have</strong> I worked?</td>
+                            <td>past → present connection</td>
+                        </tr>
+                        <tr>
+                            <td>Present Perfect Continuous</td>
+                            <td>I <strong>have been working</strong></td>
+                            <td>I <strong>haven't been working</strong></td>
+                            <td><strong>Have</strong> I been working?</td>
+                            <td>duration from past to now</td>
+                        </tr>
+                        <tr>
+                            <td>Past Simple</td>
+                            <td>I <strong>worked</strong></td>
+                            <td>I <strong>didn't work</strong></td>
+                            <td><strong>Did</strong> I work?</td>
+                            <td>completed past actions</td>
+                        </tr>
+                        <tr>
+                            <td>Past Continuous</td>
+                            <td>I <strong>was working</strong></td>
+                            <td>I <strong>wasn't working</strong></td>
+                            <td><strong>Was</strong> I working?</td>
+                            <td>actions in progress in the past</td>
+                        </tr>
+                        <tr>
+                            <td>Past Perfect</td>
+                            <td>I <strong>had worked</strong></td>
+                            <td>I <strong>hadn't worked</strong></td>
+                            <td><strong>Had</strong> I worked?</td>
+                            <td>past before another past</td>
+                        </tr>
+                        <tr>
+                            <td>Past Perfect Continuous</td>
+                            <td>I <strong>had been working</strong></td>
+                            <td>I <strong>hadn't been working</strong></td>
+                            <td><strong>Had</strong> I been working?</td>
+                            <td>duration before a past event</td>
+                        </tr>
+                        <tr>
+                            <td>Future Simple (will)</td>
+                            <td>I <strong>will work</strong></td>
+                            <td>I <strong>won't work</strong></td>
+                            <td><strong>Will</strong> I work?</td>
+                            <td>predictions, promises, decisions</td>
+                        </tr>
+                        <tr>
+                            <td>Future (going to)</td>
+                            <td>I <strong>am going to work</strong></td>
+                            <td>I <strong>am not going to work</strong></td>
+                            <td><strong>Am</strong> I going to work?</td>
+                            <td>plans, intentions</td>
+                        </tr>
+                        <tr>
+                            <td>Future Continuous</td>
+                            <td>I <strong>will be working</strong></td>
+                            <td>I <strong>won't be working</strong></td>
+                            <td><strong>Will</strong> I be working?</td>
+                            <td>actions in progress in the future</td>
+                        </tr>
+                        <tr>
+                            <td>Future Perfect</td>
+                            <td>I <strong>will have worked</strong></td>
+                            <td>I <strong>won't have worked</strong></td>
+                            <td><strong>Will</strong> I have worked?</td>
+                            <td>completed before a future time</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section-chapitre">
+                <h3>📖 PRESENT TENSES</h3>
+
+                <div class="grid-formulas">
+                    <div class="grammar-card">
+                        <p class="grammar-name">Present Simple</p>
+                        <p><span class="example">She <strong>works</strong> in an office.</span><br>
+                            <span class="example">The sun <strong>rises</strong> in the east.</span></p>
+                    </div>
+                    <div class="grammar-card">
+                        <p class="grammar-name">Present Continuous</p>
+                        <p><span class="example">She <strong>is working</strong> right now.</span><br>
+                            <span class="example">I <strong>am studying</strong> for my exam.</span></p>
+                    </div>
+                    <div class="grammar-card">
+                        <p class="grammar-name">Present Perfect</p>
+                        <p><span class="example">She <strong>has worked</strong> here since 2015.</span><br>
+                            <span class="example">I <strong>have finished</strong> my homework.</span></p>
+                    </div>
+                    <div class="grammar-card">
+                        <p class="grammar-name">Present Perfect Continuous</p>
+                        <p><span class="example">She <strong>has been working</strong> for three hours.</span><br>
+                            <span class="example">I <strong>have been waiting</strong> for an hour.</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-chapitre">
+                <h3>📜 PAST TENSES</h3>
+
+                <div class="grid-formulas">
+                    <div class="grammar-card">
+                        <p class="grammar-name">Past Simple</p>
+                        <p><span class="example">She <strong>worked</strong> yesterday.</span><br>
+                            <span class="example">I <strong>went</strong> to Paris last year.</span></p>
+                    </div>
+                    <div class="grammar-card">
+                        <p class="grammar-name">Past Continuous</p>
+                        <p><span class="example">She <strong>was working</strong> when I called.</span><br>
+                            <span class="example">They <strong>were sleeping</strong> at 10 PM.</span></p>
+                    </div>
+                    <div class="grammar-card">
+                        <p class="grammar-name">Past Perfect</p>
+                        <p><span class="example">She <strong>had worked</strong> before she left.</span><br>
+                            <span class="example">I <strong>had eaten</strong> when he arrived.</span></p>
+                    </div>
+                    <div class="grammar-card">
+                        <p class="grammar-name">Past Perfect Continuous</p>
+                        <p><span class="example">She <strong>had been working</strong> for two hours when I arrived.</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-chapitre">
+                <h3>🔮 FUTURE TENSES</h3>
+
+                <div class="grid-formulas">
+                    <div class="grammar-card">
+                        <p class="grammar-name">Future Simple (will)</p>
+                        <p><span class="example">She <strong>will work</strong> tomorrow.</span><br>
+                            <span class="example">I <strong>will call</strong> you later.</span></p>
+                    </div>
+                    <div class="grammar-card">
+                        <p class="grammar-name">Future (going to)</p>
+                        <p><span class="example">She <strong>is going to work</strong> tomorrow.</span><br>
+                            <span class="example">I <strong>am going to study</strong> medicine.</span></p>
+                    </div>
+                    <div class="grammar-card">
+                        <p class="grammar-name">Future Continuous</p>
+                        <p><span class="example">She <strong>will be working</strong> at 5 PM tomorrow.</span></p>
+                    </div>
+                    <div class="grammar-card">
+                        <p class="grammar-name">Future Perfect</p>
+                        <p><span class="example">She <strong>will have worked</strong> for 10 years by 2025.</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-chapitre">
+                <h3>⏰ SIGNAL WORDS FOR EACH TENSE</h3>
+
+                <table class="tense-table">
+                    <thead>
+                        <tr>
+                            <th>Tense</th>
+                            <th>Signal Words</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Present Simple</td>
+                            <td>always, never, usually, often, sometimes, every day/week/year</td>
+                        </tr>
+                        <tr>
+                            <td>Present Continuous</td>
+                            <td>now, right now, at the moment, today, this week</td>
+                        </tr>
+                        <tr>
+                            <td>Present Perfect</td>
+                            <td>already, yet, just, ever, never, since, for, recently</td>
+                        </tr>
+                        <tr>
+                            <td>Past Simple</td>
+                            <td>yesterday, last week/month/year, in 1990, ago, then</td>
+                        </tr>
+                        <tr>
+                            <td>Past Continuous</td>
+                            <td>while, when, as, at that time</td>
+                        </tr>
+                        <tr>
+                            <td>Past Perfect</td>
+                            <td>already, just, never, by the time, before, after, when</td>
+                        </tr>
+                        <tr>
+                            <td>Future (will)</td>
+                            <td>tomorrow, next week, soon, later, in the future</td>
+                        </tr>
+                        <tr>
+                            <td>Future (going to)</td>
+                            <td>tomorrow, next week, tonight, soon</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section-chapitre">
+                <h3>⚠️ COMMON MISTAKES TO AVOID</h3>
+
+                <div class="law-box">
+                    <strong>📌 Mistake 1: Confusing Present Perfect and Past Simple</strong><br>
+                    <span class="example">❌ I <strong>have seen</strong> that movie yesterday.</span><br>
+                    <span class="example">✅ I <strong>saw</strong> that movie yesterday.</span><br>
+                    (Past Simple for finished time → yesterday)
+                </div>
+
+                <div class="law-box">
+                    <strong>📌 Mistake 2: Forgetting the -ing in continuous forms</strong><br>
+                    <span class="example">❌ I am <strong>work</strong> right now.</span><br>
+                    <span class="example">✅ I am <strong>working</strong> right now.</span>
+                </div>
+
+                <div class="law-box">
+                    <strong>📌 Mistake 3: Using "will" for planned actions</strong><br>
+                    <span class="example">❌ I <strong>will meet</strong> my friend tomorrow (if it's a plan).</span><br>
+                    <span class="example">✅ I <strong>am going to meet</strong> my friend tomorrow.</span>
+                </div>
+            </div>
+
+            <div class="section-chapitre">
+                <h3>📖 VISUAL REFERENCES</h3>
+
+                <div class="img-container">
+                    <img src="img/8.jpg" alt="English Tenses Chart 1">
+                    <div class="img-caption">Fig. 1 – English tenses overview chart (part 1)</div>
+                </div>
+
+                <div class="img-container">
+                    <img src="img/9.jpg" alt="English Tenses Chart 2">
+                    <div class="img-caption">Fig. 2 – English tenses overview chart (part 2)</div>
+                </div>
+
+                <div class="img-container">
+                    <img src="img/10.jpg" alt="English Tenses Chart 3">
+                    <div class="img-caption">Fig. 3 – English tenses overview chart (part 3)</div>
+                </div>
+            </div>
+
+            <div class="section-chapitre">
+                <h3>💡 SUMMARY & KEY POINTS</h3>
+
+                <div class="note-box">
+                    <strong>📌 Key Takeaways:</strong><br>
+                    - <span class="highlight">Present Simple</span> → habits, facts, routines<br>
+                    - <span class="highlight">Present Continuous</span> → actions happening now<br>
+                    - <span class="highlight">Present Perfect</span> → past actions with present relevance<br>
+                    - <span class="highlight">Past Simple</span> → completed past actions<br>
+                    - <span class="highlight">Past Continuous</span> → actions in progress in the past<br>
+                    - <span class="highlight">Future (will)</span> → predictions, promises, spontaneous decisions<br>
+                    - <span class="highlight">Future (going to)</span> → plans, intentions<br>
+                    - Each tense has <span class="highlight">specific signal words</span> that help identify it<br>
+                    - Pay attention to <span class="highlight">irregular verbs</span> in past simple and past participle forms
+                </div>
+            </div>
+
+            <div class="pied">
+                PRÉPA BACC MMFNRR — English Grammar | Chapter 7: English Tenses — Conforms to Baccalaureate program 2024
+            </div>
         </div>
-      </div>
+    </main>
 
-      <!-- Past Tenses -->
-      <div class="section-chapitre">
-        <h3>📜 PAST TENSES</h3>
-        
-        <div class="grid-formulas">
-          <div class="grammar-card">
-            <p class="grammar-name">Past Simple</p>
-            <p><span class="example">She <strong>worked</strong> yesterday.</span><br>
-            <span class="example">I <strong>went</strong> to Paris last year.</span></p>
-          </div>
-          <div class="grammar-card">
-            <p class="grammar-name">Past Continuous</p>
-            <p><span class="example">She <strong>was working</strong> when I called.</span><br>
-            <span class="example">They <strong>were sleeping</strong> at 10 PM.</span></p>
-          </div>
-          <div class="grammar-card">
-            <p class="grammar-name">Past Perfect</p>
-            <p><span class="example">She <strong>had worked</strong> before she left.</span><br>
-            <span class="example">I <strong>had eaten</strong> when he arrived.</span></p>
-          </div>
-          <div class="grammar-card">
-            <p class="grammar-name">Past Perfect Continuous</p>
-            <p><span class="example">She <strong>had been working</strong> for two hours when I arrived.</span></p>
-          </div>
-        </div>
-      </div>
+    <script>
+        const logoImg = document.getElementById('logoImg');
+        const logoWrap = document.getElementById('logoWrap');
+        if (logoWrap) {
+            logoWrap.addEventListener('click', () => {
+                logoImg.classList.remove('spinning');
+                void logoImg.offsetWidth;
+                logoImg.classList.add('spinning');
+                logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+            });
+        }
 
-      <!-- Future Tenses -->
-      <div class="section-chapitre">
-        <h3>🔮 FUTURE TENSES</h3>
-        
-        <div class="grid-formulas">
-          <div class="grammar-card">
-            <p class="grammar-name">Future Simple (will)</p>
-            <p><span class="example">She <strong>will work</strong> tomorrow.</span><br>
-            <span class="example">I <strong>will call</strong> you later.</span></p>
-          </div>
-          <div class="grammar-card">
-            <p class="grammar-name">Future (going to)</p>
-            <p><span class="example">She <strong>is going to work</strong> tomorrow.</span><br>
-            <span class="example">I <strong>am going to study</strong> medicine.</span></p>
-          </div>
-          <div class="grammar-card">
-            <p class="grammar-name">Future Continuous</p>
-            <p><span class="example">She <strong>will be working</strong> at 5 PM tomorrow.</span></p>
-          </div>
-          <div class="grammar-card">
-            <p class="grammar-name">Future Perfect</p>
-            <p><span class="example">She <strong>will have worked</strong> for 10 years by 2025.</span></p>
-          </div>
-        </div>
-      </div>
+        const sidebar = document.getElementById('sidebar');
+        const hamburger = document.getElementById('hamburger');
+        const overlay = document.getElementById('overlay');
 
-      <!-- Key Signal Words -->
-      <div class="section-chapitre">
-        <h3>⏰ SIGNAL WORDS FOR EACH TENSE</h3>
-        
-        <table class="tense-table">
-          <thead>
-            <tr><th>Tense</th><th>Signal Words</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Present Simple</td><td>always, never, usually, often, sometimes, every day/week/year</td></tr>
-            <tr><td>Present Continuous</td><td>now, right now, at the moment, today, this week</td></tr>
-            <tr><td>Present Perfect</td><td>already, yet, just, ever, never, since, for, recently</td></tr>
-            <tr><td>Past Simple</td><td>yesterday, last week/month/year, in 1990, ago, then</td></tr>
-            <tr><td>Past Continuous</td><td>while, when, as, at that time</td></tr>
-            <tr><td>Past Perfect</td><td>already, just, never, by the time, before, after, when</td></tr>
-            <tr><td>Future (will)</td><td>tomorrow, next week, soon, later, in the future</td></tr>
-            <tr><td>Future (going to)</td><td>tomorrow, next week, tonight, soon</td></tr>
-          </tbody>
-        </table>
-      </div>
+        function toggleSidebar() {
+            const open = sidebar.classList.toggle('open');
+            hamburger.classList.toggle('open', open);
+            overlay.classList.toggle('visible', open);
+            document.body.style.overflow = open ? 'hidden' : '';
+        }
 
-      <!-- Common Mistakes -->
-      <div class="section-chapitre">
-        <h3>⚠️ COMMON MISTAKES TO AVOID</h3>
-        
-        <div class="law-box">
-          <strong>📌 Mistake 1: Confusing Present Perfect and Past Simple</strong><br>
-          <span class="example">❌ I <strong>have seen</strong> that movie yesterday.</span><br>
-          <span class="example">✅ I <strong>saw</strong> that movie yesterday.</span><br>
-          (Past Simple for finished time → yesterday)
-        </div>
-        
-        <div class="law-box">
-          <strong>📌 Mistake 2: Forgetting the -ing in continuous forms</strong><br>
-          <span class="example">❌ I am <strong>work</strong> right now.</span><br>
-          <span class="example">✅ I am <strong>working</strong> right now.</span>
-        </div>
-        
-        <div class="law-box">
-          <strong>📌 Mistake 3: Using "will" for planned actions</strong><br>
-          <span class="example">❌ I <strong>will meet</strong> my friend tomorrow (if it's a plan).</span><br>
-          <span class="example">✅ I <strong>am going to meet</strong> my friend tomorrow.</span>
-        </div>
-      </div>
-
-      <!-- Images -->
-      <div class="section-chapitre">
-        <h3>📖 VISUAL REFERENCES</h3>
-        
-        <div class="img-container">
-          <img src="img/8.jpg" alt="English Tenses Chart 1">
-          <div class="img-caption">Fig. 1 – English tenses overview chart (part 1)</div>
-        </div>
-        
-        <div class="img-container">
-          <img src="img/9.jpg" alt="English Tenses Chart 2">
-          <div class="img-caption">Fig. 2 – English tenses overview chart (part 2)</div>
-        </div>
-        
-        <div class="img-container">
-          <img src="img/10.jpg" alt="English Tenses Chart 3">
-          <div class="img-caption">Fig. 3 – English tenses overview chart (part 3)</div>
-        </div>
-      </div>
-
-      <!-- RÉCAPITULATIF -->
-      <div class="section-chapitre">
-        <h3>💡 SUMMARY & KEY POINTS</h3>
-        
-        <div class="note-box">
-          <strong>📌 Key Takeaways:</strong><br>
-          - <span class="highlight">Present Simple</span> → habits, facts, routines<br>
-          - <span class="highlight">Present Continuous</span> → actions happening now<br>
-          - <span class="highlight">Present Perfect</span> → past actions with present relevance<br>
-          - <span class="highlight">Past Simple</span> → completed past actions<br>
-          - <span class="highlight">Past Continuous</span> → actions in progress in the past<br>
-          - <span class="highlight">Future (will)</span> → predictions, promises, spontaneous decisions<br>
-          - <span class="highlight">Future (going to)</span> → plans, intentions<br>
-          - Each tense has <span class="highlight">specific signal words</span> that help identify it<br>
-          - Pay attention to <span class="highlight">irregular verbs</span> in past simple and past participle forms
-        </div>
-      </div>
-
-      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
-        PRÉPA BACC MMFNRR — English Grammar | Chapter 7: English Tenses — Conforms to Baccalaureate program 2024
-      </div>
-    </div>
-  </main>
-
-  <script>
-    const logoImg = document.getElementById('logoImg');
-    const logoWrap = document.getElementById('logoWrap');
-    if (logoWrap) {
-      logoWrap.addEventListener('click', () => {
-        logoImg.classList.remove('spinning');
-        void logoImg.offsetWidth;
-        logoImg.classList.add('spinning');
-        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
-      });
-    }
-
-    const sidebar = document.getElementById('sidebar');
-    const hamburger = document.getElementById('hamburger');
-    const overlay = document.getElementById('overlay');
-
-    function toggleSidebar() {
-      const open = sidebar.classList.toggle('open');
-      hamburger.classList.toggle('open', open);
-      overlay.classList.toggle('visible', open);
-      document.body.style.overflow = open ? 'hidden' : '';
-    }
-
-    function closeSidebar() {
-      sidebar.classList.remove('open');
-      hamburger.classList.remove('open');
-      overlay.classList.remove('visible');
-      document.body.style.overflow = '';
-    }
-  </script>
+        function closeSidebar() {
+            sidebar.classList.remove('open');
+            hamburger.classList.remove('open');
+            overlay.classList.remove('visible');
+            document.body.style.overflow = '';
+        }
+    </script>
 
 </body>
 </html>

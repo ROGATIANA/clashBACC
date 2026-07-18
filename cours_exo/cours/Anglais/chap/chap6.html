@@ -1,484 +1,516 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>English · Have/Get Something Done | PRÉPA BACC MMFNRR</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css" />
-  <style>
-    .chapter-content {
-      padding: 1rem 3rem 3rem;
-    }
-    
-    .section-chapitre {
-      background: var(--navy);
-      border-radius: var(--radius);
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-      border: 0.5px solid rgba(255,255,255,0.08);
-    }
-    
-    .section-chapitre h3 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.5rem;
-      color: var(--gold);
-      margin-bottom: 1rem;
-      letter-spacing: 1px;
-    }
-    
-    .section-chapitre h4 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.2rem;
-      color: #fff;
-      margin: 1rem 0 0.5rem;
-    }
-    
-    .section-chapitre p {
-      line-height: 1.6;
-      margin-bottom: 1rem;
-      color: rgba(255,255,255,0.85);
-    }
-    
-    .section-chapitre .highlight {
-      color: var(--gold);
-      font-weight: 500;
-    }
-    
-    .section-chapitre .highlight-red {
-      color: #e74c3c;
-      font-weight: 500;
-    }
-    
-    .section-chapitre ul, .section-chapitre ol {
-      margin: 1rem 0 1rem 2rem;
-      color: rgba(255,255,255,0.85);
-      line-height: 1.6;
-    }
-    
-    .section-chapitre li {
-      margin-bottom: 0.3rem;
-    }
-    
-    .img-container {
-      text-align: center;
-      margin: 1.5rem 0;
-    }
-    
-    .img-container img {
-      max-width: 100%;
-      border-radius: 12px;
-      background: rgba(0,0,0,0.2);
-      padding: 0.5rem;
-    }
-    
-    .img-caption {
-      font-size: 12px;
-      color: rgba(255,255,255,0.4);
-      margin-top: 0.5rem;
-      text-align: center;
-    }
-    
-    .note-box {
-      background: rgba(232,201,126,0.1);
-      border-left: 3px solid var(--gold);
-      padding: 1rem;
-      margin: 1rem 0;
-      border-radius: 0 10px 10px 0;
-    }
-    
-    .note-box strong {
-      color: var(--gold);
-    }
-    
-    .law-box {
-      background: rgba(230, 126, 34, 0.1);
-      border-left: 3px solid #e67e22;
-      padding: 1rem;
-      margin: 1rem 0;
-      border-radius: 0 10px 10px 0;
-    }
-    
-    .formula {
-      font-family: monospace;
-      background: rgba(0,0,0,0.3);
-      padding: 0.2rem 0.5rem;
-      border-radius: 5px;
-      display: inline-block;
-    }
-    
-    .grid-formulas {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-      margin: 1rem 0;
-    }
-    
-    .grammar-card {
-      background: rgba(0,0,0,0.2);
-      border-radius: 10px;
-      padding: 0.8rem;
-      text-align: center;
-    }
-    
-    .grammar-card .grammar-name {
-      color: var(--gold);
-      font-weight: bold;
-    }
-    
-    .example {
-      font-style: italic;
-      color: var(--gold);
-    }
-    
-    .rule-box {
-      background: rgba(0,0,0,0.2);
-      border-radius: 10px;
-      padding: 0.8rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    .causative-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0;
-      background: rgba(0,0,0,0.2);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    
-    .causative-table th, .causative-table td {
-      padding: 0.75rem;
-      text-align: left;
-      border-bottom: 0.5px solid rgba(255,255,255,0.1);
-    }
-    
-    .causative-table th {
-      background: rgba(232,201,126,0.15);
-      color: var(--gold);
-      font-weight: bold;
-    }
-    
-    .causative-table tr:last-child td {
-      border-bottom: none;
-    }
-    
-    @media (max-width: 640px) {
-      .chapter-content {
-        padding: 1rem 1.25rem 2rem;
-      }
-      .section-chapitre {
-        padding: 1rem;
-      }
-      .causative-table th, .causative-table td {
-        padding: 0.5rem;
-        font-size: 0.8rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English · Have/Get Something Done | PRÉPA BACC MMFNRR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+        .chapter-content {
+            padding: 1rem 3rem 3rem;
+        }
+
+        .section-chapitre {
+            background: var(--navy);
+            border-radius: var(--radius);
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border: 0.5px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .section-chapitre h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .section-chapitre h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            color: #fff;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .section-chapitre p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .section-chapitre .highlight {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .section-chapitre .highlight-red {
+            color: #e74c3c;
+            font-weight: 500;
+        }
+
+        .section-chapitre ul,
+        .section-chapitre ol {
+            margin: 1rem 0 1rem 2rem;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+        }
+
+        .section-chapitre li {
+            margin-bottom: 0.3rem;
+        }
+
+        .img-container {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 0.5rem;
+        }
+
+        .img-caption {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+
+        .note-box {
+            background: rgba(232, 201, 126, 0.1);
+            border-left: 3px solid var(--gold);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .note-box strong {
+            color: var(--gold);
+        }
+
+        .law-box {
+            background: rgba(230, 126, 34, 0.1);
+            border-left: 3px solid #e67e22;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .formula {
+            font-family: monospace;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .grid-formulas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .grammar-card {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 0.8rem;
+            text-align: center;
+        }
+
+        .grammar-card .grammar-name {
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .example {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .rule-box {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .causative-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .causative-table th,
+        .causative-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .causative-table th {
+            background: rgba(232, 201, 126, 0.15);
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .causative-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .pied {
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 12px;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 640px) {
+            .chapter-content {
+                padding: 1rem 1.25rem 2rem;
+            }
+            .section-chapitre {
+                padding: 1rem;
+            }
+            .causative-table th,
+            .causative-table td {
+                padding: 0.5rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+    <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
 
-  <aside class="sidebar" id="sidebar">
-    <div class="logo-wrap" id="logoWrap">
-      <div class="logo-ring"></div>
-      <img src="../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
-    </div>
-    <div class="sidebar-title">PRÉPA<span>BACC</span></div>
-    <div class="sidebar-sub">MMFNRR · 2024</div>
-    <nav class="sidebar-nav">
-      <a href="../../../../index.html" class="nav-item">
-        <div class="nav-icon">🏠</div>
-        <div class="nav-body">
-          <div class="nav-label">Accueil</div>
-          <div class="nav-desc">Page principale</div>
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-wrap" id="logoWrap">
+            <div class="logo-ring"></div>
+            <img src="../../../../img/RR.png" alt="Logo MMFNRR" id="logoImg" />
         </div>
-      </a>
-      <a href="../../../Cours.html" class="nav-item active">
-        <div class="nav-icon">📖</div>
-        <div class="nav-body">
-          <div class="nav-label">Leçons / Cours</div>
-          <div class="nav-desc">Fiches de révision</div>
+        <div class="sidebar-title">PRÉPA<span>BACC</span></div>
+        <div class="sidebar-sub">MMFNRR · 2024</div>
+        <nav class="sidebar-nav">
+            <a href="../../../../index.html" class="nav-item">
+                <div class="nav-icon">🏠</div>
+                <div class="nav-body">
+                    <div class="nav-label">Accueil</div>
+                    <div class="nav-desc">Page principale</div>
+                </div>
+            </a>
+            <a href="../../../Cours.html" class="nav-item active">
+                <div class="nav-icon">📖</div>
+                <div class="nav-body">
+                    <div class="nav-label">Leçons / Cours</div>
+                    <div class="nav-desc">Fiches de révision</div>
+                </div>
+            </a>
+            <a href="../../../Exercice.html" class="nav-item">
+                <div class="nav-icon">✏️</div>
+                <div class="nav-body">
+                    <div class="nav-label">Sujets Bacc</div>
+                    <div class="nav-desc">Annales officielles</div>
+                </div>
+            </a>
+            <a href="../../../../Info/Info.html" class="nav-item">
+                <div class="nav-icon">📝</div>
+                <div class="nav-body">
+                    <div class="nav-label">A propos</div>
+                    <div class="nav-desc">Informations sur le site</div>
+                </div>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
+            <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
         </div>
-      </a>
-      <a href="../../../Exercice.html" class="nav-item">
-        <div class="nav-icon">✏️</div>
-        <div class="nav-body">
-          <div class="nav-label">Sujets Bacc</div>
-          <div class="nav-desc">Annales officielles</div>
+    </aside>
+
+    <main class="main">
+        <div class="topbar">
+            <div class="topbar-brand">PRÉPA<span>BACC</span></div>
+            <button class="hamburger" id="hamburger" onclick="toggleSidebar()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-      </a>
-      <a href="../../../../Info/Info.html" class="nav-item">
-        <div class="nav-icon">📝</div>
-        <div class="nav-body">
-          <div class="nav-label">A propos</div>
-          <div class="nav-desc">Informations sur le site</div>
+
+        <div class="page-header">
+            <div class="breadcrumb">
+                <a href="../../../../index.html">Accueil</a> ›
+                <a href="../../../Cours.html">Leçons</a> ›
+                <a href="../Anglais.html">English</a> › Chapter 6
+            </div>
+            <div class="page-title">HAVE/GET SOMETHING DONE <span>🇬🇧 CHAPTER 6</span></div>
+            <div class="page-subtitle">Causative form: have + object + past participle · get + object + past participle</div>
         </div>
-      </a>
-    </nav>
-    <div class="sidebar-footer">
-      <div class="name">MAMPIHAVANA-MAMISOA<br>Fonohery Nérée Riantsoa Rogatiana</div>
-      <div class="copy">© BACC | PRÉPA [MMFNRR]<br>Release 2024 · 🇲🇬</div>
-    </div>
-  </aside>
 
-  <main class="main">
-    <div class="topbar">
-      <div class="topbar-brand">PRÉPA<span>BACC</span></div>
-      <button class="hamburger" id="hamburger" onclick="toggleSidebar()">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-
-    <div class="page-header">
-      <div class="breadcrumb">
-        <a href="../../../../index.html">Accueil</a> ›
-        <a href="../../../Cours.html">Leçons</a> ›
-        <a href="../Anglais.html">English</a> › Chapter 6
-      </div>
-      <div class="page-title">HAVE/GET SOMETHING DONE <span>🇬🇧 CHAPTER 6</span></div>
-      <div class="page-subtitle">Causative form: have + object + past participle · get + object + past participle</div>
-    </div>
-
-    <div class="subject-banner">
-      <div class="subject-icon-large">🇬🇧</div>
-      <div class="subject-info">
-        <h3>Causative Form</h3>
-        <p>Have something done · Get something done · Differences · Uses · Examples</p>
-      </div>
-      <div class="chapter-count">Complete lesson</div>
-    </div>
-
-    <div class="chapter-content">
-      
-      <!-- Introduction -->
-      <div class="section-chapitre">
-        <h3>📚 INTRODUCTION</h3>
-        <p><span class="highlight">Have something done</span> and <span class="highlight">get something done</span> are both used to refer to actions which are <span class="highlight">done for the subject</span> rather than <span class="highlight">by the subject</span>.</p>
-        <p>Causative verbs are used instead of passive verbs to show that the subject <span class="highlight">causes the action to be done</span>.</p>
-        
-        <div class="note-box">
-          <strong>📌 Basic Structure:</strong><br>
-          <span class="formula">Subject + have/get + object + past participle</span>
+        <div class="subject-banner">
+            <div class="subject-icon-large">🇬🇧</div>
+            <div class="subject-info">
+                <h3>Causative Form</h3>
+                <p>Have something done · Get something done · Differences · Uses · Examples</p>
+            </div>
+            <div class="chapter-count">Complete lesson</div>
         </div>
-      </div>
 
-      <!-- Have Something Done -->
-      <div class="section-chapitre">
-        <h3>🔧 HAVE SOMETHING DONE</h3>
-        
-        <div class="law-box">
-          <strong>📌 Structure:</strong><br>
-          <span class="formula">have + object + past participle</span><br><br>
-          <strong>Example:</strong><br>
-          <span class="example">I don't know how to repair cars, so I'm <strong>having mine repaired</strong> at the garage round the corner.</span>
+        <div class="chapter-content">
+
+            <div class="section-chapitre">
+                <h3>📚 INTRODUCTION</h3>
+                <p><span class="highlight">Have something done</span> and <span class="highlight">get something done</span> are both used to refer to actions which are <span class="highlight">done for the subject</span> rather than <span class="highlight">by the subject</span>.</p>
+                <p>Causative verbs are used instead of passive verbs to show that the subject <span class="highlight">causes the action to be done</span>.</p>
+
+                <div class="note-box">
+                    <strong>📌 Basic Structure:</strong><br>
+                    <span class="formula">Subject + have/get + object + past participle</span>
+                </div>
+            </div>
+
+            <div class="section-chapitre">
+                <h3>🔧 HAVE SOMETHING DONE</h3>
+
+                <div class="law-box">
+                    <strong>📌 Structure:</strong><br>
+                    <span class="formula">have + object + past participle</span><br><br>
+                    <strong>Example:</strong><br>
+                    <span class="example">I don't know how to repair cars, so I'm <strong>having mine repaired</strong> at the garage round the corner.</span>
+                </div>
+            </div>
+
+            <div class="section-chapitre">
+                <h3>🔧 GET SOMETHING DONE</h3>
+
+                <div class="law-box">
+                    <strong>📌 Structure:</strong><br>
+                    <span class="formula">get + object + past participle</span><br><br>
+                    <strong>Examples:</strong><br>
+                    <span class="example">I really must <strong>get my eyes tested</strong>. I'm sure I need glasses.</span><br>
+                    <span class="example"><strong>Get your hair cut!</strong></span>
+                </div>
+            </div>
+
+            <div class="section-chapitre">
+                <h3>📊 KEY DIFFERENCES</h3>
+
+                <div class="grid-formulas">
+                    <div class="grammar-card">
+                        <p class="grammar-name">Have Something Done</p>
+                        <p>✓ <span class="highlight">More formal</span><br>
+                            ✓ Used in formal writing<br>
+                            ✓ Neutral tone<br>
+                            <span class="example">I had my car repaired.</span></p>
+                    </div>
+                    <div class="grammar-card">
+                        <p class="grammar-name">Get Something Done</p>
+                        <p>✓ <span class="highlight">More informal / colloquial</span><br>
+                            ✓ Used in everyday speech<br>
+                            ✓ <span class="highlight">More frequent in imperative form</span><br>
+                            <span class="example">Get your hair cut!</span></p>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <strong>📌 Note:</strong><br>
+                    The differences between "have" and "get" something done are that:<br>
+                    - <span class="highlight">Have</span> is slightly more <span class="highlight">formal</span> than "get"<br>
+                    - <span class="highlight">Get</span> is more <span class="highlight">frequent</span> than "have" in the <span class="highlight">imperative form</span>
+                </div>
+            </div>
+
+            <div class="section-chapitre">
+                <h3>💡 USES OF THE CAUSATIVE FORM</h3>
+
+                <div class="law-box">
+                    <strong>📌 We use the expression "to have something done" (have + object + past participle) to say:</strong><br><br>
+                    <strong>1.</strong> That <span class="highlight">somebody does something for you</span>. Usually they're things that are difficult to do yourself or you don't want to do yourself.<br>
+                    <span class="example">I <strong>had my house painted</strong> last summer.</span><br>
+                    <span class="example">She <strong>had her hair cut</strong> at the salon.</span><br><br>
+                    <strong>2.</strong> That <span class="highlight">something unpleasant happened</span> to somebody.<br>
+                    <span class="example">He <strong>had his wallet stolen</strong> on the subway.</span><br>
+                    <span class="example">They <strong>had their roof damaged</strong> in the storm.</span>
+                </div>
+            </div>
+
+            <div class="section-chapitre">
+                <h3>⏰ CAUSATIVE FORM IN ALL TENSES</h3>
+
+                <table class="causative-table">
+                    <thead>
+                        <tr>
+                            <th>Tense</th>
+                            <th>Structure</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Present Simple</td>
+                            <td>have/get + object + past participle</td>
+                            <td><span class="example">I <strong>have</strong> my car <strong>serviced</strong> every year.</span></td>
+                        </tr>
+                        <tr>
+                            <td>Present Continuous</td>
+                            <td>am/is/are having/getting + object + pp</td>
+                            <td><span class="example">I <strong>am having</strong> my hair <strong>cut</strong> now.</span></td>
+                        </tr>
+                        <tr>
+                            <td>Past Simple</td>
+                            <td>had/got + object + past participle</td>
+                            <td><span class="example">She <strong>had</strong> her dress <strong>made</strong>.</span></td>
+                        </tr>
+                        <tr>
+                            <td>Past Continuous</td>
+                            <td>was/were having/getting + object + pp</td>
+                            <td><span class="example">I <strong>was having</strong> my car <strong>repaired</strong>.</span></td>
+                        </tr>
+                        <tr>
+                            <td>Present Perfect</td>
+                            <td>have/has had/got + object + pp</td>
+                            <td><span class="example">He <strong>has had</strong> his eyes <strong>tested</strong>.</span></td>
+                        </tr>
+                        <tr>
+                            <td>Future (will)</td>
+                            <td>will have/get + object + past participle</td>
+                            <td><span class="example">I <strong>will have</strong> my house <strong>painted</strong>.</span></td>
+                        </tr>
+                        <tr>
+                            <td>Imperative</td>
+                            <td>get + object + past participle</td>
+                            <td><span class="example"><strong>Get</strong> your hair <strong>cut</strong>!</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section-chapitre">
+                <h3>❓ QUESTIONS AND NEGATIONS</h3>
+
+                <div class="law-box">
+                    <strong>📌 With "have":</strong><br>
+                    Questions and negations of the verb "have" are formed with <span class="highlight">do/does</span> or <span class="highlight">did</span>.<br><br>
+                    <span class="example">Do you <strong>have</strong> your car <strong>serviced</strong> regularly?</span><br>
+                    <span class="example">I <strong>don't have</strong> my clothes <strong>ironed</strong>.</span><br>
+                    <span class="example">Did she <strong>have</strong> her hair <strong>cut</strong>?</span>
+                </div>
+
+                <div class="law-box">
+                    <strong>📌 With "get":</strong><br>
+                    <span class="example">Did you <strong>get</strong> your car <strong>fixed</strong>?</span><br>
+                    <span class="example">I <strong>didn't get</strong> my nails <strong>done</strong>.</span>
+                </div>
+            </div>
+
+            <div class="section-chapitre">
+                <h3>🗣️ INFORMAL USAGE</h3>
+
+                <div class="note-box">
+                    <strong>📌 Note:</strong><br>
+                    We can use the verb <span class="highlight">"get"</span> instead of the verb <span class="highlight">"have"</span> only in <span class="highlight">informal conversation</span>.<br><br>
+                    <span class="example">Formal: I <strong>had</strong> my teeth <strong>checked</strong>.</span><br>
+                    <span class="example">Informal: I <strong>got</strong> my teeth <strong>checked</strong>.</span>
+                </div>
+            </div>
+
+            <div class="section-chapitre">
+                <h3>📝 COMMON EXPRESSIONS WITH CAUSATIVE FORM</h3>
+
+                <div class="grid-formulas">
+                    <div class="grammar-card">
+                        <p class="grammar-name">get/have your hair cut</p>
+                        <p>faire couper les cheveux</p>
+                    </div>
+                    <div class="grammar-card">
+                        <p class="grammar-name">get/have your car repaired</p>
+                        <p>faire réparer la voiture</p>
+                    </div>
+                    <div class="grammar-card">
+                        <p class="grammar-name">get/have your eyes tested</p>
+                        <p>faire contrôler la vue</p>
+                    </div>
+                    <div class="grammar-card">
+                        <p class="grammar-name">get/have your house painted</p>
+                        <p>faire peindre la maison</p>
+                    </div>
+                    <div class="grammar-card">
+                        <p class="grammar-name">get/have your photo taken</p>
+                        <p>se faire photographier</p>
+                    </div>
+                    <div class="grammar-card">
+                        <p class="grammar-name">get/have something stolen</p>
+                        <p>se faire voler quelque chose</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-chapitre">
+                <h3>📖 VISUAL REFERENCE</h3>
+
+                <div class="img-container">
+                    <img src="img/7.jpg" alt="Causative Form Summary">
+                    <div class="img-caption">Fig. 1 – Causative form: have/get something done</div>
+                </div>
+            </div>
+
+            <div class="section-chapitre">
+                <h3>💡 SUMMARY & KEY POINTS</h3>
+
+                <div class="note-box">
+                    <strong>📌 Key Takeaways:</strong><br>
+                    - <span class="highlight">Causative form</span> = someone does something FOR the subject<br>
+                    - Structure: <span class="formula">have/get + object + past participle</span><br>
+                    - <span class="highlight">Have something done</span> = more <span class="highlight">formal</span><br>
+                    - <span class="highlight">Get something done</span> = more <span class="highlight">informal</span> (more common in imperative)<br>
+                    - Used for: <span class="highlight">services</span> (hair cut, car repair) and <span class="highlight">unfortunate events</span> (wallet stolen)<br>
+                    - With "have": questions/negations use <span class="highlight">do/does/did</span><br>
+                    - "Get" is only used in <span class="highlight">informal conversation</span>
+                </div>
+            </div>
+
+            <div class="pied">
+                PRÉPA BACC MMFNRR — English Grammar | Chapter 6: Have/Get Something Done — Conforms to Baccalaureate program 2024
+            </div>
         </div>
-      </div>
+    </main>
 
-      <!-- Get Something Done -->
-      <div class="section-chapitre">
-        <h3>🔧 GET SOMETHING DONE</h3>
-        
-        <div class="law-box">
-          <strong>📌 Structure:</strong><br>
-          <span class="formula">get + object + past participle</span><br><br>
-          <strong>Examples:</strong><br>
-          <span class="example">I really must <strong>get my eyes tested</strong>. I'm sure I need glasses.</span><br>
-          <span class="example"><strong>Get your hair cut!</strong></span>
-        </div>
-      </div>
+    <script>
+        const logoImg = document.getElementById('logoImg');
+        const logoWrap = document.getElementById('logoWrap');
+        if (logoWrap) {
+            logoWrap.addEventListener('click', () => {
+                logoImg.classList.remove('spinning');
+                void logoImg.offsetWidth;
+                logoImg.classList.add('spinning');
+                logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
+            });
+        }
 
-      <!-- Key Differences -->
-      <div class="section-chapitre">
-        <h3>📊 KEY DIFFERENCES</h3>
-        
-        <div class="grid-formulas">
-          <div class="grammar-card">
-            <p class="grammar-name">Have Something Done</p>
-            <p>✓ <span class="highlight">More formal</span><br>
-            ✓ Used in formal writing<br>
-            ✓ Neutral tone<br>
-            <span class="example">I had my car repaired.</span></p>
-          </div>
-          <div class="grammar-card">
-            <p class="grammar-name">Get Something Done</p>
-            <p>✓ <span class="highlight">More informal / colloquial</span><br>
-            ✓ Used in everyday speech<br>
-            ✓ <span class="highlight">More frequent in imperative form</span><br>
-            <span class="example">Get your hair cut!</span></p>
-          </div>
-        </div>
-        
-        <div class="note-box">
-          <strong>📌 Note:</strong><br>
-          The differences between "have" and "get" something done are that:<br>
-          - <span class="highlight">Have</span> is slightly more <span class="highlight">formal</span> than "get"<br>
-          - <span class="highlight">Get</span> is more <span class="highlight">frequent</span> than "have" in the <span class="highlight">imperative form</span>
-        </div>
-      </div>
+        const sidebar = document.getElementById('sidebar');
+        const hamburger = document.getElementById('hamburger');
+        const overlay = document.getElementById('overlay');
 
-      <!-- Uses of Causative Form -->
-      <div class="section-chapitre">
-        <h3>💡 USES OF THE CAUSATIVE FORM</h3>
-        
-        <div class="law-box">
-          <strong>📌 We use the expression "to have something done" (have + object + past participle) to say:</strong><br><br>
-          <strong>1.</strong> That <span class="highlight">somebody does something for you</span>. Usually they're things that are difficult to do yourself or you don't want to do yourself.<br>
-          <span class="example">I <strong>had my house painted</strong> last summer.</span><br>
-          <span class="example">She <strong>had her hair cut</strong> at the salon.</span><br><br>
-          <strong>2.</strong> That <span class="highlight">something unpleasant happened</span> to somebody.<br>
-          <span class="example">He <strong>had his wallet stolen</strong> on the subway.</span><br>
-          <span class="example">They <strong>had their roof damaged</strong> in the storm.</span>
-        </div>
-      </div>
+        function toggleSidebar() {
+            const open = sidebar.classList.toggle('open');
+            hamburger.classList.toggle('open', open);
+            overlay.classList.toggle('visible', open);
+            document.body.style.overflow = open ? 'hidden' : '';
+        }
 
-      <!-- All Tenses -->
-      <div class="section-chapitre">
-        <h3>⏰ CAUSATIVE FORM IN ALL TENSES</h3>
-        
-        <table class="causative-table">
-          <thead>
-            <tr><th>Tense</th><th>Structure</th><th>Example</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Present Simple</td><td>have/get + object + past participle</td><td><span class="example">I <strong>have</strong> my car <strong>serviced</strong> every year.</span></td></tr>
-            <tr><td>Present Continuous</td><td>am/is/are having/getting + object + pp</td><td><span class="example">I <strong>am having</strong> my hair <strong>cut</strong> now.</span></td></tr>
-            <tr><td>Past Simple</td><td>had/got + object + past participle</td><td><span class="example">She <strong>had</strong> her dress <strong>made</strong>.</span></td></tr>
-            <tr><td>Past Continuous</td><td>was/were having/getting + object + pp</td><td><span class="example">I <strong>was having</strong> my car <strong>repaired</strong>.</span></td></tr>
-            <tr><td>Present Perfect</td><td>have/has had/got + object + pp</td><td><span class="example">He <strong>has had</strong> his eyes <strong>tested</strong>.</span></td></tr>
-            <tr><td>Future (will)</td><td>will have/get + object + past participle</td><td><span class="example">I <strong>will have</strong> my house <strong>painted</strong>.</span></td></tr>
-            <tr><td>Imperative</td><td>get + object + past participle</td><td><span class="example"><strong>Get</strong> your hair <strong>cut</strong>!</span></td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Questions and Negations -->
-      <div class="section-chapitre">
-        <h3>❓ QUESTIONS AND NEGATIONS</h3>
-        
-        <div class="law-box">
-          <strong>📌 With "have":</strong><br>
-          Questions and negations of the verb "have" are formed with <span class="highlight">do/does</span> or <span class="highlight">did</span>.<br><br>
-          <span class="example">Do you <strong>have</strong> your car <strong>serviced</strong> regularly?</span><br>
-          <span class="example">I <strong>don't have</strong> my clothes <strong>ironed</strong>.</span><br>
-          <span class="example">Did she <strong>have</strong> her hair <strong>cut</strong>?</span>
-        </div>
-        
-        <div class="law-box">
-          <strong>📌 With "get":</strong><br>
-          <span class="example">Did you <strong>get</strong> your car <strong>fixed</strong>?</span><br>
-          <span class="example">I <strong>didn't get</strong> my nails <strong>done</strong>.</span>
-        </div>
-      </div>
-
-      <!-- Informal Usage -->
-      <div class="section-chapitre">
-        <h3>🗣️ INFORMAL USAGE</h3>
-        
-        <div class="note-box">
-          <strong>📌 Note:</strong><br>
-          We can use the verb <span class="highlight">"get"</span> instead of the verb <span class="highlight">"have"</span> only in <span class="highlight">informal conversation</span>.<br><br>
-          <span class="example">Formal: I <strong>had</strong> my teeth <strong>checked</strong>.</span><br>
-          <span class="example">Informal: I <strong>got</strong> my teeth <strong>checked</strong>.</span>
-        </div>
-      </div>
-
-      <!-- Common Expressions -->
-      <div class="section-chapitre">
-        <h3>📝 COMMON EXPRESSIONS WITH CAUSATIVE FORM</h3>
-        
-        <div class="grid-formulas">
-          <div class="grammar-card">
-            <p class="grammar-name">get/have your hair cut</p>
-            <p>faire couper les cheveux</p>
-          </div>
-          <div class="grammar-card">
-            <p class="grammar-name">get/have your car repaired</p>
-            <p>faire réparer la voiture</p>
-          </div>
-          <div class="grammar-card">
-            <p class="grammar-name">get/have your eyes tested</p>
-            <p>faire contrôler la vue</p>
-          </div>
-          <div class="grammar-card">
-            <p class="grammar-name">get/have your house painted</p>
-            <p>faire peindre la maison</p>
-          </div>
-          <div class="grammar-card">
-            <p class="grammar-name">get/have your photo taken</p>
-            <p>se faire photographier</p>
-          </div>
-          <div class="grammar-card">
-            <p class="grammar-name">get/have something stolen</p>
-            <p>se faire voler quelque chose</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Image -->
-      <div class="section-chapitre">
-        <h3>📖 VISUAL REFERENCE</h3>
-        
-        <div class="img-container">
-          <img src="img/7.jpg" alt="Causative Form Summary">
-          <div class="img-caption">Fig. 1 – Causative form: have/get something done</div>
-        </div>
-      </div>
-
-      <!-- RÉCAPITULATIF -->
-      <div class="section-chapitre">
-        <h3>💡 SUMMARY & KEY POINTS</h3>
-        
-        <div class="note-box">
-          <strong>📌 Key Takeaways:</strong><br>
-          - <span class="highlight">Causative form</span> = someone does something FOR the subject<br>
-          - Structure: <span class="formula">have/get + object + past participle</span><br>
-          - <span class="highlight">Have something done</span> = more <span class="highlight">formal</span><br>
-          - <span class="highlight">Get something done</span> = more <span class="highlight">informal</span> (more common in imperative)<br>
-          - Used for: <span class="highlight">services</span> (hair cut, car repair) and <span class="highlight">unfortunate events</span> (wallet stolen)<br>
-          - With "have": questions/negations use <span class="highlight">do/does/did</span><br>
-          - "Get" is only used in <span class="highlight">informal conversation</span>
-        </div>
-      </div>
-
-      <div style="text-align: center; margin-top: 2rem; margin-bottom: 1rem; font-size: 12px; opacity: 0.6;">
-        PRÉPA BACC MMFNRR — English Grammar | Chapter 6: Have/Get Something Done — Conforms to Baccalaureate program 2024
-      </div>
-    </div>
-  </main>
-
-  <script>
-    const logoImg = document.getElementById('logoImg');
-    const logoWrap = document.getElementById('logoWrap');
-    if (logoWrap) {
-      logoWrap.addEventListener('click', () => {
-        logoImg.classList.remove('spinning');
-        void logoImg.offsetWidth;
-        logoImg.classList.add('spinning');
-        logoImg.addEventListener('animationend', () => logoImg.classList.remove('spinning'), { once: true });
-      });
-    }
-
-    const sidebar = document.getElementById('sidebar');
-    const hamburger = document.getElementById('hamburger');
-    const overlay = document.getElementById('overlay');
-
-    function toggleSidebar() {
-      const open = sidebar.classList.toggle('open');
-      hamburger.classList.toggle('open', open);
-      overlay.classList.toggle('visible', open);
-      document.body.style.overflow = open ? 'hidden' : '';
-    }
-
-    function closeSidebar() {
-      sidebar.classList.remove('open');
-      hamburger.classList.remove('open');
-      overlay.classList.remove('visible');
-      document.body.style.overflow = '';
-    }
-  </script>
+        function closeSidebar() {
+            sidebar.classList.remove('open');
+            hamburger.classList.remove('open');
+            overlay.classList.remove('visible');
+            document.body.style.overflow = '';
+        }
+    </script>
 
 </body>
 </html>
